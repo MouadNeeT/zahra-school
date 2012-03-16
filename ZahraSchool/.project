@@ -14,4 +14,26 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>images/cadenas.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/cadenas.jpg</locationURI>
+		</link>
+		<link>
+			<name>images/construction.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/construction.jpg</locationURI>
+		</link>
+		<link>
+			<name>images/enregistrer.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/enregistrer.jpg</locationURI>
+		</link>
+		<link>
+			<name>images/professeur.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/professeur.jpg</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
