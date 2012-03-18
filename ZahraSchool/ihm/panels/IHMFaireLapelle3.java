@@ -56,10 +56,10 @@ public class IHMFaireLapelle3 extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/green square.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/green square.png")); // NOI18N
         jLabel4.setText("jLabel4");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("Icons\\red square.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/red square.jpg")); // NOI18N
         jLabel5.setText("jLabel5");
 
         jLabel6.setText("Aucune alerte");
