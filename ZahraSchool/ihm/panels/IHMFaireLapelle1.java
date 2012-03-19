@@ -1,3 +1,5 @@
+package panels;
+
 
 public class IHMFaireLapelle1 extends javax.swing.JPanel {
 

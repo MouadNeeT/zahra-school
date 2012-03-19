@@ -1,3 +1,5 @@
+package panels;
+
 
 public class IHMFaireLapelle2 extends javax.swing.JPanel {
 
@@ -125,7 +127,7 @@ public class IHMFaireLapelle2 extends javax.swing.JPanel {
         jLabel9.setBounds(30, 140, 80, 14);
         jLayeredPane1.add(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/right.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/right.jpg"))); // NOI18N
 
         jLabel10.setText("En clickant sur suivant, vous validez");
 
@@ -230,19 +232,19 @@ public class IHMFaireLapelle2 extends javax.swing.JPanel {
         jLabel19.setBounds(30, 140, 80, 14);
         jLayeredPane2.add(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/green square.png")); 
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/green square.png"))); 
         jLabel27.setBounds(10, 80, 10, 10);
         jLayeredPane2.add(jLabel27, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/red square.png")); 
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/red square.png"))); 
         jLabel28.setBounds(10, 110, 10, 10);
         jLayeredPane2.add(jLabel28, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/file.gif")); 
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/file.gif"))); 
         jLabel31.setBounds(10, 140, 20, 20);
         jLayeredPane2.add(jLabel31, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/right.jpg")); 
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/right.jpg"))); 
 
         jLabel22.setText("En clickant sur suivant, vous validez");
 
@@ -250,13 +252,13 @@ public class IHMFaireLapelle2 extends javax.swing.JPanel {
 
         jLabel24.setText("aucune alertes");
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/left.jpg")); 
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/left.jpg"))); 
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/red square.png"));
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/red square.png")));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/green square.png"));
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/green square.png")));
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/icon_attention_m.gif"));
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("images/icon_attention_m.gif")));
 
         jButton1.setText("Terminer");
 
