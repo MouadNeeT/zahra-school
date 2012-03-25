@@ -1,5 +1,4 @@
 package panels;
-
 import javax.swing.JPanel;
 
 public class IHMBarreHautProfesseur extends JPanel{
@@ -36,8 +35,8 @@ public class IHMBarreHautProfesseur extends JPanel{
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Evi and Max\\Desktop\\cadenas.jpg")); // NOI18N
-        jLabel4.setText("jLabel4");
+        //jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ZarhaSchool.images/logoZahraSchool.jpg"))); // NOI18N
+        jLabel4.setText("");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -45,15 +44,15 @@ public class IHMBarreHautProfesseur extends JPanel{
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(5, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(5, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
@@ -89,7 +88,7 @@ public class IHMBarreHautProfesseur extends JPanel{
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setForeground(new java.awt.Color(0, 0, 153));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Evi and Max\\Desktop\\cadenas.jpg")); // NOI18N
+        //jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cadenas.png"))); // NOI18N
         jButton1.setText("Se déconnecter");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +119,7 @@ public class IHMBarreHautProfesseur extends JPanel{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 497, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
