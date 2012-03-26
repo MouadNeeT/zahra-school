@@ -1,3 +1,6 @@
+package panelsAdministrateur;
+
+
 import javax.swing.JPanel;
 
 
