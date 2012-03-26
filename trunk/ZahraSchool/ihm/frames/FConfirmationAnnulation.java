@@ -1,8 +1,8 @@
 package frames;
 
 public class FConfirmationAnnulation extends javax.swing.JFrame {
-
-    /**
+	/*test*/
+    /** 
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -29,7 +29,7 @@ public class FConfirmationAnnulation extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("Etes-vous sûr de vouloir supprimer ?");
+        jLabel1.setText("Etes-vous sï¿½r de vouloir supprimer ?");
 
         ouiBouton.setText("Oui");
         ouiBouton.addActionListener(new java.awt.event.ActionListener() {
