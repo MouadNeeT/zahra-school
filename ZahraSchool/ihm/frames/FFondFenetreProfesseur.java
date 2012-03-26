@@ -1,9 +1,22 @@
+package frames;
+
+import panels.*;
+
+
+
+
+
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import panels.IHMBarreBas;
+import panels.IHMBarreHautProfesseur;
+import panels.IHMMenuGaucheProfesseur;
+import panelsAdministrateur.*;
 
 public class FFondFenetreProfesseur extends JFrame{
 	
