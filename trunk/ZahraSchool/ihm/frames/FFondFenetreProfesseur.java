@@ -30,8 +30,12 @@ public class FFondFenetreProfesseur extends JFrame{
 		
 		JPanel panel1 = new JPanel(new BorderLayout());
 		
-		panel1.add(principalMenu, BorderLayout.CENTER);
-		panel1.add(menuGauche, BorderLayout.CENTER);
+		/**
+		 * Il faut ajouter le panel que vous voulez ici.
+		 * Rajouter donc le panel : ne pas oublier de mettre le
+		 * borderLayout à WEST
+		 */
+		panel1.add(menuGauche, BorderLayout.WEST);
 		panel1.add(barreHaut, BorderLayout.NORTH);
 		
 		panel1.add(barreBas, BorderLayout.SOUTH);
