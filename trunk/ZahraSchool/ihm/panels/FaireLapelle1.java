@@ -37,16 +37,17 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane3 = new javax.swing.JLayeredPane();
         jLayeredPane4 = new javax.swing.JLayeredPane();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
         jLayeredPane5 = new javax.swing.JLayeredPane();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
 
         setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1234, 584));
+        setMaximumSize(new java.awt.Dimension(862, 470));
+        setPreferredSize(new java.awt.Dimension(862, 470));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Faire L'appel");
 
@@ -55,19 +56,19 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Type d'appel", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLabel2.setText("Choisisser le type d'appel :");
-        jLabel2.setBounds(20, 60, 128, 14);
+        jLabel2.setBounds(20, 60, 160, 14);
         jLayeredPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLabel2.getAccessibleContext().setAccessibleName("text1");
 
         jRadioButton1.setText("Défilement de la liste sous form d'une liste");
         jRadioButton1.setActionCommand("Liste");
-        jRadioButton1.setBounds(190, 50, 225, 23);
+        jRadioButton1.setBounds(180, 50, 280, 20);
         jLayeredPane1.add(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton1.getAccessibleContext().setAccessibleName("Liste");
 
         jRadioButton2.setText("Défilement de la liste sous forme d'un gros plan");
         jRadioButton2.setActionCommand("Plan");
-        jRadioButton2.setBounds(190, 80, 251, 23);
+        jRadioButton2.setBounds(180, 80, 300, 23);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton2.getAccessibleContext().setAccessibleName("Plan");
 
@@ -78,12 +79,17 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane3.add(jLayeredPane4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel3.setText("Rentrez le nom du groupe:");
-        jLabel3.setBounds(10, 40, 128, 14);
+        jLabel3.setBounds(10, 40, 150, 14);
         jLayeredPane3.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jTextField1.setText("jTextField1");
-        jTextField1.setBounds(150, 40, 210, 20);
-        jLayeredPane3.add(jTextField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jTextField2.setText("jTextField2");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jTextField2.setBounds(170, 40, 200, 20);
+        jLayeredPane3.add(jTextField2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane3.setBounds(30, 60, 380, 120);
         jLayeredPane2.add(jLayeredPane3, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -91,7 +97,7 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Listes des groupes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLabel4.setText("Choisissez un groupe: ");
-        jLabel4.setBounds(20, 40, 130, 14);
+        jLabel4.setBounds(20, 30, 150, 30);
         jLayeredPane5.add(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jList1.setModel(new javax.swing.AbstractListModel() {
@@ -101,10 +107,10 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jScrollPane1.setBounds(160, 40, 180, 84);
+        jScrollPane1.setBounds(170, 40, 200, 84);
         jLayeredPane5.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLayeredPane5.setBounds(30, 200, 370, 160);
+        jLayeredPane5.setBounds(30, 200, 380, 160);
         jLayeredPane2.add(jLayeredPane5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -112,39 +118,40 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(145, 145, 145)
+                .addGap(130, 130, 130)
                 .addComponent(jLabel1)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(234, 234, 234))
+                .addContainerGap(728, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(246, 246, 246))
+                .addGap(59, 59, 59)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(76, 76, 76)
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(73, 73, 73))
         );
 
         jLabel1.getAccessibleContext().setAccessibleName("UpLabel");
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -161,6 +168,6 @@ public class FaireLapelle1 extends javax.swing.JPanel {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
