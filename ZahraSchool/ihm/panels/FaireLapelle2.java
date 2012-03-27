@@ -68,11 +68,11 @@ public class FaireLapelle2 extends javax.swing.JPanel {
         jLabel30 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Faire L'appel");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Liste des élèves (gros plan)");
 
@@ -80,32 +80,30 @@ public class FaireLapelle2 extends javax.swing.JPanel {
 
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel3.setText("Nom Prenom");
         jLabel3.setBounds(20, 10, 94, 26);
         jLayeredPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton1.setText("Absent");
-        jRadioButton1.setBounds(10, 40, 59, 23);
+        jRadioButton1.setBounds(10, 40, -1, -1);
         jLayeredPane1.add(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton2.setText("Present");
-        jRadioButton2.setBounds(70, 40, 63, 23);
+        jRadioButton2.setBounds(70, 40, -1, -1);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel7.setText("Nombre d'absence d'affilé");
-        jLabel7.setBounds(30, 80, 130, 14);
+        jLabel7.setBounds(30, 80, 130, -1);
         jLayeredPane1.add(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel8.setText("Paiements");
-        jLabel8.setBounds(30, 110, 80, 14);
+        jLabel8.setBounds(30, 110, 80, -1);
         jLayeredPane1.add(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel9.setText("Voir Fiche");
-        jLabel9.setBounds(30, 140, 80, 14);
+        jLabel9.setBounds(30, 140, 80, -1);
         jLayeredPane1.add(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\right.jpg")); // NOI18N
 
         jLabel10.setText("En clickant sur suivant, vous validez");
 
@@ -157,8 +155,7 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel5))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -173,11 +170,11 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel13.setForeground(new java.awt.Color(0, 0, 51));
         jLabel13.setText("Faire L'appel");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel14.setForeground(new java.awt.Color(0, 0, 51));
         jLabel14.setText("Liste des élèves (gros plan)");
 
@@ -185,44 +182,36 @@ public class FaireLapelle2 extends javax.swing.JPanel {
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel16.setText("Nom Prenom");
         jLabel16.setBounds(20, 10, 94, 26);
         jLayeredPane2.add(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton3.setText("Absent");
-        jRadioButton3.setBounds(10, 40, 70, 23);
+        jRadioButton3.setBounds(10, 40, 70, -1);
         jLayeredPane2.add(jRadioButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton4.setText("Present");
-        jRadioButton4.setBounds(90, 40, 70, 23);
+        jRadioButton4.setBounds(90, 40, 70, -1);
         jLayeredPane2.add(jRadioButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel17.setText("Nombre d'absence d'affilé");
-        jLabel17.setBounds(30, 80, 130, 14);
+        jLabel17.setBounds(30, 80, 130, -1);
         jLayeredPane2.add(jLabel17, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel18.setText("Paiements");
-        jLabel18.setBounds(30, 110, 80, 14);
+        jLabel18.setBounds(30, 110, 80, -1);
         jLayeredPane2.add(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel19.setText("Voir Fiche");
-        jLabel19.setBounds(30, 140, 80, 14);
+        jLabel19.setBounds(30, 140, 80, -1);
         jLayeredPane2.add(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\green square.png")); // NOI18N
         jLabel27.setBounds(10, 80, 10, 10);
         jLayeredPane2.add(jLabel27, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\red square.png")); // NOI18N
         jLabel28.setBounds(10, 110, 10, 10);
         jLayeredPane2.add(jLabel28, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel31.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\file.gif")); // NOI18N
         jLabel31.setBounds(10, 140, 20, 20);
         jLayeredPane2.add(jLabel31, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel20.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\right.jpg")); // NOI18N
 
         jLabel22.setText("En clickant sur suivant, vous validez");
 
@@ -230,13 +219,7 @@ public class FaireLapelle2 extends javax.swing.JPanel {
 
         jLabel24.setText("aucune alertes");
 
-        jLabel25.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\left.jpg")); // NOI18N
-
-        jLabel26.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\red square.png")); // NOI18N
-
-        jLabel29.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\green square.png")); // NOI18N
-
-        jLabel30.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\icon_attention_m.gif")); // NOI18N
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon_attention_m.gif"))); // NOI18N
 
         jButton1.setText("Terminer");
 
@@ -306,7 +289,7 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 56, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
