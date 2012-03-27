@@ -1,7 +1,7 @@
 package frames;
 
 public class FConfirmationAnnulation extends javax.swing.JFrame {
-	/*test*/
+	/*test2*/
     /** 
 	 * 
 	 */
