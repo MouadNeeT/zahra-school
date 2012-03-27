@@ -1,6 +1,6 @@
 package panels;
 
-
+//test
 public class IHMFaireLapelle1 extends javax.swing.JPanel {
 
                   
@@ -58,13 +58,13 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLabel2.getAccessibleContext().setAccessibleName("text1");
 
-        jRadioButton1.setText("Défilement de la liste sous form d'une liste");
+        jRadioButton1.setText("Dï¿½filement de la liste sous form d'une liste");
         jRadioButton1.setActionCommand("Liste");
         jRadioButton1.setBounds(190, 50, 225, 23);
         jLayeredPane1.add(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton1.getAccessibleContext().setAccessibleName("Liste");
 
-        jRadioButton2.setText("Défilement de la liste sous forme d'un gros plan");
+        jRadioButton2.setText("Dï¿½filement de la liste sous forme d'un gros plan");
         jRadioButton2.setActionCommand("Plan");
         jRadioButton2.setBounds(190, 80, 251, 23);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
