@@ -290,7 +290,7 @@ frames.FFondFenetreProfesseur f;
                                             .addComponent(jLabel33)))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(77, 77, 77)
-                                        .addComponent(jButton1)))))))
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap(740, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -329,11 +329,9 @@ frames.FFondFenetreProfesseur f;
                             .addComponent(jLabel24)
                             .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)
-                        .addGap(29, 29, 29))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
