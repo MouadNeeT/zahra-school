@@ -25,12 +25,14 @@ public class FFondFenetreProfesseur extends JFrame{
         JPanel panel1 = new JPanel(new BorderLayout());
         JPanel t=null;
           
-	public FFondFenetreProfesseur(JPanel j)){
+	public FFondFenetreProfesseur(){
 
 		panel1.add(menuGauche, BorderLayout.WEST);
 	        panel1.add(barreHaut, BorderLayout.NORTH);
                 panel1.add(barreBas, BorderLayout.SOUTH);
-               
+                panel1.setPreferredSize(new Dimension(800, 500));
+		setSize(new Dimension(800, 600));
+		
 
 	}
         
@@ -40,15 +42,17 @@ public class FFondFenetreProfesseur extends JFrame{
         
         public void setPanel(JPanel j){
             
-               panel1.remove(getPanel());
+               panel1.removeAll();
+               panel1.add(menuGauche, BorderLayout.WEST);
+	        panel1.add(barreHaut, BorderLayout.NORTH);
+                panel1.add(barreBas, BorderLayout.SOUTH);
                t=j;
 		panel1.add(getPanel(), BorderLayout.CENTER);
 		add(panel1);
-		panel1.setPreferredSize(new Dimension(800, 500));
-		setSize(new Dimension(800, 600));
-		setLocationRelativeTo(null);
+                setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
+		
         }
 	
 
