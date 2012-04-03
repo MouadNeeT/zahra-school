@@ -37,7 +37,7 @@ public class IHMBarreBas extends JPanel{
         boutonReglementInterieur.setBackground(new java.awt.Color(204, 204, 255));
         boutonReglementInterieur.setFont(new java.awt.Font("Tahoma", 2, 12));
         boutonReglementInterieur.setForeground(new java.awt.Color(0, 0, 153));
-        boutonReglementInterieur.setText("Règlement intérieur");
+        boutonReglementInterieur.setText("Reglement interieur");
         boutonReglementInterieur.setBorder(null);
 
         boutonAide.setBackground(new java.awt.Color(204, 204, 255));
