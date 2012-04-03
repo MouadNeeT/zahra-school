@@ -18,11 +18,12 @@ import java.awt.Container;
 public class FaireLapelle1 extends javax.swing.JPanel {
 
    frames.FFondFenetreProfesseur f;
-    int Apelle = 1;
+    int Apelle = 3;
     public FaireLapelle1(frames.FFondFenetreProfesseur f) {
-        jLabel5.setVisible(false);
+       
         this.f=f;
         initComponents();
+         jLabel5.setVisible(false);
     }
 
     /**
@@ -185,17 +186,17 @@ public class FaireLapelle1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (Apelle==1){
+        if (Apelle==2){
         FaireLapelle2 f2 = new FaireLapelle2(f);
         f2.setVisible(true);
         f.setPanel(f2);}
-        else if(Apelle==2){
+        else if(Apelle==1){
         FaireLapelle3 f3 = new FaireLapelle3(f);
         f3.setVisible(true);
         f.setPanel(f3);
         }
         else
-        jLabel5.setVisible(false);  
+        jLabel5.setVisible(true);  
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
