@@ -61,7 +61,7 @@ frames.FFondFenetreProfesseur f;
         jLabel19 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -254,7 +254,7 @@ frames.FFondFenetreProfesseur f;
         jLayeredPane2.add(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel19.setText("Voir Fiche");
-        jLabel19.setBounds(30, 140, 80, 14);
+        jLabel19.setBounds(60, 140, 80, 14);
         jLayeredPane2.add(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/green square.png"))); // NOI18N
@@ -265,9 +265,14 @@ frames.FFondFenetreProfesseur f;
         jLabel28.setBounds(10, 110, 10, 10);
         jLayeredPane2.add(jLabel28, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file.gif"))); // NOI18N
-        jLabel31.setBounds(10, 140, 20, 20);
-        jLayeredPane2.add(jLabel31, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file.gif"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jButton3.setBounds(0, 130, 49, 25);
+        jLayeredPane2.add(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel22.setText("En clickant sur suivant, vous validez");
 
@@ -423,9 +428,16 @@ frames.FFondFenetreProfesseur f;
       Absent= false;
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        panelsEleve.IHMAfficheFicheEleve a = new panelsEleve.IHMAfficheFicheEleve(f);
+        f.setPanel(a);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -451,7 +463,6 @@ frames.FFondFenetreProfesseur f;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
