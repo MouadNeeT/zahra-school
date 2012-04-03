@@ -20,6 +20,7 @@ public class FaireLapelle1 extends javax.swing.JPanel {
    frames.FFondFenetreProfesseur f;
     int Apelle = 1;
     public FaireLapelle1(frames.FFondFenetreProfesseur f) {
+        jLabel5.setVisible(false);
         this.f=f;
         initComponents();
     }
@@ -48,6 +49,7 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
+        jLabel5 = new javax.swing.JLabel();
 
         setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         setMaximumSize(new java.awt.Dimension(862, 470));
@@ -134,6 +136,9 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane5.setBounds(30, 200, 380, 160);
         jLayeredPane2.add(jLayeredPane5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel5.setText("Il faut Choisir un type d'appel avant de Terminer");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -147,7 +152,9 @@ public class FaireLapelle1 extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(23, 23, 23))
@@ -163,7 +170,10 @@ public class FaireLapelle1 extends javax.swing.JPanel {
                         .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -179,11 +189,13 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         FaireLapelle2 f2 = new FaireLapelle2(f);
         f2.setVisible(true);
         f.setPanel(f2);}
-        else {
+        else if(Apelle==2){
         FaireLapelle3 f3 = new FaireLapelle3(f);
         f3.setVisible(true);
         f.setPanel(f3);
         }
+        else
+        jLabel5.setVisible(false);  
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -203,6 +215,7 @@ public class FaireLapelle1 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JLayeredPane jLayeredPane3;

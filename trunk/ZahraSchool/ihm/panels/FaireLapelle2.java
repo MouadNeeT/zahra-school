@@ -11,6 +11,7 @@ package panels;
  */
 public class FaireLapelle2 extends javax.swing.JPanel {
 frames.FFondFenetreProfesseur f;
+       boolean Absent;
     /**
      * Creates new form FaireLapelle2
      */
@@ -227,10 +228,20 @@ frames.FFondFenetreProfesseur f;
         jLayeredPane2.add(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton3.setText("Absent");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
         jRadioButton3.setBounds(10, 40, 70, 23);
         jLayeredPane2.add(jRadioButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton4.setText("Present");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
         jRadioButton4.setBounds(90, 40, 70, 23);
         jLayeredPane2.add(jRadioButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -401,6 +412,16 @@ frames.FFondFenetreProfesseur f;
         FaireLapelle1 f1 = new FaireLapelle1(f);
         f.setPanel(f1);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+      jRadioButton4.setSelected(false);
+      Absent = true;
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+      jRadioButton3.setSelected(false);  // TODO add your handling code here:
+      Absent= false;
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
