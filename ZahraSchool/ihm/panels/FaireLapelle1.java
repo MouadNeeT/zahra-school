@@ -18,7 +18,7 @@ import java.awt.Container;
 public class FaireLapelle1 extends javax.swing.JPanel {
 
    frames.FFondFenetreProfesseur f;
-    
+    int Apelle = 1;
     public FaireLapelle1(frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
@@ -73,12 +73,22 @@ public class FaireLapelle1 extends javax.swing.JPanel {
 
         jRadioButton1.setText("Défilement de la liste sous form d'une liste");
         jRadioButton1.setActionCommand("Liste");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
         jRadioButton1.setBounds(180, 50, 280, 20);
         jLayeredPane1.add(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton1.getAccessibleContext().setAccessibleName("Liste");
 
         jRadioButton2.setText("Défilement de la liste sous forme d'un gros plan");
         jRadioButton2.setActionCommand("Plan");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
         jRadioButton2.setBounds(180, 80, 300, 23);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton2.getAccessibleContext().setAccessibleName("Plan");
@@ -165,12 +175,27 @@ public class FaireLapelle1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
- 
+        if (Apelle==1){
         FaireLapelle2 f2 = new FaireLapelle2(f);
         f2.setVisible(true);
-        f.setPanel(f2);
+        f.setPanel(f2);}
+        else {
+        FaireLapelle3 f3 = new FaireLapelle3(f);
+        f3.setVisible(true);
+        f.setPanel(f3);
+        }
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+     jRadioButton2.setSelected(false);        // TODO add your handling code here:
+     Apelle = 1;
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+     jRadioButton1.setSelected(false);      // TODO add your handling code here:
+     Apelle = 2;
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
