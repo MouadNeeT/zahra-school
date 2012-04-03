@@ -16,9 +16,10 @@ package panelsEleve;
  * @author alexandre
  */
 public class IHMModifierEleve extends javax.swing.JPanel {
-
+ frames.FFondFenetreProfesseur f;
     /** Creates new form IHMAjouterEleve */
-    public IHMModifierEleve() {
+    public IHMModifierEleve( frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 

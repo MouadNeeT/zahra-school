@@ -16,9 +16,10 @@ package panelsEleve;
  * @author alexandre
  */
 public class IHMRechercheEleve extends javax.swing.JPanel {
-
+ frames.FFondFenetreProfesseur f;
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMRechercheEleve() {
+    public IHMRechercheEleve( frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 
