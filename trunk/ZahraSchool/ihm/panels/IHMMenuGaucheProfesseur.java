@@ -1,8 +1,8 @@
 package panels;
 /**
- * <b>InterfaceMenuGauche est la classe représentant un panel du menu de gauche</b>
+ * <b>InterfaceMenuGauche est la classe reprï¿½sentant un panel du menu de gauche</b>
  * <p>
- * Le menu de gauche est caractérisé par les informations suivantes :
+ * Le menu de gauche est caractï¿½risï¿½ par les informations suivantes :
  * <ul>
  * 	<li>boutonAjouterEleve</li>
  * <li>boutonVisualiserFicheEleve</li>
@@ -22,7 +22,7 @@ package panels;
  * </p>
  * 
  * 
- * @author GAUTIERT Stéphanie
+ * @author GAUTIERT Stï¿½phanie
  * @version 1.0
  */
 /*
@@ -93,7 +93,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton1.setBackground(new java.awt.Color(0, 102, 204));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Gestion des élèves");
+        jButton1.setText("Gestion des Ã©lÃ¨ves");
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +125,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton2.setBackground(new java.awt.Color(102, 153, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Ajouter un élève");
+        jButton2.setText("Ajouter un Ã©lÃ¨ve");
         jButton2.setBorder(null);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +137,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton3.setBackground(new java.awt.Color(102, 153, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Visualiser la fiche d'un élève");
+        jButton3.setText("Visualiser la fiche d'un ï¿½lï¿½ve");
         jButton3.setBorder(null);
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +149,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton4.setBackground(new java.awt.Color(102, 153, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Modifier la fiche d'un élève");
+        jButton4.setText("Modifier la fiche d'un Ã©lÃ¨ve");
         jButton4.setBorder(null);
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +161,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton5.setBackground(new java.awt.Color(102, 153, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Supprimer un élève");
+        jButton5.setText("Supprimer un Ã©lÃ¨ve");
         jButton5.setBorder(null);
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -401,7 +401,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton14.setBackground(new java.awt.Color(102, 153, 255));
         jButton14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton14.setForeground(new java.awt.Color(255, 255, 255));
-        jButton14.setText("Gérer les revenus");
+        jButton14.setText("Gï¿½rer les revenus");
         jButton14.setBorder(null);
         jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
