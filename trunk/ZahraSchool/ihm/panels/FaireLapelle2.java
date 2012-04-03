@@ -10,11 +10,12 @@ package panels;
  * @author wael
  */
 public class FaireLapelle2 extends javax.swing.JPanel {
-
+frames.FFondFenetreProfesseur f;
     /**
      * Creates new form FaireLapelle2
      */
-    public FaireLapelle2() {
+    public FaireLapelle2(frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 
@@ -67,12 +68,14 @@ public class FaireLapelle2 extends javax.swing.JPanel {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Faire L'appel");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Liste des élèves (gros plan)");
 
@@ -80,29 +83,29 @@ public class FaireLapelle2 extends javax.swing.JPanel {
 
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nom Prenom");
         jLabel3.setBounds(20, 10, 94, 26);
         jLayeredPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton1.setText("Absent");
-        jRadioButton1.setBounds(10, 40, -1, -1);
+        jRadioButton1.setBounds(10, 40, 59, 23);
         jLayeredPane1.add(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton2.setText("Present");
-        jRadioButton2.setBounds(70, 40, -1, -1);
+        jRadioButton2.setBounds(70, 40, 63, 23);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel7.setText("Nombre d'absence d'affilé");
-        jLabel7.setBounds(30, 80, 130, -1);
+        jLabel7.setBounds(30, 80, 130, 14);
         jLayeredPane1.add(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel8.setText("Paiements");
-        jLabel8.setBounds(30, 110, 80, -1);
+        jLabel8.setBounds(30, 110, 80, 14);
         jLayeredPane1.add(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel9.setText("Voir Fiche");
-        jLabel9.setBounds(30, 140, 80, -1);
+        jLabel9.setBounds(30, 140, 80, 14);
         jLayeredPane1.add(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel10.setText("En clickant sur suivant, vous validez");
@@ -155,7 +158,8 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel5))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -170,11 +174,11 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24));
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 51));
         jLabel13.setText("Faire L'appel");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 51));
         jLabel14.setText("Liste des élèves (gros plan)");
 
@@ -182,34 +186,40 @@ public class FaireLapelle2 extends javax.swing.JPanel {
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel16.setText("Nom Prenom");
         jLabel16.setBounds(20, 10, 94, 26);
         jLayeredPane2.add(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton3.setText("Absent");
-        jRadioButton3.setBounds(10, 40, 70, -1);
+        jRadioButton3.setBounds(10, 40, 70, 23);
         jLayeredPane2.add(jRadioButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton4.setText("Present");
-        jRadioButton4.setBounds(90, 40, 70, -1);
+        jRadioButton4.setBounds(90, 40, 70, 23);
         jLayeredPane2.add(jRadioButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel17.setText("Nombre d'absence d'affilé");
-        jLabel17.setBounds(30, 80, 130, -1);
+        jLabel17.setBounds(30, 80, 130, 14);
         jLayeredPane2.add(jLabel17, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel18.setText("Paiements");
-        jLabel18.setBounds(30, 110, 80, -1);
+        jLabel18.setBounds(30, 110, 80, 14);
         jLayeredPane2.add(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel19.setText("Voir Fiche");
-        jLabel19.setBounds(30, 140, 80, -1);
+        jLabel19.setBounds(30, 140, 80, 14);
         jLayeredPane2.add(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/green square.png"))); // NOI18N
         jLabel27.setBounds(10, 80, 10, 10);
         jLayeredPane2.add(jLabel27, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red square.jpg"))); // NOI18N
         jLabel28.setBounds(10, 110, 10, 10);
         jLayeredPane2.add(jLabel28, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file.gif"))); // NOI18N
         jLabel31.setBounds(10, 140, 20, 20);
         jLayeredPane2.add(jLabel31, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -219,9 +229,17 @@ public class FaireLapelle2 extends javax.swing.JPanel {
 
         jLabel24.setText("aucune alertes");
 
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red square.jpg"))); // NOI18N
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/green square.png"))); // NOI18N
+
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon_attention_m.gif"))); // NOI18N
 
         jButton1.setText("Terminer");
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/left.jpg"))); // NOI18N
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/right.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -236,8 +254,13 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                         .addGap(158, 158, 158)
                         .addComponent(jLabel14))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jLabel21)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(270, 270, 270)
+                                .addComponent(jLabel21))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGap(0, 272, Short.MAX_VALUE)
+                                .addComponent(jLabel32)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel25)
                         .addGap(33, 33, 33)
@@ -263,11 +286,12 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel22)
                                             .addComponent(jLabel23)
-                                            .addComponent(jLabel24)))
+                                            .addComponent(jLabel24)
+                                            .addComponent(jLabel33)))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(77, 77, 77)
                                         .addComponent(jButton1)))))))
-                .addContainerGap(742, Short.MAX_VALUE))
+                .addContainerGap(740, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,11 +309,14 @@ public class FaireLapelle2 extends javax.swing.JPanel {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel20))
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel32)
+                        .addComponent(jLabel33)))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 56, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -320,9 +347,10 @@ public class FaireLapelle2 extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(33, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 44, Short.MAX_VALUE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -352,6 +380,8 @@ public class FaireLapelle2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
