@@ -179,6 +179,11 @@ frames.FFondFenetreProfesseur f;
         label1.setText("L'apelle est validé, Cliquez sur ok pour revenir a la Page Principale");
 
         jButton2.setText("Ok");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -387,9 +392,15 @@ frames.FFondFenetreProfesseur f;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jDialog1.setSize(300,100);
+        jDialog1.setSize(600,200);
+        jDialog1.setLocation(500, 200);
         jDialog1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FaireLapelle1 f1 = new FaireLapelle1(f);
+        f.setPanel(f1);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
