@@ -11,10 +11,10 @@ package panels;
  */
 public class FaireLapelle3 extends javax.swing.JPanel {
 
-    /**
-     * Creates new form FaireLapelle3
-     */
-    public FaireLapelle3() {
+    frames.FFondFenetreProfesseur f;
+    
+    public FaireLapelle3(frames.FFondFenetreProfesseur f) {
+        this.f = f;
         initComponents();
     }
 
