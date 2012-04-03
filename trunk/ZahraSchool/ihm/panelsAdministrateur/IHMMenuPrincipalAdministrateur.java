@@ -29,7 +29,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel2.setBackground(new java.awt.Color(255, 255, 255));
             jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visualiserProfesseur.png"))); // NOI18N
+            //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visualiserProfesseur.png"))); // NOI18N
 
             boutonFicheProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonFicheProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -69,7 +69,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel3.setBackground(new java.awt.Color(255, 255, 255));
             jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeAjouterProfesseur.png"))); // NOI18N
+            //jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeAjouterProfesseur.png"))); // NOI18N
 
             boutonAjouterProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonAjouterProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -109,7 +109,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel4.setBackground(new java.awt.Color(255, 255, 255));
             jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeModifierProfesseur.png"))); // NOI18N
+            //jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeModifierProfesseur.png"))); // NOI18N
 
             boutonModifierProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonModifierProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -149,7 +149,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel5.setBackground(new java.awt.Color(255, 255, 255));
             jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeSupprimerProfesseur.png"))); // NOI18N
+            //jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeSupprimerProfesseur.png"))); // NOI18N
 
             boutonSupprimerProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonSupprimerProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
