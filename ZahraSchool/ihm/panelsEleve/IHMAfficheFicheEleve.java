@@ -16,9 +16,10 @@ package panelsEleve;
  * @author alexandre
  */
 public class IHMAfficheFicheEleve extends javax.swing.JPanel {
-
+ frames.FFondFenetreProfesseur f;
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMAfficheFicheEleve() {
+    public IHMAfficheFicheEleve( frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 
