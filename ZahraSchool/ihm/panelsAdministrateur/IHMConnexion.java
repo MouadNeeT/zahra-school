@@ -19,11 +19,17 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle;
 
+import frames.FFondFenetreAdministrateur;
+
 
 public class IHMConnexion extends JPanel {
+	
+	String typePersonne = "Professeur";
 
+	frames.FFondFenetreAdministrateur f;
     /** Creates new form Connexion2 */
-    public IHMConnexion() {
+    public IHMConnexion(frames.FFondFenetreAdministrateur f) {
+    	this.f = f;
         initComponents();
     }
 
@@ -47,7 +53,7 @@ public class IHMConnexion extends JPanel {
 
         jLabel4.setText("S'identifier en tant que :");
 
-        jLabel3.setText("Identifiant ou mot de passe oubliÃ©?");
+        jLabel3.setText("Identifiant ou mot de passe oublié?");
 
         jTextField1.setText("[a-z][A-Z][0-9]");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +74,11 @@ public class IHMConnexion extends JPanel {
         jComboBox1.setModel(new DefaultComboBoxModel(new String[] { "Professeur", "Administrateur" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+            	System.out.println(""+jComboBox1.getSelectedItem());
+            	if (jComboBox1.getSelectedItem() == typePersonne){
+            		typePersonne = "Professeur";
+            	}
+            	else typePersonne = "Administrateur";
             }
         });
 
@@ -134,10 +144,19 @@ public class IHMConnexion extends JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    	
+    	if (typePersonne == "Administrateur"){
+    		f = new FFondFenetreAdministrateur();
+    		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f);
+    		f.setPanel(menuPrincipal);
+    	}
+    	//frame = new FFondFenetreAdministrateur();
+    	//
 }
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+
 }
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
