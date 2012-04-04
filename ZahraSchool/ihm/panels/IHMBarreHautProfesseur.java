@@ -1,15 +1,21 @@
 package panels;
+import java.awt.Window;
+
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class IHMBarreHautProfesseur extends JPanel{
+import frames.FConnexionZahraSchool;
 
+public class IHMBarreHautProfesseur extends JPanel{
+	frames.FFondFenetreProfesseur f2;
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-    public IHMBarreHautProfesseur() {
-        initComponents();
+    public IHMBarreHautProfesseur(frames.FFondFenetreProfesseur f2) {
+        this.f2 = f2;
+    	initComponents();
     }
 
     /** This method is called from within the constructor to
@@ -159,6 +165,9 @@ public class IHMBarreHautProfesseur extends JPanel{
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
+    		f2.dispose();
+    
+    	FConnexionZahraSchool connexion = new FConnexionZahraSchool();
     }                                        
 
 
