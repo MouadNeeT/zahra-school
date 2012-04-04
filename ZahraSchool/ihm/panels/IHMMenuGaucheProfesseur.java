@@ -137,7 +137,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton3.setBackground(new java.awt.Color(102, 153, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Visualiser la fiche d'un �l�ve");
+        jButton3.setText("Visualiser la fiche d'un élève");
         jButton3.setBorder(null);
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
