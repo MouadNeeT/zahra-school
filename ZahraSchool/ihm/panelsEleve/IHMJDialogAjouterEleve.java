@@ -87,9 +87,9 @@ public class IHMJDialogAjouterEleve extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         panelsEleve.IHMChoixEleve2 F1 = new panelsEleve.IHMChoixEleve2(f);
+        this.setVisible(false);
         f.setPanel(F1);
-        // quitte le dialog
-        System.exit(0);
+ 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
