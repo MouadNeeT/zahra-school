@@ -39,6 +39,7 @@ public class IHMJDialogAjouterEleve extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jButton1.setText("OK");
+        jButton1.setAlignmentY(1.0F);
 
         jLabel1.setText("L'eleve a bien été ajouté");
 
