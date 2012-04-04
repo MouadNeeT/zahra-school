@@ -17,12 +17,11 @@ public class Main {
 		 * J'y ai mis un commentaire.
 		 */
 		FFondFenetreProfesseur fenetreFondProfesseur =  new FFondFenetreProfesseur();
-                panels.FaireLapelle1 f1 = new panels.FaireLapelle1(fenetreFondProfesseur);
-                fenetreFondProfesseur.setPanel(f1);
+                panelsEleve.IHMChoixEleve2 F1 = new panelsEleve.IHMChoixEleve2(fenetreFondProfesseur);
+                fenetreFondProfesseur.setPanel(F1);
 		// TODO Auto-generated method stub
 		
-		
-
+	
 	}
 
 }
