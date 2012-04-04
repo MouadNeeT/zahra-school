@@ -86,7 +86,7 @@
               </Border>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Curseur par d&#xe9;faut"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[206, 93]"/>
@@ -128,7 +128,7 @@
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Marwan\Documents\ImageVisualiserGroupe.png"/>
+                  <Image iconType="3" name="/ImageVisualiserGroupe.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Image"/>
               </Properties>
@@ -150,7 +150,7 @@
                   <Border info="null"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur en forme de main"/>
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Events>
@@ -172,7 +172,7 @@
               </Border>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Curseur par d&#xe9;faut"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[206, 93]"/>
@@ -208,7 +208,7 @@
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Marwan\Documents\ImageajouterGroupe.png"/>
+                  <Image iconType="3" name="/ImageajouterGroupe.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Image"/>
               </Properties>
@@ -230,7 +230,7 @@
                   <Border info="null"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur en forme de main"/>
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Events>
@@ -252,7 +252,7 @@
               </Border>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Curseur par d&#xe9;faut"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[206, 93]"/>
@@ -294,7 +294,7 @@
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Marwan\Documents\ImageSupprimerGroupe.png"/>
+                  <Image iconType="3" name="/ImageSupprimerGroupe.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Image"/>
               </Properties>
@@ -316,7 +316,7 @@
                   <Border info="null"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur en forme de main"/>
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Events>
@@ -338,7 +338,7 @@
               </Border>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Curseur par d&#xe9;faut"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[206, 93]"/>
@@ -394,7 +394,7 @@
                   <Border info="null"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur en forme de main"/>
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Events>
@@ -404,7 +404,7 @@
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Marwan\Documents\ImageModifierGroupe.png"/>
+                  <Image iconType="3" name="/ImageModifierGroupe.png"/>
                 </Property>
               </Properties>
             </Component>

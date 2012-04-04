@@ -46,7 +46,7 @@ public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
         jPanel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel15.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marwan\\Documents\\ImageVisualiserGroupe.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageVisualiserGroupe.png"))); // NOI18N
         jLabel5.setText("Image");
 
         jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
@@ -55,7 +55,7 @@ public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
         jToggleButton3.setText("Visualiser un groupe");
         jToggleButton3.setToolTipText("Pour visualiser un groupe, cliquez ici.");
         jToggleButton3.setBorder(null);
-        jToggleButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jToggleButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton3ActionPerformed(evt);
@@ -92,7 +92,7 @@ public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
         jPanel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel17.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marwan\\Documents\\ImageajouterGroupe.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageajouterGroupe.png"))); // NOI18N
         jLabel7.setText("Image");
 
         jToggleButton5.setBackground(new java.awt.Color(255, 255, 255));
@@ -101,7 +101,7 @@ public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
         jToggleButton5.setText("Ajouter un groupe");
         jToggleButton5.setToolTipText("Pour ajouter un groupe, cliquez ici.");
         jToggleButton5.setBorder(null);
-        jToggleButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jToggleButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton5ActionPerformed(evt);
@@ -134,7 +134,7 @@ public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
         jPanel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel18.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marwan\\Documents\\ImageSupprimerGroupe.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageSupprimerGroupe.png"))); // NOI18N
         jLabel4.setText("Image");
 
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
@@ -143,7 +143,7 @@ public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
         jToggleButton6.setText("Supprimer un groupe");
         jToggleButton6.setToolTipText("Pour supprimer un groupe, cliquez ici.");
         jToggleButton6.setBorder(null);
-        jToggleButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jToggleButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton6ActionPerformed(evt);
@@ -186,14 +186,14 @@ public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
         jToggleButton2.setText("Modifier un groupe");
         jToggleButton2.setToolTipText("Pour modifier un groupe, cliquez ici.");
         jToggleButton2.setBorder(null);
-        jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton2ActionPerformed(evt);
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marwan\\Documents\\ImageModifierGroupe.png")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageModifierGroupe.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
