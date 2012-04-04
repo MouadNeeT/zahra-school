@@ -61,10 +61,7 @@ public class FFondFenetreProfesseur extends JFrame{
             if(F)
             panel1.add(menuGauche, BorderLayout.WEST);
             else
-             panel1.removeAll();
-             /*  panel1.add(menuGauche, BorderLayout.WEST);*/
-	     panel1.add(barreHaut, BorderLayout.NORTH);
-             panel1.add(barreBas, BorderLayout.SOUTH);
+             panel1.remove(menuGauche);
         }
 
 }
