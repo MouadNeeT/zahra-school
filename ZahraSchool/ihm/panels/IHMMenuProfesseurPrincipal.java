@@ -18,7 +18,9 @@ package panels;
 public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 
     /** Creates new form IHMMenuProfesseurPrincipal */
-    public IHMMenuProfesseurPrincipal() {
+    frames.FFondFenetreProfesseur f2;
+    public IHMMenuProfesseurPrincipal(frames.FFondFenetreProfesseur f2) {
+        this.f2 = f2;
         initComponents();
     }
 
@@ -163,11 +165,8 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(6, 6, 6)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(boutonGestionEleve)
-                            .addComponent(jLabel5)))
+                    .addComponent(boutonGestionEleve)
+                    .addComponent(jLabel5)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,13 +272,11 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(boutonGestionProfesseur)
                             .addComponent(jLabel15))
                         .addContainerGap(75, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17)
                             .addComponent(jLabel16)
