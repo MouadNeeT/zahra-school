@@ -1,5 +1,8 @@
 package panelsAdministrateur;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
@@ -18,18 +21,23 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle;
+
+import panels.IHMMenuProfesseurPrincipal;
 
 import frames.FFondFenetreAdministrateur;
+import frames.FFondFenetreProfesseur;
 
 
 public class IHMConnexion extends JPanel {
 	
 	String typePersonne = "Professeur";
 
-	frames.FFondFenetreAdministrateur f;
+	frames.FFondFenetreAdministrateur f1;
+	frames.FFondFenetreProfesseur f2;
     /** Creates new form Connexion2 */
-    public IHMConnexion(frames.FFondFenetreAdministrateur f) {
-    	this.f = f;
+    public IHMConnexion(frames.FFondFenetreAdministrateur f1, frames.FFondFenetreProfesseur f2) {
+    	this.f1 = f1;
+    	this.f2 = f2;
         initComponents();
     }
 
@@ -144,14 +152,22 @@ public class IHMConnexion extends JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    	
+    	System.out.println(typePersonne);
     	if (typePersonne == "Administrateur"){
-    		f = new FFondFenetreAdministrateur();
-    		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f);
-    		f.setPanel(menuPrincipal);
+    		f1 = new FFondFenetreAdministrateur();
+    		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f1);
+    		f1.setPanel(menuPrincipal);
     	}
-    	//frame = new FFondFenetreAdministrateur();
-    	//
+    	else{
+    		f2 = new FFondFenetreProfesseur();
+    		JPanel panel = new JPanel(new BorderLayout());
+    		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
+    		//panel.add(menuPrincipal2, BorderLayout.CENTER);
+    		//panel.setBackground(Color.BLACK);
+    		f2.setPanel(menuPrincipal2);
+    		f2.setLocationRelativeTo(null);
+    		f2.setVisible(true); 
+    	}
 }
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
