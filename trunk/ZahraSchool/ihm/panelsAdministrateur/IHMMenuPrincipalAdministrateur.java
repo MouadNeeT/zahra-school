@@ -1,11 +1,18 @@
 package panelsAdministrateur;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JPanel;
+
+import frames.FFondFenetreAdministrateur;
 
 
 public class IHMMenuPrincipalAdministrateur extends JPanel{
 	
-	public IHMMenuPrincipalAdministrateur(){
+	frames.FFondFenetreAdministrateur f;
+	
+	public IHMMenuPrincipalAdministrateur(frames.FFondFenetreAdministrateur f){
+		this.f = f;
 		initComponents();
 	}
 
@@ -229,18 +236,38 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
 
         private void boutonFicheProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
+        	//f = new FFondFenetreAdministrateur();
+        	JPanel panel = new JPanel(new BorderLayout());
+        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur();
+    		IHMVisualiserProfesseur visualiser = new IHMVisualiserProfesseur(f);
+        	panel.add(visualiser, BorderLayout.CENTER);
+        	panel.add(menuAdminGauche, BorderLayout.WEST);
+    		f.setPanel(panel);
         }
 
         private void boutonSupprimerProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
+        	
         }
 
         private void boutonAjouterProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
+        	JPanel panel = new JPanel(new BorderLayout());
+        	IHMAjouterProfesseur ajouterProfesseur = new IHMAjouterProfesseur(f);
+        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur();
+        	panel.add(ajouterProfesseur, BorderLayout.CENTER);
+        	panel.add(menuAdminGauche, BorderLayout.WEST);
+    		f.setPanel(panel);
         }
 
         private void boutonModifierProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
+        	JPanel panel = new JPanel(new BorderLayout());
+        	IHMModifierProfesseur modifierProfesseur = new IHMModifierProfesseur(f);
+        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur();
+        	panel.add(modifierProfesseur, BorderLayout.CENTER);
+        	panel.add(menuAdminGauche, BorderLayout.WEST);
+    		f.setPanel(panel);
         }
 
 
