@@ -20,7 +20,10 @@ public class FaireLapelle1 extends javax.swing.JPanel {
    frames.FFondFenetreProfesseur f;
     int Apelle = 3;
     public FaireLapelle1(frames.FFondFenetreProfesseur f) {
-       
+   /*  setLayout(new BorderLayout());
+       panelsAdministrateur.IHMBarreVision bv = new  panelsAdministrateur.IHMBarreVision();
+       bv.setVisible(true);
+       add(bv,BorderLayout.NORTH);*/
         this.f=f;
         initComponents();
          jLabel5.setVisible(false);
