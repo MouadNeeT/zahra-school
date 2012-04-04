@@ -16,10 +16,12 @@ package panelsEleve;
  * @author alexandre
  */
 public class IHMJDialogAjouterEleve extends javax.swing.JDialog {
+    frames.FFondFenetreProfesseur f;
 
     /** Creates new form IHMJDialogAjouterEleve */
-    public IHMJDialogAjouterEleve(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public IHMJDialogAjouterEleve(frames.FFondFenetreProfesseur f, boolean modal) {
+        super(f, modal);
+        this.f=f;
         initComponents();
     }
 
@@ -40,6 +42,11 @@ public class IHMJDialogAjouterEleve extends javax.swing.JDialog {
 
         jButton1.setText("OK");
         jButton1.setAlignmentY(1.0F);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("L'eleve a bien été ajouté");
 
@@ -78,22 +85,18 @@ public class IHMJDialogAjouterEleve extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        panelsEleve.IHMChoixEleve2 F1 = new panelsEleve.IHMChoixEleve2(f);
+        f.setPanel(F1);
+        // quitte le dialog
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
     * @param args the command line arguments
     */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                IHMJDialogAjouterEleve dialog = new IHMJDialogAjouterEleve(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
