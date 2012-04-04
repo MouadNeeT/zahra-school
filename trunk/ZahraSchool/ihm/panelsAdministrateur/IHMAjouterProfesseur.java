@@ -1,5 +1,7 @@
 package panelsAdministrateur;
 
+import frames.FFondFenetreAdministrateur;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -18,12 +20,14 @@ package panelsAdministrateur;
  */
 public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
+	FFondFenetreAdministrateur f;
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	/** Creates new form InterfaceAjouterProfesseur */
-    public IHMAjouterProfesseur() {
+    public IHMAjouterProfesseur(FFondFenetreAdministrateur f) {
+    	this.f = f;
         initComponents();
     }
 
