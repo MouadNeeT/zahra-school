@@ -235,7 +235,8 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-        // TODO add your handling code here:
+       IHMSupprimerEleve SE = new IHMSupprimerEleve(f);
+       f.setPanel(SE);
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
@@ -244,13 +245,13 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        IHMRechercheEleve RE = new IHMRechercheEleve(f,2);
+        IHMRechercherEleve RE = new IHMRechercherEleve(f,2);
         f.setPanel(RE);
 
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        IHMRechercheEleve RE = new IHMRechercheEleve(f,1);
+        IHMRechercherEleve RE = new IHMRechercherEleve(f,1);
         f.setPanel(RE);
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 

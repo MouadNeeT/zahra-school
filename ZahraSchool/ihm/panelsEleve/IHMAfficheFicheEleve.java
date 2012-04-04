@@ -229,7 +229,7 @@ frames.FFondFenetreProfesseur f;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
   
-      IHMRechercheEleve IH = new IHMRechercheEleve(f,1);
+      IHMRechercherEleve IH = new IHMRechercherEleve(f,1);
       f.setPanel(IH);
     
 }//GEN-LAST:event_jButton2ActionPerformed

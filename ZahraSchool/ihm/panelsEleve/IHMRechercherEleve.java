@@ -17,9 +17,11 @@ package panelsEleve;
  */
 public class IHMRechercherEleve extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
+ int c;
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMRechercherEleve( frames.FFondFenetreProfesseur f) {
+    public IHMRechercherEleve( frames.FFondFenetreProfesseur f,int i) {
         this.f=f;
+        c=i;
         initComponents();
     }
 
@@ -165,11 +167,22 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    if(c==1)
+    {
+       IHMAfficheFicheEleve AE = new IHMAfficheFicheEleve(f);
+       f.setPanel(AE);
+    }
+    else
+    {
+       IHMModifierEleve AE = new IHMModifierEleve(f);
+       f.setPanel(AE);
+    }
+
 }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       IHMChoixEleve2 CE = new IHMChoixEleve2(f);
+       f.setPanel(CE);
 }//GEN-LAST:event_jButton2ActionPerformed
 
 
