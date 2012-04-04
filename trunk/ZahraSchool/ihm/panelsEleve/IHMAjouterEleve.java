@@ -337,12 +337,13 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+      panelsEleve.IHMJDialogAjouterEleve d1 = new panelsEleve.IHMJDialogAjouterEleve(f,true);
+      d1.setLocation(300,200);
+      d1.setVisible(true);  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      panelsEleve.IHMJDialogAjouterEleve d1 = new panelsEleve.IHMJDialogAjouterEleve(f,true);
-      d1.setVisible(true);
+      
       //panelsEleve.IHMChoixEleve2 F1 = new panelsEleve.IHMChoixEleve2(f);
       //f.setPanel(F1);
     }//GEN-LAST:event_jButton2ActionPerformed
