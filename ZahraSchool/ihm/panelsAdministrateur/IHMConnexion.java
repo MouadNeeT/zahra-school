@@ -61,7 +61,7 @@ public class IHMConnexion extends JPanel {
 
         jLabel4.setText("S'identifier en tant que :");
 
-        jLabel3.setText("Identifiant ou mot de passe oublié?");
+        jLabel3.setText("Identifiant ou mot de passe oubliï¿½?");
 
         jTextField1.setText("[a-z][A-Z][0-9]");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {

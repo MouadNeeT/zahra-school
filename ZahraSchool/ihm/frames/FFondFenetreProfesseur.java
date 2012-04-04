@@ -18,7 +18,7 @@ import panelsAdministrateur.*;
 
 public class FFondFenetreProfesseur extends JFrame{
 
-    IHMBarreHautProfesseur barreHaut = new IHMBarreHautProfesseur();
+          IHMBarreHautProfesseur barreHaut = new IHMBarreHautProfesseur(this);
 	IHMMenuGaucheProfesseur menuGauche = new IHMMenuGaucheProfesseur();
 	IHMBarreBas barreBas = new IHMBarreBas();
         JPanel panel1 = new JPanel(new BorderLayout());
@@ -55,6 +55,16 @@ public class FFondFenetreProfesseur extends JFrame{
 		setVisible(true);
 		
         }
-	
+        
+        public void setMenuGauche(Boolean F)
+        {
+            if(F)
+            panel1.add(menuGauche, BorderLayout.WEST);
+            else
+             panel1.removeAll();
+             /*  panel1.add(menuGauche, BorderLayout.WEST);*/
+	     panel1.add(barreHaut, BorderLayout.NORTH);
+             panel1.add(barreBas, BorderLayout.SOUTH);
+        }
 
 }
