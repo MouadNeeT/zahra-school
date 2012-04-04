@@ -157,6 +157,7 @@ public class IHMConnexion extends JPanel {
     		f1 = new FFondFenetreAdministrateur();
     		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f1);
     		f1.setPanel(menuPrincipal);
+
     	}
     	else{
     		f2 = new FFondFenetreProfesseur();
@@ -167,6 +168,7 @@ public class IHMConnexion extends JPanel {
     		f2.setPanel(menuPrincipal2);
     		f2.setLocationRelativeTo(null);
     		f2.setVisible(true); 
+                f2.setMenuGauche(false);
     	}
 }
 
