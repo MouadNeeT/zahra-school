@@ -61,6 +61,9 @@
         <Property name="text" type="java.lang.String" value="OK"/>
         <Property name="alignmentY" type="float" value="1.0"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
