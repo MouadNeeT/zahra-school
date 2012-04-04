@@ -59,9 +59,9 @@ public class FFondFenetreProfesseur extends JFrame{
         public void setMenuGauche(Boolean F)
         {
             if(F)
-            panel1.add(menuGauche, BorderLayout.WEST);
+            menuGauche.setVisible(true);
             else
-             panel1.remove(menuGauche);
+            menuGauche.setVisible(false);
         }
 
 }
