@@ -196,8 +196,9 @@ public class FaireLapelle3 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        FaireLapelle1 f1 = new FaireLapelle1(f);
-        f.setPanel(f1);
+         IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f);
+        f.setPanel(menuPrincipal2);
+        f.setMenuGauche(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
