@@ -17,9 +17,10 @@ package panelsEleve;
  */
 public class IHMAfficheFicheEleve extends javax.swing.JPanel {
 frames.FFondFenetreProfesseur f;
-    /** Creates new form IHMAfficheFicheEleve */
+
     public IHMAfficheFicheEleve(frames.FFondFenetreProfesseur f) {
         this.f=f;
+     
         initComponents();
     }
 
@@ -227,7 +228,10 @@ frames.FFondFenetreProfesseur f;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      // TODO add your handling code here:
+  
+      IHMRechercheEleve IH = new IHMRechercheEleve(f,1);
+      f.setPanel(IH);
+    
 }//GEN-LAST:event_jButton2ActionPerformed
 
 
