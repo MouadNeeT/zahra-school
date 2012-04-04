@@ -35,7 +35,6 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 
         jPanel7 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         boutonGestionGroupe = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -43,7 +42,6 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         boutonGestionEleve = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -51,10 +49,8 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         boutonAppel = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         boutonGestionProfesseur = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -64,14 +60,12 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication6/gestionGroupe.png"))); // NOI18N
-
         boutonGestionGroupe.setBackground(new java.awt.Color(255, 255, 255));
-        boutonGestionGroupe.setFont(new java.awt.Font("Tahoma", 1, 12));
+        boutonGestionGroupe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         boutonGestionGroupe.setForeground(new java.awt.Color(0, 0, 204));
         boutonGestionGroupe.setText("Gestion des groupes");
         boutonGestionGroupe.setBorder(null);
-        boutonGestionGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boutonGestionGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boutonGestionGroupe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonGestionGroupeActionPerformed(evt);
@@ -93,9 +87,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -112,34 +104,29 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(boutonGestionGroupe)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel13)))
+                .addComponent(boutonGestionGroupe)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication6/gestionEleve.png"))); // NOI18N
-
         boutonGestionEleve.setBackground(new java.awt.Color(255, 255, 255));
-        boutonGestionEleve.setFont(new java.awt.Font("Tahoma", 1, 12));
+        boutonGestionEleve.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         boutonGestionEleve.setForeground(new java.awt.Color(0, 0, 204));
         boutonGestionEleve.setText("Gestion des élèves");
         boutonGestionEleve.setBorder(null);
-        boutonGestionEleve.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boutonGestionEleve.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boutonGestionEleve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonGestionEleveActionPerformed(evt);
@@ -161,14 +148,14 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(6, 6, 6)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boutonGestionEleve)
-                    .addComponent(jLabel5)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(boutonGestionEleve)
+                            .addComponent(jLabel5)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addComponent(jLabel7)
@@ -180,18 +167,15 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(boutonGestionEleve)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8)))
+                .addComponent(boutonGestionEleve)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
                 .addContainerGap())
@@ -200,14 +184,12 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication6/gestionFaireLAppel.png"))); // NOI18N
-
         boutonAppel.setBackground(new java.awt.Color(255, 255, 255));
-        boutonAppel.setFont(new java.awt.Font("Tahoma", 1, 14));
+        boutonAppel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         boutonAppel.setForeground(new java.awt.Color(0, 204, 204));
         boutonAppel.setText("Faire l'appel");
         boutonAppel.setBorder(null);
-        boutonAppel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boutonAppel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boutonAppel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonAppelActionPerformed(evt);
@@ -219,18 +201,12 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addGap(54, 54, 54)
+                .addGap(64, 64, 64)
                 .addComponent(boutonAppel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(73, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addGap(24, 24, 24))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addComponent(boutonAppel)
@@ -240,14 +216,12 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication6/gestionProfesseur.png"))); // NOI18N
-
         boutonGestionProfesseur.setBackground(new java.awt.Color(255, 255, 255));
-        boutonGestionProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12));
+        boutonGestionProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         boutonGestionProfesseur.setForeground(new java.awt.Color(0, 0, 204));
         boutonGestionProfesseur.setText("Gestion des professeurs");
         boutonGestionProfesseur.setBorder(null);
-        boutonGestionProfesseur.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boutonGestionProfesseur.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boutonGestionProfesseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonGestionProfesseurActionPerformed(evt);
@@ -267,9 +241,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(16, 16, 16)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,16 +261,13 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(boutonGestionProfesseur)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel18))))
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel18))
         );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -340,7 +309,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,7 +321,9 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boutonGestionEleveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionEleveActionPerformed
-        // TODO add your handling code here:
+        panelsEleve.IHMChoixEleve2 CE = new panelsEleve.IHMChoixEleve2(f2);
+        f2.setPanel(CE);
+        f2.setMenuGauche(true);
     }//GEN-LAST:event_boutonGestionEleveActionPerformed
 
     private void boutonGestionGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionGroupeActionPerformed
@@ -373,7 +344,6 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     private javax.swing.JButton boutonGestionEleve;
     private javax.swing.JButton boutonGestionGroupe;
     private javax.swing.JButton boutonGestionProfesseur;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -383,9 +353,6 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
