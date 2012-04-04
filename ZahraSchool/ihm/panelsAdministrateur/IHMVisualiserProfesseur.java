@@ -6,7 +6,9 @@ import javax.swing.JPanel;
 
 public class IHMVisualiserProfesseur extends JPanel{
 	
-	public IHMVisualiserProfesseur(){
+	frames.FFondFenetreAdministrateur f;
+	
+	public IHMVisualiserProfesseur(frames.FFondFenetreAdministrateur f){
 		initComponents();
 	}
 	
