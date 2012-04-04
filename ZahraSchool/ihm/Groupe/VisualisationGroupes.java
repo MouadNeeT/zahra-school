@@ -10,11 +10,12 @@ package Groupe;
  * @author Marwan
  */
 public class VisualisationGroupes extends javax.swing.JPanel {
-
+frames.FFondFenetreProfesseur f;
     /**
      * Creates new form VisualisationGroupes
      */
-    public VisualisationGroupes() {
+    public VisualisationGroupes(frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 

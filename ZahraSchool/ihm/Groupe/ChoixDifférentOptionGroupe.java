@@ -10,11 +10,12 @@ package Groupe;
  * @author Marwan
  */
 public class ChoixDifférentOptionGroupe extends javax.swing.JPanel {
-
+frames.FFondFenetreProfesseur f;
     /**
      * Creates new form ChoixDifférentOptionGroupe
      */
-    public ChoixDifférentOptionGroupe() {
+    public ChoixDifférentOptionGroupe(frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 
