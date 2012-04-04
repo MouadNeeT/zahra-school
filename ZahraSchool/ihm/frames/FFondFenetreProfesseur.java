@@ -1,5 +1,10 @@
 package frames;
 
+
+
+
+
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
@@ -16,7 +21,6 @@ public class FFondFenetreProfesseur extends JFrame{
     IHMBarreHautProfesseur barreHaut = new IHMBarreHautProfesseur();
 	IHMMenuGaucheProfesseur menuGauche = new IHMMenuGaucheProfesseur();
 	IHMBarreBas barreBas = new IHMBarreBas();
-	IHMMenuPrincipalAdministrateur principalMenu = new IHMMenuPrincipalAdministrateur();
         JPanel panel1 = new JPanel(new BorderLayout());
         JPanel t=null;
           
