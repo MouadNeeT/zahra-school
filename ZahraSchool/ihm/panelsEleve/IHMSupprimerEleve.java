@@ -15,10 +15,10 @@ package panelsEleve;
  *
  * @author alexandre
  */
-public class IHMRechercheEleve extends javax.swing.JPanel {
+public class IHMSupprimerEleve extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMRechercheEleve( frames.FFondFenetreProfesseur f) {
+    public IHMSupprimerEleve( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
     }
@@ -45,7 +45,7 @@ public class IHMRechercheEleve extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder("Supprimer un eleve"));
+        setBorder(javax.swing.BorderFactory.createTitledBorder("Recherche d'un eleve"));
 
         jLabel2.setText("Rentrer le prénom de l'eleve :");
 
@@ -83,7 +83,7 @@ public class IHMRechercheEleve extends javax.swing.JPanel {
 
         jLabel4.setText("Groupe selectionne :");
 
-        jButton1.setText("Supprimer");
+        jButton1.setText("Rechercher");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -146,7 +146,7 @@ public class IHMRechercheEleve extends javax.swing.JPanel {
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(24, Short.MAX_VALUE))
+                        .addContainerGap(19, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
