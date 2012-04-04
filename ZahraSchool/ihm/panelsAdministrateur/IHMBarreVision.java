@@ -2,13 +2,20 @@ package panelsAdministrateur;
 
 import javax.swing.JPanel;
 
+import frames.FFondFenetreProfesseur;
+
+import panels.FaireLapelle2;
+
 public class IHMBarreVision extends JPanel{
+	
+	frames.FFondFenetreProfesseur f;
 	
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public IHMBarreVision() {
+	public IHMBarreVision(FFondFenetreProfesseur f2) {
+		this.f = f2;
         initComponents();
     }
 
@@ -34,6 +41,11 @@ public class IHMBarreVision extends JPanel{
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Evi and Max\\Desktop\\images.jpg")); // NOI18N
         jButton1.setText("Retour page d'accueil");
         jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            	jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -89,6 +101,15 @@ public class IHMBarreVision extends JPanel{
             .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    	/*
+    	IHMMenuPrincipalAdministration menuPrincipal = 
+        f2.setVisible(true);
+        f.setPanel(f2);}*/
+    	
+    }
 
 
     // Variables declaration - do not modify
