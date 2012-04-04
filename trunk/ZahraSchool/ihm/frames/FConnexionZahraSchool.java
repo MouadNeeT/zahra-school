@@ -13,9 +13,10 @@ import panelsAdministrateur.IHMConnexion;
 public class FConnexionZahraSchool extends JWindow{
 	
 	frames.FFondFenetreAdministrateur frame;
+	frames.FFondFenetreProfesseur f2;
 	JPanel panel = new JPanel();
     JPanel t=null;
-    IHMConnexion connexion = new IHMConnexion(frame);
+    IHMConnexion connexion = new IHMConnexion(frame, f2);
     
     public FConnexionZahraSchool(){
     	panel.add(connexion);
