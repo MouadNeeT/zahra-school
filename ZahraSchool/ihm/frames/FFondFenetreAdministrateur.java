@@ -9,11 +9,13 @@ import javax.swing.JPanel;
 import panels.IHMBarreBas;
 import panels.IHMBarreHautProfesseur;
 import panels.IHMMenuGaucheProfesseur;
+import panelsAdministrateur.IHMBarreHautAdministrateur;
 import panelsAdministrateur.IHMMenuPrincipalAdministrateur;
 
 public class FFondFenetreAdministrateur extends JFrame{
 
-	IHMBarreHautProfesseur barreHaut = new IHMBarreHautProfesseur();
+	//FFondFenetreAdministrateur f;
+	IHMBarreHautAdministrateur barreHaut = new IHMBarreHautAdministrateur(this);
 	
 	IHMBarreBas barreBas = new IHMBarreBas();
 	
