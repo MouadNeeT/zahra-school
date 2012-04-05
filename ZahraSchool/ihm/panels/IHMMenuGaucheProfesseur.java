@@ -1,4 +1,9 @@
 package panels;
+
+import panelsEleve.IHMAjouterEleve;
+import panelsEleve.IHMRechercherEleve;
+import panelsEleve.IHMSupprimerEleve;
+
 /**
  * <b>InterfaceMenuGauche est la classe repr�sentant un panel du menu de gauche</b>
  * <p>
@@ -43,12 +48,12 @@ package panels;
  */
 public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
 
-    /**
-	 * 
-	 */
+ 
+	 frames.FFondFenetreProfesseur f;
 	private static final long serialVersionUID = 1L;
 	/** Creates new form InterfaceMenuGaucheProfesseur */
-    public IHMMenuGaucheProfesseur() {
+    public IHMMenuGaucheProfesseur(frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 
@@ -483,23 +488,29 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     }// </editor-fold>                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsEleve.IHMChoixEleve2 CE = new panelsEleve.IHMChoixEleve2(f);
+        f.setPanel(CE);
+        
     }                                        
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+         IHMRechercherEleve RE = new IHMRechercherEleve(f,1);
+        f.setPanel(RE);
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+      IHMAjouterEleve AE = new IHMAjouterEleve(f);
+        f.setPanel(AE);  
     }                                        
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+         IHMRechercherEleve RE = new IHMRechercherEleve(f,2);
+        f.setPanel(RE);
     }                                        
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+      IHMSupprimerEleve SE = new IHMSupprimerEleve(f);
+       f.setPanel(SE);
     }                                        
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          

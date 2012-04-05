@@ -19,7 +19,7 @@ import panelsAdministrateur.*;
 public class FFondFenetreProfesseur extends JFrame{
 
           IHMBarreHautProfesseur barreHaut = new IHMBarreHautProfesseur(this);
-	IHMMenuGaucheProfesseur menuGauche = new IHMMenuGaucheProfesseur();
+	IHMMenuGaucheProfesseur menuGauche = new IHMMenuGaucheProfesseur(this);
 	IHMBarreBas barreBas = new IHMBarreBas();
         JPanel panel1 = new JPanel(new BorderLayout());
         JPanel t=null;
