@@ -11,6 +11,15 @@
 
 package panels;
 
+import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+
+import panelsAdministrateur.IHMBarreVisionGestionEleve;
+import panelsEleve.IHMChoixEleve2;
+import frames.FFondFenetreProfesseur;
+
+
 /**
  *
  * @author Evi and Max
@@ -76,7 +85,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             }
         });
 
-        jLabel10.setText("Vous avez la possibilité de :");
+        jLabel10.setText("Vous avez la possibilite de :");
 
         jLabel11.setText("- visualiser un groupe,");
 
@@ -86,7 +95,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 
         jLabel14.setText("- supprimer un groupe.");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionGroupe_1.png"))); // NOI18N
+        //jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("gestionGroupe_1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -136,7 +145,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         boutonGestionEleve.setBackground(new java.awt.Color(255, 255, 255));
         boutonGestionEleve.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         boutonGestionEleve.setForeground(new java.awt.Color(0, 0, 204));
-        boutonGestionEleve.setText("Gestion des élèves");
+        boutonGestionEleve.setText("Gestion des eleves");
         boutonGestionEleve.setBorder(null);
         boutonGestionEleve.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boutonGestionEleve.addActionListener(new java.awt.event.ActionListener() {
@@ -145,17 +154,17 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             }
         });
 
-        jLabel5.setText("Vous avez la possibilité de :");
+        jLabel5.setText("Vous avez la possibilite de :");
 
-        jLabel6.setText("- visualiser la fiche d'un élève,");
+        jLabel6.setText("- visualiser la fiche d'un eleve,");
 
-        jLabel7.setText("- ajouter un élève,");
+        jLabel7.setText("- ajouter un eleve,");
 
-        jLabel8.setText("- modifier la liste d'un élève,");
+        jLabel8.setText("- modifier la liste d'un eleve,");
 
-        jLabel9.setText("- supprimer un élève.");
+        jLabel9.setText("- supprimer un eleve.");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionEleve_1.png"))); // NOI18N
+        //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionEleve_1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -218,15 +227,15 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             }
         });
 
-        jLabel15.setText("Vous avez la possibilité de :");
+        jLabel15.setText("Vous avez la possibilite de :");
 
         jLabel16.setText("- visualiser la fiche d'un professeur,");
 
-        jLabel17.setText("- gérer des emplois du temps,");
+        jLabel17.setText("- gerer des emplois du temps,");
 
-        jLabel18.setText("- gérer les revenus,");
+        jLabel18.setText("- gerer les revenus,");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionProfesseur_1.png"))); // NOI18N
+        //jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionProfesseur_1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -284,7 +293,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionFaireLAppel_1.png"))); // NOI18N
+        //jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionFaireLAppel_1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -358,9 +367,15 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boutonGestionEleveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionEleveActionPerformed
-        panelsEleve.IHMChoixEleve2 CE = new panelsEleve.IHMChoixEleve2(f2);
-        f2.setPanel(CE);
+    	panelsEleve.IHMChoixEleve2 CE = new panelsEleve.IHMChoixEleve2(f2);
+        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f2);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(CE, BorderLayout.CENTER);
+        panel.add(barreVision, BorderLayout.NORTH);
+        f2.setPanel(panel);
         f2.setMenuGauche(true);
+        //f2.setMenuGauche(false);
+        //f2.setMenuGauche(true);
     }//GEN-LAST:event_boutonGestionEleveActionPerformed
 
     private void boutonGestionGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionGroupeActionPerformed
