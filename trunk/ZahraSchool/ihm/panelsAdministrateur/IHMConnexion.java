@@ -3,40 +3,43 @@ package panelsAdministrateur;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.LayoutStyle;
 
-
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.LayoutStyle;
-
+import panels.Horloge;
+import panels.IHMBarreVisionMenuPrincipal;
 import panels.IHMMenuProfesseurPrincipal;
 
 import frames.FFondFenetreAdministrateur;
 import frames.FFondFenetreProfesseur;
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-public class IHMConnexion extends JPanel {
-	
-	String typePersonne = "Professeur";
+/*
+ * IHMConnexionZahraSchool.java
+ *
+ * Created on 6 avr. 2012, 15:30:58
+ */
+
+
+
+/**
+ *
+ * @author Evi and Max
+ */
+public class IHMConnexion extends javax.swing.JPanel {
+
+    String typePersonne = "Professeur";
 
 	frames.FFondFenetreAdministrateur f1;
 	frames.FFondFenetreProfesseur f2;
-    /** Creates new form Connexion2 */
+    /** Creates new form IHMConnexionZahraSchool */
     public IHMConnexion(frames.FFondFenetreAdministrateur f1, frames.FFondFenetreProfesseur f2) {
-    	this.f1 = f1;
+        this.f1 = f1;
     	this.f2 = f2;
         initComponents();
     }
@@ -50,148 +53,230 @@ public class IHMConnexion extends JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
-        jLabel4 = new JLabel();
-        jLabel3 = new JLabel();
-        jTextField1 = new JTextField();
-        jLabel2 = new JLabel();
-        jButton1 = new JButton();
-        jComboBox1 = new JComboBox();
-        jTextField2 = new JTextField();
-        jLabel1 = new JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextFieldIdentifiant = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jPasswordFieldMotDePasse = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBoxIdentifiaction = new javax.swing.JComboBox();
+        jButtonIdentification = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jButtonIdentifiantMdpOublie = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
-        jLabel4.setText("S'identifier en tant que :");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("S'identifier"));
 
-        jLabel3.setText("Identifiant ou mot de passe oubliï¿½?");
+        jLabel1.setText("Identifiant :");
 
-        jTextField1.setText("[a-z][A-Z][0-9]");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldIdentifiant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldIdentifiantActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Identifiant :");
+        jLabel2.setText("Mot de passe :");
 
-        jButton1.setText("S'identifier");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordFieldMotDePasse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jPasswordFieldMotDePasseActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new DefaultComboBoxModel(new String[] { "Professeur", "Administrateur" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel3.setText("S'identifier en tant que :");
+
+        jComboBoxIdentifiaction.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Professeur", "Administrateur" }));
+        jComboBoxIdentifiaction.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	System.out.println(""+jComboBox1.getSelectedItem());
-            	if (jComboBox1.getSelectedItem() == typePersonne){
-            		typePersonne = "Professeur";
-            	}
-            	else typePersonne = "Administrateur";
+                jComboBoxIdentifiactionActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("ex : nom_professeur@gmail.com");
-        jTextField2.setToolTipText("null");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonIdentification.setText("S'identifier");
+        jButtonIdentification.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jButtonIdentificationActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Mot de passe :");
+        jLabel4.setText("Identifiant ou mot de passe oublié ?");
 
-        GroupLayout layout = new GroupLayout(this);
+        jButtonIdentifiantMdpOublie.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonIdentifiantMdpOublie.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonIdentifiantMdpOublie.setText("Obtenir son identifiant et/ou mot de passe");
+        jButtonIdentifiantMdpOublie.setBorder(null);
+        jButtonIdentifiantMdpOublie.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButtonIdentifiantMdpOublie.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonIdentifiantMdpOublie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIdentifiantMdpOublieActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel5.setText("ex : penom.nom@exemple.com");
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel6.setText("Caractères admis : [A-Z] [a-z] [0-9]");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(98, 98, 98)
+                            .addComponent(jButtonIdentification))
+                        .addComponent(jButtonIdentifiantMdpOublie))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBoxIdentifiaction, 0, 164, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                            .addComponent(jPasswordFieldMotDePasse, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                            .addComponent(jTextFieldIdentifiant, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE))))
+                .addGap(23, 23, 23))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(jLabel4)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextFieldIdentifiant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jPasswordFieldMotDePasse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jComboBoxIdentifiaction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48)
+                .addComponent(jButtonIdentification)
+                .addGap(16, 16, 16)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonIdentifiantMdpOublie)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 339, Short.MAX_VALUE)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextField2, GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
-                            .addComponent(jLabel4)
-                            .addComponent(jComboBox1, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 371, Short.MAX_VALUE)
-            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel2)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2,GroupLayout.PREFERRED_SIZE, 27,GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel4)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton1)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(35, 35, 35))
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jPasswordFieldMotDePasseActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-}
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButtonIdentifiantMdpOublieActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    	System.out.println(typePersonne);
+    	JOptionPane jop = new JOptionPane();
+        //ImageIcon img = new ImageIcon("images/cysboy.gif");
+
+    	String mess = "Votre identifiant correspond à \n";
+        mess += "votre addresse de messagerie, \n";
+        mess += "Votre mot de passe correspond \n";
+        mess += "également au mot de passe de \n";
+        mess += "votre messagerie.\n";
+
+        jop.showMessageDialog(null, mess, "Oublie ?", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    private void jComboBoxIdentifiactionActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        System.out.println(""+jComboBoxIdentifiaction.getSelectedItem());
+            	if (jComboBoxIdentifiaction.getSelectedItem() == typePersonne){
+            		typePersonne = "Professeur";
+            	}
+            	else typePersonne = "Administrateur";
+    }
+
+    private void jTextFieldIdentifiantActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void jButtonIdentificationActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        System.out.println(typePersonne);
     	if (typePersonne == "Administrateur"){
     		f1 = new FFondFenetreAdministrateur();
+    		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
     		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f1);
-    		f1.setPanel(menuPrincipal);
-
+    		JPanel panel = new JPanel(new BorderLayout());    		
+    		panel.add(new Horloge(), BorderLayout.WEST);
+    		panel.add(menuPrincipal, BorderLayout.EAST);
+    		panel.add(visionMenu, BorderLayout.NORTH);
+    		f1.setPanel(panel);
+    		f1.setLocationRelativeTo(null);
+    		f1.setVisible(true);
     	}
     	else{
-    		f2 = new FFondFenetreProfesseur();
+    		f2 = new FFondFenetreProfesseur();   		
     		JPanel panel = new JPanel(new BorderLayout());
+    		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
     		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
-    		//panel.add(menuPrincipal2, BorderLayout.CENTER);
-    		//panel.setBackground(Color.BLACK);
-    		f2.setPanel(menuPrincipal2);
+    		panel.add(menuPrincipal2, BorderLayout.CENTER);
+    		panel.add(visionMenu, BorderLayout.NORTH);
+    		panel.add(new Horloge(), BorderLayout.WEST);
+    		f2.setPanel(panel);
     		f2.setLocationRelativeTo(null);
-    		f2.setVisible(true); 
-                f2.setMenuGauche(false);
+    		f2.setVisible(true);
+            f2.setMenuGauche(false);
     	}
-}
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-
-}
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-}
+    }
 
 
     // Variables declaration - do not modify
-    private JButton jButton1;
-    private JComboBox jComboBox1;
-    private JLabel jLabel1;
-    private JLabel jLabel2;
-    private JLabel jLabel3;
-    private JLabel jLabel4;
-    private JTextField jTextField1;
-    private JTextField jTextField2;
+    private javax.swing.JButton jButtonIdentifiantMdpOublie;
+    private javax.swing.JButton jButtonIdentification;
+    private javax.swing.JComboBox jComboBoxIdentifiaction;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordFieldMotDePasse;
+    private javax.swing.JTextField jTextFieldIdentifiant;
     // End of variables declaration
 
 }
-
