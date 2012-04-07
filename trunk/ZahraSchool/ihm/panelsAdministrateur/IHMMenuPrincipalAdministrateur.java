@@ -9,6 +9,10 @@ import frames.FFondFenetreAdministrateur;
 
 public class IHMMenuPrincipalAdministrateur extends JPanel{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	frames.FFondFenetreAdministrateur f;
 	
 	public IHMMenuPrincipalAdministrateur(frames.FFondFenetreAdministrateur f){
@@ -36,7 +40,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel2.setBackground(new java.awt.Color(255, 255, 255));
             jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visualiserProfesseur.png"))); // NOI18N
+            jLabel1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageVisualiserProfesseur.png")); // NOI18N
 
             boutonFicheProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonFicheProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -76,7 +80,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel3.setBackground(new java.awt.Color(255, 255, 255));
             jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            //jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeAjouterProfesseur.png"))); // NOI18N
+            jLabel3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageAjouterProfesseur.png")); // NOI18N
 
             boutonAjouterProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonAjouterProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -116,7 +120,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel4.setBackground(new java.awt.Color(255, 255, 255));
             jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            //jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeModifierProfesseur.png"))); // NOI18N
+            jLabel2.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageModifierProfesseur.png")); // NOI18N
 
             boutonModifierProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonModifierProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -156,7 +160,7 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             jPanel5.setBackground(new java.awt.Color(255, 255, 255));
             jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            //jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconeSupprimerProfesseur.png"))); // NOI18N
+            jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageSupprimerProfesseur.png")); // NOI18N
 
             boutonSupprimerProfesseur.setBackground(new java.awt.Color(255, 255, 255));
             boutonSupprimerProfesseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -238,35 +242,59 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
             // TODO add your handling code here:
         	//f = new FFondFenetreAdministrateur();
         	JPanel panel = new JPanel(new BorderLayout());
-        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur();
+        	JPanel visualiserETVision = new JPanel(new BorderLayout());
+        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
     		IHMVisualiserProfesseur visualiser = new IHMVisualiserProfesseur(f);
-        	panel.add(visualiser, BorderLayout.CENTER);
+    		visualiserETVision.add(visualiser, BorderLayout.NORTH);
+    		
+    		visualiserETVision.add(visualiser, BorderLayout.CENTER);
+    		visualiserETVision.add(new IHMBarreVisionVisualiserProfesseur(f), BorderLayout.NORTH);
         	panel.add(menuAdminGauche, BorderLayout.WEST);
+        	panel.add(visualiserETVision, BorderLayout.CENTER);
     		f.setPanel(panel);
         }
 
         private void boutonSupprimerProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
+        	JPanel panel = new JPanel(new BorderLayout());
+        	JPanel visualiserETVision = new JPanel(new BorderLayout());
+        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+    		IHMModifierSupprimerProfesseur visualiser = new IHMModifierSupprimerProfesseur(f);
+    		visualiserETVision.add(visualiser, BorderLayout.NORTH);
+    		
+    		visualiserETVision.add(visualiser, BorderLayout.CENTER);
+    		visualiserETVision.add(new IHMBarreVisionSupprimerProfesseur(f), BorderLayout.NORTH);
+        	panel.add(menuAdminGauche, BorderLayout.WEST);
+        	panel.add(visualiserETVision, BorderLayout.CENTER);
+    		f.setPanel(panel);
         	
         }
 
         private void boutonAjouterProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
         	JPanel panel = new JPanel(new BorderLayout());
-        	IHMAjouterProfesseur ajouterProfesseur = new IHMAjouterProfesseur(f);
-        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur();
-        	panel.add(ajouterProfesseur, BorderLayout.CENTER);
+        	JPanel visualiserETVision = new JPanel(new BorderLayout());
+        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+    		IHMAjouterProfesseur ajouter = new IHMAjouterProfesseur(f);		
+    		visualiserETVision.add(ajouter, BorderLayout.EAST);
+    		visualiserETVision.add(new IHMBarreVisionAjouterProfesseur(f), BorderLayout.NORTH);
         	panel.add(menuAdminGauche, BorderLayout.WEST);
+        	panel.add(visualiserETVision, BorderLayout.CENTER);
     		f.setPanel(panel);
         }
 
         private void boutonModifierProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
         	JPanel panel = new JPanel(new BorderLayout());
-        	IHMModifierProfesseur modifierProfesseur = new IHMModifierProfesseur(f);
-        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur();
-        	panel.add(modifierProfesseur, BorderLayout.CENTER);
+        	JPanel visualiserETVision = new JPanel(new BorderLayout());
+        	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+        	IHMModifierSupprimerProfesseur visualiser = new IHMModifierSupprimerProfesseur(f);
+    		visualiserETVision.add(visualiser, BorderLayout.NORTH);
+    		
+    		visualiserETVision.add(visualiser, BorderLayout.CENTER);
+    		visualiserETVision.add(new IHMBarreVisionModifierProfesseur(f), BorderLayout.NORTH);
         	panel.add(menuAdminGauche, BorderLayout.WEST);
+        	panel.add(visualiserETVision, BorderLayout.CENTER);
     		f.setPanel(panel);
         }
 
