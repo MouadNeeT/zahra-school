@@ -277,11 +277,13 @@ frames.FFondFenetreProfesseur f;
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-        // TODO add your handling code here:
+        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,2);
+        f.setPanel(RG);
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
+        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,1);
+        f.setPanel(RG);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
