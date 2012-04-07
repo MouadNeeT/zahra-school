@@ -43,7 +43,7 @@ public class IHMBarreHautAdministrateur extends JPanel{
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
-        //jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ZarhaSchool.images/logoZahraSchool.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/logoZahraSchool.jpg")); // NOI18N
         jLabel4.setText("");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -96,8 +96,8 @@ public class IHMBarreHautAdministrateur extends JPanel{
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setForeground(new java.awt.Color(0, 0, 153));
-        //jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cadenas.png"))); // NOI18N
-        jButton1.setText("Se déconnecter");
+        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/cadenas1.png")); // NOI18N
+        jButton1.setText("Deconnexion");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
