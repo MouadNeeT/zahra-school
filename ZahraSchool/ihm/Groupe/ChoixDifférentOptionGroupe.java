@@ -31,15 +31,15 @@ frames.FFondFenetreProfesseur f;
         jPanel1 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jToggleButton3 = new javax.swing.JToggleButton();
+        BoutonVisualiserGroupe = new javax.swing.JToggleButton();
         jPanel17 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jToggleButton5 = new javax.swing.JToggleButton();
+        BoutonAjouterGroupe = new javax.swing.JToggleButton();
         jPanel18 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jToggleButton6 = new javax.swing.JToggleButton();
+        BoutonSupprimerGroupe = new javax.swing.JToggleButton();
         jPanel16 = new javax.swing.JPanel();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        BoutonModifierGroupe = new javax.swing.JToggleButton();
         jLabel6 = new javax.swing.JLabel();
 
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
@@ -50,16 +50,16 @@ frames.FFondFenetreProfesseur f;
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageVisualiserGroupe.png"))); // NOI18N
         jLabel5.setText("Image");
 
-        jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jToggleButton3.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton3.setText("Visualiser un groupe");
-        jToggleButton3.setToolTipText("Pour visualiser un groupe, cliquez ici.");
-        jToggleButton3.setBorder(null);
-        jToggleButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        BoutonVisualiserGroupe.setBackground(new java.awt.Color(255, 255, 255));
+        BoutonVisualiserGroupe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        BoutonVisualiserGroupe.setForeground(new java.awt.Color(0, 0, 204));
+        BoutonVisualiserGroupe.setText("Visualiser un groupe");
+        BoutonVisualiserGroupe.setToolTipText("Pour visualiser un groupe, cliquez ici.");
+        BoutonVisualiserGroupe.setBorder(null);
+        BoutonVisualiserGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BoutonVisualiserGroupe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                BoutonVisualiserGroupeActionPerformed(evt);
             }
         });
 
@@ -71,7 +71,7 @@ frames.FFondFenetreProfesseur f;
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoutonVisualiserGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
@@ -81,7 +81,7 @@ frames.FFondFenetreProfesseur f;
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BoutonVisualiserGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
@@ -96,16 +96,16 @@ frames.FFondFenetreProfesseur f;
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageajouterGroupe.png"))); // NOI18N
         jLabel7.setText("Image");
 
-        jToggleButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jToggleButton5.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton5.setText("Ajouter un groupe");
-        jToggleButton5.setToolTipText("Pour ajouter un groupe, cliquez ici.");
-        jToggleButton5.setBorder(null);
-        jToggleButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+        BoutonAjouterGroupe.setBackground(new java.awt.Color(255, 255, 255));
+        BoutonAjouterGroupe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        BoutonAjouterGroupe.setForeground(new java.awt.Color(0, 0, 204));
+        BoutonAjouterGroupe.setText("Ajouter un groupe");
+        BoutonAjouterGroupe.setToolTipText("Pour ajouter un groupe, cliquez ici.");
+        BoutonAjouterGroupe.setBorder(null);
+        BoutonAjouterGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BoutonAjouterGroupe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton5ActionPerformed(evt);
+                BoutonAjouterGroupeActionPerformed(evt);
             }
         });
 
@@ -117,7 +117,7 @@ frames.FFondFenetreProfesseur f;
                 .addContainerGap()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BoutonAjouterGroupe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
@@ -126,7 +126,7 @@ frames.FFondFenetreProfesseur f;
                 .addContainerGap()
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BoutonAjouterGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -138,16 +138,16 @@ frames.FFondFenetreProfesseur f;
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageSupprimerGroupe.png"))); // NOI18N
         jLabel4.setText("Image");
 
-        jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jToggleButton6.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton6.setText("Supprimer un groupe");
-        jToggleButton6.setToolTipText("Pour supprimer un groupe, cliquez ici.");
-        jToggleButton6.setBorder(null);
-        jToggleButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+        BoutonSupprimerGroupe.setBackground(new java.awt.Color(255, 255, 255));
+        BoutonSupprimerGroupe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        BoutonSupprimerGroupe.setForeground(new java.awt.Color(0, 0, 204));
+        BoutonSupprimerGroupe.setText("Supprimer un groupe");
+        BoutonSupprimerGroupe.setToolTipText("Pour supprimer un groupe, cliquez ici.");
+        BoutonSupprimerGroupe.setBorder(null);
+        BoutonSupprimerGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BoutonSupprimerGroupe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton6ActionPerformed(evt);
+                BoutonSupprimerGroupeActionPerformed(evt);
             }
         });
 
@@ -159,7 +159,7 @@ frames.FFondFenetreProfesseur f;
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoutonSupprimerGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel18Layout.setVerticalGroup(
@@ -169,10 +169,10 @@ frames.FFondFenetreProfesseur f;
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BoutonSupprimerGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47))
                     .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
                         .addContainerGap())))
         );
 
@@ -181,16 +181,17 @@ frames.FFondFenetreProfesseur f;
         jPanel16.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel16.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jToggleButton2.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton2.setText("Modifier un groupe");
-        jToggleButton2.setToolTipText("Pour modifier un groupe, cliquez ici.");
-        jToggleButton2.setBorder(null);
-        jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        BoutonModifierGroupe.setBackground(new java.awt.Color(255, 255, 255));
+        BoutonModifierGroupe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        BoutonModifierGroupe.setForeground(new java.awt.Color(0, 0, 204));
+        BoutonModifierGroupe.setText("Modifier un groupe");
+        BoutonModifierGroupe.setToolTipText("Pour modifier un groupe, cliquez ici.");
+        BoutonModifierGroupe.setBorder(null);
+        BoutonModifierGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BoutonModifierGroupe.setName("Button1");
+        BoutonModifierGroupe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                BoutonModifierGroupeActionPerformed(evt);
             }
         });
 
@@ -204,7 +205,7 @@ frames.FFondFenetreProfesseur f;
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BoutonModifierGroupe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
@@ -216,10 +217,12 @@ frames.FFondFenetreProfesseur f;
                         .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BoutonModifierGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
+
+        BoutonModifierGroupe.getAccessibleContext().setAccessibleName("bUTTON1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -269,7 +272,7 @@ frames.FFondFenetreProfesseur f;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
@@ -287,6 +290,10 @@ frames.FFondFenetreProfesseur f;
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton BoutonAjouterGroupe;
+    private javax.swing.JToggleButton BoutonModifierGroupe;
+    private javax.swing.JToggleButton BoutonSupprimerGroupe;
+    private javax.swing.JToggleButton BoutonVisualiserGroupe;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -296,9 +303,5 @@ frames.FFondFenetreProfesseur f;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JToggleButton jToggleButton5;
-    private javax.swing.JToggleButton jToggleButton6;
     // End of variables declaration//GEN-END:variables
 }
