@@ -172,8 +172,8 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
 }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     IHMSupprimerEleve SE = new IHMSupprimerEleve(f);
-     f.setPanel(SE);
+      IHMChoixEleve2 CE = new IHMChoixEleve2(f);
+      f.setPanel(CE);
 }//GEN-LAST:event_jButton2ActionPerformed
 
 
