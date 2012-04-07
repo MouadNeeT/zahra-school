@@ -20,11 +20,11 @@ public class Horloge  extends JPanel{
 	    JLabel heureAffichage = new JLabel("    " +heure.format(new Date()));
 	    JLabel dateAffichage = new JLabel("    " +date.format(new Date()));
 	    JLabel image = new JLabel();
-	    //image.setIcon(new ImageIcon("C://Users//Evi and Max//Desktop//horloge.jpg"));
+	    image.setIcon(new ImageIcon("../ZahraSchool/images/imageHeure.png"));
 	    panel.add(heureAffichage, BorderLayout.CENTER);
 	    panel.add(dateAffichage, BorderLayout.NORTH);
-	    panel.add(image, BorderLayout.EAST);
-	    panel.setBackground(Color.white);
+	    panel.add(image, BorderLayout.SOUTH);
+	    //panel.setBackground(Color.white);
 	    panel2.add(panel, BorderLayout.CENTER);
 	    add(panel2, BorderLayout.CENTER);
 	    panel2.setSize(150, 50);
