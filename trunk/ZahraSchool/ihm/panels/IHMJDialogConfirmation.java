@@ -17,11 +17,13 @@ package panels;
  */
 public class IHMJDialogConfirmation extends javax.swing.JDialog {
      frames.FFondFenetreProfesseur f;
+     javax.swing.JPanel p;
 
     /** Creates new form IHMJDialogAjouterEleve */
-    public IHMJDialogConfirmation(frames.FFondFenetreProfesseur f, boolean modal, String phrase) {
+    public IHMJDialogConfirmation(frames.FFondFenetreProfesseur f, boolean modal, String phrase, javax.swing.JPanel p) {
         super(f, modal);
         this.f=f;
+        this.p=p;
         initComponents();
         // Affiche le type d'operation sur le type d'element
         jLabel1.setText(phrase);
@@ -87,9 +89,8 @@ public class IHMJDialogConfirmation extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       panelsEleve.IHMChoixEleve2 CE = new  panelsEleve.IHMChoixEleve2(f);
-       f.setPanel(CE);
-       this.setVisible(false);
+        f.setPanel(p);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
