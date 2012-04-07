@@ -117,9 +117,7 @@ public class IHMBarreVisionGestionEleve extends JPanel{
 		panel.add(visionMenu, BorderLayout.NORTH);
 		panel.add(new Horloge(), BorderLayout.WEST);
 		f.setPanel(panel);
-		f.setLocationRelativeTo(null);
-		f.setVisible(true);
-        f.setMenuGauche(false);
+		
     }
 
 
