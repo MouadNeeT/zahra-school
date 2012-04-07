@@ -39,9 +39,6 @@
       </Border>
     </Property>
   </Properties>
-  <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Ajout d&apos;un groupe"/>
-  </AccessibilityProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -62,49 +59,34 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="AjoutGroupeNomGroupe" alignment="1" min="-2" pref="175" max="-2" attributes="0"/>
-                                          <Component id="AjoutGroupeNomProfesseur" alignment="1" min="-2" pref="175" max="-2" attributes="0"/>
-                                      </Group>
+                                  <Component id="AjoutGroupeNomGroupe" alignment="1" pref="243" max="32767" attributes="0"/>
+                                  <Component id="AjoutGroupePrenomProfesseur" pref="243" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="AjoutGroupeDateJours" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="AjoutGroupeDateMois" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="AjoutGroupeDateAnnees" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="AjoutGroupePrenomProfesseur" max="32767" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="AjoutGroupeDateJours" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="AjoutGroupeDateMois" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="AjoutGroupeDateAnnees" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="AjoutGroupeTarifs" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="AjoutGroupeNomProfesseur" alignment="1" pref="243" max="32767" attributes="0"/>
+                                  <Component id="AjoutGroupeTarifs" alignment="0" pref="243" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="AjoutGroupeBoutonAjouter" min="-2" pref="103" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="AjoutGroupeBoutonAnnule" min="-2" pref="107" max="-2" attributes="0"/>
                           </Group>
                           <Component id="AjoutGroupeAvertissement2" min="-2" max="-2" attributes="0"/>
                           <Component id="AjoutGroupeAvertissement1" alignment="0" min="-2" pref="276" max="-2" attributes="0"/>
@@ -123,7 +105,10 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="AjoutGroupeNiveauGroupe" min="-2" pref="175" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="AjoutGroupeBoutonAnnule" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
+                                          <Component id="AjoutGroupeNiveauGroupe" alignment="1" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
@@ -132,7 +117,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="776" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -155,7 +140,7 @@
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -170,8 +155,8 @@
                       <Component id="AjoutGroupeAvertissement2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="AjoutGroupeBoutonAnnule" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="AjoutGroupeBoutonAjouter" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="AjoutGroupeBoutonAnnule" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -197,7 +182,7 @@
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="AjoutGroupeTarifs" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -370,7 +355,7 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Individuel"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Curseur par d&#xe9;faut"/>
+          <Color id="Pointeur par d&#xe9;faut"/>
         </Property>
       </Properties>
     </Component>
