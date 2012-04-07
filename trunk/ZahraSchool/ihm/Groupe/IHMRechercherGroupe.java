@@ -128,7 +128,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     if(c==1)
     {
-       VisualisationGroupes VG = new VisualisationGroupes(f);
+       IHMVisualisationGroupes VG = new IHMVisualisationGroupes(f);
        f.setPanel(VG);
     }
     else
