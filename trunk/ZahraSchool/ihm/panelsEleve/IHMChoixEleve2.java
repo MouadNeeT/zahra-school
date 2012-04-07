@@ -233,8 +233,8 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-       IHMSupprimerEleve SE = new IHMSupprimerEleve(f);
-       f.setPanel(SE);
+        IHMRechercherEleve RE = new IHMRechercherEleve(f,3);
+        f.setPanel(RE);
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
