@@ -337,14 +337,15 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"L'eleve "+jTextField2.getText()+" a bien été ajouté");
+      panelsEleve.IHMAjouterEleve p = new  panelsEleve.IHMAjouterEleve(f);
+      panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"L'eleve "+jTextField2.getText()+" a bien été ajouté",p);
       d1.setLocation(300,200);
-      d1.setVisible(true);  
+      d1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      panelsEleve.IHMChoixEleve2 F1 = new panelsEleve.IHMChoixEleve2(f);
-      f.setPanel(F1);
+      panelsEleve.IHMChoixEleve2 CE = new panelsEleve.IHMChoixEleve2(f);
+      f.setPanel(CE);
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
