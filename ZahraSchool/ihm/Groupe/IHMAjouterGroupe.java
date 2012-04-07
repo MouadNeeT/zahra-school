@@ -164,11 +164,7 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
                                     .addComponent(AjoutGroupeTarifs, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE))))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(33, 33, 33)
-                                .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(AjoutGroupeAvertissement2)
-                            .addComponent(AjoutGroupeAvertissement1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11)
@@ -181,13 +177,17 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
                                             .addComponent(AjoutGroupeBoutonRadCollectif)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(AjoutGroupeNiveauGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGap(52, 52, 52))
+                                        .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(AjoutGroupeNiveauGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(AjoutGroupeAvertissement1))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addContainerGap(776, Short.MAX_VALUE))))
+                        .addContainerGap(793, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,8 +216,8 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
                         .addComponent(AjoutGroupeAvertissement2)
                         .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -255,15 +255,19 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 }//GEN-LAST:event_AjoutGroupeDateJoursActionPerformed
 
     private void AjoutGroupeBoutonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAjouterActionPerformed
-        // TODO add your handling code here:
+        Groupe.IHMAjouterGroupe p = new  Groupe.IHMAjouterGroupe(f);
+        panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"Le groupe "+AjoutGroupeNomGroupe.getText()+" a bien été ajouté",p);
+        d1.setLocation(300,200);
+        d1.setVisible(true);
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
 
     private void AjoutGroupeBoutonAnnuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAnnuleActionPerformed
-        // TODO add your handling code here:
+        Groupe.IHMAjouterGroupe AG = new  Groupe.IHMAjouterGroupe(f);
+        f.setPanel(AG);
     }//GEN-LAST:event_AjoutGroupeBoutonAnnuleActionPerformed
 
     private void AjoutGroupeBoutonRadCollectifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonRadCollectifActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_AjoutGroupeBoutonRadCollectifActionPerformed
 
 
