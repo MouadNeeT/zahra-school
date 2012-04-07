@@ -1,12 +1,18 @@
 package panelsAdministrateur;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JPanel;
+
+import frames.FFondFenetreAdministrateur;
 
 public class IHMMenuGaucheAdministrateur extends JPanel{
 
 	private static final long serialVersionUID = 1L;
 	/** Creates new form InterfaceMenuGauche */
-    public IHMMenuGaucheAdministrateur() {
+	FFondFenetreAdministrateur f;
+    public IHMMenuGaucheAdministrateur(FFondFenetreAdministrateur f) {
+    	this.f = f;
         initComponents();
     }
 	
@@ -235,24 +241,71 @@ public class IHMMenuGaucheAdministrateur extends JPanel{
         );
     }// </editor-fold>
 
+    //retour au MenuPrincipal
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    	IHMMenuPrincipalAdministrateur panel = new IHMMenuPrincipalAdministrateur(f);
+    	f.setPanel(panel);
+    	
 }
-
+  //Bouton retour visualiserFiche profeseur
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    	JPanel panel = new JPanel(new BorderLayout());
+    	JPanel visualiserETVision = new JPanel(new BorderLayout());
+    	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+		IHMVisualiserProfesseur visualiser = new IHMVisualiserProfesseur(f);
+		visualiserETVision.add(visualiser, BorderLayout.NORTH);
+		
+		visualiserETVision.add(visualiser, BorderLayout.CENTER);
+		visualiserETVision.add(new IHMBarreVisionVisualiserProfesseur(f), BorderLayout.NORTH);
+    	panel.add(menuAdminGauche, BorderLayout.WEST);
+    	panel.add(visualiserETVision, BorderLayout.CENTER);
+		f.setPanel(panel);
 }
-
+    //modifier professeur
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    	JPanel panel = new JPanel(new BorderLayout());
+    	JPanel visualiserETVision = new JPanel(new BorderLayout());
+    	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+    	IHMModifierSupprimerProfesseur visualiser = new IHMModifierSupprimerProfesseur(f);
+		visualiserETVision.add(visualiser, BorderLayout.NORTH);
+		
+		visualiserETVision.add(visualiser, BorderLayout.CENTER);
+		visualiserETVision.add(new IHMBarreVisionModifierProfesseur(f), BorderLayout.NORTH);
+    	panel.add(menuAdminGauche, BorderLayout.WEST);
+    	panel.add(visualiserETVision, BorderLayout.CENTER);
+		f.setPanel(panel);
 }
 
+    //supprimer un professeur
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    	JPanel panel = new JPanel(new BorderLayout());
+    	JPanel visualiserETVision = new JPanel(new BorderLayout());
+    	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+		IHMModifierSupprimerProfesseur visualiser = new IHMModifierSupprimerProfesseur(f);
+		visualiserETVision.add(visualiser, BorderLayout.NORTH);
+		
+		visualiserETVision.add(visualiser, BorderLayout.CENTER);
+		visualiserETVision.add(new IHMBarreVisionSupprimerProfesseur(f), BorderLayout.NORTH);
+    	panel.add(menuAdminGauche, BorderLayout.WEST);
+    	panel.add(visualiserETVision, BorderLayout.CENTER);
+		f.setPanel(panel);
 }
 
+    //ajouter un professeur
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    	JPanel panel = new JPanel(new BorderLayout());
+    	JPanel visualiserETVision = new JPanel(new BorderLayout());
+    	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+		IHMAjouterProfesseur ajouter = new IHMAjouterProfesseur(f);		
+		visualiserETVision.add(ajouter, BorderLayout.EAST);
+		visualiserETVision.add(new IHMBarreVisionAjouterProfesseur(f), BorderLayout.NORTH);
+    	panel.add(menuAdminGauche, BorderLayout.WEST);
+    	panel.add(visualiserETVision, BorderLayout.CENTER);
+		f.setPanel(panel);
     }
 
 
