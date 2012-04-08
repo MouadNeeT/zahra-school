@@ -17,7 +17,7 @@ public class Main {
 		 * J'y ai mis un commentaire.
 		 */
 		FFondFenetreProfesseur fenetreFondProfesseur =  new FFondFenetreProfesseur();
-                panelsEleve.IHMChoixEleve2 F1 = new panelsEleve.IHMChoixEleve2(fenetreFondProfesseur);
+                panelsEleve.IHMChoixEleve F1 = new panelsEleve.IHMChoixEleve(fenetreFondProfesseur);
                 fenetreFondProfesseur.setPanel(F1);
 		// TODO Auto-generated method stub
 		

@@ -9,7 +9,7 @@
  * Created on 26 mars 2012, 23:33:49
  */
 
-package Groupe;
+package panelsGroupe;
 
 import panelsEleve.*;
 
@@ -255,14 +255,14 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 }//GEN-LAST:event_AjoutGroupeDateJoursActionPerformed
 
     private void AjoutGroupeBoutonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAjouterActionPerformed
-        Groupe.IHMAjouterGroupe p = new  Groupe.IHMAjouterGroupe(f);
+        panelsGroupe.IHMAjouterGroupe p = new  panelsGroupe.IHMAjouterGroupe(f);
         panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"Le groupe "+AjoutGroupeNomGroupe.getText()+" a bien été ajouté",p);
         d1.setLocation(300,200);
         d1.setVisible(true);
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
 
     private void AjoutGroupeBoutonAnnuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAnnuleActionPerformed
-        Groupe.IHMAjouterGroupe AG = new  Groupe.IHMAjouterGroupe(f);
+        panelsGroupe.IHMAjouterGroupe AG = new  panelsGroupe.IHMAjouterGroupe(f);
         f.setPanel(AG);
     }//GEN-LAST:event_AjoutGroupeBoutonAnnuleActionPerformed
 
