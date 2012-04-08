@@ -1,4 +1,9 @@
 package panels;
+
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import panelsAdministrateur.IHMBarreVisionGestionEleve;
+
 /**
  * <b>InterfaceMenuGauche est la classe reprï¿½sentant un panel du menu de gauche</b>
  * <p>
@@ -42,13 +47,12 @@ package panels;
  * @author Evi and Max
  */
 public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
+    private static final long serialVersionUID = 1L;
+    /** Creates new form InterfaceMenuGaucheProfesseur */
+    frames.FFondFenetreProfesseur f;
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	/** Creates new form InterfaceMenuGaucheProfesseur */
-    public IHMMenuGaucheProfesseur() {
+    public IHMMenuGaucheProfesseur(frames.FFondFenetreProfesseur f) {
+        this.f=f;
         initComponents();
     }
 
@@ -482,54 +486,74 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         );
     }// </editor-fold>                        
 
-    //gestion des élèves
+    //gestion des ï¿½lï¿½ves
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+    	panelsEleve.IHMChoixEleve CE = new panelsEleve.IHMChoixEleve(f);
+        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(CE, BorderLayout.CENTER);
+        panel.add(barreVision, BorderLayout.NORTH);
+        f.setPanel(panel);
+        f.setMenuGauche(true);
     }                                        
 
     //Visualiser la fiche d'un eleve
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,1);
+        f.setPanel(RE);
     }                                        
 
-    //ajouter un élève
+    //ajouter un ï¿½lï¿½ve
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsEleve.IHMAjouterEleve AE = new panelsEleve.IHMAjouterEleve(f);
+        f.setPanel(AE);
     }                                        
 
     //"Modifier la fiche d'un Ã©lÃ¨ve
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,2);
+        f.setPanel(RE);
     }                                        
 
     //Supprimer un eleve
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,3);
+        f.setPanel(RE);
     }                                        
 
     //Gestion des groupes
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
+        panelsGroupe.IHMChoixGroupe CG = new panelsGroupe.IHMChoixGroupe(f);
+        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(CG, BorderLayout.CENTER);
+        panel.add(barreVision, BorderLayout.NORTH);
+        f.setPanel(panel);
+        f.setMenuGauche(true);
     }                                         
 
     //Ajouter un groupe
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,3);
+        f.setPanel(RG);
     }                                        
 
     //Visualiser la fiche d'un groupe
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,1);
+        f.setPanel(RG);
     }                                        
 
     //Modifier un groupe
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,2);
+        f.setPanel(RG);
     }                                        
 
     //Supprimer un groupe
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
+        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,3);
+        f.setPanel(RG);
     }                                         
 
     //Gestion des professeurs
