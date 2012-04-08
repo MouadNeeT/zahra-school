@@ -64,7 +64,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
 
         jLabel3.setText("Groupe :");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BoutonEditCrayon.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panelsEleve/imageBoutonEditCrayon.png"))); // NOI18N
         jButton3.setText(" Modifier");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,7 +72,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonSupprimer.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panelsEleve/imageBoutonSupprimer.png"))); // NOI18N
         jButton4.setText("Supprimer");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +80,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonVoir.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panelsEleve/imageBoutonSupprimer.png"))); // NOI18N
         jButton1.setText(" Visualiser");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
