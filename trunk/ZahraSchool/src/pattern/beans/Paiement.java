@@ -8,14 +8,16 @@ private Date datePrevue;
 private Date dateEncaissement;
 private float montant;
 private String mois;
+private Eleve eleve;
 
 public  Paiement(){}
 
-public  Paiement(Date datePrevue,Date dateEncaissement,float montant,String mois){
+public  Paiement(Date datePrevue,Date dateEncaissement,float montant,String mois, Eleve eleve){
 this.datePrevue=datePrevue;
 this.dateEncaissement= dateEncaissement;
 this.montant=montant;
 this.mois=mois;
+this.eleve=eleve;
 }
 
  public void setDateEncaissement(Date dateEncaissement)
@@ -57,4 +59,12 @@ this.mois=mois;
         return this.mois;
     }
 
+      public void setEleve(Eleve eleve){
+      this.eleve= eleve;
+    }
+    
+    public Eleve getEleve()
+    {
+        return this.eleve;
+    }
 }
