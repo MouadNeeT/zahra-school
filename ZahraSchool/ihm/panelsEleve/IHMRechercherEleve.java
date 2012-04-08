@@ -87,7 +87,7 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
 
         jLabel4.setText("Groupe selectionne :");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonVoir.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panelsEleve/imageBoutonVoir.png"))); // NOI18N
         jButton1.setText(" Visualiser");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
