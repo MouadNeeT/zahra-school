@@ -1,16 +1,14 @@
 package pattern.DAOs;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.sdz.bean.Eleve;
-import com.sdz.dao.DAO;
+import java.sql.Connection;
+import pattern.beans.Eleve;
 
 public class EleveDAO extends DAO<Eleve> {
 
-        public EleveDAO(Connection conn) {
-                super(conn);
+        public EleveDAO(Connection connexion) {
+                super(connexion);
         }
 
         public boolean create(Eleve obj) {
@@ -26,12 +24,12 @@ public class EleveDAO extends DAO<Eleve> {
                 Eleve eleve = new Eleve();                
                 
                 try {
-                        ResultSet result = this.connect        .createStatement(
-                                                                                                        ResultSet.TYPE_SCROLL_INSENSITIVE, 
-                                                                                                        ResultSet.CONCUR_READ_ONLY
-                                                                                        ).executeQuery(
-                                                                                                        "SELECT * FROM eleve WHERE elv_id = " + id
-                                                                                        );
+                        ResultSet result = this.connect.createStatement(
+                                                               ResultSet.TYPE_SCROLL_INSENSITIVE, 
+                                                               ResultSet.CONCUR_READ_ONLY
+                                                        ).executeQuery(
+                                                               "SELECT * FROM eleve WHERE elv_id = " + id
+                                                          );
                         if(result.first())
                                 eleve = new Eleve(id, result.getString("elv_nom"), result.getString("elv_prenom"));
                         
