@@ -379,7 +379,13 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     }//GEN-LAST:event_boutonGestionEleveActionPerformed
 
     private void boutonGestionGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionGroupeActionPerformed
-        // TODO add your handling code here:
+        panelsGroupe.IHMChoixGroupe CG = new panelsGroupe.IHMChoixGroupe(f2);
+        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f2);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(CG, BorderLayout.CENTER);
+        panel.add(barreVision, BorderLayout.NORTH);
+        f2.setPanel(panel);
+        f2.setMenuGauche(true);
     }//GEN-LAST:event_boutonGestionGroupeActionPerformed
 
     private void boutonGestionProfesseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionProfesseurActionPerformed
