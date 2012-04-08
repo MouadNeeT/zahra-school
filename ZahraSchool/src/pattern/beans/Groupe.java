@@ -104,7 +104,7 @@ public class Groupe {
         return this.listeMatieres;
     }
     
-    public void addEleve(Matiere matiere){
+    public void addMatiere(Matiere matiere){
                 this.listeMatieres.add(matiere);
         }
         
