@@ -3,7 +3,11 @@ package pattern.beans;
 import java.util.Date;
 
 public class Absence {
-    
+    /**
+     * le motif de l'absence de l'élève.
+     * @see Absence#setMotif(String)
+     * @see Absence#getMotif()
+     */
     private String motif;
     private Date date;
     
