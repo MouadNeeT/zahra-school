@@ -114,6 +114,11 @@ public class Eleve {
 	 */
 	private String niveauTest;
 	
+	public Eleve(){
+	}
+	
+	public Eleve(int identifiant, String nom, String prenom, int age, Date dateDeNaissance)
+	
 	
 	/**
 	 * @return the identifiant
