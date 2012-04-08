@@ -1,5 +1,6 @@
 package pattern.beans;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -113,6 +114,11 @@ public class Eleve {
 	 * @see Eleve#getNiveauEtudes()
 	 */
 	private String niveauTest;
+	private ArrayList<Professeur> listeProfesseurs = new ArrayList<Professeur>(); 
+	
+	private ArrayList<Groupe> listeGroupes = new ArrayList<Groupe>(); 
+	private ArrayList<Paiement> listePaiements = new ArrayList<Paiement>(); 
+	private EmploiDuTemps emploiDuTemps = new EmploiDuTemps(); 
 	
 	public Eleve(){
 	}
@@ -122,7 +128,9 @@ public class Eleve {
 			     int numeroTelephoneEleve, int numeroTelephoneParent, 
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
-			     String status, String niveauTest){
+			     String status, String niveauTest,
+			     ArrayList<Professeur> listeProfesseurs, ArrayList<Groupe> listeGroupes,
+			     ArrayList<Paiement> listePaiements, EmploiDuTemps emploiDuTemps){
 		this.identifiant = identifiant;
 		this.nom = nom;
 		this.prenom = prenom;
@@ -138,6 +146,67 @@ public class Eleve {
 		this.prenomMere = prenomMere;
 		this.status = status;
 		this.niveauTest = niveauTest;
+		this.listeProfesseurs = listeProfesseurs;
+		this.listeGroupes = listeGroupes;
+		this.listePaiements = listePaiements;
+		this.emploiDuTemps = emploiDuTemps;
+		
+	}
+	
+	/**
+	 * @return the listeProfesseurs
+	 */
+	public ArrayList<Professeur> getListeProfesseurs() {
+		return listeProfesseurs;
+	}
+
+	/**
+	 * @param listeProfesseurs the listeProfesseurs to set
+	 */
+	public void setListeProfesseurs(ArrayList<Professeur> listeProfesseurs) {
+		this.listeProfesseurs = listeProfesseurs;
+	}
+
+	/**
+	 * @return the listeGroupes
+	 */
+	public ArrayList<Groupe> getListeGroupes() {
+		return listeGroupes;
+	}
+
+	/**
+	 * @param listeGroupes the listeGroupes to set
+	 */
+	public void setListeGroupes(ArrayList<Groupe> listeGroupes) {
+		this.listeGroupes = listeGroupes;
+	}
+
+	/**
+	 * @return the listePaiements
+	 */
+	public ArrayList<Paiement> getListePaiements() {
+		return listePaiements;
+	}
+
+	/**
+	 * @param listePaiements the listePaiements to set
+	 */
+	public void setListePaiements(ArrayList<Paiement> listePaiements) {
+		this.listePaiements = listePaiements;
+	}
+
+	/**
+	 * @return the emploiDuTemps
+	 */
+	public EmploiDuTemps getEmploiDuTemps() {
+		return emploiDuTemps;
+	}
+
+	/**
+	 * @param emploiDuTemps the emploiDuTemps to set
+	 */
+	public void setEmploiDuTemps(EmploiDuTemps emploiDuTemps) {
+		this.emploiDuTemps = emploiDuTemps;
 	}
 	
 	
@@ -183,6 +252,7 @@ public class Eleve {
 	public int getAge() {
 		return age;
 	}
+
 	/**
 	 * @param age the age to set
 	 */
@@ -333,6 +403,33 @@ public class Eleve {
 	public void setNiveauTest(String niveauTest) {
 		this.niveauTest = niveauTest;
 	}
+	
+	public void addProfesseur(Professeur professeur){
+		this.listeProfesseurs.add(professeur);
+	}
+	
+	public void addGroupe(Groupe groupe){
+		this.listeGroupes.add(groupe);
+	}
+		
+	public void addPaiement (Paiement paiement){
+		this.listePaiements.add(paiement);
+	}
+	
+	public void removeProfesseur(Professeur professeur){
+        this.listeProfesseurs.remove(professeur);
+	}
+	
+	public void removeGroupe(Groupe groupe){
+        this.listeGroupes.remove(groupe);
+	}
+	
+	public void removePaiement(Paiement paiement){
+        this.listePaiements.remove(paiement);
+	}
+	
+
+	
 	
 	
 	
