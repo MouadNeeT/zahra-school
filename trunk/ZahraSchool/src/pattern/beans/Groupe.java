@@ -7,6 +7,10 @@ import java.util.Date;
 public class Groupe {
 
     private ArrayList<Eleve> listeEleves = new ArrayList<Eleve>();
+    private ArrayList<Matiere> listeMatieres = new ArrayList<Matiere>();
+    private ArrayList<Professeur> listeProfesseur = new ArrayList<Professeur>();
+    
+    private EmploiDuTemps emploiDuTemps;
     
     private String nom;
     
@@ -87,4 +91,55 @@ public class Groupe {
         public void removeEleve(Eleve eleve){
                 this.listeEleves.remove(eleve);
         }
+        
+        
+        /*-----------------------------------------------------------------*/
+         public void setListeMatieres(ArrayList<Matiere> listeMatieres)
+    {
+        this.listeMatieres=listeMatieres;
+    }
+    
+    public ArrayList<Matiere> returnListeMatieres()
+    {
+        return this.listeMatieres;
+    }
+    
+    public void addEleve(Matiere matiere){
+                this.listeMatieres.add(matiere);
+        }
+        
+
+        public void removeMatiere(Matiere Matieres){
+                this.listeMatieres.remove(Matieres);
+        }
+        
+     public void setListeProfesseur(ArrayList<Professeur> listeProfesseur)
+    {
+        this.listeProfesseur=listeProfesseur;
+    }
+    
+    public ArrayList<Professeur> returnListeProfesseur()
+    {
+        return this.listeProfesseur;
+    }
+    
+    public void addProfesseur(Professeur professeur){
+                this.listeProfesseur.add(professeur);
+        }
+        
+  
+        public void removeProfesseur(Professeur professeur){
+                this.listeProfesseur.remove(professeur);
+        }
+        
+        
+         public void setEmploi(EmploiDuTemps EmploiDuTemps)
+    {
+        this.emploiDuTemps=EmploiDuTemps;
+    }
+    
+    public EmploiDuTemps returnEmploiDuTemps()
+    {
+        return this.emploiDuTemps;
+    }
 }
