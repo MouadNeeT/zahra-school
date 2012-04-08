@@ -1,5 +1,6 @@
 package pattern.beans;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Professeur {
@@ -13,13 +14,16 @@ public class Professeur {
 	private String niveauEtudes;
 	private Date dateDeNaissance;
 	private Date dateEmbauche;
-	
+	private ArrayList<Eleve> listeEleves = new ArrayList<Eleve>();
+	private ArrayList<Matiere> listeMatieres = new ArrayList<Matiere>();
+
 	public Professeur(){
 	}
 	
 	public Professeur(String identifiant, String motDePasse, String nom,
 			String prenom, String adresse, int numeroTelephone, 
-			String niveauEtudes, Date dateDeNaissance, Date dateEmbauche){
+			String niveauEtudes, Date dateDeNaissance, Date dateEmbauche, 
+			ArrayList<Eleve> listeEleves, ArrayList<Matiere> listeMatieres){
 		this.identifiant = identifiant;
 		this.motDePasse = motDePasse;
 		this.nom = nom;
@@ -29,6 +33,36 @@ public class Professeur {
 		this.niveauEtudes = niveauEtudes;
 		this.dateDeNaissance = dateDeNaissance;
 		this.dateEmbauche = dateEmbauche;
+		this.listeEleves = listeEleves;
+		this.listeMatieres = listeMatieres;
+	}
+	
+	/**
+	 * @return the listeMatieres
+	 */
+	public ArrayList<Matiere> getListeMatieres() {
+		return listeMatieres;
+	}
+
+	/**
+	 * @param listeMatieres the listeMatieres to set
+	 */
+	public void setListeMatieres(ArrayList<Matiere> listeMatieres) {
+		this.listeMatieres = listeMatieres;
+	}
+	
+	/**
+	 * @return the listeEleves
+	 */
+	public ArrayList<Eleve> getListeEleves() {
+		return listeEleves;
+	}
+
+	/**
+	 * @param listeEleves the listeEleves to set
+	 */
+	public void setListeEleves(ArrayList<Eleve> listeEleves) {
+		this.listeEleves = listeEleves;
 	}
 
 	/**
@@ -157,9 +191,36 @@ public class Professeur {
 		this.dateEmbauche = dateEmbauche;
 	}
 	
+	/**
+	 * méthode qui ajoute un élève à la liste d'élève du professeur
+	 * @param eleve
+	 */
+	public void addEleve(Eleve eleve){
+        this.listeEleves.add(eleve);
+	}
 	
+	/**
+	 * méthode qui ajoute une matière à la liste des matières du professeur
+	 * @param matiere
+	 */
+	public void addMatiere(Matiere matiere){
+        this.listeMatieres.add(matiere);
+	}
+
+	/**
+	 * Retire une matiere de la liste des matieres 
+	 * @param matiere
+	 */
+	public void removeMatiere(Matiere matiere){
+        this.listeMatieres.remove(matiere);
+	}
 	
-	
-	
+	/**
+	 * Retire un eleve de la liste des eleves 
+	 * @param eleve
+	 */
+	public void removeEleve(Eleve eleve){
+        this.listeEleves.remove(eleve);
+	}
 
 }
