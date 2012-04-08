@@ -1,8 +1,4 @@
 package panels;
-
-import panelsEleve.IHMAjouterEleve;
-import panelsEleve.IHMRechercherEleve;
-
 /**
  * <b>InterfaceMenuGauche est la classe repr�sentant un panel du menu de gauche</b>
  * <p>
@@ -47,12 +43,12 @@ import panelsEleve.IHMRechercherEleve;
  */
 public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
 
- 
-	 frames.FFondFenetreProfesseur f;
+    /**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	/** Creates new form InterfaceMenuGaucheProfesseur */
-    public IHMMenuGaucheProfesseur(frames.FFondFenetreProfesseur f) {
-        this.f=f;
+    public IHMMenuGaucheProfesseur() {
         initComponents();
     }
 
@@ -97,7 +93,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton1.setBackground(new java.awt.Color(0, 102, 204));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Gestion des élèves");
+        jButton1.setText("Gestion des eleves");
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +125,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton2.setBackground(new java.awt.Color(102, 153, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Ajouter un élève");
+        jButton2.setText("Ajouter un eleve");
         jButton2.setBorder(null);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +137,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton3.setBackground(new java.awt.Color(102, 153, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Visualiser la fiche d'un élève");
+        jButton3.setText("Visualiser la fiche d'un eleve");
         jButton3.setBorder(null);
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -165,7 +161,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton5.setBackground(new java.awt.Color(102, 153, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Supprimer un élève");
+        jButton5.setText("Supprimer un eleve");
         jButton5.setBorder(null);
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -405,7 +401,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton14.setBackground(new java.awt.Color(102, 153, 255));
         jButton14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton14.setForeground(new java.awt.Color(255, 255, 255));
-        jButton14.setText("G�rer les revenus");
+        jButton14.setText("Gerer les revenus");
         jButton14.setBorder(null);
         jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -486,68 +482,77 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         );
     }// </editor-fold>                        
 
+    //gestion des �l�ves
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsEleve.IHMChoixEleve CE = new panelsEleve.IHMChoixEleve(f);
-        f.setPanel(CE);
-        
+        // TODO add your handling code here:
     }                                        
 
+    //Visualiser la fiche d'un eleve
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-         IHMRechercherEleve RE = new IHMRechercherEleve(f,1);
-        f.setPanel(RE);
+        // TODO add your handling code here:
     }                                        
 
+    //ajouter un �l�ve
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-      IHMAjouterEleve AE = new IHMAjouterEleve(f);
-        f.setPanel(AE);  
+        // TODO add your handling code here:
     }                                        
 
+    //"Modifier la fiche d'un élève
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-         IHMRechercherEleve RE = new IHMRechercherEleve(f,2);
-        f.setPanel(RE);
+        // TODO add your handling code here:
     }                                        
 
+    //Supprimer un eleve
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-      IHMRechercherEleve SE = new IHMRechercherEleve(f,3);
-       f.setPanel(SE);
+        // TODO add your handling code here:
     }                                        
 
+    //Gestion des groupes
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
     }                                         
 
+    //Ajouter un groupe
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
     }                                        
 
+    //Visualiser la fiche d'un groupe
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
     }                                        
 
+    //Modifier un groupe
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
     }                                        
 
+    //Supprimer un groupe
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
     }                                         
 
+    //Gestion des professeurs
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
     }                                        
 
+    //Visualiser la fiche d'un professeur
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
     }                                         
 
+    //Gestion des emplois du temps
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
     }                                         
 
+    //Gerer les revenus
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
     }                                         
 
+    //Faire l'appel
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
     }                                         
