@@ -99,7 +99,7 @@ frames.FFondFenetreProfesseur f;
         jRadioButton2.setBounds(70, 40, 63, 23);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel7.setText("Nombre d'absence d'affilé");
+        jLabel7.setText("Nombre d'absence d'affile");
         jLabel7.setBounds(30, 80, 130, 14);
         jLayeredPane1.add(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -176,7 +176,7 @@ frames.FFondFenetreProfesseur f;
         );
 
         label1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        label1.setText("L'apelle est validé, Cliquez sur ok pour revenir a la Page Principale");
+        label1.setText("L'apelle est valide, Cliquez sur ok pour revenir a la Page Principale");
 
         jButton2.setText("Ok");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -249,21 +249,21 @@ frames.FFondFenetreProfesseur f;
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/left.jpg"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/left.jpg")); // NOI18N
         jButton5.setBorder(null);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/right.jpg"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/right.jpg")); // NOI18N
         jButton4.setBorder(null);
 
         jLabel23.setText("une ou plusieurs alertes");
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red square.jpg"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/red square.jpg")); // NOI18N
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/green square.png"))); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/green square.png")); // NOI18N
 
         jLabel22.setText("En clickant sur suivant, vous validez");
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon_attention_m.gif"))); // NOI18N
+        jLabel30.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/icon_attention_m.gif")); // NOI18N
 
         jButton1.setText("Terminer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -299,7 +299,7 @@ frames.FFondFenetreProfesseur f;
         jRadioButton4.setBounds(90, 40, 70, 23);
         jLayeredPane2.add(jRadioButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel17.setText("Nombre d'absence d'affilé");
+        jLabel17.setText("Nombre d'absence d'affile");
         jLabel17.setBounds(30, 80, 130, 14);
         jLayeredPane2.add(jLabel17, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -311,15 +311,15 @@ frames.FFondFenetreProfesseur f;
         jLabel19.setBounds(60, 140, 80, 14);
         jLayeredPane2.add(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/green square.png"))); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/green square.png")); // NOI18N
         jLabel27.setBounds(10, 80, 10, 10);
         jLayeredPane2.add(jLabel27, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red square.jpg"))); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/red square.jpg")); // NOI18N
         jLabel28.setBounds(10, 110, 10, 10);
         jLayeredPane2.add(jLabel28, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file.gif"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/file.gif")); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
