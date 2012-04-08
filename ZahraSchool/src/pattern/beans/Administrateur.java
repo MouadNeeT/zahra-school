@@ -2,21 +2,106 @@ package pattern.beans;
 
 import java.util.Date;
 
+/**
+ * <b>Administrateur est un bean</b>
+ * <p>
+ * un administrateur est caractérisé par les informations suivantes :
+ * <ul>
+ * <li>L'identifiant de l'administrateur.</li>
+ * <li>Le mot de passe de l'administrateur.</li>
+ * <li>le nom de l'administrateur.</li>
+ * <li>le prenom de l'administrateur.</li>
+ * <li>l'adresse de l'administrateur</li>
+ * <li>le numéro de téléphone de l'administrateur.</li>
+ * <li>le niveau d'études de l'administrateur.</li>
+ * <li>la date de naissance de l'administrateur.</li>
+ * <li>la date d'embauche de l'administrateur</li>
+ * </ul>
+ * </p>
+ * 
+ * @see Administrateur
+ * 
+ * @author GAUTIER Stéphanie
+ * @version 1.0
+ */
+
 public class Administrateur {
 	
+	/**
+	 * L'identifiant de l'administrateur.
+	 * Il s'agit de l'adresse mail.
+	 * @see Administrateur#setIdentifiant(String)
+	 * @see Administrateur#getIdentifiant()
+	 */
 	private String identifiant;
+	/**
+	 * Le mot de passe de l'administrateur.
+	 * En général le mot de passe ser celui de la boite mail
+	 * @see Administrateur#setMotDePasse(String)
+	 * @see Administrateur#getMotDePasse()
+	 */
 	private String motDePasse;
+	/**
+	 * le nom de l'administrateur.
+	 * @see Administrateur#setNom(String)
+	 * @see Administrateur#getNom()
+	 */
 	private String nom;
+	/**
+	 * le prenom de l'administrateur.
+	 * @see Administrateur#setPrenom(String)
+	 * @see Administrateur#getPrenom()
+	 */
 	private String prenom;
+	/**
+	 * l'adresse de l'administrateur
+	 * @see Administrateur#setAdresse(String)
+	 * @see Administrateur#getAdresse()
+	 */
 	private String adresse;
+	/**
+	 * le numéro de téléphone de l'administrateur.
+	 * @see Administrateur#setNumeroTelephone(String)
+	 * @see Administrateur#getNumeroTelephone()
+	 */
 	private int numeroTelephone;
+	/**
+	 * le niveau d'études de l'administrateur.
+	 * @see Administrateur#setNiveauEtudes(String)
+	 * @see Administrateur#getNiveauEtudes()
+	 */
 	private String niveauEtudes;
+	/**
+	 * la date de naissance de l'administrateur.
+	 * @see Administrateur#setDateDeNaissance(Date)
+	 * @see Administrateur#getDateDeNaissance()
+	 */
 	private Date dateDeNaissance;
+	/**
+	 * la date d'embauche de l'administrateur
+	 * @see Administrateur#setDateEmbauche(Date)
+	 * @see Administrateur#getDateEmbauche()
+	 */
 	private Date dateEmbauche;
 	
+	/**
+	 * Construvteur vide
+	 */
 	public Administrateur(){
 	}
 	
+	/**
+	 * 
+	 * @param identifiant
+	 * @param motDePasse
+	 * @param nom
+	 * @param prenom
+	 * @param adresse
+	 * @param numeroTelephone
+	 * @param niveauEtudes
+	 * @param dateDeNaissance
+	 * @param dateEmbauche
+	 */
 	public Administrateur(String identifiant, String motDePasse, String nom,
 			String prenom, String adresse, int numeroTelephone, 
 			String niveauEtudes, Date dateDeNaissance, Date dateEmbauche){
