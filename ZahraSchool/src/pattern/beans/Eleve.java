@@ -1,4 +1,4 @@
-package beans;
+package pattern.beans;
 
 import java.util.Date;
 
@@ -119,7 +119,26 @@ public class Eleve {
 	
 	public Eleve(int identifiant, String nom, String prenom, 
 			     int age, Date dateDeNaissance, String photo, 
-			     int numeroTelephoneEleve, numeroTelephoneParent)
+			     int numeroTelephoneEleve, int numeroTelephoneParent, 
+			     Date dateInscription, String niveauEtudes, String nomPere,
+			     String prenomPere, String nomMere, String prenomMere,
+			     String status, String niveauTest){
+		this.identifiant = identifiant;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.dateDeNaissance = dateDeNaissance;
+		this.photo = photo;
+		this.numeroTelephoneEleve = numeroTelephoneEleve;
+		this.numeroTelephoneParent = numeroTelephoneParent;
+		this.dateInscription = dateInscription;
+		this.niveauEtudes = niveauEtudes;
+		this.nomPere = nomPere;
+		this.prenomPere = prenomPere;
+		this.nomMere = nomMere;
+		this.prenomMere = prenomMere;
+		this.status = status;
+		this.niveauTest = niveauTest;
+	}
 	
 	
 	/**
