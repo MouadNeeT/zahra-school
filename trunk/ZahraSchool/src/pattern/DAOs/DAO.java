@@ -1,4 +1,4 @@
-package pattern.DAOs;
+package pattern.dao;
 
 
 
@@ -19,27 +19,27 @@ public abstract class DAO<T> {
         }
         
         /**
-         * MÃ©thode de crÃ©ation
+         * Méthode de création
          * @param obj
          * @return
          */
         public abstract boolean create(T obj);
         /**
-         * MÃ©thode pour effacer
+         * Méthode pour effacer
          * @param obj
          * @return
          */
         public abstract boolean delete(T obj);
         /**
-         * MÃ©thode de mise Ã  jour
+         * Méthode de mise à jour
          * @param obj
          * @return
          */
         public abstract boolean update(T obj);
         /**
-         * MÃ©thode de recherche des informations
+         * Méthode de recherche des informations
          * @param id
          * @return
          */
-        public abstract T find(int id);
+        public abstract T find(String nom, String prenom);
 }
