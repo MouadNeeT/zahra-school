@@ -46,13 +46,13 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel18.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Supprimer.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("../Tests/images/imageSupprimerEleve.png")); // NOI18N
         jLabel4.setText("Image");
 
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton6.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton6.setText("Supprimer un élève");
+        jToggleButton6.setText("Supprimer un eleve");
         jToggleButton6.setToolTipText("Pour supprimer un groupe, cliquez ici.");
         jToggleButton6.setBorder(null);
         jToggleButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -85,13 +85,13 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel17.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ajouter.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("../Tests/images/imageAjouterEleve.png")); // NOI18N
         jLabel7.setText("Image");
 
         jToggleButton5.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton5.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton5.setText("Ajouter un élève");
+        jToggleButton5.setText("Ajouter un eleve");
         jToggleButton5.setToolTipText("Pour ajouter un groupe, cliquez ici.");
         jToggleButton5.setBorder(null);
         jToggleButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -129,8 +129,8 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton2.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton2.setText("Modifier un élève");
-        jToggleButton2.setToolTipText("Pour modifier un élève, cliquez ici.");
+        jToggleButton2.setText("Modifier un eleve");
+        jToggleButton2.setToolTipText("Pour modifier un eleve, cliquez ici.");
         jToggleButton2.setBorder(null);
         jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +139,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EDITER.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon("../Tests/images/imageEditerEleve.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -166,7 +166,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel15.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visualizer.jpg"))); // NOI18N
+        //jLabel5.setIcon(new javax.swing.ImageIcon("../Tests/images/imageVisualiserEleve.png")); // NOI18N
         jLabel5.setText("Image");
 
         jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
