@@ -487,7 +487,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     }// </editor-fold>                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsEleve.IHMChoixEleve2 CE = new panelsEleve.IHMChoixEleve2(f);
+        panelsEleve.IHMChoixEleve CE = new panelsEleve.IHMChoixEleve(f);
         f.setPanel(CE);
         
     }                                        

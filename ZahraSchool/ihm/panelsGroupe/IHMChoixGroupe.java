@@ -2,19 +2,21 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package panelsEleve;
+package panelsGroupe;
+
+import panelsGroupe.*;
 
 /**
  *
  * @author wael
  */
-public class IHMChoixEleve2 extends javax.swing.JPanel {
+public class IHMChoixGroupe extends javax.swing.JPanel {
 
     /**
      * Creates new form IHMChoixEleve2
      */
      frames.FFondFenetreProfesseur f;
-    public IHMChoixEleve2(frames.FFondFenetreProfesseur f) {
+    public IHMChoixGroupe(frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
     }
@@ -50,9 +52,9 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
         jLabel4.setText("Image");
 
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton6.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton6.setText("Supprimer un élève");
+        jToggleButton6.setText("Supprimer un groupe");
         jToggleButton6.setToolTipText("Pour supprimer un groupe, cliquez ici.");
         jToggleButton6.setBorder(null);
         jToggleButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -89,9 +91,9 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
         jLabel7.setText("Image");
 
         jToggleButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton5.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton5.setText("Ajouter un élève");
+        jToggleButton5.setText("Ajouter un groupe");
         jToggleButton5.setToolTipText("Pour ajouter un groupe, cliquez ici.");
         jToggleButton5.setBorder(null);
         jToggleButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -109,7 +111,7 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
@@ -127,9 +129,9 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
         jPanel16.setPreferredSize(new java.awt.Dimension(206, 93));
 
         jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton2.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton2.setText("Modifier un élève");
+        jToggleButton2.setText("Modifier un groupe");
         jToggleButton2.setToolTipText("Pour modifier un élève, cliquez ici.");
         jToggleButton2.setBorder(null);
         jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -149,7 +151,7 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
                 .addGap(18, 18, 18))
         );
         jPanel16Layout.setVerticalGroup(
@@ -170,9 +172,9 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
         jLabel5.setText("Image");
 
         jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton3.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton3.setText("Visualiser un élève");
+        jToggleButton3.setText("Visualiser un groupe");
         jToggleButton3.setToolTipText("Pour visualiser un groupe, cliquez ici.");
         jToggleButton3.setBorder(null);
         jToggleButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -196,10 +198,10 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -233,23 +235,23 @@ public class IHMChoixEleve2 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-        IHMRechercherEleve RE = new IHMRechercherEleve(f,3);
-        f.setPanel(RE);
+        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,3);
+        f.setPanel(RG);
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        IHMAjouterEleve AE = new IHMAjouterEleve(f);
-        f.setPanel(AE);
+        IHMAjouterGroupe AG = new IHMAjouterGroupe(f);
+        f.setPanel(AG);
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        IHMRechercherEleve RE = new IHMRechercherEleve(f,2);
-        f.setPanel(RE);
+        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,2);
+        f.setPanel(RG);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        IHMRechercherEleve RE = new IHMRechercherEleve(f,1);
-        f.setPanel(RE);
+        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,1);
+        f.setPanel(RG);
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

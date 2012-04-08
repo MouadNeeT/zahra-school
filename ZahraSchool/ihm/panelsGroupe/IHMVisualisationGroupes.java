@@ -1,4 +1,4 @@
-package Groupe;
+package panelsGroupe;
 
 /*
  * To change this template, choose Tools | Templates

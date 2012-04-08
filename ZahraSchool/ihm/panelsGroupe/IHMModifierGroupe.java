@@ -9,9 +9,7 @@
  * Created on 26 mars 2012, 23:33:49
  */
 
-package Groupe;
-
-import panelsEleve.*;
+package panelsGroupe;
 
 /**
  *
