@@ -2,7 +2,6 @@ package panels;
 
 import panelsEleve.IHMAjouterEleve;
 import panelsEleve.IHMRechercherEleve;
-import panelsEleve.IHMSupprimerEleve;
 
 /**
  * <b>InterfaceMenuGauche est la classe repr�sentant un panel du menu de gauche</b>
@@ -509,7 +508,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     }                                        
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-      IHMSupprimerEleve SE = new IHMSupprimerEleve(f);
+      IHMRechercherEleve SE = new IHMRechercherEleve(f,3);
        f.setPanel(SE);
     }                                        
 
