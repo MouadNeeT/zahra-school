@@ -10,7 +10,7 @@ import javax.swing.JWindow;
 
 import panelsAdministrateur.IHMConnexion;
 
-public class FConnexionZahraSchool extends JWindow{
+public class FConnexionZahraSchool extends JFrame{
 	
 	frames.FFondFenetreAdministrateur frame;
 	frames.FFondFenetreProfesseur f2;
