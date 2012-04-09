@@ -11,6 +11,9 @@
 
 package panelsGroupe;
 
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import panelsAdministrateur.IHMBarreVisionGestionEleve;
 import panelsEleve.*;
 
 /**
@@ -261,8 +264,14 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
 
     private void AjoutGroupeBoutonAnnuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAnnuleActionPerformed
-        panelsGroupe.IHMChoixGroupe AG = new  panelsGroupe.IHMChoixGroupe(f);
-        f.setPanel(AG);
+        panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
+        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(CG, BorderLayout.CENTER);
+        panel.add(barreVision, BorderLayout.NORTH);
+        f.setPanel(panel);
+        f.setMenuGauche(true);
+      
     }//GEN-LAST:event_AjoutGroupeBoutonAnnuleActionPerformed
 
     private void AjoutGroupeBoutonRadCollectifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonRadCollectifActionPerformed
