@@ -244,9 +244,10 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
         	JPanel panel = new JPanel(new BorderLayout());
         	JPanel visualiserETVision = new JPanel(new BorderLayout());
         	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+        	panelDateEmbaucheAdministrateur dateEmbauche = new panelDateEmbaucheAdministrateur();
     		IHMVisualiserProfesseur visualiser = new IHMVisualiserProfesseur(f);
     		visualiserETVision.add(visualiser, BorderLayout.NORTH);
-    		
+    		visualiserETVision.add(dateEmbauche, BorderLayout.WEST);
     		visualiserETVision.add(visualiser, BorderLayout.CENTER);
     		visualiserETVision.add(new IHMBarreVisionVisualiserProfesseur(f), BorderLayout.NORTH);
         	panel.add(menuAdminGauche, BorderLayout.WEST);
