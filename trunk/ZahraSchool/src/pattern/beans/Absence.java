@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Absence {
-    /**
-     * le motif de l'absence de l'�l�ve.
-     * @see Absence#setMotif(String)
-     * @see Absence#getMotif()
-     */
+
     private String motif;
     private Date date;
    private ArrayList<Eleve> listeEleves = new ArrayList<Eleve>();
@@ -54,10 +50,7 @@ public class Absence {
                 this.listeEleves.add(eleve);
         }
         
-        /**
-         * Retire une matière de la liste des cours dispensés
-         * @param Matiere
-         */
+   
         public void removeEleve(Eleve eleve){
                 this.listeEleves.remove(eleve);
         }
