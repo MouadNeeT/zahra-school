@@ -72,7 +72,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(ModifierGroupeListeGroupes);
 
-        ModifierGroupeBoutonModifier.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonEditCrayon.png"))); // NOI18N
+        ModifierGroupeBoutonModifier.setIcon(new javax.swing.ImageIcon("..ZahraSchool/images/imageBoutonEditCrayon.png"));
         ModifierGroupeBoutonModifier.setText(" Modifier");
         ModifierGroupeBoutonModifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +161,6 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                                     .addComponent(ModifierGroupeNiveauGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ModifierGroupeTypeGroupe, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ModifierGroupeBoutonModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(ModifierGroupeBoutonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
