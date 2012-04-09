@@ -164,7 +164,6 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jList1);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonAjouter.png"))); // NOI18N
         jButton1.setText(" Ajouter");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
