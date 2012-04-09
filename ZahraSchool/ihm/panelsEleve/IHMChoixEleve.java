@@ -49,7 +49,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Supprimer.jpg"))); // NOI18N
 
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton6.setForeground(new java.awt.Color(0, 0, 204));
         jToggleButton6.setText("Supprimer un élève");
         jToggleButton6.setToolTipText("Pour supprimer un groupe, cliquez ici.");
@@ -74,9 +74,11 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
@@ -88,7 +90,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jLabel7.setText("Image");
 
         jToggleButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton5.setForeground(new java.awt.Color(0, 0, 204));
         jToggleButton5.setText("Ajouter un élève");
         jToggleButton5.setToolTipText("Pour ajouter un groupe, cliquez ici.");
@@ -108,7 +110,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
@@ -126,7 +128,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel16.setPreferredSize(new java.awt.Dimension(206, 93));
 
         jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton2.setForeground(new java.awt.Color(0, 0, 204));
         jToggleButton2.setText("Modifier un élève");
         jToggleButton2.setToolTipText("Pour modifier un élève, cliquez ici.");
@@ -147,17 +149,19 @@ public class IHMChoixEleve extends javax.swing.JPanel {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
                 .addGap(18, 18, 18))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
-            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
@@ -169,7 +173,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jLabel5.setText("Image");
 
         jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton3.setForeground(new java.awt.Color(0, 0, 204));
         jToggleButton3.setText("Visualiser un élève");
         jToggleButton3.setToolTipText("Pour visualiser un groupe, cliquez ici.");
@@ -195,10 +199,10 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
