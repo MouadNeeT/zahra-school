@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 
 import javax.swing.JPanel;
 
+import panelsAdministrateur.panelDateEmbaucheAdministrateur;
+
 import frames.FFondFenetreAdministrateur;
 
 public class IHMMenuGaucheAdministrateur extends JPanel{
@@ -300,8 +302,10 @@ public class IHMMenuGaucheAdministrateur extends JPanel{
     	JPanel panel = new JPanel(new BorderLayout());
     	JPanel visualiserETVision = new JPanel(new BorderLayout());
     	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
+    	panelDateEmbaucheAdministrateur dateEmbauche = new panelDateEmbaucheAdministrateur();
 		IHMAjouterProfesseur ajouter = new IHMAjouterProfesseur(f);		
 		visualiserETVision.add(ajouter, BorderLayout.EAST);
+		visualiserETVision.add(dateEmbauche, BorderLayout.WEST);
 		visualiserETVision.add(new IHMBarreVisionAjouterProfesseur(f), BorderLayout.NORTH);
     	panel.add(menuAdminGauche, BorderLayout.WEST);
     	panel.add(visualiserETVision, BorderLayout.CENTER);
