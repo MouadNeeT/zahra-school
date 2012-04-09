@@ -112,7 +112,7 @@ public class IHMModifierProfesseur extends javax.swing.JPanel {
         dateEmbauche.setText("Date d'embauche :");
 
         niveauEtudes.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        niveauEtudes.setText("Niveau d'études :");
+        niveauEtudes.setText("Niveau d'etudes :");
 
         adresse.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         adresse.setText("Adresse :");
@@ -181,7 +181,7 @@ public class IHMModifierProfesseur extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(51, 0, 153));
-        jLabel7.setText("Fiche détaillée");
+        jLabel7.setText("Fiche dï¿½taillï¿½e");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -330,7 +330,7 @@ public class IHMModifierProfesseur extends javax.swing.JPanel {
         boutonAnnuler.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         boutonAnnuler.setForeground(new java.awt.Color(255, 0, 0));
         boutonAnnuler.setText("Annuler");
-        boutonAnnuler.setToolTipText("En cliquant sue Annuler, vous reviendrez à la page d'accueil.");
+        boutonAnnuler.setToolTipText("En cliquant sue Annuler, vous reviendrez ï¿½ la page d'accueil.");
         boutonAnnuler.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonAnnulerActionPerformed(evt);
