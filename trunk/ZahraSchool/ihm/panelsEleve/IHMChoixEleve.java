@@ -51,7 +51,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton6.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton6.setText("Supprimer un élève");
+        jToggleButton6.setText("Supprimer un eleve");
         jToggleButton6.setToolTipText("Pour supprimer un groupe, cliquez ici.");
         jToggleButton6.setBorder(null);
         jToggleButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
