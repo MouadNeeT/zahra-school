@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.util.Date;
-
+/*
 public class GroupeDAO extends DAO<Groupe> {
 
         public GroupeDAO(Connection connexion) {
@@ -38,7 +38,7 @@ public class GroupeDAO extends DAO<Groupe> {
                                 groupe = new Groupe(nom, result.getString("niveau"), 
                                 		result.getDate("dateDeCreation"), 
                                 		result.getFloat("tarif"));
-                /*          public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif)*/
+                /*          public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif)
 
                 } catch (SQLException e) {
                         e.printStackTrace();
@@ -56,4 +56,4 @@ public class GroupeDAO extends DAO<Groupe> {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-}
+}*/
