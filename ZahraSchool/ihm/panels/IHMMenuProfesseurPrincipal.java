@@ -95,7 +95,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 
         jLabel14.setText("- supprimer un groupe.");
 
-        //jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("gestionGroupe_1.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/gestionGroupe_1.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -164,7 +164,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 
         jLabel9.setText("- supprimer un eleve.");
 
-        //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionEleve_1.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/gestionEleve_1.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -235,7 +235,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 
         jLabel18.setText("- gerer les revenus,");
 
-        //jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionProfesseur_1.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/gestionProfesseur_1.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -293,7 +293,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
             }
         });
 
-        //jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionFaireLAppel_1.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/gestionFaireLAppel_1.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -393,7 +393,13 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     }//GEN-LAST:event_boutonGestionProfesseurActionPerformed
 
     private void boutonAppelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAppelActionPerformed
-        // TODO add your handling code here:
+    	JPanel panel = new JPanel(new BorderLayout());
+    	FaireLapelle2 appel = new FaireLapelle2(f2);
+    	panel.add(appel, BorderLayout.NORTH);
+	    
+    	panel.add(this, BorderLayout.WEST);
+    	//panel.add(visualiserETVision, BorderLayout.CENTER);
+		f2.setPanel(panel);
     }//GEN-LAST:event_boutonAppelActionPerformed
 
 
