@@ -72,7 +72,8 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(ModifierGroupeListeGroupes);
 
-        ModifierGroupeBoutonModifier.setText("Modifier");
+        ModifierGroupeBoutonModifier.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonEditCrayon.png"))); // NOI18N
+        ModifierGroupeBoutonModifier.setText(" Modifier");
         ModifierGroupeBoutonModifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModifierGroupeBoutonModifierActionPerformed(evt);
@@ -203,8 +204,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(ModifierGroupeTarifs1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(39, Short.MAX_VALUE))
+                            .addComponent(ModifierGroupeTarifs1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,8 +213,8 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ModifierGroupeBoutonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ModifierGroupeBoutonModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                            .addComponent(ModifierGroupeBoutonModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
