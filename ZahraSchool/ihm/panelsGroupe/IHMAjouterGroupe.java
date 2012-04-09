@@ -101,7 +101,8 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 
         jLabel11.setText("Niveau du groupe :");
 
-        AjoutGroupeBoutonAjouter.setText("Ajouter");
+        AjoutGroupeBoutonAjouter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonAjouter.png"))); // NOI18N
+        AjoutGroupeBoutonAjouter.setText(" Ajouter");
         AjoutGroupeBoutonAjouter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AjoutGroupeBoutonAjouterActionPerformed(evt);
@@ -176,18 +177,16 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
                                             .addComponent(AjoutGroupeBoutonRadIndividuel)
                                             .addComponent(AjoutGroupeBoutonRadCollectif)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(13, 13, 13)
+                                        .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(AjoutGroupeNiveauGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(AjoutGroupeAvertissement1))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addContainerGap(793, Short.MAX_VALUE))))
+                            .addComponent(AjoutGroupeAvertissement1)))
+                    .addComponent(jLabel7))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
