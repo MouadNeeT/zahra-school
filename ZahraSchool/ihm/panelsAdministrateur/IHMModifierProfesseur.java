@@ -105,7 +105,7 @@ public class IHMModifierProfesseur extends javax.swing.JPanel {
         naissance.setText("Date de naissance :");
 
         telephone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        telephone.setText("Numéro de téléphone :");
+        telephone.setText("Numero de telephone :");
         telephone.setToolTipText("");
 
         dateEmbauche.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
