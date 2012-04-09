@@ -11,6 +11,10 @@
 
 package panelsGroupe;
 
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import panelsAdministrateur.IHMBarreVisionGestionEleve;
+
 /**
  *
  * @author alexandre
@@ -166,8 +170,14 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
 }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        IHMChoixGroupe CG = new IHMChoixGroupe(f);
-        f.setPanel(CG);
+        panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
+        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(CG, BorderLayout.CENTER);
+        panel.add(barreVision, BorderLayout.NORTH);
+        f.setPanel(panel);
+        f.setMenuGauche(true);
+      
 }//GEN-LAST:event_jButton2ActionPerformed
 
 
