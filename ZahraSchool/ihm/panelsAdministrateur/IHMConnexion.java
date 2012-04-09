@@ -100,7 +100,7 @@ public class IHMConnexion extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setText("Identifiant ou mot de passe oublié ?");
+        jLabel4.setText("Identifiant ou mot de passe oublie ?");
 
         jButtonIdentifiantMdpOublie.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonIdentifiantMdpOublie.setForeground(new java.awt.Color(0, 0, 204));
@@ -120,7 +120,7 @@ public class IHMConnexion extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel6.setText("Caractères admis : [A-Z] [a-z] [0-9]");
+        jLabel6.setText("Caracteres admis : [A-Z] [a-z] [0-9]");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -211,10 +211,10 @@ public class IHMConnexion extends javax.swing.JPanel {
     	JOptionPane jop = new JOptionPane();
         //ImageIcon img = new ImageIcon("images/cysboy.gif");
 
-    	String mess = "Votre identifiant correspond à \n";
+    	String mess = "Votre identifiant correspond a \n";
         mess += "votre addresse de messagerie, \n";
         mess += "Votre mot de passe correspond \n";
-        mess += "également au mot de passe de \n";
+        mess += "egalement au mot de passe de \n";
         mess += "votre messagerie.\n";
 
         jop.showMessageDialog(null, mess, "Oublie ?", JOptionPane.INFORMATION_MESSAGE);
