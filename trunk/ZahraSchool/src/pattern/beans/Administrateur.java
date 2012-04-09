@@ -5,15 +5,15 @@ import java.util.Date;
 /**
  * <b>Administrateur est un bean</b>
  * <p>
- * un administrateur est caractérisé par les informations suivantes :
+ * un administrateur est caracterise par les informations suivantes :
  * <ul>
  * <li>L'identifiant de l'administrateur.</li>
  * <li>Le mot de passe de l'administrateur.</li>
  * <li>le nom de l'administrateur.</li>
  * <li>le prenom de l'administrateur.</li>
  * <li>l'adresse de l'administrateur</li>
- * <li>le numéro de téléphone de l'administrateur.</li>
- * <li>le niveau d'études de l'administrateur.</li>
+ * <li>le numero de telephone de l'administrateur.</li>
+ * <li>le niveau d'etudes de l'administrateur.</li>
  * <li>la date de naissance de l'administrateur.</li>
  * <li>la date d'embauche de l'administrateur</li>
  * </ul>
@@ -21,7 +21,7 @@ import java.util.Date;
  * 
  * @see Administrateur
  * 
- * @author GAUTIER Stéphanie
+ * @author GAUTIER Stephanie
  * @version 1.0
  */
 
@@ -36,7 +36,7 @@ public class Administrateur {
 	private String identifiant;
 	/**
 	 * Le mot de passe de l'administrateur.
-	 * En général le mot de passe ser celui de la boite mail
+	 * En general le mot de passe ser celui de la boite mail
 	 * @see Administrateur#setMotDePasse(String)
 	 * @see Administrateur#getMotDePasse()
 	 */
@@ -60,13 +60,13 @@ public class Administrateur {
 	 */
 	private String adresse;
 	/**
-	 * le numéro de téléphone de l'administrateur.
+	 * le numero de telephone de l'administrateur.
 	 * @see Administrateur#setNumeroTelephone(String)
 	 * @see Administrateur#getNumeroTelephone()
 	 */
 	private int numeroTelephone;
 	/**
-	 * le niveau d'études de l'administrateur.
+	 * le niveau d'etudes de l'administrateur.
 	 * @see Administrateur#setNiveauEtudes(String)
 	 * @see Administrateur#getNiveauEtudes()
 	 */
