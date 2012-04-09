@@ -11,7 +11,7 @@ package panels;
 public class IHMChoixDifferentOptionGroupe extends javax.swing.JPanel {
 
     /**
-     * Creates new form ChoixDifférentOptionGroupe
+     * Creates new form ChoixDifferentOptionGroupe
      */
     public IHMChoixDifferentOptionGroupe() {
         initComponents();

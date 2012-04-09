@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import frames.FConnexionZahraSchool;
+import javax.swing.ImageIcon;
 
 public class IHMBarreHautProfesseur extends JPanel{
 	frames.FFondFenetreProfesseur f2;
@@ -41,7 +42,8 @@ public class IHMBarreHautProfesseur extends JPanel{
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("../ZarhaSchool/images/logoZahraSchool.jpg")); // NOI18N
+        //jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/logoZahraSchool.jpg")); // NOI18N
+        jLabel4.setIcon(new ImageIcon("../ZahraSchool/images/logoZahraSchool.jpg"));
         jLabel4.setText("");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -94,8 +96,8 @@ public class IHMBarreHautProfesseur extends JPanel{
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setForeground(new java.awt.Color(0, 0, 153));
-        jButton1.setIcon(new javax.swing.ImageIcon("../ZarhaSchool/images/images/cadenas1.png")); // NOI18N
-        jButton1.setText("Se deconnecter");
+        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/cadenas1.png")); // NOI18N
+        jButton1.setText("Deconnexion");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

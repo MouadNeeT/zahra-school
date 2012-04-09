@@ -56,7 +56,7 @@ public class IHMVisualisationGroupes extends javax.swing.JPanel {
         jLabel1.setText("Nom du groupe :");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Vous avez la possibilité de rechercher un groupe");
+        jLabel2.setText("Vous avez la possibilite de rechercher un groupe");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -128,7 +128,7 @@ public class IHMVisualisationGroupes extends javax.swing.JPanel {
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des élèves", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(0, 0, 153))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des eleves", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(0, 0, 153))); // NOI18N
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -138,7 +138,7 @@ public class IHMVisualisationGroupes extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Nom", "Prénom", "Alerte", "Fiche"
+                "Nom", "Prenom", "Alerte", "Fiche"
             }
         ));
         jScrollPane4.setViewportView(jTable2);
