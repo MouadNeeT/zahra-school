@@ -262,7 +262,7 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
 
     private void AjoutGroupeBoutonAnnuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAnnuleActionPerformed
-        panelsGroupe.IHMAjouterGroupe AG = new  panelsGroupe.IHMAjouterGroupe(f);
+        panelsGroupe.IHMChoixGroupe AG = new  panelsGroupe.IHMChoixGroupe(f);
         f.setPanel(AG);
     }//GEN-LAST:event_AjoutGroupeBoutonAnnuleActionPerformed
 
