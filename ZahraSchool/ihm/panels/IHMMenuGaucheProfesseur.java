@@ -537,7 +537,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
 
     //Ajouter un groupe
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,3);
+        panelsGroupe.IHMAjouterGroupe RG = new panelsGroupe.IHMAjouterGroupe(f);
         f.setPanel(RG);
     }                                        
 
