@@ -181,7 +181,7 @@ public class IHMModifierProfesseur extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(51, 0, 153));
-        jLabel7.setText("Fiche d�taill�e");
+        jLabel7.setText("Fiche detaillee");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
