@@ -8,24 +8,24 @@ import pattern.beans.Professeur;
 /**
  * <b>Professeur DAO</b>
  * <p>
- * Le professeur est recherché dans la base de donnée grâce aux éléments suivants :
+ * Le professeur est recherchï¿½ dans la base de donnï¿½e grï¿½ce aux ï¿½lï¿½ments suivants :
  * <ul>
  * <li>le nom du professeur.</li>
  * <li>le prenom du professeur.</li>
  * </ul>
  * </p>
  *<p>
- * En fonction du nom et du prénom, les autres éléments sont retrouvés dans la
- * base de données.
+ * En fonction du nom et du prï¿½nom, les autres ï¿½lï¿½ments sont retrouvï¿½s dans la
+ * base de donnï¿½es.
  * </p>
  * 
  * @see ProfesseurDAO
  * @see DAO
  * 
- * @author GAUTIER Stéphanie
+ * @author GAUTIER Stï¿½phanie
  * @version 1.0
  */
-
+/*
 public class ProfesseurDAO extends DAO<Professeur>{
 
 	public ProfesseurDAO(Connection conn) {
@@ -78,3 +78,4 @@ public class ProfesseurDAO extends DAO<Professeur>{
 	}
 
 }
+*/

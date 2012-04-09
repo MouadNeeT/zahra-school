@@ -7,7 +7,7 @@ import java.util.Date;
 
 import pattern.beans.Absence;
 
-
+/*
 
 public class AbsenceDAO extends DAO<Absence> {
 
@@ -57,4 +57,4 @@ public class AbsenceDAO extends DAO<Absence> {
         
    
 
-}
+}*/
