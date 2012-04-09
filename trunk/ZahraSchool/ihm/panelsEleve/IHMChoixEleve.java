@@ -17,6 +17,11 @@ public class IHMChoixEleve extends javax.swing.JPanel {
     public IHMChoixEleve(frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
+        // Ajout d'images dans les boutons
+        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/Ajouter.jpg"));
+        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/Supprimer.jpg"));
+        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/EDITER.jpg"));
+        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/visualizer.jpg"));
     }
 
     /**
@@ -46,7 +51,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel18.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Supprimer.jpg"))); // NOI18N
+        jLabel4.setText(" ");
 
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12));
@@ -86,9 +91,6 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel17.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ajouter.jpg"))); // NOI18N
-        jLabel7.setText("Image");
-
         jToggleButton5.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton5.setForeground(new java.awt.Color(0, 0, 204));
@@ -107,19 +109,24 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
@@ -140,7 +147,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EDITER.jpg"))); // NOI18N
+        jLabel6.setText(" ");
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -169,8 +176,7 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         jPanel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel15.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visualizer.jpg"))); // NOI18N
-        jLabel5.setText("Image");
+        jLabel5.setText(" ");
 
         jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12));
