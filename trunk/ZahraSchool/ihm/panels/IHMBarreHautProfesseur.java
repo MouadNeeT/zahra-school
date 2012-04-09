@@ -95,7 +95,7 @@ public class IHMBarreHautProfesseur extends JPanel{
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setForeground(new java.awt.Color(0, 0, 153));
         //jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cadenas.png"))); // NOI18N
-        jButton1.setText("Se déconnecter");
+        jButton1.setText("Se deconnecter");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
