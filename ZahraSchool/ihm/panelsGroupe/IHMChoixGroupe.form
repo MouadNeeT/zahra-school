@@ -97,11 +97,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel4">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;../ZahraSchool/images/Supprimer.jpg&quot;)" type="code"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JToggleButton" name="BoutonSupprimerGroupe">
           <Properties>
@@ -176,11 +171,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel7">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;../ZahraSchool/images/Ajouter.jpg&quot;)" type="code"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JToggleButton" name="BoutonAjouterGroupe">
           <Properties>
@@ -282,11 +272,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;../ZahraSchool/images/EDITER.jpg&quot;)" type="code"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -340,11 +325,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel5">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;../ZahraSchool/images/visualizer.jpg&quot;)" type="code"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JToggleButton" name="BoutonVisualisationGroupe">
           <Properties>
