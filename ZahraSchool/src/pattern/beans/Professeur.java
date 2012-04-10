@@ -21,9 +21,9 @@ public class Professeur {
 	}
 	
 	public Professeur(String identifiant, String motDePasse, String nom,
-			String prenom, String adresse, int numeroTelephone, 
-			String niveauEtudes, Date dateDeNaissance, Date dateEmbauche, 
-			ArrayList<Eleve> listeEleves, ArrayList<Matiere> listeMatieres){
+				String prenom, String adresse, int numeroTelephone, 
+				String niveauEtudes, Date dateDeNaissance, Date dateEmbauche, 
+				ArrayList<Eleve> listeEleves, ArrayList<Matiere> listeMatieres){
 		this.identifiant = identifiant;
 		this.motDePasse = motDePasse;
 		this.nom = nom;
