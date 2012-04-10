@@ -123,7 +123,7 @@ frames.FFondFenetreProfesseur f;
 
         jLabel12.setText("Ses groupes :");
 
-        jButton2.setText("Retour");
+        jButton2.setText("Retour1");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
