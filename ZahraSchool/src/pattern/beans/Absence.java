@@ -1,23 +1,48 @@
 package pattern.beans;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Absence {
-
+    /**
+     * le motif de l'absence de l'élève.
+     * @see Absence#setMotif(String)
+     * @see Absence#getMotif()
+     */
     private String motif;
     private Date date;
-   private ArrayList<Eleve> listeEleves = new ArrayList<Eleve>();
+    private Eleve eleve;
     
     public Absence(){}
     
-    public Absence(String motif, Date date)
+    public Absence(Eleve eleve, String motif, Date date)
     {
+    	this.eleve=eleve;
         this.motif=motif;
         this.date=date;
     }
     
-     public void setMotif(String Motif){
+     /**
+	 * @return the eleve
+	 */
+	public Eleve getEleve() {
+		return eleve;
+	}
+
+	/**
+	 * @param eleve the eleve to set
+	 */
+	public void setEleve(Eleve eleve) {
+		this.eleve = eleve;
+	}
+
+	/**
+	 * @return the motif
+	 */
+	public String getMotif() {
+		return motif;
+	}
+
+	public void setMotif(String Motif){
         this.motif= Motif;
     }
     
@@ -36,23 +61,5 @@ public class Absence {
         return this.date;
     }
     
-        public void setListeEleves(ArrayList<Eleve> listeEleves)
-    {
-        this.listeEleves=listeEleves;
-    }
-    
-    public ArrayList<Eleve> returnListeElves()
-    {
-        return this.listeEleves;
-    }
-    
-    public void addEleve(Eleve eleve){
-                this.listeEleves.add(eleve);
-        }
-        
-   
-        public void removeEleve(Eleve eleve){
-                this.listeEleves.remove(eleve);
-        }
-        
+
 }
