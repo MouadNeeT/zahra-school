@@ -5,15 +5,15 @@ import java.util.Date;
 /**
  * <b>Administrateur est un bean</b>
  * <p>
- * un administrateur est caracterise par les informations suivantes :
+ * un administrateur est caract�ris� par les informations suivantes :
  * <ul>
  * <li>L'identifiant de l'administrateur.</li>
  * <li>Le mot de passe de l'administrateur.</li>
  * <li>le nom de l'administrateur.</li>
  * <li>le prenom de l'administrateur.</li>
  * <li>l'adresse de l'administrateur</li>
- * <li>le numero de telephone de l'administrateur.</li>
- * <li>le niveau d'etudes de l'administrateur.</li>
+ * <li>le num�ro de t�l�phone de l'administrateur.</li>
+ * <li>le niveau d'�tudes de l'administrateur.</li>
  * <li>la date de naissance de l'administrateur.</li>
  * <li>la date d'embauche de l'administrateur</li>
  * </ul>
@@ -27,61 +27,23 @@ import java.util.Date;
 
 public class Administrateur {
 	
-	/**
-	 * L'identifiant de l'administrateur.
-	 * Il s'agit de l'adresse mail.
-	 * @see Administrateur#setIdentifiant(String)
-	 * @see Administrateur#getIdentifiant()
-	 */
+	
 	private String identifiant;
-	/**
-	 * Le mot de passe de l'administrateur.
-	 * En general le mot de passe ser celui de la boite mail
-	 * @see Administrateur#setMotDePasse(String)
-	 * @see Administrateur#getMotDePasse()
-	 */
+	
 	private String motDePasse;
-	/**
-	 * le nom de l'administrateur.
-	 * @see Administrateur#setNom(String)
-	 * @see Administrateur#getNom()
-	 */
+	
 	private String nom;
-	/**
-	 * le prenom de l'administrateur.
-	 * @see Administrateur#setPrenom(String)
-	 * @see Administrateur#getPrenom()
-	 */
+	
 	private String prenom;
-	/**
-	 * l'adresse de l'administrateur
-	 * @see Administrateur#setAdresse(String)
-	 * @see Administrateur#getAdresse()
-	 */
+	
 	private String adresse;
-	/**
-	 * le numero de telephone de l'administrateur.
-	 * @see Administrateur#setNumeroTelephone(String)
-	 * @see Administrateur#getNumeroTelephone()
-	 */
+	
 	private int numeroTelephone;
-	/**
-	 * le niveau d'etudes de l'administrateur.
-	 * @see Administrateur#setNiveauEtudes(String)
-	 * @see Administrateur#getNiveauEtudes()
-	 */
+	
 	private String niveauEtudes;
-	/**
-	 * la date de naissance de l'administrateur.
-	 * @see Administrateur#setDateDeNaissance(Date)
-	 * @see Administrateur#getDateDeNaissance()
-	 */
+	
 	private Date dateDeNaissance;
-	/**
-	 * la date d'embauche de l'administrateur
-	 * @see Administrateur#setDateEmbauche(Date)
-	 * @see Administrateur#getDateEmbauche()
-	 */
+	
 	private Date dateEmbauche;
 	
 	/**

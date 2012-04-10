@@ -177,40 +177,27 @@ public class Professeur {
 		this.dateDeNaissance = dateDeNaissance;
 	}
 
-	/**
-	 * @return the dateEmbauche
-	 */
+	
 	public Date getDateEmbauche() {
 		return dateEmbauche;
 	}
 
-	/**
-	 * @param dateEmbauche the dateEmbauche to set
-	 */
+	
 	public void setDateEmbauche(Date dateEmbauche) {
 		this.dateEmbauche = dateEmbauche;
 	}
 	
-	/**
-	 * méthode qui ajoute un élève à la liste d'élève du professeur
-	 * @param eleve
-	 */
+	
 	public void addEleve(Eleve eleve){
         this.listeEleves.add(eleve);
 	}
 	
-	/**
-	 * méthode qui ajoute une matière à la liste des matières du professeur
-	 * @param matiere
-	 */
+	
 	public void addMatiere(Matiere matiere){
         this.listeMatieres.add(matiere);
 	}
 
-	/**
-	 * Retire une matiere de la liste des matieres 
-	 * @param matiere
-	 */
+	
 	public void removeMatiere(Matiere matiere){
         this.listeMatieres.remove(matiere);
 	}
