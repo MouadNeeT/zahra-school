@@ -20,6 +20,8 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     public IHMAjouterEleve( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
+        // ajout images boutons
+        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonAjouter.png"));
     }
 
     /** This method is called from within the constructor to
@@ -164,7 +166,6 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jList1);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonAjouter.png"))); // NOI18N
         jButton1.setText(" Ajouter");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
