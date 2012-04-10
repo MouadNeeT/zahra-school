@@ -24,12 +24,15 @@ public class FFondFenetreAdministrateur extends JFrame{
           
 	public FFondFenetreAdministrateur(){
 
-		
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+    	int height = (int)dimension.getHeight();
+    	int width  = (int)dimension.getWidth();
+    	
 	        panel1.add(barreHaut, BorderLayout.NORTH);
                 panel1.add(barreBas, BorderLayout.SOUTH);
                 //panel1.add(this.getPanel(), BorderLayout.CENTER);
                 panel1.setPreferredSize(new Dimension(800, 500));
-		setSize(new Dimension(800, 600));
+		setSize(new Dimension(width, height));
 		add(panel1);
                 setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
