@@ -3,6 +3,13 @@ package pattern.beans;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Dans cette classe :
+ * add et remove en plus pour les listes
+ * 
+ * @author GAUTIER Stéphanie
+ *
+ */
 
 public class Eleve {
 	
@@ -37,11 +44,10 @@ public class Eleve {
 	private String status;
 	
 	private String niveauTest;
-	private ArrayList<Professeur> listeProfesseurs = new ArrayList<Professeur>(); 
-	
-	private ArrayList<Groupe> listeGroupes = new ArrayList<Groupe>(); 
-	private ArrayList<Paiement> listePaiements = new ArrayList<Paiement>(); 
-	private EmploiDuTemps emploiDuTemps = new EmploiDuTemps(); 
+	private ArrayList<Professeur> listeProfesseurs; 
+	private ArrayList<Groupe> listeGroupes; 
+	private ArrayList<Paiement> listePaiements; 
+	private EmploiDuTemps emploiDuTemps; 
 	
 	public Eleve(){
 	}
@@ -351,12 +357,4 @@ public class Eleve {
         this.listePaiements.remove(paiement);
 	}
 	
-
-	
-	
-	
-	
-	
-	
-
 }
