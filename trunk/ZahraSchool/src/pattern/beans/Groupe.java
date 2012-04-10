@@ -1,34 +1,28 @@
 package pattern.beans;
 
-import pattern.beans.*;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Groupe {
 
-    private ArrayList<Eleve> listeEleves = new ArrayList<Eleve>();
-    private ArrayList<Matiere> listeMatieres = new ArrayList<Matiere>();
-    private ArrayList<Professeur> listeProfesseur = new ArrayList<Professeur>();
-    
-    private EmploiDuTemps emploiDuTemps;
-    
+	
+
+	private EmploiDuTemps emploiDuTemps;
+	private ArrayList<Eleve> listeEleves;
+	private Groupe groupe;
     private String nom;
-    
     private String niveau;
-    
     private Date dateDeCreation;
-    
     private float tarif;
 
     public Groupe(){}
     
-    public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif, ArrayList<Eleve> listeEleves)
+    public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif)
     {
         this.nom=nom;
         this.niveau=niveau;
         this.dateDeCreation=dateDeCreation;
         this.tarif=tarif;
-        this.listeEleves=listeEleves;
     }
     
     public void setNom(String Nom){
@@ -65,81 +59,79 @@ public class Groupe {
         this.tarif=tarif;
     }
     
-    public float returnTarif()
-    {
-        return this.tarif;
-    }
-    
-    public void setListeEleves(ArrayList<Eleve> listeEleves)
-    {
-        this.listeEleves=listeEleves;
-    }
-    
-    public ArrayList<Eleve> returnListeElves()
-    {
-        return this.listeEleves;
-    }
-    
-    public void addEleve(Eleve eleve){
-                this.listeEleves.add(eleve);
-        }
-        
-        /**
-         * Retire une matière de la liste des cours dispensés
-         * @param Matiere
-         */
-        public void removeEleve(Eleve eleve){
-                this.listeEleves.remove(eleve);
-        }
-        
-        
-        /*-----------------------------------------------------------------*/
-         public void setListeMatieres(ArrayList<Matiere> listeMatieres)
-    {
-        this.listeMatieres=listeMatieres;
-    }
-    
-    public ArrayList<Matiere> returnListeMatieres()
-    {
-        return this.listeMatieres;
-    }
-    
-    public void addMatiere(Matiere matiere){
-                this.listeMatieres.add(matiere);
-        }
-        
+    /**
+	 * @return the emploiDuTemps
+	 */
+	public EmploiDuTemps getEmploiDuTemps() {
+		return emploiDuTemps;
+	}
 
-        public void removeMatiere(Matiere Matieres){
-                this.listeMatieres.remove(Matieres);
-        }
-        
-     public void setListeProfesseur(ArrayList<Professeur> listeProfesseur)
-    {
-        this.listeProfesseur=listeProfesseur;
-    }
+	/**
+	 * @param emploiDuTemps the emploiDuTemps to set
+	 */
+	public void setEmploiDuTemps(EmploiDuTemps emploiDuTemps) {
+		this.emploiDuTemps = emploiDuTemps;
+	}
+
+	/**
+	 * @return the listeEleves
+	 */
+	public ArrayList<Eleve> getListeEleves() {
+		return listeEleves;
+	}
+
+	/**
+	 * @param listeEleves the listeEleves to set
+	 */
+	public void setListeEleves(ArrayList<Eleve> listeEleves) {
+		this.listeEleves = listeEleves;
+	}
+
+	/**
+	 * @return the groupe
+	 */
+	public Groupe getGroupe() {
+		return groupe;
+	}
+
+	/**
+	 * @param groupe the groupe to set
+	 */
+	public void setGroupe(Groupe groupe) {
+		this.groupe = groupe;
+	}
+
+	/**
+	 * @return the tarif
+	 */
+	public float getTarif() {
+		return tarif;
+	}
+
+	/**
+	 * @param e
+	 * @return
+	 * @see java.util.ArrayList#add(java.lang.Object)
+	 */
+	public boolean add(Eleve e) {
+		return listeEleves.add(e);
+	}
+
+	/**
+	 * @param o
+	 * @return
+	 * @see java.util.ArrayList#remove(java.lang.Object)
+	 */
+	public boolean remove(Object o) {
+		return listeEleves.remove(o);
+	}
+
+	/**
+	 * @param dateDeCreation the dateDeCreation to set
+	 */
+	public void setDateDeCreation(Date dateDeCreation) {
+		this.dateDeCreation = dateDeCreation;
+	}
     
-    public ArrayList<Professeur> returnListeProfesseur()
-    {
-        return this.listeProfesseur;
-    }
     
-    public void addProfesseur(Professeur professeur){
-                this.listeProfesseur.add(professeur);
-        }
-        
-  
-        public void removeProfesseur(Professeur professeur){
-                this.listeProfesseur.remove(professeur);
-        }
-        
-        
-         public void setEmploi(EmploiDuTemps EmploiDuTemps)
-    {
-        this.emploiDuTemps=EmploiDuTemps;
-    }
-    
-    public EmploiDuTemps returnEmploiDuTemps()
-    {
-        return this.emploiDuTemps;
-    }
 }
