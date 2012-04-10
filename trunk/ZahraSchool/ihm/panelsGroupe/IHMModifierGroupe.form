@@ -36,38 +36,31 @@
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                              <Component id="ModifierGroupeTarifs1" pref="177" max="32767" attributes="1"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="217" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="216" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="ModifierGroupePrenomProfesseur" alignment="1" max="32767" attributes="1"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="ModifierGroupeNom" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="ModifierGroupeDateJour" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="ModifierGroupeDateMois" min="-2" pref="65" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="ModifierGroupeDateAnnee" min="-2" pref="57" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="ModifierGroupeNomProfesseur" alignment="1" max="32767" attributes="1"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  <Component id="ModifierGroupeTarifs1" max="32767" attributes="1"/>
+                                  <Component id="ModifierGroupePrenomProfesseur" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="ModifierGroupeNom" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="ModifierGroupeDateJour" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="ModifierGroupeDateMois" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="ModifierGroupeDateAnnee" min="-2" pref="57" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="ModifierGroupeNomProfesseur" alignment="1" max="32767" attributes="1"/>
                               </Group>
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
