@@ -2,7 +2,6 @@ package panels;
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
-import panelsAdministrateur.IHMBarreVisionGestion;
 import panelsAdministrateur.IHMBarreVisionModifierProfesseur;
 import panelsAdministrateur.IHMMenuGaucheAdministrateur;
 import panelsAdministrateur.IHMModifierSupprimerProfesseur;
@@ -492,7 +491,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     //gestion des eleves
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	panelsEleve.IHMChoixEleve CE = new panelsEleve.IHMChoixEleve(f);
-        IHMBarreVisionGestion barreVision = new IHMBarreVisionGestion(f,"   Gestion des eleves");
+        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,"   Gestion des eleves");
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(CE, BorderLayout.CENTER);
         panel.add(barreVision, BorderLayout.NORTH);
@@ -527,7 +526,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     //Gestion des groupes
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         panelsGroupe.IHMChoixGroupe CG = new panelsGroupe.IHMChoixGroupe(f);
-        IHMBarreVisionGestion barreVision = new IHMBarreVisionGestion(f,"   Gestion des groupes");
+        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,"   Gestion des groupes");
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(CG, BorderLayout.CENTER);
         panel.add(barreVision, BorderLayout.NORTH);
