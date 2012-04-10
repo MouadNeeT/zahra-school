@@ -1,16 +1,41 @@
 package pattern.dao;
 import pattern.beans.*;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.util.Date;
 
 import pattern.beans.Eleve;
+import pattern.entity.EleveEntity;
 
-/*
+/**
+ * <b>ELeve DAO</b>
+ * <p>
+ * L'élève est recherché dans la base de donnée grâce aux éléments suivants :
+ * <ul>
+ * <li>le nom de l'élève.</li>
+ * <li>le prenom de l'élève.</li>
+ * </ul>
+ * </p>
+ *<p>
+ * En fonction du nom et du prénom, les autres éléments sont retrouvés dans la
+ * base de données.
+ * </p>
+ * 
+ * @see EleveDAO
+ * @see DAO
+ * 
+ * @author GAUTIER Stéphanie
+ * @version 1.0
+ */
 
-public class EleveDAO extends DAO<Eleve> {
+public class EleveDAO extends DAO<EleveEntity> {
 
+	public EleveDAO() {
+      
+	}
+	
         public EleveDAO(Connection connexion) {
                 super(connexion);
         }
@@ -43,7 +68,8 @@ public class EleveDAO extends DAO<Eleve> {
                                 		result.getInt("numeroTelephoneParent"), result.getDate("dateInscription"), 
                                 		result.getString("niveauEtudes"), result.getString("nomPere"), 
                                 		result.getString("prenomPere"), result.getString("nomMere"), 
-                                		result.getString("prenomMere"), result.getString("status"), result.getString("niveauTest"));
+                                		result.getString("prenomMere"), result.getString("status"), result.getString("niveauTest"), 
+                                		null, null, null, null);
                        
                 } catch (SQLException e) {
                         e.printStackTrace();
@@ -54,7 +80,23 @@ public class EleveDAO extends DAO<Eleve> {
         public boolean update(Eleve obj) {
                 return false;
         }
-        
-   
 
-}*/
+		@Override
+		public boolean create(EleveEntity obj) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean delete(EleveEntity obj) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean update(EleveEntity obj) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+}
