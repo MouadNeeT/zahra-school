@@ -23,6 +23,10 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
         this.f=f;
         c=i;
         initComponents();
+        // ajout images boutons
+        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonVoir.png"));
+        jButton3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png"));
+        jButton4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonSupprimer.png"));
     }
 
     /** This method is called from within the constructor to
@@ -87,7 +91,6 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
 
         jLabel4.setText("Groupe selectionne :");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonVoir.png"))); // NOI18N
         jButton1.setText(" Visualiser");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +105,6 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonEditCrayon.png"))); // NOI18N
         jButton3.setText(" Modifier");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +112,6 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonSupprimer.png"))); // NOI18N
         jButton4.setText("Supprimer");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

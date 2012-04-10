@@ -21,6 +21,8 @@ public class IHMModifierEleve extends javax.swing.JPanel {
     public IHMModifierEleve( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
+        // ajout images boutons
+        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png")); // NOI18N
     }
 
     /** This method is called from within the constructor to
@@ -165,7 +167,6 @@ public class IHMModifierEleve extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jList1);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageBoutonEditCrayon.png"))); // NOI18N
         jButton1.setText(" Modifier");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
