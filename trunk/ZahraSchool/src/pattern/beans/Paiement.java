@@ -3,68 +3,79 @@ package pattern.beans;
 import java.util.Date;
 
 public class Paiement {
-    
-private Date datePrevue;
-private Date dateEncaissement;
-private float montant;
-private String mois;
-private Eleve eleve;
+	
+	private int montant;
+	private String mois;
+	private Date dateDePaiementPrevus;
+	private Date dateEncaissement;
+	private Eleve eleve;
+	
+	public Paiement() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Paiement(int montant, String mois, Date dateDePaiementPrevus, Date dateEncaissement, Eleve eleve) {
+		this.montant = montant;
+		this.mois = mois;
+		this.dateDePaiementPrevus = dateDePaiementPrevus;
+		this.dateEncaissement = dateEncaissement;
+		this.eleve = eleve;
+	}
+	
+	
+	public int getMontant() {
+		return montant;
+	}
 
-public  Paiement(){}
+	public void setMontant(int montant) {
+		this.montant = montant;
+	}
 
-public  Paiement(Date datePrevue,Date dateEncaissement,float montant,String mois, Eleve eleve){
-this.datePrevue=datePrevue;
-this.dateEncaissement= dateEncaissement;
-this.montant=montant;
-this.mois=mois;
-this.eleve=eleve;
-}
+	public String getMois() {
+		return mois;
+	}
 
- public void setDateEncaissement(Date dateEncaissement)
-    {
-        this.dateEncaissement=dateEncaissement;
-    }
-    
-    public Date getDateEncaissement()
-    {
-        return this.dateEncaissement;
-    }
-    
-     public void setDatePrevue(Date datePrevue)
-    {
-        this.datePrevue=datePrevue;
-    }
-    
-    public Date getDatePrevue()
-    {
-        return this.datePrevue;
-    }
-    
-     public void setMontant(float montant)
-    {
-        this.montant=montant;
-    }
-    
-    public float returnMontant()
-    {
-        return this.montant;
-    }
-    
-     public void setMois(String mois){
-        this.mois= mois;
-    }
-    
-    public String getMois()
-    {
-        return this.mois;
-    }
+	public void setMois(String mois) {
+		this.mois = mois;
+	}
 
-      public void setEleve(Eleve eleve){
-      this.eleve= eleve;
-    }
-    
-    public Eleve getEleve()
-    {
-        return this.eleve;
-    }
+	public Date getDateDePaiementPrévus() {
+		return dateDePaiementPrevus;
+	}
+
+	public void setDateDePaiementPrevus(Date dateDePaiementPrevus) {
+		this.dateDePaiementPrevus = dateDePaiementPrevus;
+	}
+
+	/**
+	 * @return the eleve
+	 */
+	public Eleve getEleve() {
+		return eleve;
+	}
+
+	/**
+	 * @param eleve the eleve to set
+	 */
+	public void setEleve(Eleve eleve) {
+		this.eleve = eleve;
+	}
+
+	/**
+	 * @return the dateDePaiementPrevus
+	 */
+	public Date getDateDePaiementPrevus() {
+		return dateDePaiementPrevus;
+	}
+
+	public Date getDateEncaissement() {
+		return dateEncaissement;
+	}
+
+	public void setDateEncaissement(Date dateEncaissement) {
+		this.dateEncaissement = dateEncaissement;
+	}
+
+	
+
 }
