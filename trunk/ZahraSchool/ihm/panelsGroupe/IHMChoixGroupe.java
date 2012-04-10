@@ -53,8 +53,6 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
         jPanel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel18.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/Supprimer.jpg"));
-
         BoutonSupprimerGroupe.setBackground(new java.awt.Color(255, 255, 255));
         BoutonSupprimerGroupe.setFont(new java.awt.Font("Tahoma", 1, 12));
         BoutonSupprimerGroupe.setForeground(new java.awt.Color(0, 0, 204));
@@ -95,8 +93,6 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
         jPanel17.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel17.setPreferredSize(new java.awt.Dimension(206, 93));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/Ajouter.jpg"));
 
         BoutonAjouterGroupe.setBackground(new java.awt.Color(255, 255, 255));
         BoutonAjouterGroupe.setFont(new java.awt.Font("Tahoma", 1, 12));
@@ -152,8 +148,6 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/EDITER.jpg"));
-
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -182,8 +176,6 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
         jPanel15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel15.setPreferredSize(new java.awt.Dimension(206, 93));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/visualizer.jpg"));
 
         BoutonVisualisationGroupe.setBackground(new java.awt.Color(255, 255, 255));
         BoutonVisualisationGroupe.setFont(new java.awt.Font("Tahoma", 1, 12));
