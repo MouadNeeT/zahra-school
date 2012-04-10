@@ -1,6 +1,5 @@
 package pattern.dao;
 import pattern.beans.*;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
@@ -8,26 +7,7 @@ import java.util.Date;
 
 import pattern.beans.Eleve;
 
-/**
- * <b>ELeve DAO</b>
- * <p>
- * L'élève est recherché dans la base de donnée grâce aux éléments suivants :
- * <ul>
- * <li>le nom de l'élève.</li>
- * <li>le prenom de l'élève.</li>
- * </ul>
- * </p>
- *<p>
- * En fonction du nom et du prénom, les autres éléments sont retrouvés dans la
- * base de données.
- * </p>
- * 
- * @see EleveDAO
- * @see DAO
- * 
- * @author GAUTIER Stéphanie
- * @version 1.0
- */
+/*
 
 public class EleveDAO extends DAO<Eleve> {
 
@@ -74,5 +54,7 @@ public class EleveDAO extends DAO<Eleve> {
         public boolean update(Eleve obj) {
                 return false;
         }
+        
+   
 
-}
+}*/
