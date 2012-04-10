@@ -18,10 +18,10 @@ public class IHMChoixEleve extends javax.swing.JPanel {
         this.f=f;
         initComponents();
         // Ajout d'images dans les boutons
-        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/Ajouter.jpg"));
-        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/Supprimer.jpg"));
-        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/EDITER.jpg"));
-        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/visualizer.jpg"));
+        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/ajouterEleve.png"));
+        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/supprimerEleve.png"));
+        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/editerEleve.png"));
+        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/voirEleve.png.jpg"));
     }
 
     /**
