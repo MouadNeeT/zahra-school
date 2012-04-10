@@ -39,10 +39,6 @@ public class Paiement {
 		this.mois = mois;
 	}
 
-	public Date getDateDePaiementPrévus() {
-		return dateDePaiementPrevus;
-	}
-
 	public void setDateDePaiementPrevus(Date dateDePaiementPrevus) {
 		this.dateDePaiementPrevus = dateDePaiementPrevus;
 	}
