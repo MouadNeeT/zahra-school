@@ -196,7 +196,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 
     private void ModifierGroupeBoutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierGroupeBoutonAnnulerActionPerformed
          panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
-        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f,"   Gestion des eleves");
+        IHMBarreVisionGestionEleve barreVision = new IHMBarreVisionGestionEleve(f,"   Gestion des groupes");
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(CG, BorderLayout.CENTER);
         panel.add(barreVision, BorderLayout.NORTH);
