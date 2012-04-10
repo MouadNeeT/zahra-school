@@ -21,7 +21,7 @@ public class FConnexionZahraSchool extends JFrame{
     public FConnexionZahraSchool(){
     	panel.add(connexion);
     	getContentPane().add(panel);	
-    	setSize(new Dimension(500, 400));  	
+    	setSize(new Dimension(470, 450));  	
 		setLocationRelativeTo(null);
 		setVisible(true);       
     }
