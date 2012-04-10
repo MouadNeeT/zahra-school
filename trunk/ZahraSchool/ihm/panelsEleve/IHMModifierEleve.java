@@ -22,7 +22,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
         this.f=f;
         initComponents();
         // ajout images boutons
-        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png"));
     }
 
     /** This method is called from within the constructor to
