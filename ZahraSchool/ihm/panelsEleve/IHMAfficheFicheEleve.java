@@ -66,7 +66,7 @@ frames.FFondFenetreProfesseur f;
         setBorder(null);
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ajout d'un eleve"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Voir la fiche d'un eleve"));
 
         jLabel18.setText("jLabel18");
 
