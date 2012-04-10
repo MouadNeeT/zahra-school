@@ -19,9 +19,10 @@ public class IHMBarreVisionGestionEleve extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public IHMBarreVisionGestionEleve(FFondFenetreProfesseur f) {
-		this.f = f;
-        initComponents();
+	public IHMBarreVisionGestionEleve(FFondFenetreProfesseur f, String texte) {
+            this.f = f;
+            initComponents();
+            jLabel1.setText(texte);
     }
 
     /** This method is called from within the constructor to
