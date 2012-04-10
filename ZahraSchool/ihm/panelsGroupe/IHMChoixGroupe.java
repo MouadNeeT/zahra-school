@@ -19,6 +19,11 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
     public IHMChoixGroupe(frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
+        // Ajout d'images dans les boutons
+        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/ajouterEleve.png"));
+        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/supprimerEleve.png"));
+        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/editerEleve.png"));
+        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/voirEleve.png"));
     }
 
     /**
