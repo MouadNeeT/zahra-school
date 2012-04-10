@@ -5,114 +5,37 @@ import java.util.Date;
 
 
 public class Eleve {
-	/**
-	 * Certains eleves peuvent avoir des noms, prenoms identiques :
-	 * l'identifiant les dif�renciera.
-	 * 
-	 * @see Eleve#getIdentifiant()
-	 * @see Eleve#setIdentifiant(int)
-	 */
+	
 	private int identifiant;
-	/**
-	 * le nom de l'�l�ve.
-	 * 
-	 * @see Eleve#setNom(String)
-	 * @see Eleve#getNom()
-	 */
+	
 	private String nom;
-	/**
-	 * le pr�nom de l'�l�ve.
-	 * 
-	 * @see Eleve#setPrenom(String)
-	 * @see Eleve#getPrenom()
-	 */
+	
 	private String prenom;
-	/**
-	 * l'�ge de l'�l�ve.
-	 * 
-	 * @see Eleve#setAge(int)
-	 *  @see Eleve#getAge()
-	 */
+	
 	private int age;
-	/**
-	 * la date de naissance de l'�l�ve
-	 * 
-	 *  @see Eleve#setDateDeNaissance(Date)
-	 *   @see Eleve#getDateDeNaissance()
-	 */
+	
 	private Date dateDeNaissance;
-	/**
-	 * la photo de l'�l�ve. Il s'agit de l'url de la photo.
-	 * 
-	 *  @see Eleve#setPhoto(String)
-	 *   @see Eleve#getPhoto()
-	 */
+
 	private String photo; 
-	/**
-	 * le num�ro de t�l�phone de l'�l�ve.
-	 * 
-	 *  @see Eleve#setNumeroTelephoneEleve(int)
-	 *   @see Eleve#getNumeroTelephoneEleve()
-	 */
+	
 	private int numeroTelephoneEleve;
-	/**
-	 * le num�ro de t�l�phone des parents.
-	 * 
-	 *  @see Eleve#setNumeroTelephoneParent(int)
-	 *   @see Eleve#getNumeroTelephoneParent()
-	 */
+	
 	private int numeroTelephoneParent;
-	/**
-	 * la date d'inscription de l'�l�ve.
-	 * 
-	 *  @see Eleve#setDateInscription(Date)
-	 *   @see Eleve#getDateInscription()
-	 */
+	
 	private Date dateInscription;
-	/**
-	 * le niveau d'�tudes de l'�l�ve : (ex : coll�ge, lyc�e, ...) 
-	 * 
-	 *  @see Eleve#setNiveauEtudes(String)
-	 *   @see Eleve#getNiveauEtudes()
-	 */
+	
 	private String niveauEtudes;
-	/**
-	 * le nom du p�re de l'�l�ve.
-	 *  @see Eleve#setNomPere(String)
-	 *   @see Eleve#getNomPere()
-	 */
+	
 	private String nomPere;
-	/**
-	 * le pr�nom du p�re de l'�l�ve.
-	 * 
-	 *  @see Eleve#setPrenomPere(String)
-	 *   @see Eleve#getPrenomPere()
-	 */
+	
 	private String prenomPere;
-	/**
-	 * le nom de la m�re de l'�l�ve
-	 * @see Eleve#setNomMere(String)
-	 *   @see Eleve#getNomMere()
-	 */
+	
 	private String nomMere;
-	/**
-	 * le prenom de la m�re de l'�l�ve.
-	 * @see Eleve#setPrenomMere(String)
-	 *   @see Eleve#getPrenomMere()
-	 */
+	
 	private String prenomMere;
-	/**
-	 * le statut de l'�l�ve 
-	 * (ex : il se peut qu'un �l�ve ne puisse pas payer le mois)
-	 * @see Eleve#setStatus(String)
-	 *   @see Eleve#getStatus()
-	 */
+	
 	private String status;
-	/**
-	 * le niveau de test de l'�l�ve.
-	 * @see Eleve#setNiveauEtudes(String)
-	 * @see Eleve#getNiveauEtudes()
-	 */
+	
 	private String niveauTest;
 	private ArrayList<Professeur> listeProfesseurs = new ArrayList<Professeur>(); 
 	
