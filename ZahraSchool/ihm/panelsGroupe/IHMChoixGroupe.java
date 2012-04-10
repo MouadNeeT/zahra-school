@@ -20,10 +20,10 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
         this.f=f;
         initComponents();
         // Ajout d'images dans les boutons
-        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/ajouterEleve.png"));
-        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/supprimerEleve.png"));
-        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/editerEleve.png"));
-        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/voirEleve.png"));
+        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/ajouterGroupe.png"));
+        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/supprimerGroupe.png"));
+        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/editerGroupe.png"));
+        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/voirGroupe.png"));
     }
 
     /**
