@@ -13,7 +13,7 @@ package panelsGroupe;
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
-import panelsAdministrateur.IHMBarreVisionGestion;
+import panels.IHMBarreVisionPresentation;
 
 /**
  *
@@ -170,7 +170,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
-        IHMBarreVisionGestion barreVision = new IHMBarreVisionGestion(f,"   Gestion des groupes");
+        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,"   Gestion des groupes");
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(CG, BorderLayout.CENTER);
         panel.add(barreVision, BorderLayout.NORTH);
