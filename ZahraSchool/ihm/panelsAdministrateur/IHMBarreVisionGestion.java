@@ -11,7 +11,7 @@ import panels.Horloge;
 import panels.IHMBarreVisionMenuPrincipal;
 import panels.IHMMenuProfesseurPrincipal;
 
-public class IHMBarreVisionGestionEleve extends JPanel{
+public class IHMBarreVisionGestion extends JPanel{
 	
 	frames.FFondFenetreProfesseur f;
 	
@@ -19,7 +19,7 @@ public class IHMBarreVisionGestionEleve extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public IHMBarreVisionGestionEleve(FFondFenetreProfesseur f, String texte) {
+	public IHMBarreVisionGestion(FFondFenetreProfesseur f, String texte) {
             this.f = f;
             initComponents();
             jLabel1.setText(texte);
