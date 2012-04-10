@@ -6,19 +6,20 @@ public class Matiere {
     
     private String nom;
     private String type;
+    private ArrayList<EmploiDuTemps> listeEmploiDuTemps;
+    private ArrayList<Professeur> listeProfesseurs;
+    private ArrayList<Groupe> listeGroupes;
     
-    private ArrayList<Groupe> listeGroupes = new ArrayList<Groupe>();
-    private ArrayList<Professeur> listeProfesseur = new ArrayList<Professeur>();
-    private EmploiDuTemps emploiDuTemps;
+    public Matiere(){}
     
-    
-    public Matiere()
-    {}
-    
-    public Matiere(String nom, String type)
+    public Matiere(String nom, String type, ArrayList<Professeur> listeProfesseurs,
+    		ArrayList<Groupe> listeGroupes, ArrayList<EmploiDuTemps> listeEmploiDuTemps)
     {
         this.nom=nom;
         this.type= type;
+        this.listeEmploiDuTemps = listeEmploiDuTemps;
+        this.listeProfesseurs = listeProfesseurs;
+        this.listeGroupes = listeGroupes;
     }
     
     public void setNom(String nom)
@@ -30,62 +31,73 @@ public class Matiere {
         return this.nom;
     }
     
-     public void settype(String type)
+     public void setType(String type)
     {
         this.type=type;
     }
-    public String gettype()
+    public String getType()
     {
         return this.type;
     }
-    
-       public void setListeGroupes(ArrayList<Groupe> listeGroupes)
-    {
-        this.listeGroupes=listeGroupes;
-    }
-    
-    public ArrayList<Groupe> returnListeGroupes()
-    {
-        return this.listeGroupes;
-    }
-    
-    public void addGroupe(Groupe group){
-                this.listeGroupes.add(group);
-        }
-        
 
-        public void removeGroupe(Groupe group){
-                this.listeGroupes.remove(group);
-        }
-        
-     public void setListeProfesseur(ArrayList<Professeur> listeProfesseur)
-    {
-        this.listeProfesseur=listeProfesseur;
-    }
-    
-    public ArrayList<Professeur> returnListeProfesseur()
-    {
-        return this.listeProfesseur;
-    }
-    
-    public void addProfesseur(Professeur professeur){
-                this.listeProfesseur.add(professeur);
-        }
-        
-  
-        public void removeProfesseur(Professeur professeur){
-                this.listeProfesseur.remove(professeur);
-        }
-        
-        
-         public void setEmploi(EmploiDuTemps EmploiDuTemps)
-    {
-        this.emploiDuTemps=EmploiDuTemps;
-    }
-    
-    public EmploiDuTemps returnEmploiDuTemps()
-    {
-        return this.emploiDuTemps;
-    }
+	/**
+	 * @param e
+	 * @return
+	 * @see java.util.ArrayList#add(java.lang.Object)
+	 */
+	public boolean add(EmploiDuTemps e) {
+		return listeEmploiDuTemps.add(e);
+	}
+
+	/**
+	 * @param o
+	 * @return
+	 * @see java.util.ArrayList#remove(java.lang.Object)
+	 */
+	public boolean remove(Object o) {
+		return listeEmploiDuTemps.remove(o);
+	}
+
+	/**
+	 * @return the listeEmploiDuTemps
+	 */
+	public ArrayList<EmploiDuTemps> getListeEmploiDuTemps() {
+		return listeEmploiDuTemps;
+	}
+
+	/**
+	 * @param listeEmploiDuTemps the listeEmploiDuTemps to set
+	 */
+	public void setListeEmploiDuTemps(ArrayList<EmploiDuTemps> listeEmploiDuTemps) {
+		this.listeEmploiDuTemps = listeEmploiDuTemps;
+	}
+
+	/**
+	 * @return the listeProfesseurs
+	 */
+	public ArrayList<Professeur> getListeProfesseurs() {
+		return listeProfesseurs;
+	}
+
+	/**
+	 * @param listeProfesseurs the listeProfesseurs to set
+	 */
+	public void setListeProfesseurs(ArrayList<Professeur> listeProfesseurs) {
+		this.listeProfesseurs = listeProfesseurs;
+	}
+
+	/**
+	 * @return the listeGroupes
+	 */
+	public ArrayList<Groupe> getListeGroupes() {
+		return listeGroupes;
+	}
+
+	/**
+	 * @param listeGroupes the listeGroupes to set
+	 */
+	public void setListeGroupes(ArrayList<Groupe> listeGroupes) {
+		this.listeGroupes = listeGroupes;
+	}
     
 }
