@@ -253,7 +253,7 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
     }//GEN-LAST:event_BoutonAjouterGroupeActionPerformed
 
     private void BoutonModifierGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonModifierGroupeActionPerformed
-        IHMModifierGroupe RG = new IHMModifierGroupe(f);
+        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,1);
         f.setPanel(RG);
     }//GEN-LAST:event_BoutonModifierGroupeActionPerformed
 
