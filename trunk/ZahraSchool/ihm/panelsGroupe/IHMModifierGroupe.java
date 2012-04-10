@@ -25,6 +25,8 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
     public IHMModifierGroupe( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
+        // ajout d'un image dans le bouton modifier
+        ModifierGroupeBoutonModifier.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png"));
     }
 
     /** This method is called from within the constructor to
