@@ -1,5 +1,5 @@
 /**
- * author GAUTIER Stéphanie
+ * author GAUTIER Stï¿½phanie
  */
 
 package pattern.entity;
@@ -44,7 +44,7 @@ public class PaiementEntity {
 		this.mois = mois;
 	}
 
-	public Date getDateDePaiementPrévus() {
+	public Date getDateDePaiementPrevus() {
 		return dateDePaiementPrevus;
 	}
 
@@ -69,9 +69,6 @@ public class PaiementEntity {
 	/**
 	 * @return the dateDePaiementPrevus
 	 */
-	public Date getDateDePaiementPrevus() {
-		return dateDePaiementPrevus;
-	}
 
 	public Date getDateEncaissement() {
 		return dateEncaissement;
