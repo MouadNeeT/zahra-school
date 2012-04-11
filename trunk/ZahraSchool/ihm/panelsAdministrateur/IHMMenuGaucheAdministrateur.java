@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import panelsAdministrateur.panelDateEmbaucheAdministrateur;
 
 import frames.FFondFenetreAdministrateur;
+import javax.swing.JLabel;
 
 public class IHMMenuGaucheAdministrateur extends JPanel{
 
@@ -300,12 +301,16 @@ public class IHMMenuGaucheAdministrateur extends JPanel{
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     	JPanel panel = new JPanel(new BorderLayout());
+        JPanel panel1 = new JPanel();
+        panel1.setSize(700,200);
+        JLabel label = new JLabel("                                                 ");
+        panel1.add(label);
     	JPanel visualiserETVision = new JPanel(new BorderLayout());
     	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
     	panelDateEmbaucheAdministrateur dateEmbauche = new panelDateEmbaucheAdministrateur();
 		IHMAjouterProfesseur ajouter = new IHMAjouterProfesseur(f);		
-		visualiserETVision.add(ajouter, BorderLayout.EAST);
-		visualiserETVision.add(dateEmbauche, BorderLayout.WEST);
+		visualiserETVision.add(ajouter, BorderLayout.CENTER);
+		visualiserETVision.add(panel1, BorderLayout.WEST);
 		visualiserETVision.add(new IHMBarreVisionAjouterProfesseur(f), BorderLayout.NORTH);
     	panel.add(menuAdminGauche, BorderLayout.WEST);
     	panel.add(visualiserETVision, BorderLayout.CENTER);
