@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
 import frames.FFondFenetreAdministrateur;
+import javax.swing.JLabel;
 
 
 public class IHMMenuPrincipalAdministrateur extends JPanel{
@@ -273,12 +274,17 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
 
         private void boutonAjouterProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
             // TODO add your handling code here:
+            JPanel panel1 = new JPanel();
+        panel1.setSize(700,200);
+        JLabel label = new JLabel("                                                 ");
+        panel1.add(label);
         	JPanel panel = new JPanel(new BorderLayout());
         	JPanel visualiserETVision = new JPanel(new BorderLayout());
         	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
     		IHMAjouterProfesseur ajouter = new IHMAjouterProfesseur(f);		
-    		visualiserETVision.add(ajouter, BorderLayout.EAST);
+    		visualiserETVision.add(ajouter, BorderLayout.CENTER);
     		visualiserETVision.add(new IHMBarreVisionAjouterProfesseur(f), BorderLayout.NORTH);
+                visualiserETVision.add(panel1, BorderLayout.WEST);
         	panel.add(menuAdminGauche, BorderLayout.WEST);
         	panel.add(visualiserETVision, BorderLayout.CENTER);
     		f.setPanel(panel);
