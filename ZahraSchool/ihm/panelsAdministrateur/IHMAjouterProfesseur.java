@@ -1,5 +1,14 @@
 package panelsAdministrateur;
 
+import java.awt.BorderLayout;
+import java.util.GregorianCalendar;
+
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+import panels.Horloge;
+import panels.IHMBarreVisionMenuPrincipal;
+
 import frames.FFondFenetreAdministrateur;
 
 /*
@@ -35,7 +44,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-
+    	GregorianCalendar calendar = new GregorianCalendar();
         jPanel5 = new javax.swing.JPanel();
         boutonModifier = new javax.swing.JButton();
         boutonSupprimer = new javax.swing.JButton();
@@ -71,17 +80,22 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-
-        boutonModifier.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEnregistrer.png")); // NOI18N
-        boutonModifier.setText("Modifier");
+        
+        jTextFieldDateEmbaucheMois.setText("" + (calendar.get(GregorianCalendar.MONTH) + 1));
+        jTextFieldDateEmbaucheAnnee.setText("" + (calendar.get(GregorianCalendar.YEAR)));
+        jTextFieldDateEmbaucheJour.setText("" + (calendar.get(GregorianCalendar.DAY_OF_MONTH)));
+        
+       // boutonModifier.setIcon(new javax.swing.ImageIcon("../Tests/images/imageBoutonEnregistrer.png")); // NOI18N
+        boutonModifier.setText("Enregistrer");
         boutonModifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonModifierActionPerformed(evt);
             }
         });
 
-        boutonSupprimer.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonSupprimer.png")); // NOI18N
-        boutonSupprimer.setText("Supprimer");
+      //  boutonSupprimer.setIcon(new javax.swing.ImageIcon("../Tests/images/imageBoutonSupprimer.png")); // NOI18N
+        boutonSupprimer.setText("Annuler");
+        boutonSupprimer.setToolTipText("En cliquant sur annuler, vous retournerez à la page d'accueil");
         boutonSupprimer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonSupprimerActionPerformed(evt);
@@ -121,14 +135,14 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         naissance.setText("Date de naissance :");
 
         telephone.setFont(new java.awt.Font("Tahoma", 1, 12));
-        telephone.setText("Numero de telephone :");
+        telephone.setText("Numéro de téléphone :");
         telephone.setToolTipText("");
 
         dateEmbauche.setFont(new java.awt.Font("Tahoma", 1, 12));
         dateEmbauche.setText("Date d'embauche :");
 
         niveauEtudes.setFont(new java.awt.Font("Tahoma", 1, 12));
-        niveauEtudes.setText("Niveau d'etudes :");
+        niveauEtudes.setText("Niveau d'études :");
 
         adresse.setFont(new java.awt.Font("Tahoma", 1, 12));
         adresse.setText("Adresse :");
@@ -145,7 +159,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel7.setForeground(new java.awt.Color(51, 0, 153));
-        jLabel7.setText("Fiche a remplir");
+        jLabel7.setText("Fiche à remplir");
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12));
 
@@ -352,10 +366,19 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
     private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-}
+    	JOptionPane jop1 = new JOptionPane();
+		jop1.showMessageDialog(null, "Enregistrement du professeur", "Information", JOptionPane.INFORMATION_MESSAGE);
+    }
 
     private void boutonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
+		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f);
+		JPanel panel = new JPanel(new BorderLayout());    		
+		panel.add(new Horloge(), BorderLayout.WEST);
+		panel.add(menuPrincipal, BorderLayout.EAST);
+		panel.add(visionMenu, BorderLayout.NORTH);
+		f.setPanel(panel);
 }
 
     private void jTextFieldPrenomActionPerformed(java.awt.event.ActionEvent evt) {
