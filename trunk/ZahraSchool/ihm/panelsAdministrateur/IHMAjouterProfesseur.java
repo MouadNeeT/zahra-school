@@ -95,7 +95,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
       //  boutonSupprimer.setIcon(new javax.swing.ImageIcon("../Tests/images/imageBoutonSupprimer.png")); // NOI18N
         boutonSupprimer.setText("Annuler");
-        boutonSupprimer.setToolTipText("En cliquant sur annuler, vous retournerez à la page d'accueil");
+        boutonSupprimer.setToolTipText("En cliquant sur annuler, vous retournerez a la page d'accueil");
         boutonSupprimer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonSupprimerActionPerformed(evt);
@@ -135,14 +135,14 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         naissance.setText("Date de naissance :");
 
         telephone.setFont(new java.awt.Font("Tahoma", 1, 12));
-        telephone.setText("Numéro de téléphone :");
+        telephone.setText("Numero de telephone :");
         telephone.setToolTipText("");
 
         dateEmbauche.setFont(new java.awt.Font("Tahoma", 1, 12));
         dateEmbauche.setText("Date d'embauche :");
 
         niveauEtudes.setFont(new java.awt.Font("Tahoma", 1, 12));
-        niveauEtudes.setText("Niveau d'études :");
+        niveauEtudes.setText("Niveau d'etudes :");
 
         adresse.setFont(new java.awt.Font("Tahoma", 1, 12));
         adresse.setText("Adresse :");
@@ -159,7 +159,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel7.setForeground(new java.awt.Color(51, 0, 153));
-        jLabel7.setText("Fiche à remplir");
+        jLabel7.setText("Fiche a remplir");
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12));
 
