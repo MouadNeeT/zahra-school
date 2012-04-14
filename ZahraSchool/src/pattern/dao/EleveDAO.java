@@ -61,7 +61,18 @@ public class EleveDAO extends DAO<EleveEntity> {
                                                                "SELECT * FROM eleve WHERE nom = " + nom
                                                                + "AND prenom = " + prenom
                                                           );
-                        if(result.first())
+                        if(result.first()){
+                        	ProfesseurDAO professeurDAO = new ProfesseurDAO();
+                        	ArrayList<Professeur> listeProfesseurs = new ArrayList<Professeur>();
+                        	result.beforeFirst();
+                        	while(result.next() && result.getInt("identifiant") != 0)
+                        		listeProfesseurs.add(professeurDAO.find(result.getString("nom"), result.getString("prenom")));
+                        
+                        	GroupeDAO groupeDAO = new GroupeDAO();
+                        	ArrayList<Groupe> listeGroupes = new ArrayList<Groupe>();
+                        	result.beforeFirst();
+                        	while(result.next() && result.getString("nom") != 0)
+                        		listeProfesseurs.add(professeurDAO.find(result.getString("nom"), result.getString("prenom")));
                         
                                 eleve = new Eleve(result.getInt("identifiant"), nom, prenom, 
                                 		result.getInt("age"), result.getDate("dateDeNaissance"), 
@@ -70,14 +81,13 @@ public class EleveDAO extends DAO<EleveEntity> {
                                 		result.getString("niveauEtudes"), result.getString("nomPere"), 
                                 		result.getString("prenomPere"), result.getString("nomMere"), 
                                 		result.getString("prenomMere"), result.getString("status"), result.getString("niveauTest"), 
-                                		new ProfesseurDAO().find(result.getString("nom"), result.getString("prenom")), null, 
-                                		null, null));
+                                		listeProfesseurs, null, null, null);
                         
                         
-                        
+                        }
                         
                         result.first();
-                        
+                        societe = new Societe(id, result.getString("soc_nom"), listDeveloppeur);
                        
                 } catch (SQLException e) {
                         e.printStackTrace();
