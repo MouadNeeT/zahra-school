@@ -26,13 +26,13 @@ public abstract class DAO<T> {
         public DAO(){}
         
         /**
-         * Méthode de création
+         * Methode de création
          * @param obj
          * @return
          */
         public abstract boolean create(T obj);
         /**
-         * Méthode pour effacer
+         * Methode pour effacer
          * @param obj
          * @return
          */
@@ -63,6 +63,11 @@ public abstract class DAO<T> {
 		}
 		
 		public Groupe find2(String nom) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		public Groupe find(String nom) {
 			// TODO Auto-generated method stub
 			return null;
 		}
