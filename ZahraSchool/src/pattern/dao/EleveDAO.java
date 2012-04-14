@@ -13,21 +13,21 @@ import pattern.entity.EleveEntity;
 /**
  * <b>ELeve DAO</b>
  * <p>
- * L'�l�ve est recherch� dans la base de donn�e gr�ce aux �l�ments suivants :
+ * L'élève est recherché dans la base de donnée grâce aux éléments suivants :
  * <ul>
- * <li>le nom de l'�l�ve.</li>
- * <li>le prenom de l'�l�ve.</li>
+ * <li>le nom de l'élève.</li>
+ * <li>le prenom de l'élève.</li>
  * </ul>
  * </p>
  *<p>
- * En fonction du nom et du pr�nom, les autres �l�ments sont retrouv�s dans la
- * base de donn�es.
+ * En fonction du nom et du prénom, les autres éléments sont retrouvés dans la
+ * base de données.
  * </p>
  * 
  * @see EleveDAO
  * @see DAO
  * 
- * @author GAUTIER St�phanie
+ * @author GAUTIER Stéphanie
  * @version 1.0
  */
 
@@ -61,8 +61,19 @@ public class EleveDAO extends DAO<EleveEntity> {
                                                                "SELECT * FROM eleve WHERE nom = " + nom
                                                                + "AND prenom = " + prenom
                                                           );
-                        if(result.first())
-                                 GroupeDAO g= new GroupDAO();
+                        if(result.first()){
+                        	ProfesseurDAO professeurDAO = new ProfesseurDAO();
+                        	ArrayList<Professeur> listeProfesseurs = new ArrayList<Professeur>();
+                        	result.beforeFirst();
+                        	while(result.next() && result.getInt("identifiant") != 0)
+                        		listeProfesseurs.add(professeurDAO.find(result.getString("nom"), result.getString("prenom")));
+                        
+                        	GroupeDAO groupeDAO = new GroupeDAO();
+                        	ArrayList<Groupe> listeGroupes = new ArrayList<Groupe>();
+                        	result.beforeFirst();
+                        	while(result.next() && result.getString("nom") != 0)
+                        		listeProfesseurs.add(professeurDAO.find(result.getString("nom"), result.getString("prenom")));
+                        
                                 eleve = new Eleve(result.getInt("identifiant"), nom, prenom, 
                                 		result.getInt("age"), result.getDate("dateDeNaissance"), 
                                 		result.getString("photo"), result.getInt("numeroTelephoneEleve"), 
@@ -70,14 +81,13 @@ public class EleveDAO extends DAO<EleveEntity> {
                                 		result.getString("niveauEtudes"), result.getString("nomPere"), 
                                 		result.getString("prenomPere"), result.getString("nomMere"), 
                                 		result.getString("prenomMere"), result.getString("status"), result.getString("niveauTest"), 
-                                		new ProfesseurDAO().find(result.getString("nom"), result.getString("prenom")), null, 
-                                		null, null);
+                                		listeProfesseurs, null, null, null);
                         
                         
-                        
+                        }
                         
                         result.first();
-                        
+                        societe = new Societe(id, result.getString("soc_nom"), listDeveloppeur);
                        
                 } catch (SQLException e) {
                         e.printStackTrace();
