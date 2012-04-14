@@ -5,6 +5,7 @@ package pattern.dao;
 import java.sql.Connection;
 
 import pattern.entity.AbsenceEntity;
+import pattern.entity.GroupeEntity;
 
 
 
@@ -45,5 +46,11 @@ public abstract class DAO<T> {
          * @param id
          * @return
          */
-        public abstract T find(String nom, String prenom);
+        public abstract T find(T obj);
+
+		public GroupeEntity find2(String nom) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 }
