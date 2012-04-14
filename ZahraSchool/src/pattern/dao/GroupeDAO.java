@@ -1,6 +1,10 @@
 package pattern.dao;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import pattern.beans.Eleve;
 
 import pattern.beans.Groupe;
 import pattern.beans.Professeur;
@@ -45,10 +49,37 @@ public class GroupeDAO extends DAO<GroupeEntity>{
 	}
 
 	@Override
-	public GroupeEntity find2(String nom) {
-		// TODO Auto-generated method stub
-		GroupeEntity groupe = new GroupeEntity(); 
-		return groupe;
+	public Groupe find2(String nom) {
+		  Groupe groupe;                
+                
+                try {
+                        ResultSet result = this.connect.createStatement(
+                                                               ResultSet.TYPE_SCROLL_INSENSITIVE, 
+                                                               ResultSet.CONCUR_READ_ONLY
+                                                        ).executeQuery(
+                                                               "SELECT * FROM groupe WHERE nom = " + nom                                                   
+                                                          );
+                        if(result.first()){
+                        	EleveDAO eleveDAO = new EleveDAO();
+                        	ArrayList<Eleve> listeEleves = new ArrayList<Eleve>();
+                        	result.beforeFirst();
+                        	while(result.next() && result.getInt("identifiant") != 0)
+                        		listeEleves.add(eleveDAO.find(result.getString("nom"), result.getString("prenom")));
+                        
+                        	//public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif,ArrayList<Eleve> listeEleves,EmploiDuTemps emploiDuTemps )
+                        
+                                groupe = new Groupe(nom, result.getString("niveau"), result.getDate("dateDeCreation"), 
+                                		result.getFloat("tarif"), listeEleves,null);
+                        
+                        
+                        }
+          
+                       
+                } catch (SQLException e) {
+                        e.printStackTrace();
+                }
+                return groupe;
+        
 	}
 //
 }
