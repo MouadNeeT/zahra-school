@@ -5,6 +5,7 @@ import pattern.entity.GroupeEntity;
 
 public abstract class GroupeDAO extends DAO<GroupeEntity>{
 
+        public GroupeDAO(){}
 	@Override
 	public boolean create(GroupeEntity obj) {
 		// TODO Auto-generated method stub
