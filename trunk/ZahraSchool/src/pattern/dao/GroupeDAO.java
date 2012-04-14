@@ -3,7 +3,7 @@ package pattern.dao;
 import pattern.entity.EmploiDuTempsEntity;
 import pattern.entity.GroupeEntity;
 
-public abstract class GroupeDAO extends DAO<GroupeEntity>{
+public class GroupeDAO extends DAO<GroupeEntity>{
 
         public GroupeDAO(){}
 	@Override
