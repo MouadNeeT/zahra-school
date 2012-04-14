@@ -23,7 +23,6 @@ public abstract class GroupeDAO extends DAO<GroupeEntity>{
 		return false;
 	}
 
-	@Override
 	public GroupeEntity find2(String nom) {
 		// TODO Auto-generated method stub
 		return null;
