@@ -24,7 +24,7 @@ public abstract class GroupeDAO extends DAO<GroupeEntity>{
 	}
 
 	public GroupeEntity find2(String nom) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
