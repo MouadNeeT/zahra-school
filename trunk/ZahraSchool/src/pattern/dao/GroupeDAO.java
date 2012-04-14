@@ -3,7 +3,7 @@ package pattern.dao;
 import pattern.entity.EmploiDuTempsEntity;
 import pattern.entity.GroupeEntity;
 
-public class GroupeDAO extends DAO<GroupeEntity>{
+public abstract class GroupeDAO extends DAO<GroupeEntity>{
 
 	@Override
 	public boolean create(GroupeEntity obj) {
@@ -24,7 +24,7 @@ public class GroupeDAO extends DAO<GroupeEntity>{
 	}
 
 	@Override
-	public GroupeEntity find(String nom, String prenom) {
+	public GroupeEntity find2(String nom) {
 		// TODO Auto-generated method stub
 		return null;
 	}
