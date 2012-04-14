@@ -17,12 +17,14 @@ public class Groupe {
 
     public Groupe(){}
     
-    public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif)
+    public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif,ArrayList<Eleve> listeEleves,EmploiDuTemps emploiDuTemps )
     {
         this.nom=nom;
         this.niveau=niveau;
         this.dateDeCreation=dateDeCreation;
         this.tarif=tarif;
+        this.listeEleves=listeEleves;
+        this.emploiDuTemps= emploiDuTemps;
     }
     
     public void setNom(String Nom){
