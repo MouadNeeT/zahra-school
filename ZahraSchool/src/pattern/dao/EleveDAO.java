@@ -4,6 +4,7 @@ import pattern.beans.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.Date;
 
 import pattern.beans.Eleve;
@@ -40,17 +41,17 @@ public class EleveDAO extends DAO<EleveEntity> {
                 super(connexion);
         }
 
-        public boolean create(Eleve obj) {
+        public boolean create(EleveEntity obj) {
                 return false;
         }
 
-        public boolean delete(Eleve obj) {
+        public boolean delete(EleveEntity obj) {
                 return false;
         }
 
         public Eleve find(String nom, String prenom) {
                 
-                Eleve eleve = new Eleve();                
+                Eleve eleve ;                
                 
                 try {
                         ResultSet result = this.connect.createStatement(
@@ -60,8 +61,13 @@ public class EleveDAO extends DAO<EleveEntity> {
                                                                "SELECT * FROM eleve WHERE nom = " + nom
                                                                + "AND prenom = " + prenom
                                                           );
-                        if(result.first())
-                        	
+                        if(result.first()){
+                        	ProfesseurDAO professeurDAO = new ProfesseurDAO();
+                        	ArrayList<Professeur> listeProfesseurs = new ArrayList<Professeur>();
+                        result.beforeFirst();
+                        while(result.next() && result.getInt("identifiant") != 0)
+                        	listeProfesseurs.add(professeurDAO.find(result.getString("nom"), result.getString("prenom")));
+                        
                                 eleve = new Eleve(result.getInt("identifiant"), nom, prenom, 
                                 		result.getInt("age"), result.getDate("dateDeNaissance"), 
                                 		result.getString("photo"), result.getInt("numeroTelephoneEleve"), 
@@ -69,7 +75,13 @@ public class EleveDAO extends DAO<EleveEntity> {
                                 		result.getString("niveauEtudes"), result.getString("nomPere"), 
                                 		result.getString("prenomPere"), result.getString("nomMere"), 
                                 		result.getString("prenomMere"), result.getString("status"), result.getString("niveauTest"), 
-                                		null, null, null, null);
+                                		result.getArray(listeProfesseurs), null, null, null);
+                        
+                        
+                        }
+                        
+                        result.first();
+                        societe = new Societe(id, result.getString("soc_nom"), listDeveloppeur);
                        
                 } catch (SQLException e) {
                         e.printStackTrace();
@@ -77,26 +89,14 @@ public class EleveDAO extends DAO<EleveEntity> {
                 return eleve;
         }
 
-        public boolean update(Eleve obj) {
+        public boolean update(EleveEntity obj) {
                 return false;
         }
 
 		@Override
-		public boolean create(EleveEntity obj) {
+		public EleveEntity find(EleveEntity obj) {
 			// TODO Auto-generated method stub
-			return false;
-		}
-
-		@Override
-		public boolean delete(EleveEntity obj) {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-		@Override
-		public boolean update(EleveEntity obj) {
-			// TODO Auto-generated method stub
-			return false;
+			return null;
 		}
 
 }
