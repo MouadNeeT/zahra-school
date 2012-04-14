@@ -50,5 +50,5 @@ public class GroupeDAO extends DAO<GroupeEntity>{
 		GroupeEntity groupe = new GroupeEntity(); 
 		return groupe;
 	}
-
+//
 }
