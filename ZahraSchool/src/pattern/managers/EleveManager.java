@@ -12,7 +12,7 @@ public class EleveManager {
 	    }
 
 	    /**
-	     * Méthode permettant d'obtenir l'instance unique.
+	     * Mï¿½thode permettant d'obtenir l'instance unique.
 	     * @return L'instance du singleton.
 	     */
 	    public static EleveManager getInstance() {
@@ -49,3 +49,4 @@ public class EleveManager {
 			session.close();
 		}
 	}
+}

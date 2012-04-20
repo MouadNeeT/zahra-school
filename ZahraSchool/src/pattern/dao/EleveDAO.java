@@ -71,7 +71,8 @@ public class EleveDAO extends DAO<EleveEntity> {
                         	GroupeDAO groupeDAO = new GroupeDAO();
                         	ArrayList<Groupe> listeGroupes = new ArrayList<Groupe>();
                         	result.beforeFirst();
-                        	while(result.next() && result.getString("nom") != 0)
+                        	//while(result.next() && result.getString("nom") != 0) erreur
+                                while(result.next() && result.getString("nom") != null)
                         		listeProfesseurs.add(professeurDAO.find(result.getString("nom"), result.getString("prenom")));
                         
                                 eleve = new Eleve(result.getInt("identifiant"), nom, prenom, 
