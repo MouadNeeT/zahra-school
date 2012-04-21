@@ -2,9 +2,6 @@ package panels;
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
-import panelsAdministrateur.IHMBarreVisionModifierProfesseur;
-import panelsAdministrateur.IHMMenuGaucheAdministrateur;
-import panelsAdministrateur.IHMModifierSupprimerProfesseur;
 
 /**
  * <b>InterfaceMenuGauche est la classe repr�sentant un panel du menu de gauche</b>
@@ -42,7 +39,6 @@ import panelsAdministrateur.IHMModifierSupprimerProfesseur;
  *
  * Created on 10 mars 2012, 15:02:40
  */
-
 
 /**
  *
@@ -505,7 +501,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         f.setPanel(RE);
     }                                        
 
-    //ajouter un �l�ve
+    //ajouter un eleve
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsEleve.IHMAjouterEleve AE = new panelsEleve.IHMAjouterEleve(f);
         f.setPanel(AE);
