@@ -110,6 +110,11 @@ frames.FFondFenetreProfesseur f;
         jScrollPane2.setViewportView(jList1);
 
         jButton1.setText("Imprimer la fiche de l'eleve");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel20.setText("jLabel20");
 
@@ -123,7 +128,7 @@ frames.FFondFenetreProfesseur f;
 
         jLabel12.setText("Ses groupes :");
 
-        jButton2.setText("Retour1");
+        jButton2.setText("Retour");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -260,6 +265,10 @@ frames.FFondFenetreProfesseur f;
         IHMRechercherEleve IH = new IHMRechercherEleve(f,1);
         f.setPanel(IH);
 }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

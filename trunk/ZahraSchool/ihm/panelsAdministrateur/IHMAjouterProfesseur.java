@@ -365,13 +365,11 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
     }// </editor-fold>
 
     private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    	JOptionPane jop1 = new JOptionPane();
+                JOptionPane jop1 = new JOptionPane();
 		jop1.showMessageDialog(null, "Enregistrement du professeur", "Information", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private void boutonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
 		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
 		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f);
 		JPanel panel = new JPanel(new BorderLayout());    		

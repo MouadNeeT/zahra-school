@@ -11,6 +11,8 @@
 
 package panelsEleve;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alexandre
@@ -156,7 +158,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
             }
         });
 
-        jLabel11.setText("Niveau du groupe :");
+        jLabel11.setText("Niveau de l'eleve :");
 
         jLabel12.setText("Ajouter groupe(s) :");
 
@@ -337,10 +339,13 @@ public class IHMModifierEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      IHMRechercherEleve p = new IHMRechercherEleve(f,2);
-      panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"L'eleve "+jTextField2.getText()+" a bien été modifié",p);
-      d1.setLocation(300,200);
-      d1.setVisible(true);
+        JOptionPane jp = new JOptionPane();
+        jp.showMessageDialog(null, "Ajouter l'eleve "+jTextField2.getText(), "Confirmation", JOptionPane.INFORMATION_MESSAGE);
+        IHMRechercherEleve p = new IHMRechercherEleve(f,2);
+        f.setPanel(p);
+        /*panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"L'eleve "+jTextField2.getText()+" a bien été modifié",p);
+        d1.setLocation(300,200);
+        d1.setVisible(true);*/
 }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
