@@ -9,13 +9,13 @@ package panels;
  *
  * @author wael
  */
-public class FaireLapelle2 extends javax.swing.JPanel {
+public class IHMFaireLapelle2 extends javax.swing.JPanel {
 frames.FFondFenetreProfesseur f;
        boolean Absent;
     /**
-     * Creates new form FaireLapelle2
+     * Creates new form IHMFaireLapelle2
      */
-    public FaireLapelle2(frames.FFondFenetreProfesseur f) {
+    public IHMFaireLapelle2(frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
     }
@@ -74,11 +74,11 @@ frames.FFondFenetreProfesseur f;
         jButton3 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Faire L'appel");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Liste des élèves (gros plan)");
 
@@ -86,29 +86,29 @@ frames.FFondFenetreProfesseur f;
 
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel3.setText("Nom Prenom");
         jLabel3.setBounds(20, 10, 94, 26);
         jLayeredPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton1.setText("Absent");
-        jRadioButton1.setBounds(10, 40, 59, 23);
+        jRadioButton1.setBounds(10, 40, -1, -1);
         jLayeredPane1.add(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton2.setText("Present");
-        jRadioButton2.setBounds(70, 40, 63, 23);
+        jRadioButton2.setBounds(70, 40, -1, -1);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel7.setText("Nombre d'absence d'affile");
-        jLabel7.setBounds(30, 80, 130, 14);
+        jLabel7.setText("Nombre d'absence d'affilé");
+        jLabel7.setBounds(30, 80, 130, -1);
         jLayeredPane1.add(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel8.setText("Paiements");
-        jLabel8.setBounds(30, 110, 80, 14);
+        jLabel8.setBounds(30, 110, 80, -1);
         jLayeredPane1.add(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel9.setText("Voir Fiche");
-        jLabel9.setBounds(30, 140, 80, 14);
+        jLabel9.setBounds(30, 140, 80, -1);
         jLayeredPane1.add(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel10.setText("En clickant sur suivant, vous validez");
@@ -175,8 +175,8 @@ frames.FFondFenetreProfesseur f;
                 .addContainerGap())
         );
 
-        label1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        label1.setText("L'apelle est valide, Cliquez sur ok pour revenir a la Page Principale");
+        label1.setFont(new java.awt.Font("Tahoma", 0, 14));
+        label1.setText("L'apelle est validé, Cliquez sur ok pour revenir a la Page Principale");
 
         jButton2.setText("Ok");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -249,21 +249,21 @@ frames.FFondFenetreProfesseur f;
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        jButton5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/left.jpg")); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/left.jpg"))); // NOI18N
         jButton5.setBorder(null);
 
-        jButton4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/right.jpg")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/right.jpg"))); // NOI18N
         jButton4.setBorder(null);
 
         jLabel23.setText("une ou plusieurs alertes");
 
-        jLabel26.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/red square.jpg")); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red square.jpg"))); // NOI18N
 
-        jLabel29.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/green square.png")); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/green square.png"))); // NOI18N
 
         jLabel22.setText("En clickant sur suivant, vous validez");
 
-        jLabel30.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/icon_attention_m.gif")); // NOI18N
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon_attention_m.gif"))); // NOI18N
 
         jButton1.setText("Terminer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -276,7 +276,7 @@ frames.FFondFenetreProfesseur f;
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel16.setText("Nom Prenom");
         jLabel16.setBounds(20, 10, 94, 26);
         jLayeredPane2.add(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -287,7 +287,7 @@ frames.FFondFenetreProfesseur f;
                 jRadioButton3ActionPerformed(evt);
             }
         });
-        jRadioButton3.setBounds(10, 40, 70, 23);
+        jRadioButton3.setBounds(10, 40, 70, -1);
         jLayeredPane2.add(jRadioButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton4.setText("Present");
@@ -296,36 +296,36 @@ frames.FFondFenetreProfesseur f;
                 jRadioButton4ActionPerformed(evt);
             }
         });
-        jRadioButton4.setBounds(90, 40, 70, 23);
+        jRadioButton4.setBounds(90, 40, 70, -1);
         jLayeredPane2.add(jRadioButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel17.setText("Nombre d'absence d'affile");
-        jLabel17.setBounds(30, 80, 130, 14);
+        jLabel17.setText("Nombre d'absence d'affilé");
+        jLabel17.setBounds(30, 80, 130, -1);
         jLayeredPane2.add(jLabel17, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel18.setText("Paiements");
-        jLabel18.setBounds(30, 110, 80, 14);
+        jLabel18.setBounds(30, 110, 80, -1);
         jLayeredPane2.add(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel19.setText("Voir Fiche");
-        jLabel19.setBounds(60, 140, 80, 14);
+        jLabel19.setBounds(60, 140, 80, -1);
         jLayeredPane2.add(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel27.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/green square.png")); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/green square.png"))); // NOI18N
         jLabel27.setBounds(10, 80, 10, 10);
         jLayeredPane2.add(jLabel27, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel28.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/red square.jpg")); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red square.jpg"))); // NOI18N
         jLabel28.setBounds(10, 110, 10, 10);
         jLayeredPane2.add(jLabel28, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jButton3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/file.gif")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file.gif"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jButton3.setBounds(10, 140, 49, 25);
+        jButton3.setBounds(10, 140, -1, -1);
         jLayeredPane2.add(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel15.setText("                     IMAGE");

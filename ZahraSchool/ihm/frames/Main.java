@@ -1,6 +1,6 @@
 package frames;
 
-public class main4 {
+public class Main {
 
 	/**
 	 * @param args

@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 
 import frames.FFondFenetreProfesseur;
 
-import panels.FaireLapelle2;
+import panels.IHMFaireLapelle2;
 
 public class IHMBarreVision extends JPanel{
 	

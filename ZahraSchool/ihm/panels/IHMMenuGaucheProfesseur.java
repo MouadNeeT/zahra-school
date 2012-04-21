@@ -581,7 +581,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     //Faire l'appel
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
     	JPanel panel = new JPanel(new BorderLayout());
-    	FaireLapelle2 appel = new FaireLapelle2(f);
+    	IHMFaireLapelle2 appel = new IHMFaireLapelle2(f);
     	panel.add(appel, BorderLayout.NORTH);
 	    
     	panel.add(this, BorderLayout.WEST);

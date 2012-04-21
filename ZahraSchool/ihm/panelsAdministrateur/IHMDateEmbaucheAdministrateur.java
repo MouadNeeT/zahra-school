@@ -9,7 +9,7 @@ import java.util.Date;
  */
 
 /*
- * panelDateEmbaucheAdministrateur.java
+ * IHMDateEmbaucheAdministrateur.java
  *
  * Created on 9 avr. 2012, 14:35:49
  */
@@ -19,10 +19,10 @@ import java.util.Date;
  *
  * @author Evi and Max
  */
-public class panelDateEmbaucheAdministrateur extends javax.swing.JPanel {
+public class IHMDateEmbaucheAdministrateur extends javax.swing.JPanel {
 
-    /** Creates new form panelDateEmbaucheAdministrateur */
-    public panelDateEmbaucheAdministrateur() {
+    /** Creates new form IHMDateEmbaucheAdministrateur */
+    public IHMDateEmbaucheAdministrateur() {
         initComponents();
     }
 
