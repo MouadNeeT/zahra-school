@@ -11,6 +11,8 @@
 
 package panelsEleve;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alexandre
@@ -210,10 +212,10 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        JOptionPane jp = new JOptionPane();
+        jp.showMessageDialog(null, "Supprimer l'eleve "+jTextField2.getText(), "Confirmation", JOptionPane.INFORMATION_MESSAGE);
         IHMRechercherEleve p = new IHMRechercherEleve(f,3);
-        panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"L'eleve "+jTextField2.getText()+" a bien été supprimé",p);
-        d1.setLocation(300,200);
-        d1.setVisible(true);
+        f.setPanel(p);
     }//GEN-LAST:event_jButton4ActionPerformed
 
 
