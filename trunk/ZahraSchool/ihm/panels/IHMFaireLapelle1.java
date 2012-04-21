@@ -15,11 +15,11 @@ import java.awt.Container;
  *
  * @author wael
  */
-public class FaireLapelle1 extends javax.swing.JPanel {
+public class IHMFaireLapelle1 extends javax.swing.JPanel {
 
    frames.FFondFenetreProfesseur f;
     int Apelle = 3;
-    public FaireLapelle1(frames.FFondFenetreProfesseur f) {
+    public IHMFaireLapelle1(frames.FFondFenetreProfesseur f) {
    /*  setLayout(new BorderLayout());
        panelsAdministrateur.IHMBarreVision bv = new  panelsAdministrateur.IHMBarreVision();
        bv.setVisible(true);
@@ -55,11 +55,11 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jList1 = new javax.swing.JList();
         jLabel5 = new javax.swing.JLabel();
 
-        setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        setFont(new java.awt.Font("Tahoma", 0, 12));
         setMaximumSize(new java.awt.Dimension(862, 470));
         setPreferredSize(new java.awt.Dimension(862, 470));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Faire L'appel");
 
@@ -73,7 +73,7 @@ public class FaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Type d'appel", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLabel2.setText("Choisisser le type d'appel :");
-        jLabel2.setBounds(20, 60, 160, 14);
+        jLabel2.setBounds(20, 60, 160, -1);
         jLayeredPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLabel2.getAccessibleContext().setAccessibleName("text1");
 
@@ -95,18 +95,18 @@ public class FaireLapelle1 extends javax.swing.JPanel {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jRadioButton2.setBounds(180, 80, 300, 23);
+        jRadioButton2.setBounds(180, 80, 300, -1);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton2.getAccessibleContext().setAccessibleName("Plan");
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Choisissez le groupe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLayeredPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Recherche rapide ?", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
-        jLayeredPane4.setBounds(0, -10, 0, 0);
+        jLayeredPane4.setBounds(0, -10, -1, -1);
         jLayeredPane3.add(jLayeredPane4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel3.setText("Rentrez le nom du groupe:");
-        jLabel3.setBounds(10, 40, 150, 14);
+        jLabel3.setBounds(10, 40, 150, -1);
         jLayeredPane3.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTextField2.setText("jTextField2");
@@ -115,7 +115,7 @@ public class FaireLapelle1 extends javax.swing.JPanel {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jTextField2.setBounds(170, 40, 200, 20);
+        jTextField2.setBounds(170, 40, 200, -1);
         jLayeredPane3.add(jTextField2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane3.setBounds(30, 60, 380, 120);
@@ -150,7 +150,7 @@ public class FaireLapelle1 extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(130, 130, 130)
                 .addComponent(jLabel1)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -190,11 +190,11 @@ public class FaireLapelle1 extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (Apelle==2){
-        FaireLapelle2 f2 = new FaireLapelle2(f);
+        IHMFaireLapelle2 f2 = new IHMFaireLapelle2(f);
         f2.setVisible(true);
         f.setPanel(f2);}
         else if(Apelle==1){
-        FaireLapelle3 f3 = new FaireLapelle3(f);
+        IHMFaireLapelle3 f3 = new IHMFaireLapelle3(f);
         f3.setVisible(true);
         f.setPanel(f3);
         }

@@ -9,11 +9,11 @@ package panels;
  *
  * @author wael
  */
-public class FaireLapelle3 extends javax.swing.JPanel {
+public class IHMFaireLapelle3 extends javax.swing.JPanel {
 
     frames.FFondFenetreProfesseur f;
     
-    public FaireLapelle3(frames.FFondFenetreProfesseur f) {
+    public IHMFaireLapelle3(frames.FFondFenetreProfesseur f) {
         this.f = f;
         initComponents();
     }
@@ -42,7 +42,7 @@ public class FaireLapelle3 extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        label1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label1.setFont(new java.awt.Font("Tahoma", 0, 14));
         label1.setText("L'apelle est validé, Cliquez sur ok pour revenir a la Page Principale");
 
         jButton2.setText("Ok");
@@ -76,15 +76,15 @@ public class FaireLapelle3 extends javax.swing.JPanel {
                 .addGap(38, 38, 38))
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Faire L'appel");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Liste des élèves (Liste)");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24));
         jLabel3.setForeground(new java.awt.Color(0, 0, 51));
         jLabel3.setText("> Groupe 1");
 
@@ -101,10 +101,8 @@ public class FaireLapelle3 extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\green square.png")); // NOI18N
         jLabel4.setText("jLabel4");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\wael\\Desktop\\Icons\\red square.jpg")); // NOI18N
         jLabel5.setText("jLabel5");
 
         jLabel6.setText("Aucune alerte");
