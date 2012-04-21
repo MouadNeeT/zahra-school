@@ -12,6 +12,7 @@
 package panelsGroupe;
 
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import panels.IHMBarreVisionPresentation;
 
@@ -188,21 +189,20 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ModifierGroupeBoutonModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierGroupeBoutonModifierActionPerformed
-      IHMRechercherGroupe p = new IHMRechercherGroupe(f,2);
-      panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"Le groupe "+ModifierGroupeNom.getText()+" a bien été modifié",p);
-      d1.setLocation(300,200);
-      d1.setVisible(true);
+        JOptionPane jp = new JOptionPane();
+        jp.showMessageDialog(null, "Ajouter le groupe "+ModifierGroupeNom.getText(), "Confirmation", JOptionPane.INFORMATION_MESSAGE);
+        IHMRechercherGroupe p = new IHMRechercherGroupe(f,2);
+        f.setPanel(p);
 }//GEN-LAST:event_ModifierGroupeBoutonModifierActionPerformed
 
     private void ModifierGroupeBoutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierGroupeBoutonAnnulerActionPerformed
-         panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
+        panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
         IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,"   Gestion des groupes");
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(CG, BorderLayout.CENTER);
         panel.add(barreVision, BorderLayout.NORTH);
         f.setPanel(panel);
         f.setMenuGauche(true);
-      
     }//GEN-LAST:event_ModifierGroupeBoutonAnnulerActionPerformed
 
     private void ModifierGroupeDateMoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierGroupeDateMoisActionPerformed

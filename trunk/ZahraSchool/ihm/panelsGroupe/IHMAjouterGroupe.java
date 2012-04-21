@@ -12,6 +12,7 @@
 package panelsGroupe;
 
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import panels.IHMBarreVisionPresentation;
 import panelsEleve.*;
@@ -252,10 +253,10 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 }//GEN-LAST:event_AjoutGroupeDateJoursActionPerformed
 
     private void AjoutGroupeBoutonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAjouterActionPerformed
+        JOptionPane jp = new JOptionPane();
+        jp.showMessageDialog(null, "Ajouter le groupe "+AjoutGroupeNomGroupe.getText(), "Confirmation", JOptionPane.INFORMATION_MESSAGE);
         panelsGroupe.IHMAjouterGroupe p = new  panelsGroupe.IHMAjouterGroupe(f);
-        panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"Le groupe "+AjoutGroupeNomGroupe.getText()+" a bien été ajouté",p);
-        d1.setLocation(300,200);
-        d1.setVisible(true);
+        f.setPanel(p);
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
 
     private void AjoutGroupeBoutonAnnuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAnnuleActionPerformed
@@ -266,7 +267,6 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         panel.add(barreVision, BorderLayout.NORTH);
         f.setPanel(panel);
         f.setMenuGauche(true);
-      
     }//GEN-LAST:event_AjoutGroupeBoutonAnnuleActionPerformed
 
     private void AjoutGroupeBoutonRadCollectifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonRadCollectifActionPerformed
