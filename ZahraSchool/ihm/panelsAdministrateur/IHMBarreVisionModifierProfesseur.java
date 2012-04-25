@@ -4,8 +4,8 @@ import java.awt.BorderLayout;
 
 import javax.swing.JPanel;
 
-import panels.Horloge;
-import panels.IHMBarreVisionMenuPrincipal;
+import panelsProfesseur.Horloge;
+import panelsProfesseur.IHMBarreVisionMenuPrincipal;
 import frames.FFondFenetreAdministrateur;
 
 /*

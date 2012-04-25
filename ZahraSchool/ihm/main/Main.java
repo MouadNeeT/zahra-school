@@ -1,4 +1,6 @@
-package frames;
+package main;
+
+import frames.FConnexionZahraSchool;
 
 public class Main {
 
