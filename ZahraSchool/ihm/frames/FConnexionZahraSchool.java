@@ -7,12 +7,12 @@ import javax.swing.JPanel;
 import panelsAdministrateur.IHMConnexion;
 
 public class FConnexionZahraSchool extends JFrame {
-    frames.FFondFenetreAdministrateur frame;
+    frames.FFondFenetreAdministrateur f1;
     frames.FFondFenetreProfesseur f2;
     JPanel panel = new JPanel();
     
     JPanel t=null;
-    IHMConnexion connexion = new IHMConnexion(frame, f2);
+    IHMConnexion connexion = new IHMConnexion(f1, f2);
     
     public FConnexionZahraSchool(){
     	panel.add(connexion);
