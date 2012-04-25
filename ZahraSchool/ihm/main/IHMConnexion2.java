@@ -250,6 +250,7 @@ public class IHMConnexion2 extends javax.swing.JPanel {
         {
     		f2 = new FFondFenetreProfesseur();
     		JPanel panel = new JPanel(new BorderLayout());
+                //ScrollBarre
                 new JScrollPane(panel);
     		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
     		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
