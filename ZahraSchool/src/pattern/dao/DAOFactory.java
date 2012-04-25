@@ -1,16 +1,15 @@
 package pattern.dao;
 
-import pattern.beans.*;
-
 public class DAOFactory {
 	
-	/**
-     * Retourne un objet Absence interagissant avec la BDD
-     * @return
-     */
+    /**
+    * Retourne un objet Absence interagissant avec la BDD
+    * @return
+    */
     public static DAO getAbsenceDAO(){
             return new AbsenceDAO();
     }
+
     /**
      * Retourne un objet Eleve interagissant avec la BDD
      * @return
