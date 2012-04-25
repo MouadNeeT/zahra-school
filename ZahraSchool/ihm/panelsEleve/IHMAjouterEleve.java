@@ -163,7 +163,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
             }
         });
 
-        jLabel11.setText("Niveau du groupe :");
+        jLabel11.setText("Niveau de l'eleve :");
 
         jLabel12.setText("Ajouter groupe(s) :");
 
