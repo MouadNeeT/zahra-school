@@ -249,7 +249,6 @@ public class IHMConnexion2 extends javax.swing.JPanel {
     	else
         {
     		f2 = new FFondFenetreProfesseur();
-                f2.setSize(1024,600);
     		JPanel panel = new JPanel(new BorderLayout());
                 //ScrollBarre
                 //new JScrollPane(panel);
