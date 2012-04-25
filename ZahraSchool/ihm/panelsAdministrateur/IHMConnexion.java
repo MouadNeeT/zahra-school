@@ -25,19 +25,14 @@ import frames.FFondFenetreProfesseur;
  * Created on 6 avr. 2012, 15:30:58
  */
 
-
-
-/**
- *
- * @author Evi and Max
- */
 public class IHMConnexion extends javax.swing.JPanel {
-
     String typePersonne = "Professeur";
+    frames.FFondFenetreAdministrateur f1;
+    frames.FFondFenetreProfesseur f2;
 
-	frames.FFondFenetreAdministrateur f1;
-	frames.FFondFenetreProfesseur f2;
-    /** Creates new form IHMConnexionZahraSchool */
+    /**
+     * Creates new form IHMConnexionZahraSchool
+     */
     public IHMConnexion(frames.FFondFenetreAdministrateur f1, frames.FFondFenetreProfesseur f2) {
         this.f1 = f1;
     	this.f2 = f2;
@@ -223,10 +218,12 @@ public class IHMConnexion extends javax.swing.JPanel {
     private void jComboBoxIdentifiactionActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         System.out.println(""+jComboBoxIdentifiaction.getSelectedItem());
-            	if (jComboBoxIdentifiaction.getSelectedItem() == typePersonne){
+            	if (jComboBoxIdentifiaction.getSelectedItem() == typePersonne)
+                {
             		typePersonne = "Professeur";
             	}
-            	else typePersonne = "Administrateur";
+            	else
+                        typePersonne = "Administrateur";
     }
 
     private void jTextFieldIdentifiantActionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,7 +233,8 @@ public class IHMConnexion extends javax.swing.JPanel {
     private void jButtonIdentificationActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         System.out.println(typePersonne);
-    	if (typePersonne == "Administrateur"){
+    	if (typePersonne == "Administrateur")
+        {
     		f1 = new FFondFenetreAdministrateur();
     		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
     		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f1);
@@ -248,7 +246,8 @@ public class IHMConnexion extends javax.swing.JPanel {
     		f1.setLocationRelativeTo(null);
     		f1.setVisible(true);
     	}
-    	else{
+    	else
+        {
     		f2 = new FFondFenetreProfesseur();   		
     		JPanel panel = new JPanel(new BorderLayout());
     		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
@@ -259,7 +258,7 @@ public class IHMConnexion extends javax.swing.JPanel {
     		f2.setPanel(panel);
     		f2.setLocationRelativeTo(null);
     		f2.setVisible(true);
-            f2.setMenuGauche(false);
+                f2.setMenuGauche(false);
     	}
     }
 
