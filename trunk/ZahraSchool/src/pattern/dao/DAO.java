@@ -26,7 +26,7 @@ public abstract class DAO<T> {
         public DAO(){}
         
         /**
-         * Methode de création
+         * Methode de creation
          * @param obj
          * @return
          */
@@ -38,13 +38,13 @@ public abstract class DAO<T> {
          */
         public abstract boolean delete(T obj);
         /**
-         * Méthode de mise à jour
+         * Methode de mise a jour
          * @param obj
          * @return
          */
         public abstract boolean update(T obj);
         /**
-         * Méthode de recherche des informations
+         * Methode de recherche des informations
          * @param id
          * @return
          */
