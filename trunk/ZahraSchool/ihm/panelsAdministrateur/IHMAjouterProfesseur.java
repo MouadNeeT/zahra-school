@@ -6,8 +6,8 @@ import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import panels.Horloge;
-import panels.IHMBarreVisionMenuPrincipal;
+import panelsProfesseur.Horloge;
+import panelsProfesseur.IHMBarreVisionMenuPrincipal;
 
 import frames.FFondFenetreAdministrateur;
 

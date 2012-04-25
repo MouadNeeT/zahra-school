@@ -11,9 +11,9 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import panels.IHMBarreBas;
-import panels.IHMBarreHautProfesseur;
-import panels.IHMMenuGaucheProfesseur;
+import panelsProfesseur.IHMBarreBas;
+import panelsProfesseur.IHMBarreHautProfesseur;
+import panelsProfesseur.IHMMenuGaucheProfesseur;
 import panelsAdministrateur.*;
 
 public class FFondFenetreProfesseur extends JFrame{

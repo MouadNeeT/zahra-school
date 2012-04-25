@@ -7,9 +7,9 @@ import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import panels.Horloge;
-import panels.IHMBarreVisionMenuPrincipal;
-import panels.IHMMenuProfesseurPrincipal;
+import panelsProfesseur.Horloge;
+import panelsProfesseur.IHMBarreVisionMenuPrincipal;
+import panelsProfesseur.IHMMenuProfesseurPrincipal;
 
 import frames.FFondFenetreAdministrateur;
 import frames.FFondFenetreProfesseur;

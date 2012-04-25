@@ -14,7 +14,7 @@ package panelsGroupe;
 import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import panels.IHMBarreVisionPresentation;
+import panelsProfesseur.IHMBarreVisionPresentation;
 import panelsEleve.*;
 
 /**
