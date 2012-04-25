@@ -213,7 +213,7 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Supprimer l'eleve "+jTextField1.getText(), "Confirmation", JOptionPane.INFORMATION_MESSAGE);
+        jp.showMessageDialog(null, "Supprimer l'eleve "+jTextField1.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         IHMRechercherEleve p = new IHMRechercherEleve(f,3);
         f.setPanel(p);
     }//GEN-LAST:event_jButton4ActionPerformed
