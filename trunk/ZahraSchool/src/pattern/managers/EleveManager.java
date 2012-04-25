@@ -1,13 +1,16 @@
 package pattern.managers;
 
+import pattern.beans.Eleve;
 import pattern.dao.DAO;
+import pattern.dao.DAOFactory;
 import pattern.entity.EleveEntity;
+import pattern.entity.EntityFactory;
 
 public class EleveManager {
 	private EleveManager(){
 		
 	}
-	 private static class ManagerEleveHolder {
+	private static class ManagerEleveHolder {
 	        private final static EleveManager instance = new EleveManager();
 	    }
 
@@ -18,15 +21,12 @@ public class EleveManager {
 	    public static EleveManager getInstance() {
 	        return ManagerEleveHolder.instance;
 	    }
-
-	@Override
+	
 	public  void  createAndStore(Eleve eleve) {
 		//
 		EleveEntity eleveEntity = EntityFactory.getEleveEntity();
 		eleveEntity.setNom(eleve.getNom());
 		eleveEntity.setPrenom(eleve.getPrenom());
-		
-		
 		
 		// TODO Auto-generated method stub
 		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -35,10 +35,7 @@ public class EleveManager {
 		tx = session.beginTransaction();
 		// do some work
 		DAO<EleveEntity> eleveDAO = DAOFactory.getEleveDAO();
-		
-		
 		eleveDAO.create(eleveEntity);
-		
 		
 		tx.commit();
 		}
