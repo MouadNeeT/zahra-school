@@ -254,7 +254,7 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 
     private void AjoutGroupeBoutonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAjouterActionPerformed
         JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Ajouter le groupe "+AjoutGroupeNomGroupe.getText(), "Confirmation", JOptionPane.INFORMATION_MESSAGE);
+        jp.showMessageDialog(null, "Ajouter le groupe "+AjoutGroupeNomGroupe.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         panelsGroupe.IHMAjouterGroupe p = new  panelsGroupe.IHMAjouterGroupe(f);
         f.setPanel(p);
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
