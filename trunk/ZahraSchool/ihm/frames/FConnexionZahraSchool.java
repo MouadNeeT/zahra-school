@@ -1,12 +1,8 @@
 package frames;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JWindow;
 
 import panelsAdministrateur.IHMConnexion;
 
@@ -29,5 +25,5 @@ public class FConnexionZahraSchool extends JFrame {
     // Main
     public static void main(String[] args) {
     	FConnexionZahraSchool f = new FConnexionZahraSchool();
-	}
+    }
 }
