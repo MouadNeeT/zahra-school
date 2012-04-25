@@ -250,8 +250,12 @@ public class IHMConnexion2 extends javax.swing.JPanel {
         {
     		f2 = new FFondFenetreProfesseur();
     		JPanel panel = new JPanel(new BorderLayout());
+                panel.setSize(50,50);
                 //ScrollBarre
-                //new JScrollPane(panel);
+                JScrollPane SC = new JScrollPane(panel);
+                SC.setVisible(true);
+                f2.getContentPane().add(SC);
+                
     		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
     		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
     		panel.add(menuPrincipal2, BorderLayout.CENTER);
