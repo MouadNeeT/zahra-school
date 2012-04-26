@@ -14,7 +14,8 @@ import panelsProfesseur.IHMMenuProfesseurPrincipal;
 
 import frames.FFondFenetreAdministrateur;
 import frames.FFondFenetreProfesseur;
-import javax.swing.JScrollPane;
+import java.awt.Dimension;
+import javax.swing.*;
 
 /*
  * To change this template, choose Tools | Templates
@@ -250,12 +251,6 @@ public class IHMConnexion2 extends javax.swing.JPanel {
         {
     		f2 = new FFondFenetreProfesseur();
     		JPanel panel = new JPanel(new BorderLayout());
-                panel.setSize(50,50);
-                //ScrollBarre
-                JScrollPane SC = new JScrollPane(panel);
-                SC.setVisible(true);
-                f2.getContentPane().add(SC);
-                
     		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
     		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
     		panel.add(menuPrincipal2, BorderLayout.CENTER);
@@ -265,6 +260,15 @@ public class IHMConnexion2 extends javax.swing.JPanel {
     		f2.setLocationRelativeTo(null);
     		f2.setVisible(true);
                 f2.setMenuGauche(false);
+                
+                //ScrollBarre
+                JPanel pan = new JPanel();
+                pan.add(new JTextArea());
+                pan.setBounds(0,0,20,20);
+                JScrollPane SC = new JScrollPane(f2);
+                SC.setMinimumSize(new Dimension(150,150));
+                SC.setVisible(true);
+                f2.getContentPane().add(SC);
     	}
     }
 
