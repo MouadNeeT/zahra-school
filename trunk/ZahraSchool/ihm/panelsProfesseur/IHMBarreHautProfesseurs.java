@@ -7,14 +7,14 @@ import javax.swing.JPanel;
 import frames.FConnexionZahraSchool;
 import javax.swing.ImageIcon;
 
-public class IHMBarreHautProfesseur extends JPanel{
+public class IHMBarreHautProfesseurs extends JPanel{
 	frames.FFondFenetreProfesseur f2;
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-    public IHMBarreHautProfesseur(frames.FFondFenetreProfesseur f2) {
+    public IHMBarreHautProfesseurs(frames.FFondFenetreProfesseur f2) {
         this.f2 = f2;
     	initComponents();
     }
