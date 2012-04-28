@@ -25,10 +25,11 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
     FFondFenetreProfesseur f;
     
     /** Creates new form IHMBarreVisionVisualiserProfesseur */
-    public IHMBarreVisionPresentation(FFondFenetreProfesseur f,String texte) {
+    public IHMBarreVisionPresentation(FFondFenetreProfesseur f,String texte, String image) {
     	this.f = f;
         initComponents();
         jLabel1.setText(texte);
+        jLabel1.setIcon(new javax.swing.ImageIcon(image));
     }
 
     /** This method is called from within the constructor to
@@ -44,7 +45,6 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
         boutonRetourMenuPrincipal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/accueil.png"));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
 

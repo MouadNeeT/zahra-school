@@ -477,10 +477,10 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     /**
      * Affiche le barre de presentation en haut et le panel de traitement au milieu
      */
-    public void AfficheBarreVision(JPanel panelMilieu, String titre)
+    public void AfficheBarreVision(JPanel panelMilieu, String titre, String image)
     {
         JPanel panel = new JPanel(new BorderLayout());
-        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,titre);
+        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,titre,image);
         panel.add(panelMilieu, BorderLayout.CENTER);
         panel.add(barreVision, BorderLayout.NORTH);
         f.setPanel(panel);
@@ -492,7 +492,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	panelsEleve.IHMChoixEleve CE = new panelsEleve.IHMChoixEleve(f);
-        AfficheBarreVision(CE,"   Gestion des Eleves");
+        AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
     /**
@@ -500,7 +500,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,1);
-        AfficheBarreVision(RE,"   Gestion des Eleves");
+        AfficheBarreVision(RE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
     /**
@@ -508,7 +508,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsEleve.IHMAjouterEleve AE = new panelsEleve.IHMAjouterEleve(f);
-        AfficheBarreVision(AE,"   Gestion des Eleves");
+        AfficheBarreVision(AE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
     /**
@@ -516,7 +516,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,2);
-        AfficheBarreVision(RE,"   Gestion des Eleves");
+        AfficheBarreVision(RE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
     /**
@@ -524,7 +524,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,3);
-        AfficheBarreVision(RE,"   Gestion des Eleves");
+        AfficheBarreVision(RE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
     /**
@@ -532,7 +532,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         panelsGroupe.IHMChoixGroupe CG = new panelsGroupe.IHMChoixGroupe(f);
-        AfficheBarreVision(CG,"   Gestion des Groupes");
+        AfficheBarreVision(CG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                         
 
     /**
@@ -540,7 +540,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsGroupe.IHMAjouterGroupe AG = new panelsGroupe.IHMAjouterGroupe(f);
-        AfficheBarreVision(AG,"   Gestion des Groupes");
+        AfficheBarreVision(AG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                        
 
     /**
@@ -548,7 +548,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,1);
-        AfficheBarreVision(RG,"   Gestion des Groupes");
+        AfficheBarreVision(RG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                        
 
     /**
@@ -556,7 +556,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,2);
-        AfficheBarreVision(RG,"   Gestion des Groupes");
+        AfficheBarreVision(RG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                        
 
     /**
@@ -564,7 +564,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,3);
-        AfficheBarreVision(RG,"   Gestion des Groupes");
+        AfficheBarreVision(RG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                         
 
     /**
@@ -572,7 +572,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsProfesseur.IHMChoixProfesseur CP = new panelsProfesseur.IHMChoixProfesseur(f);
-        AfficheBarreVision(CP,"   Espace Professeur");
+        AfficheBarreVision(CP,"   Espace Professeur","../ZahraSchool/images/prof.png");
     }                                        
 
     /**
@@ -602,7 +602,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {
         panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f);
-        AfficheBarreVision(FA,"   Espace Professeur");
+        AfficheBarreVision(FA,"   faire l'appel","../ZahraSchool/images/appel.png");
     }                                         
 
 
