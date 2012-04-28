@@ -337,7 +337,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton6.setBackground(new java.awt.Color(0, 102, 204));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Gestion des professeurs");
+        jButton6.setText("Espace professeur");
         jButton6.setBorder(null);
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -532,20 +532,15 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         panelsGroupe.IHMChoixGroupe CG = new panelsGroupe.IHMChoixGroupe(f);
-        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,"   Gestion des groupes");
-        JPanel panel = new JPanel(new BorderLayout());
-        panel.add(CG, BorderLayout.CENTER);
-        panel.add(barreVision, BorderLayout.NORTH);
-        f.setPanel(panel);
-        f.setMenuGauche(true);
+        AfficheBarreVision(CG,"   Gestion des Groupes");
     }                                         
 
     /**
      * Ajouter un groupe
      */
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsGroupe.IHMAjouterGroupe RG = new panelsGroupe.IHMAjouterGroupe(f);
-        f.setPanel(RG);
+        panelsGroupe.IHMAjouterGroupe AG = new panelsGroupe.IHMAjouterGroupe(f);
+        AfficheBarreVision(AG,"   Gestion des Groupes");
     }                                        
 
     /**
@@ -553,7 +548,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,1);
-        f.setPanel(RG);
+        AfficheBarreVision(RG,"   Gestion des Groupes");
     }                                        
 
     /**
@@ -561,7 +556,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,2);
-        f.setPanel(RG);
+        AfficheBarreVision(RG,"   Gestion des Groupes");
     }                                        
 
     /**
@@ -569,48 +564,45 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      */
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,3);
-        f.setPanel(RG);
+        AfficheBarreVision(RG,"   Gestion des Groupes");
     }                                         
 
     /**
      * Gestion des professeurs
      */
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        panelsProfesseur.IHMChoixProfesseur CP = new panelsProfesseur.IHMChoixProfesseur(f);
+        AfficheBarreVision(CP,"   Espace Professeur");
     }                                        
 
     /**
      * Visualiser la fiche d'un professeur
      */
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
+        //panelsAdministrateur.IHMVisualiserProfesseur VP = new panelsAdministrateur.IHMVisualiserProfesseur(f);
+        //AfficheBarreVision(VP,"   Espace Professeur");
     }                                         
 
     /**
      * Gestion des emplois du temps
      */
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
+        
     }                                         
 
     /**
      * Gerer les revenus
      */
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
+        
     }                                         
 
     /**
      * Faire l'appel
      */
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-    	JPanel panel = new JPanel(new BorderLayout());
-    	IHMFaireLapelle2 appel = new IHMFaireLapelle2(f);
-    	panel.add(appel, BorderLayout.NORTH);
-	    
-    	panel.add(this, BorderLayout.WEST);
-    	//panel.add(visualiserETVision, BorderLayout.CENTER);
-		f.setPanel(panel);
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {
+        panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f);
+        AfficheBarreVision(FA,"   Espace Professeur");
     }                                         
 
 
