@@ -87,16 +87,15 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
     }// </editor-fold>
 
     private void boutonRetourMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
 		JPanel panel = new JPanel(new BorderLayout());
 		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
 		IHMMenuProfesseurPrincipal menuPrincipal = new IHMMenuProfesseurPrincipal(f);
 		panel.add(menuPrincipal, BorderLayout.CENTER);
 		panel.add(visionMenu, BorderLayout.NORTH);
-		//panel.add(new Horloge(), BorderLayout.WEST);
-                JLabel label = new JLabel();
+		panel.add(new Horloge(), BorderLayout.WEST);
+                /*JLabel label = new JLabel();
                 label.setText("                        ");
-                panel.add(label, BorderLayout.WEST);
+                panel.add(label, BorderLayout.WEST);*/
 		f.setPanel(panel);
     }
 
