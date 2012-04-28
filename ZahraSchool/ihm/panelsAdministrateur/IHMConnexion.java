@@ -254,7 +254,7 @@ public class IHMConnexion extends javax.swing.JPanel {
     		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
     		panel.add(menuPrincipal2, BorderLayout.CENTER);
     		panel.add(visionMenu, BorderLayout.NORTH);
-    		panel.add(new Horloge(), BorderLayout.WEST);
+    		//panel.add(new Horloge(), BorderLayout.WEST);
     		f2.setPanel(panel);
     		f2.setLocationRelativeTo(null);
     		f2.setVisible(true);
