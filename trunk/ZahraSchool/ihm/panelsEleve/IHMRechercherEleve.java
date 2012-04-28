@@ -98,7 +98,7 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setText("Annuler1");
+        jButton2.setText("Annuler");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
