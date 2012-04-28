@@ -4,18 +4,15 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Groupe {
-
-	
-
-	private EmploiDuTemps emploiDuTemps;
-	private ArrayList<Eleve> listeEleves;
-	private Groupe groupe;
+    private EmploiDuTemps emploiDuTemps;
+    private ArrayList<Eleve> listeEleves;
+    private Groupe groupe;
     private String nom;
     private String niveau;
     private Date dateDeCreation;
     private float tarif;
 
-    public Groupe(){}
+    public Groupe() {}
     
     public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif,ArrayList<Eleve> listeEleves,EmploiDuTemps emploiDuTemps )
     {

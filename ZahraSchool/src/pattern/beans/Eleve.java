@@ -7,50 +7,34 @@ import java.util.Date;
  * Dans cette classe :
  * add et remove en plus pour les listes
  * 
- * @author GAUTIER Stéphanie
+ * @author GAUTIER Stï¿½phanie
  *
  */
 
 public class Eleve {
-	
 	private int identifiant;
-	
 	private String nom;
-	
 	private String prenom;
-	
 	private int age;
-	
 	private Date dateDeNaissance;
-
 	private String photo; 
-	
 	private int numeroTelephoneEleve;
-	
 	private int numeroTelephoneParent;
-	
 	private Date dateInscription;
-	
 	private String niveauEtudes;
-	
 	private String nomPere;
-	
 	private String prenomPere;
-	
 	private String nomMere;
-	
 	private String prenomMere;
-	
 	private String status;
-	
 	private String niveauTest;
+        
 	private ArrayList<Professeur> listeProfesseurs; 
 	private ArrayList<Groupe> listeGroupes; 
 	private ArrayList<Paiement> listePaiements; 
 	private EmploiDuTemps emploiDuTemps; 
 	
-	public Eleve(){
-	}
+	public Eleve() {}
 	
 	public Eleve(int identifiant, String nom, String prenom, 
 			     int age, Date dateDeNaissance, String photo, 
@@ -79,7 +63,6 @@ public class Eleve {
 		this.listeGroupes = listeGroupes;
 		this.listePaiements = listePaiements;
 		this.emploiDuTemps = emploiDuTemps;
-		
 	}
 	
 	/**

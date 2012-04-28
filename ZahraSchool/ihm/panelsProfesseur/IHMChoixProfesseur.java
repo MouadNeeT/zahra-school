@@ -8,7 +8,7 @@ import panelsEleve.*;
 
 /**
  *
- * @author wael
+ * @author Alexandre
  */
 public class IHMChoixProfesseur extends javax.swing.JPanel {
 

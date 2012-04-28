@@ -398,7 +398,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 	    
     	panel.add(this, BorderLayout.WEST);
     	//panel.add(visualiserETVision, BorderLayout.CENTER);
-		f2.setPanel(panel);
+        f2.setPanel(panel);
     }//GEN-LAST:event_boutonAppelActionPerformed
 
 

@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
  *
  * @author alexandre
  */
+
 public class IHMModifierEleve extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
     /** Creates new form IHMAjouterEleve */
@@ -340,7 +341,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Ajouter l'eleve "+jTextField2.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
+        jp.showMessageDialog(null, "Modifier l'eleve "+jTextField2.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         IHMRechercherEleve p = new IHMRechercherEleve(f,2);
         f.setPanel(p);
         /*panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"L'eleve "+jTextField2.getText()+" a bien été modifié",p);
