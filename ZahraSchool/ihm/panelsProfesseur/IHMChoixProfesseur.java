@@ -20,10 +20,10 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
         this.f=f;
         initComponents();
         // Ajout d'images dans les boutons
-        jLabel8.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/appel.png"));
-        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/argent.png"));
+        jLabel8.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/emploiDuTemps.png"));
+        jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/stats.png"));
         jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/voirProf.png"));
-        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/emploiDuTemps.png"));
+        jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/argent.png"));
     }
 
     /**
@@ -59,7 +59,7 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton6.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton6.setText("Revenus");
+        jToggleButton6.setText("Statistiques");
         jToggleButton6.setToolTipText("Pour supprimer un groupe, cliquez ici.");
         jToggleButton6.setBorder(null);
         jToggleButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -98,7 +98,7 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
         jToggleButton5.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton5.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton5.setText("Faire l'appel");
+        jToggleButton5.setText("Emploi du temps");
         jToggleButton5.setToolTipText("Pour ajouter un groupe, cliquez ici.");
         jToggleButton5.setBorder(null);
         jToggleButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -188,7 +188,7 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
         jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton3.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton3.setText("Emploi du temps");
+        jToggleButton3.setText("Revenus");
         jToggleButton3.setToolTipText("Pour visualiser un groupe, cliquez ici.");
         jToggleButton3.setBorder(null);
         jToggleButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

@@ -379,13 +379,8 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     }//GEN-LAST:event_boutonGestionProfesseurActionPerformed
 
     private void boutonAppelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAppelActionPerformed
-    	JPanel panel = new JPanel(new BorderLayout());
-    	IHMFaireLapelle2 appel = new IHMFaireLapelle2(f2);
-    	panel.add(appel, BorderLayout.NORTH);
-	    
-    	panel.add(this, BorderLayout.WEST);
-    	//panel.add(visualiserETVision, BorderLayout.CENTER);
-        f2.setPanel(panel);
+        panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f2);
+        f2.setPanel(FA);
     }//GEN-LAST:event_boutonAppelActionPerformed
 
 
