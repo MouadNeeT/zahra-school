@@ -13,6 +13,7 @@ import panelsProfesseur.IHMMenuProfesseurPrincipal;
 
 import frames.FFondFenetreAdministrateur;
 import frames.FFondFenetreProfesseur;
+import javax.swing.JLabel;
 
 /*
  * To change this template, choose Tools | Templates
@@ -255,7 +256,9 @@ public class IHMConnexion extends javax.swing.JPanel {
     		panel.add(menuPrincipal2, BorderLayout.CENTER);
     		panel.add(visionMenu, BorderLayout.NORTH);
     		//panel.add(new Horloge(), BorderLayout.WEST);
-                panel.add(new javax.swing.JLabel(), BorderLayout.WEST);
+                JLabel label = new JLabel();
+                label.setText("                    ");
+                panel.add(label, BorderLayout.WEST);
     		f2.setPanel(panel);
     		f2.setLocationRelativeTo(null);
     		f2.setVisible(true);
