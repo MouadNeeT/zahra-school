@@ -92,7 +92,7 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
 		IHMMenuProfesseurPrincipal menuPrincipal = new IHMMenuProfesseurPrincipal(f);
 		panel.add(menuPrincipal, BorderLayout.CENTER);
 		panel.add(visionMenu, BorderLayout.NORTH);
-		//panel.add(new Horloge(), BorderLayout.WEST);
+		panel.add(new Horloge(), BorderLayout.WEST);
 		f.setPanel(panel);
     }
 
