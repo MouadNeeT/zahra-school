@@ -1,6 +1,7 @@
 package panelsProfesseur;
 
 import java.awt.BorderLayout;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -483,6 +484,9 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,titre,image);
         panel.add(panelMilieu, BorderLayout.CENTER);
         panel.add(barreVision, BorderLayout.NORTH);
+        JLabel label = new JLabel();
+        label.setText("test");
+        panel.add(label, BorderLayout.WEST);
         f.setPanel(panel);
         f.setMenuGauche(true);
     }
