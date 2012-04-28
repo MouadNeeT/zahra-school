@@ -1,11 +1,8 @@
 package panelsProfesseur;
 
-import panelsAdministrateur.*;
 import java.awt.BorderLayout;
-
 import javax.swing.JPanel;
 
-import frames.FFondFenetreAdministrateur;
 import frames.FFondFenetreProfesseur;
 
 /*
@@ -22,7 +19,7 @@ import frames.FFondFenetreProfesseur;
 
 /**
  *
- * @author Evi and Max
+ * @author Alexandre
  */
 public class IHMBarreVisionPresentation extends javax.swing.JPanel {
     FFondFenetreProfesseur f;
@@ -47,9 +44,9 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
         boutonRetourMenuPrincipal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageMaison.png"));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel1.setText("Ajouter un professeur");
 
         boutonRetourMenuPrincipal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         boutonRetourMenuPrincipal.setForeground(new java.awt.Color(0, 102, 255));
@@ -96,7 +93,7 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
 		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f);
 		panel.add(menuPrincipal2, BorderLayout.CENTER);
 		panel.add(visionMenu, BorderLayout.NORTH);
-		panel.add(new Horloge(), BorderLayout.WEST);
+		//panel.add(new Horloge(), BorderLayout.WEST);
 		f.setPanel(panel);
     }
 
