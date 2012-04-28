@@ -16,7 +16,6 @@ import frames.FFondFenetreProfesseur;
  * Created on 7 avr. 2012, 22:16:22
  */
 
-
 /**
  *
  * @author Alexandre
@@ -94,6 +93,7 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
 		panel.add(menuPrincipal, BorderLayout.CENTER);
 		panel.add(visionMenu, BorderLayout.NORTH);
 		//panel.add(new Horloge(), BorderLayout.WEST);
+                panel.add(new javax.swing.JLabel(), BorderLayout.WEST);
 		f.setPanel(panel);
     }
 
