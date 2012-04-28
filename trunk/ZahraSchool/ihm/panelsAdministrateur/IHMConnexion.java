@@ -257,7 +257,7 @@ public class IHMConnexion extends javax.swing.JPanel {
     		panel.add(visionMenu, BorderLayout.NORTH);
     		//panel.add(new Horloge(), BorderLayout.WEST);
                 JLabel label = new JLabel();
-                label.setText("                    ");
+                label.setText("                                                            ");
                 panel.add(label, BorderLayout.WEST);
     		f2.setPanel(panel);
     		f2.setLocationRelativeTo(null);
