@@ -94,10 +94,10 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
 		panel.add(visionMenu, BorderLayout.NORTH);
 		//panel.add(new Horloge(), BorderLayout.WEST);
                 JLabel label = new JLabel();
-                label.setText("                        ");
+                label.setText("                                                            ");
                 panel.add(label, BorderLayout.WEST);
-
 		f.setPanel(panel);
+                f.setMenuGauche(false);
     }
 
     // Variables declaration - do not modify
