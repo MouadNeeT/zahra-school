@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
 import frames.FFondFenetreProfesseur;
+import javax.swing.JLabel;
 
 /*
  * To change this template, choose Tools | Templates
@@ -92,11 +93,12 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
 		panel.add(menuPrincipal, BorderLayout.CENTER);
 		panel.add(visionMenu, BorderLayout.NORTH);
 		//panel.add(new Horloge(), BorderLayout.WEST);
+                JLabel label = new JLabel();
+                label.setText("                        ");
+                panel.add(label, BorderLayout.WEST);
+
 		f.setPanel(panel);
     }
-                /*JLabel label = new JLabel();
-                label.setText("                        ");
-                panel.add(label, BorderLayout.WEST);*/
 
     // Variables declaration - do not modify
     private javax.swing.JButton boutonRetourMenuPrincipal;
