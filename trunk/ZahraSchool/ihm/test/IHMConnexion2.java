@@ -1,4 +1,4 @@
-package main;
+package test;
 
 import panelsAdministrateur.*;
 import java.awt.BorderLayout;

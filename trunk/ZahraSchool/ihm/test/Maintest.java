@@ -1,5 +1,6 @@
-package main;
+package test;
 
+import test.IHMConnexion2;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
