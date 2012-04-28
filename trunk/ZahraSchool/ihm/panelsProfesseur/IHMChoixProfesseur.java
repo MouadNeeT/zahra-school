@@ -250,23 +250,21 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-        IHMRechercherEleve RE = new IHMRechercherEleve(f,3);
-        f.setPanel(RE);
+        
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        IHMAjouterEleve AE = new IHMAjouterEleve(f);
-        f.setPanel(AE);
+        panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f);
+        f.setPanel(FA);
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        IHMRechercherEleve RE = new IHMRechercherEleve(f,2);
-        f.setPanel(RE);
+        //panelsAdministrateur.IHMVisualiserProfesseur VP = new panelsAdministrateur.IHMVisualiserProfesseur(f);
+        //AfficheBarreVision(VP,"   Espace Professeur");
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        IHMRechercherEleve RE = new IHMRechercherEleve(f,1);
-        f.setPanel(RE);
+        ;
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
