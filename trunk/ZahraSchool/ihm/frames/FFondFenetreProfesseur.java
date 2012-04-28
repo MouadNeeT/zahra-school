@@ -7,11 +7,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import panelsProfesseur.IHMBarreBas;
-import panelsProfesseur.IHMBarreHautProfesseurs;
+import panelsProfesseur.IHMBarreHautProfesseur;
 import panelsProfesseur.IHMMenuGaucheProfesseur;
 
 public class FFondFenetreProfesseur extends JFrame {
-        IHMBarreHautProfesseurs barreHaut = new IHMBarreHautProfesseurs(this);
+        IHMBarreHautProfesseur barreHaut = new IHMBarreHautProfesseur(this);
 	IHMMenuGaucheProfesseur menuGauche = new IHMMenuGaucheProfesseur(this);
 	IHMBarreBas barreBas = new IHMBarreBas();
         JPanel panel1 = new JPanel(new BorderLayout());
