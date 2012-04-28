@@ -90,8 +90,8 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
         // TODO add your handling code here:
 		JPanel panel = new JPanel(new BorderLayout());
 		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
-		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f);
-		panel.add(menuPrincipal2, BorderLayout.CENTER);
+		IHMMenuProfesseurPrincipal menuPrincipal = new IHMMenuProfesseurPrincipal(f);
+		panel.add(menuPrincipal, BorderLayout.CENTER);
 		panel.add(visionMenu, BorderLayout.NORTH);
 		//panel.add(new Horloge(), BorderLayout.WEST);
 		f.setPanel(panel);
