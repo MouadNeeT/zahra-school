@@ -1,17 +1,12 @@
 package panelsProfesseur;
-import java.awt.Window;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 import frames.FConnexionZahraSchool;
 import javax.swing.ImageIcon;
 
 public class IHMBarreHautProfesseur extends JPanel{
 	frames.FFondFenetreProfesseur f2;
-    /**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
     public IHMBarreHautProfesseur(frames.FFondFenetreProfesseur f2) {
