@@ -487,6 +487,8 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         JLabel label = new JLabel();
         label.setText("test");
         panel.add(label, BorderLayout.WEST);
+        panel.add(label, BorderLayout.EAST);
+        panel.add(label, BorderLayout.SOUTH);
         f.setPanel(panel);
         f.setMenuGauche(true);
     }
