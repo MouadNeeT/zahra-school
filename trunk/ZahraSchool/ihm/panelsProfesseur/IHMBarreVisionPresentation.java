@@ -44,14 +44,14 @@ public class IHMBarreVisionPresentation extends javax.swing.JPanel {
         boutonRetourMenuPrincipal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageMaison.png"));
+        jLabel1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/accueil.png"));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
 
         boutonRetourMenuPrincipal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         boutonRetourMenuPrincipal.setForeground(new java.awt.Color(0, 102, 255));
         boutonRetourMenuPrincipal.setBackground(new java.awt.Color(240,240,240));
-        boutonRetourMenuPrincipal.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageMaison.png")); 
+        boutonRetourMenuPrincipal.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/accueil.png"));
         boutonRetourMenuPrincipal.setText("Retour au menu pricipal");
         boutonRetourMenuPrincipal.setBorder(null);
         boutonRetourMenuPrincipal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
