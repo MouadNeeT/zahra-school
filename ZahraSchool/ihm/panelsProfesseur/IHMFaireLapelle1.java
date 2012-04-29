@@ -68,40 +68,40 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Type d'appel", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLabel2.setText("Choisisser le type d'appel :");
-        jLabel2.setBounds(20, 60, 160, -1);
+        jLabel2.setBounds(20, 60, 190, 17);
         jLayeredPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLabel2.getAccessibleContext().setAccessibleName("text1");
 
-        jRadioButton1.setText("Défilement de la liste sous form d'une liste");
+        jRadioButton1.setText("Défilement sous forme de liste");
         jRadioButton1.setActionCommand("Liste");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        jRadioButton1.setBounds(180, 50, 280, 20);
+        jRadioButton1.setBounds(210, 60, 300, 20);
         jLayeredPane1.add(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton1.getAccessibleContext().setAccessibleName("Liste");
 
-        jRadioButton2.setText("Défilement de la liste sous forme d'un gros plan");
+        jRadioButton2.setText("Défilement sous forme d'album photo");
         jRadioButton2.setActionCommand("Plan");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jRadioButton2.setBounds(180, 80, 300, -1);
+        jRadioButton2.setBounds(210, 80, 330, 22);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton2.getAccessibleContext().setAccessibleName("Plan");
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Choisissez le groupe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLayeredPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Recherche rapide ?", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
-        jLayeredPane4.setBounds(0, -10, -1, -1);
+        jLayeredPane4.setBounds(0, -10, 0, 0);
         jLayeredPane3.add(jLayeredPane4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel3.setText("Rentrez le nom du groupe:");
-        jLabel3.setBounds(10, 40, 150, -1);
+        jLabel3.setBounds(10, 40, 170, 17);
         jLayeredPane3.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTextField2.setText("jTextField2");
@@ -110,10 +110,10 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jTextField2.setBounds(170, 40, 200, -1);
+        jTextField2.setBounds(170, 40, 110, 27);
         jLayeredPane3.add(jTextField2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLayeredPane3.setBounds(20, 40, 380, 120);
+        jLayeredPane3.setBounds(20, 40, 300, 120);
         jLayeredPane2.add(jLayeredPane3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Listes des groupes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
@@ -129,10 +129,10 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jScrollPane1.setBounds(170, 40, 200, 84);
+        jScrollPane1.setBounds(170, 40, 110, 84);
         jLayeredPane5.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLayeredPane5.setBounds(20, 180, 380, 160);
+        jLayeredPane5.setBounds(20, 180, 300, 150);
         jLayeredPane2.add(jLayeredPane5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
@@ -142,32 +142,31 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel5))
+                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

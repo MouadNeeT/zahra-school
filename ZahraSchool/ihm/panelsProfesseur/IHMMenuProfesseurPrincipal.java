@@ -377,11 +377,13 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
     private void boutonGestionProfesseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionProfesseurActionPerformed
         panelsProfesseur.IHMChoixProfesseur CP = new panelsProfesseur.IHMChoixProfesseur(f2);
         f2.setPanel(CP);
+        f2.setMenuGauche(true);
     }
 
     private void boutonAppelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAppelActionPerformed
         panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f2);
         f2.setPanel(FA);
+        f2.setMenuGauche(true);
     }
 
 
