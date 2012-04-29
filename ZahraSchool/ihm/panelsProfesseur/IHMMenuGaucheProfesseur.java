@@ -486,20 +486,21 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,titre,image);
         panel.add(barreVision, BorderLayout.NORTH);
 
-        /*JPanel panel2 = new JPanel(new BorderLayout());
-        BoxLayout gestionnaire = new BoxLayout(panel2, BoxLayout.X_AXIS);
-        panel2.setLayout(gestionnaire);
+        JPanel panel1 = new JPanel();
+        BoxLayout vertical = new BoxLayout(panel1, BoxLayout.Y_AXIS);
+        panel1.setLayout(vertical);
+        panel1.add(Box.createGlue());
+        panel1.add(panelMilieu);
+        panel1.add(Box.createGlue());
+
+        JPanel panel2 = new JPanel();
+        BoxLayout horizontal = new BoxLayout(panel2, BoxLayout.X_AXIS);
+        panel2.setLayout(horizontal);
         panel2.add(Box.createGlue());
-        panel2.add(panelMilieu);
+        panel2.add(panel1);
         panel2.add(Box.createGlue());
         
-        panel.add(panel2, BorderLayout.CENTER);*/
-        panel.add(panelMilieu, BorderLayout.CENTER);
-
-        panel.add(Box.createGlue(), BorderLayout.WEST);
-        panel.add(Box.createGlue(), BorderLayout.EAST);
-        panel.add(Box.createGlue(), BorderLayout.SOUTH);
-
+        panel.add(panel2, BorderLayout.CENTER);
         f.setPanel(panel);
         f.setMenuGauche(true);
     }
