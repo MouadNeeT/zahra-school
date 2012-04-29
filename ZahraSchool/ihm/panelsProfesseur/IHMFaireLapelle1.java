@@ -27,6 +27,7 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
         this.f=f;
         initComponents();
         jLabel5.setVisible(false);
+        jLabel2.setVisible(true);
     }
 
     /**
