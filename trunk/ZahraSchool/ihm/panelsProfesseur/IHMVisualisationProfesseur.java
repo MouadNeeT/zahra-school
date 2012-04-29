@@ -26,6 +26,7 @@ public class IHMVisualisationProfesseur extends javax.swing.JPanel {
     public IHMVisualisationProfesseur(FFondFenetreProfesseur f) {
     	this.f = f;
         initComponents();
+        boutonModifier.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imprimer.png"));
     }
 
     /** This method is called from within the constructor to
