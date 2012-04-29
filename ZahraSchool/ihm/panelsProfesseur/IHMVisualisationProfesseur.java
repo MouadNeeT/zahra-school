@@ -72,7 +72,7 @@ public class IHMVisualisationProfesseur extends javax.swing.JPanel {
         jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
 
-        boutonModifier.setText("Imprimer la fiche de l'eleve");
+        boutonModifier.setText("Imprimer la fiche");
         boutonModifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonModifierActionPerformed(evt);
@@ -327,11 +327,12 @@ public class IHMVisualisationProfesseur extends javax.swing.JPanel {
     }// </editor-fold>
 
     private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {                                               
-        // TODO add your handling code here:
+        
     }                                              
 
     private void boutonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {                                                
-        // TODO add your handling code here:
+        IHMChoixProfesseur CP = new IHMChoixProfesseur(f);
+        f.setPanel(CP);
     }                                               
 
 
