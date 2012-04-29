@@ -71,14 +71,14 @@ public class IHMVisualisationProfesseur extends javax.swing.JPanel {
         jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
 
-        boutonModifier.setText("Modifier");
+        boutonModifier.setText("Imprimer la fiche de l'eleve");
         boutonModifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonModifierActionPerformed(evt);
             }
         });
 
-        boutonSupprimer.setText("Supprimer");
+        boutonSupprimer.setText("Annuler");
         boutonSupprimer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonSupprimerActionPerformed(evt);
