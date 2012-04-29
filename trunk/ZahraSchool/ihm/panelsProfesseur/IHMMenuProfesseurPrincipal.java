@@ -362,7 +362,7 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         panel.add(barreVision, BorderLayout.NORTH);
         f2.setPanel(panel);
         f2.setMenuGauche(true);
-    }//GEN-LAST:event_boutonGestionEleveActionPerformed
+    }
 
     private void boutonGestionGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionGroupeActionPerformed
         panelsGroupe.IHMChoixGroupe CG = new panelsGroupe.IHMChoixGroupe(f2);
@@ -372,16 +372,17 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
         panel.add(barreVision, BorderLayout.NORTH);
         f2.setPanel(panel);
         f2.setMenuGauche(true);
-    }//GEN-LAST:event_boutonGestionGroupeActionPerformed
+    }
 
     private void boutonGestionProfesseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionProfesseurActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boutonGestionProfesseurActionPerformed
+        panelsProfesseur.IHMChoixProfesseur CP = new panelsProfesseur.IHMChoixProfesseur(f2);
+        f2.setPanel(CP);
+    }
 
     private void boutonAppelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAppelActionPerformed
         panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f2);
         f2.setPanel(FA);
-    }//GEN-LAST:event_boutonAppelActionPerformed
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
