@@ -589,8 +589,8 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      * Visualiser la fiche d'un professeur
      */
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        //panelsAdministrateur.IHMVisualiserProfesseur VP = new panelsAdministrateur.IHMVisualiserProfesseur(f);
-        //AfficheBarreVision(VP,"   Espace Professeur");
+        panelsProfesseur.IHMVisualisationProfesseur VP = new panelsProfesseur.IHMVisualisationProfesseur(f);
+        AfficheBarreVision(VP,"   Espace Professeur","../ZahraSchool/images/prof.png");
     }                                         
 
     /**
