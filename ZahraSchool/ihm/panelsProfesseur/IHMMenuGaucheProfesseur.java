@@ -1,6 +1,7 @@
 package panelsProfesseur;
 
 import java.awt.BorderLayout;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -486,20 +487,20 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         panel.add(barreVision, BorderLayout.NORTH);
 
         JPanel panel2 = new JPanel(new BorderLayout());
-        JLabel label1 = new JLabel();
+        BoxLayout gestionnaire = new BoxLayout(panel2, BoxLayout.X_AXIS);
+        panel2.setLayout(gestionnaire);
+        panel2.add(Box.createGlue());
+        panel2.add(panelMilieu);
+        panel2.add(Box.createGlue());
+
+        panel.add(panel2, BorderLayout.CENTER);
+        /*JLabel label1 = new JLabel();
         JLabel label2 = new JLabel();
         JLabel label3 = new JLabel();
         label1.setText("test");
         label2.setText("test");
         label3.setText("test");
-        BoxLayout gestionnaire = new BoxLayout(panel2, BoxLayout.Y_AXIS);
-        panel2.setLayout(gestionnaire);
-        panel2.add(label1);
-        panel2.add(panelMilieu);
-        panel2.add(label2);
-
-        panel.add(panel2, BorderLayout.CENTER);
-        /*panel.add(label1, BorderLayout.WEST);
+        panel.add(label1, BorderLayout.WEST);
         panel.add(label2, BorderLayout.EAST);
         panel.add(label3, BorderLayout.SOUTH);*/
         f.setPanel(panel);
