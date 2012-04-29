@@ -254,13 +254,12 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f);
-        f.setPanel(FA);
+        
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        //panelsAdministrateur.IHMVisualiserProfesseur VP = new panelsAdministrateur.IHMVisualiserProfesseur(f);
-        //AfficheBarreVision(VP,"   Espace Professeur");
+        panelsProfesseur.IHMVisualisationProfesseur VP = new panelsProfesseur.IHMVisualisationProfesseur(f);
+        f.setPanel(VP);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
