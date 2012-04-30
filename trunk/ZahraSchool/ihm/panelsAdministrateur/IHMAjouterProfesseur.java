@@ -1,27 +1,29 @@
-package panelsAdministrateur;
-
-import java.awt.BorderLayout;
-import java.util.GregorianCalendar;
-
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
-import panelsProfesseur.Horloge;
-import panelsProfesseur.IHMBarreVisionMenuPrincipal;
-
-import frames.FFondFenetreAdministrateur;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
 /*
- * IHMModifierSupprimerProfesseur.java
+ * InterfaceAjouterProfesseur.java
  *
- * Created on 7 avr. 2012, 23:12:26
+ * Created on 9 mars 2012, 11:52:32
  */
 
+package panelsAdministrateur;
+
+import java.awt.BorderLayout;
+import java.sql.Date;
+import java.util.GregorianCalendar;
+
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+import database.SpringJDBC;
+import domaine.Professeur;
+
+import panelsProfesseur.Horloge;
+import panelsProfesseur.IHMBarreVisionMenuPrincipal;
+import frames.FFondFenetreAdministrateur;
 
 /**
  *
@@ -29,13 +31,14 @@ import frames.FFondFenetreAdministrateur;
  */
 public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
+    /** Creates new form InterfaceAjouterProfesseur */
+
 	FFondFenetreAdministrateur f;
     /** Creates new form IHMModifierSupprimerProfesseur */
     public IHMAjouterProfesseur(FFondFenetreAdministrateur f) {
     	this.f = f;
         initComponents();
     }
-
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -45,9 +48,11 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
     	GregorianCalendar calendar = new GregorianCalendar();
-        jPanel5 = new javax.swing.JPanel();
-        boutonModifier = new javax.swing.JButton();
-        boutonSupprimer = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel4 = new javax.swing.JPanel();
+        boutonAnnuler = new javax.swing.JButton();
+        boutonEnregistrer = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         nom = new javax.swing.JLabel();
         prenom = new javax.swing.JLabel();
@@ -56,71 +61,87 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         dateEmbauche = new javax.swing.JLabel();
         niveauEtudes = new javax.swing.JLabel();
         adresse = new javax.swing.JLabel();
+        motDePasse = new javax.swing.JLabel();
+        textNom = new javax.swing.JTextField();
+        textPrenom = new javax.swing.JTextField();
+        textJourNaissance = new javax.swing.JTextField();
+        textMoisNaissance = new javax.swing.JTextField();
+        textAnneeNaissance = new javax.swing.JTextField();
+        textNumTel = new javax.swing.JTextField();
+        textjourDateEmbauche = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        textAdresseAdresse = new javax.swing.JTextArea();
+        textAdresse = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        textNiveauEtudesEtudes = new javax.swing.JTextArea();
+        textNiveauEtudes = new javax.swing.JTextArea();
+        textMotDePasse = new javax.swing.JPasswordField();
+        textMoisDateEmbauche = new javax.swing.JTextField();
+        textAnneeDateEmbauche = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        textJourNaissance = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        textAnneeNaissance = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jTextFieldNom = new javax.swing.JTextField();
-        jTextFieldPrenom = new javax.swing.JTextField();
-        jTextFieldDateNaissance = new javax.swing.JTextField();
-        jTextFieldTelephone = new javax.swing.JTextField();
-        jTextFieldDateEmbaucheJour = new javax.swing.JTextField();
-        jTextFieldDateEmbaucheMois = new javax.swing.JTextField();
-        jTextFieldDateEmbaucheAnnee = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        motDePasse1 = new javax.swing.JLabel();
+        textIdentifiant = new javax.swing.JTextField();
         
-        jTextFieldDateEmbaucheMois.setText("" + (calendar.get(GregorianCalendar.MONTH) + 1));
-        jTextFieldDateEmbaucheAnnee.setText("" + (calendar.get(GregorianCalendar.YEAR)));
-        jTextFieldDateEmbaucheJour.setText("" + (calendar.get(GregorianCalendar.DAY_OF_MONTH)));
-        
-       // boutonModifier.setIcon(new javax.swing.ImageIcon("../Tests/images/imageBoutonEnregistrer.png")); // NOI18N
-        boutonModifier.setText("Enregistrer");
-        boutonModifier.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boutonModifierActionPerformed(evt);
-            }
-        });
+        textMoisDateEmbauche.setText("" + (calendar.get(GregorianCalendar.MONTH) + 1));
+        textAnneeDateEmbauche.setText("" + (calendar.get(GregorianCalendar.YEAR)));
+        textjourDateEmbauche.setText("" + (calendar.get(GregorianCalendar.DAY_OF_MONTH)));
 
-      //  boutonSupprimer.setIcon(new javax.swing.ImageIcon("../Tests/images/imageBoutonSupprimer.png")); // NOI18N
-        boutonSupprimer.setText("Annuler");
-        boutonSupprimer.setToolTipText("En cliquant sur annuler, vous retournerez a la page d'accueil");
-        boutonSupprimer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boutonSupprimerActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(169, Short.MAX_VALUE)
-                .addComponent(boutonModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(boutonSupprimer)
-                .addGap(107, 107, 107))
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boutonSupprimer)
-                    .addComponent(boutonModifier))
-                .addContainerGap(19, Short.MAX_VALUE))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        boutonAnnuler.setFont(new java.awt.Font("Tahoma", 1, 12));
+        boutonAnnuler.setForeground(new java.awt.Color(255, 0, 0));
+        boutonAnnuler.setText("Annuler");
+        boutonAnnuler.setToolTipText("");
+        boutonAnnuler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonAnnulerActionPerformed(evt);
+            }
+        });
+
+        boutonEnregistrer.setFont(new java.awt.Font("Tahoma", 1, 12));
+        boutonEnregistrer.setForeground(new java.awt.Color(0, 0, 153));
+        boutonEnregistrer.setText("Enregistrer");
+        boutonEnregistrer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonEnregistrerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(486, 486, 486)
+                .addComponent(boutonEnregistrer)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(boutonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(123, 123, 123))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boutonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(boutonEnregistrer, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12), new java.awt.Color(0, 0, 153)))); // NOI18N
@@ -135,75 +156,98 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         naissance.setText("Date de naissance :");
 
         telephone.setFont(new java.awt.Font("Tahoma", 1, 12));
-        telephone.setText("Numero de telephone :");
+        telephone.setText("Numéro de téléphone :");
         telephone.setToolTipText("");
 
         dateEmbauche.setFont(new java.awt.Font("Tahoma", 1, 12));
         dateEmbauche.setText("Date d'embauche :");
 
         niveauEtudes.setFont(new java.awt.Font("Tahoma", 1, 12));
-        niveauEtudes.setText("Niveau d'etudes :");
+        niveauEtudes.setText("Niveau d'études :");
 
         adresse.setFont(new java.awt.Font("Tahoma", 1, 12));
         adresse.setText("Adresse :");
 
-        textAdresseAdresse.setColumns(20);
-        textAdresseAdresse.setFont(new java.awt.Font("Tahoma", 0, 12));
-        textAdresseAdresse.setRows(5);
-        jScrollPane1.setViewportView(textAdresseAdresse);
+        motDePasse.setFont(new java.awt.Font("Tahoma", 1, 12));
+        motDePasse.setText("Mot de passe :");
 
-        textNiveauEtudesEtudes.setColumns(20);
-        textNiveauEtudesEtudes.setFont(new java.awt.Font("Tahoma", 0, 12));
-        textNiveauEtudesEtudes.setRows(5);
-        jScrollPane2.setViewportView(textNiveauEtudesEtudes);
+        textNom.setFont(new java.awt.Font("Tahoma", 0, 12));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel7.setForeground(new java.awt.Color(51, 0, 153));
-        jLabel7.setText("Fiche a remplir");
+        textPrenom.setFont(new java.awt.Font("Tahoma", 0, 12));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12));
+        textJourNaissance.setFont(new java.awt.Font("Tahoma", 0, 12));
+
+        textMoisNaissance.setFont(new java.awt.Font("Tahoma", 0, 12));
 
         textAnneeNaissance.setFont(new java.awt.Font("Tahoma", 0, 12));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12));
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12));
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 12));
-
-        jTextFieldPrenom.addActionListener(new java.awt.event.ActionListener() {
+        textNumTel.setFont(new java.awt.Font("Tahoma", 0, 12));
+        textNumTel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPrenomActionPerformed(evt);
+                textNumTelActionPerformed(evt);
             }
         });
 
-        jTextFieldDateNaissance.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextFieldDateNaissance.setForeground(new java.awt.Color(153, 153, 153));
-        jTextFieldDateNaissance.setText("exemple : 05/12/2000");
+        textjourDateEmbauche.setFont(new java.awt.Font("Tahoma", 0, 12));
 
-        jTextFieldTelephone.addActionListener(new java.awt.event.ActionListener() {
+        textAdresse.setColumns(20);
+        textAdresse.setFont(new java.awt.Font("Tahoma", 0, 12));
+        textAdresse.setRows(5);
+        jScrollPane1.setViewportView(textAdresse);
+
+        textNiveauEtudes.setColumns(20);
+        textNiveauEtudes.setFont(new java.awt.Font("Tahoma", 0, 12));
+        textNiveauEtudes.setRows(5);
+        jScrollPane2.setViewportView(textNiveauEtudes);
+
+        textMotDePasse.setFont(new java.awt.Font("Tahoma", 0, 12));
+        textMotDePasse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTelephoneActionPerformed(evt);
+                textMotDePasseActionPerformed(evt);
             }
         });
 
-        jTextFieldDateEmbaucheAnnee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDateEmbaucheAnneeActionPerformed(evt);
-            }
-        });
+        textMoisDateEmbauche.setFont(new java.awt.Font("Tahoma", 0, 12));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        textAnneeDateEmbauche.setFont(new java.awt.Font("Tahoma", 0, 12));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 2, 11));
+        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel1.setText("jj");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 2, 11));
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("jj");
+        jLabel2.setText("mm");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 2, 11));
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("mm");
+        jLabel3.setText("aaaa");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 2, 11));
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("aaaa");
+        jLabel4.setText("jj");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 2, 11));
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setText("mm");
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 2, 11));
+        jLabel6.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel6.setText("aaaa");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel7.setForeground(new java.awt.Color(51, 0, 153));
+        jLabel7.setText("Fiche détaillée");
+
+        motDePasse1.setFont(new java.awt.Font("Tahoma", 1, 12));
+        motDePasse1.setText("Identifiant :");
+
+        textIdentifiant.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textIdentifiant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textIdentifiantActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -212,64 +256,65 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 792, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(naissance)
-                            .addComponent(telephone)
                             .addComponent(adresse)
                             .addComponent(nom)
-                            .addComponent(prenom))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldTelephone)
-                            .addComponent(jTextFieldDateNaissance)
-                            .addComponent(jTextFieldPrenom)
-                            .addComponent(jTextFieldNom)
-                            .addComponent(jScrollPane1))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(prenom)
+                            .addComponent(telephone)
+                            .addComponent(naissance))
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(textJourNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textJourNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textMoisNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel11)
-                                        .addGap(50, 50, 50)
-                                        .addComponent(textAnneeNaissance))
-                                    .addComponent(niveauEtudes))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(27, 27, 27)
-                                        .addComponent(jTextFieldDateEmbaucheJour, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextFieldDateEmbaucheMois, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextFieldDateEmbaucheAnnee, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel14)
-                                        .addGap(92, 92, 92)
-                                        .addComponent(jLabel15)
-                                        .addGap(126, 126, 126)
-                                        .addComponent(jLabel16))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(dateEmbauche))
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(textAnneeNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(2, 2, 2)
+                                        .addComponent(jLabel3))
+                                    .addComponent(textPrenom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                                    .addComponent(textNom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                            .addComponent(textNumTel, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
+                        .addGap(73, 73, 73)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dateEmbauche)
+                            .addComponent(niveauEtudes)
+                            .addComponent(motDePasse1)
+                            .addComponent(motDePasse))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane2)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(textjourDateEmbauche, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(14, 14, 14)
+                                    .addComponent(textMoisDateEmbauche, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(textAnneeDateEmbauche, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel6)))
+                            .addComponent(textIdentifiant, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                            .addComponent(textMotDePasse, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(242, 242, 242))
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -277,65 +322,63 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 12, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                        .addGap(9, 9, 9)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nom)
-                            .addComponent(jTextFieldNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(niveauEtudes))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                            .addComponent(textNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nom))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(prenom)
-                            .addComponent(jTextFieldPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(textJourNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel11)
-                                .addComponent(textAnneeNaissance))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(naissance)
-                                .addComponent(jTextFieldDateNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(13, 13, 13))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(textPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prenom))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(telephone)
-                            .addComponent(jTextFieldTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(textJourNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addComponent(textMoisNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(textAnneeNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(naissance))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textNumTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(telephone))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(adresse)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(dateEmbauche)
-                                    .addComponent(jTextFieldDateEmbaucheJour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jTextFieldDateEmbaucheMois, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jTextFieldDateEmbaucheAnnee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)))))
+                            .addComponent(adresse))
+                        .addGap(24, 24, 24))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(niveauEtudes)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16))))
-                .addGap(14, 14, 14)
+                            .addComponent(dateEmbauche)
+                            .addComponent(textjourDateEmbauche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(textMoisDateEmbauche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5)
+                            .addComponent(textAnneeDateEmbauche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motDePasse1)
+                            .addComponent(textIdentifiant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motDePasse)
+                            .addComponent(textMotDePasse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -344,90 +387,119 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 747, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>
 
-    private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {
-                JOptionPane jop1 = new JOptionPane();
+    private void boutonEnregistrerActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+        // TODO add your handling code here:
+    	String nom = textNom.getText();
+        String prenom = textPrenom.getText();
+        int dateNaissanceJour = Integer.parseInt(textJourNaissance.getText());
+        int dateNaissanceMois = Integer.parseInt(textMoisNaissance.getText());
+        int dateNaissanceAnnee = Integer.parseInt(textAnneeNaissance.getText());
+        int dateEmbaucheJour = Integer.parseInt(textjourDateEmbauche.getText());
+        int dateEmbaucheMois = Integer.parseInt(textMoisDateEmbauche.getText());
+        int dateEmbaucheAnnee = Integer.parseInt(textAnneeDateEmbauche.getText());
+        int telephone = Integer.parseInt(textNumTel.getText());
+        String niveauEtudes = textNiveauEtudes.getText();
+        String adresse = textAdresse.getText(); 
+        String identifiant = textIdentifiant.getText();
+        @SuppressWarnings("deprecation")
+		String motDePasse = textMotDePasse.getText();
+        
+        @SuppressWarnings("deprecation")
+		Date dateDeNaissance = new Date(dateNaissanceJour, dateNaissanceMois, dateNaissanceAnnee);
+        @SuppressWarnings("deprecation")
+		Date dateEmbauche  = new Date(dateEmbaucheJour,dateEmbaucheMois,dateEmbaucheAnnee);
+        
+        Professeur professeur = new Professeur(identifiant, motDePasse, nom, prenom,
+        									   adresse, telephone, niveauEtudes, 
+        									   dateDeNaissance, dateEmbauche, null, null);
+        
+        SpringJDBC j= new SpringJDBC(); 
+        j.saveProfesseur(professeur);
+        
+        JOptionPane jop1 = new JOptionPane();
 		jop1.showMessageDialog(null, "Enregistrement du professeur", "Information", JOptionPane.INFORMATION_MESSAGE);
-    }
 
-    private void boutonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {
-		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
+    }                                                 
+
+    private void boutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {                                              
+    	IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
 		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f);
 		JPanel panel = new JPanel(new BorderLayout());    		
 		panel.add(new Horloge(), BorderLayout.WEST);
 		panel.add(menuPrincipal, BorderLayout.EAST);
 		panel.add(visionMenu, BorderLayout.NORTH);
 		f.setPanel(panel);
+    }                                             
+
+    private void textNumTelActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
 }
 
-    private void jTextFieldPrenomActionPerformed(java.awt.event.ActionEvent evt) {
+    private void textIdentifiantActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
-    private void jTextFieldTelephoneActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void jTextFieldDateEmbaucheAnneeActionPerformed(java.awt.event.ActionEvent evt) {
+    private void textMotDePasseActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
 
     // Variables declaration - do not modify
     private javax.swing.JLabel adresse;
-    private javax.swing.JButton boutonModifier;
-    private javax.swing.JButton boutonSupprimer;
+    private javax.swing.JButton boutonAnnuler;
+    private javax.swing.JButton boutonEnregistrer;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel dateEmbauche;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField jTextFieldDateEmbaucheAnnee;
-    private javax.swing.JTextField jTextFieldDateEmbaucheJour;
-    private javax.swing.JTextField jTextFieldDateEmbaucheMois;
-    private javax.swing.JTextField jTextFieldDateNaissance;
-    private javax.swing.JTextField jTextFieldNom;
-    private javax.swing.JTextField jTextFieldPrenom;
-    private javax.swing.JTextField jTextFieldTelephone;
+    private javax.swing.JLabel motDePasse;
+    private javax.swing.JLabel motDePasse1;
     private javax.swing.JLabel naissance;
     private javax.swing.JLabel niveauEtudes;
     private javax.swing.JLabel nom;
     private javax.swing.JLabel prenom;
     private javax.swing.JLabel telephone;
-    private javax.swing.JTextArea textAdresseAdresse;
-    private javax.swing.JLabel textAnneeNaissance;
-    private javax.swing.JLabel textJourNaissance;
-    private javax.swing.JTextArea textNiveauEtudesEtudes;
+    private javax.swing.JTextArea textAdresse;
+    private javax.swing.JTextField textAnneeDateEmbauche;
+    private javax.swing.JTextField textAnneeNaissance;
+    private javax.swing.JTextField textIdentifiant;
+    private javax.swing.JTextField textJourNaissance;
+    private javax.swing.JTextField textMoisDateEmbauche;
+    private javax.swing.JTextField textMoisNaissance;
+    private javax.swing.JPasswordField textMotDePasse;
+    private javax.swing.JTextArea textNiveauEtudes;
+    private javax.swing.JTextField textNom;
+    private javax.swing.JTextField textNumTel;
+    private javax.swing.JTextField textPrenom;
+    private javax.swing.JTextField textjourDateEmbauche;
     // End of variables declaration
 
 }
