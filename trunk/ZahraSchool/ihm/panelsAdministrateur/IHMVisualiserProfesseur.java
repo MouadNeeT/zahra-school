@@ -1,5 +1,10 @@
 package panelsAdministrateur;
 
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
+import database.SpringJDBC;
+import domaine.Professeur;
 import frames.FFondFenetreAdministrateur;
 
 /*
@@ -280,10 +285,19 @@ public class IHMVisualiserProfesseur extends javax.swing.JPanel {
         );
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+        	
+        	 SpringJDBC springJdbc = new SpringJDBC();
+                ArrayList<Professeur> listeProfesseurs = springJdbc.getAllProfesseurs();
+                public int getSize() { return listeProfesseurs.size(); }
+                public Object getElementAt(int i) { return (listeProfesseurs.get(i).getNom() + " " + listeProfesseurs.get(i).getPrenom()); }
+            });
+        	
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jList1MousePressed(evt);
+            }
         });
+        
         jScrollPane3.setViewportView(jList1);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -324,7 +338,31 @@ public class IHMVisualiserProfesseur extends javax.swing.JPanel {
         );
     }// </editor-fold>
 
-    private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {                                               
+    @SuppressWarnings("unchecked")
+	protected void jList1MousePressed(MouseEvent evt) {
+    	if (!jList1.isSelectionEmpty()){
+
+            jList1.setModel(new javax.swing.AbstractListModel() {
+            	SpringJDBC springJdbc = new SpringJDBC();
+                ArrayList<Professeur> listeProfesseurs = springJdbc.getAllProfesseurs();
+                public int getSize() { return listeProfesseurs.size(); }
+                public Object getElementAt(int i) {
+                	jLabelNom.setText(listeProfesseurs.get(i).getNom());
+                	jLabelPrenom.setText(listeProfesseurs.get(i).getPrenom());
+                	jLabelDateEmbauche.setText(""+listeProfesseurs.get(i).getDateEmbauche());
+                	jLabelDateNaissance.setText(""+listeProfesseurs.get(i).getDateDeNaissance());                  
+                	textAdresse.setText(listeProfesseurs.get(i).getAdresse());
+                	textNiveauEtudes.setText(listeProfesseurs.get(i).getNiveauEtudes());
+                	jLabelTelephone.setText("" + listeProfesseurs.get(i).getNumeroTelephone());
+
+                                     
+                    return (listeProfesseurs.get(i).getNom() + listeProfesseurs.get(i).getPrenom());
+                }
+            });
+        } else System.out.println("aucun élément sélectioné");
+	}
+
+	private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {                                               
         // TODO add your handling code here:
     }                                              
 
