@@ -15,6 +15,9 @@ import frames.FFondFenetreAdministrateur;
 import frames.FFondFenetreProfesseur;
 import javax.swing.JLabel;
 
+import database.SpringJDBC;
+import domaine.Administrateur;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -218,35 +221,63 @@ public class IHMConnexion extends javax.swing.JPanel {
 
     private void jComboBoxIdentifiactionActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    	//Administrateur admin = new Administrateur (jTextFieldIdentifiant.getText(), jPasswordFieldMotDePasse.getText());
+    	
         System.out.println(""+jComboBoxIdentifiaction.getSelectedItem());
             	if (jComboBoxIdentifiaction.getSelectedItem() == typePersonne)
                 {
             		typePersonne = "Professeur";
             	}
-            	else
+            	else {
                         typePersonne = "Administrateur";
+                        
+                    	
+            	}
     }
 
     private void jTextFieldIdentifiantActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
-    private void jButtonIdentificationActionPerformed(java.awt.event.ActionEvent evt) {
+    @SuppressWarnings({ "deprecation", "static-access" })
+	private void jButtonIdentificationActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         System.out.println(typePersonne);
-    	if (typePersonne == "Administrateur")
-        {
-    		f1 = new FFondFenetreAdministrateur();
-    		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
-    		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f1);
-    		JPanel panel = new JPanel(new BorderLayout());    		
-    		panel.add(new Horloge(), BorderLayout.WEST);
-    		panel.add(menuPrincipal, BorderLayout.EAST);
-    		panel.add(visionMenu, BorderLayout.NORTH);
-    		f1.setPanel(panel);
-    		f1.setLocationRelativeTo(null);
-    		f1.setVisible(true);
-    	}
+        
+        //administrateur
+    	if (typePersonne == "Administrateur") {
+ 		
+    		SpringJDBC j= new SpringJDBC(); 
+        	Administrateur admin;
+        	admin = j.getAdministrateurbyId(jTextFieldIdentifiant.getText());
+        	
+        	if (admin == null) {
+        		System.out.println("pa ni ayen");
+        		admin = null;
+        		JOptionPane jop1 = new JOptionPane();
+    			jop1.showMessageDialog(null, "Identifiant incorrect", "Erreur", JOptionPane.ERROR_MESSAGE);      	
+        	}
+        	
+        	else if (admin.getMotDePasse().equals(jPasswordFieldMotDePasse.getText())){
+        		f1 = new FFondFenetreAdministrateur();
+        		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
+        		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f1);
+        		JPanel panel = new JPanel(new BorderLayout());    		
+        		panel.add(new Horloge(), BorderLayout.WEST);
+        		panel.add(menuPrincipal, BorderLayout.EAST);
+        		panel.add(visionMenu, BorderLayout.NORTH);
+        		f1.setPanel(panel);
+        		f1.setLocationRelativeTo(null);
+        		f1.setVisible(true);
+        	}
+        	else {
+        		admin = null;
+        		JOptionPane jop1 = new JOptionPane();
+    			jop1.showMessageDialog(null, "Mot de passe incorrect", "Erreur", JOptionPane.ERROR_MESSAGE);
+        	}
+        }
+    	
+    	//professeur
     	else
         {
     		f2 = new FFondFenetreProfesseur();   		
