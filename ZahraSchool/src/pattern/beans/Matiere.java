@@ -3,7 +3,6 @@ package pattern.beans;
 import java.util.ArrayList;
 
 public class Matiere {
-    
     private String nom;
     private String type;
     private ArrayList<EmploiDuTemps> listeEmploiDuTemps;

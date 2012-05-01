@@ -17,7 +17,7 @@ public class Eleve {
 	private String prenom;
 	private int age;
 	private Date dateDeNaissance;
-	private String photo; 
+	private String photo;
 	private int numeroTelephoneEleve;
 	private int numeroTelephoneParent;
 	private Date dateInscription;
