@@ -15,6 +15,8 @@ import frames.FFondFenetreAdministrateur;
 import frames.FFondFenetreProfesseur;
 import javax.swing.JLabel;
 
+import manager.AdministrateurManager;
+
 import database.SpringJDBC;
 import domaine.Administrateur;
 
@@ -246,19 +248,19 @@ public class IHMConnexion extends javax.swing.JPanel {
         
         //administrateur
     	if (typePersonne == "Administrateur") {
- 		
-    		SpringJDBC j= new SpringJDBC(); 
-        	Administrateur admin;
-        	admin = j.getAdministrateurbyId(jTextFieldIdentifiant.getText());
+    		Administrateur administrateur;// = AdministrateurManager.getInstance().readById("stephanie.gautier1@gmail.com");
+    		
+
+    		administrateur = AdministrateurManager.getInstance().readById(jTextFieldIdentifiant.getText());
         	
-        	if (admin == null) {
+        	if (administrateur == null) {
         		System.out.println("pa ni ayen");
-        		admin = null;
+        		administrateur = null;
         		JOptionPane jop1 = new JOptionPane();
     			jop1.showMessageDialog(null, "Identifiant incorrect", "Erreur", JOptionPane.ERROR_MESSAGE);      	
         	}
         	
-        	else if (admin.getMotDePasse().equals(jPasswordFieldMotDePasse.getText())){
+        	else if (administrateur.getMotDePasse().equals(jPasswordFieldMotDePasse.getText())){
         		f1 = new FFondFenetreAdministrateur();
         		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
         		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f1);
@@ -271,7 +273,7 @@ public class IHMConnexion extends javax.swing.JPanel {
         		f1.setVisible(true);
         	}
         	else {
-        		admin = null;
+        		administrateur = null;
         		JOptionPane jop1 = new JOptionPane();
     			jop1.showMessageDialog(null, "Mot de passe incorrect", "Erreur", JOptionPane.ERROR_MESSAGE);
         	}
