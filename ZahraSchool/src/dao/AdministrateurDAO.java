@@ -1,70 +1,106 @@
 package dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import domaine.Administrateur;
+import entity.AdministrateurEntity;
 
 @Repository("administrateurDAO")
-public class AdministrateurDAO implements IAdministrateurDAO{
+public class AdministrateurDAO{
 
-	private JdbcTemplate jdbcTemplate;
+	public JdbcTemplate jdbcTemplate;
 	
 	public void setDataSource(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
-	@Override
-	public Administrateur getAdministrateurById(String identifiant) {
-		String sql = "select identifiant, motDePasse from administrateur where identifiant = ?";
+	public Administrateur readById(String identifiant) {
+		Connection conn = null;
+		PreparedStatement stmt = null; 
+		ResultSet rs = null;
 
-		// Mapping d'un enregistrement vers un ResultSet
-		RowMapper mapper = new RowMapper() {
-			public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Administrateur administrateur = new Administrateur();
+		try {
+			final String ADMINISTRATEUR_QUERY =
+				"select  identifiant, motDePasse from administrateur where identifiant=?";
+			
+			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
+	        DataSource dataSource = (DataSource) appContext.getBean("datasource2");
+	        
+	        conn = dataSource.getConnection();
+			stmt = conn.prepareStatement(ADMINISTRATEUR_QUERY);
+		
+			stmt.setString(1, identifiant);
+			rs = stmt.executeQuery();
+			Administrateur administrateur = null;
+			if(rs.next()) {
+				administrateur = new Administrateur();
 				administrateur.setIdentifiant(rs.getString("identifiant"));
 				administrateur.setMotDePasse(rs.getString("motDePasse"));
-				return administrateur;
 			}
-
-		};
-		// Retourne l'objet Employe associé à l'Id
-		// Notez 1) le casting explicite Employe,
-		// 2) que l'enveloppe de l'argument 'id' dans un tableau d'objet,
-		// 3) le boxing de 'id' comme un type reference Long
-		// Ces étapes ne sont pas necessaire en utilisant (java 5)
-		// SimpleJdbcTemplate
-		return (Administrateur) jdbcTemplate.queryForObject(sql, new Object[] { String
-				.valueOf(identifiant) }, mapper);
+			
+			return administrateur;
+	
+		} catch (SQLException e) {
+		e.printStackTrace();
+		
+	
+		} finally {
+		try {
+			if(rs != null) { rs.close(); }
+		if(stmt != null) { stmt.close(); }
+		if(conn != null) { conn.close(); }
+		} catch (SQLException e) {
+			
+		}
+		}
+		return null;
 	}
 
-	@Override
 	public Administrateur getAdministrateurByLogin(String login) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public void saveAdministrateur(Administrateur administrateur) {
+	public void create(AdministrateurEntity administrateur) {
+		Connection conn = null;
+		PreparedStatement stmt = null;		
+		try {
 		final String ADMINISTRATEUR_INSERT = "insert into administrateur (identifiant, motDePasse)"
 				+ "values (?,?)";
+		
+		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
+		//<---------------- ne pas oublier de changer
+        DataSource ds = (DataSource) appContext.getBean("datasource2");
+        
+        conn = ds.getConnection();
+		stmt = conn.prepareStatement(ADMINISTRATEUR_INSERT);
+		
+		stmt.setString(1, administrateur.getIdentifiant());
+		stmt.setString(2, administrateur.getMotDePasse());
+		
+		stmt.execute();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		} finally {
+			try {
+				if(stmt != null) { stmt.close(); }
+				if(conn != null) { conn.close(); }
+			} catch (SQLException e) {}
+		}
 
-	        /*
-		 * On récupère et on utilisera directement le jdbcTemplate
-		 */
-		jdbcTemplate.update(
-				ADMINISTRATEUR_INSERT,
-				new Object[] { administrateur.getIdentifiant(),administrateur.getMotDePasse()});
+
 	}
 
-	@Override
 	public int getAdministrateurCount() {
 		final String ADMINISTRATEUR_COUNT = "select count(*) from administrateur";
 
@@ -77,10 +113,20 @@ public class AdministrateurDAO implements IAdministrateurDAO{
 		return nbLignes;
 	}
 
-	@Override
 	public List<Administrateur> getAllAdministrateurs() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	
+
+	public void save(Administrateur administrateurEntity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+
+	
 }
