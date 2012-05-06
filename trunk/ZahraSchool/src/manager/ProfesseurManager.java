@@ -46,7 +46,6 @@ public class ProfesseurManager {
 		professeurEntity.setNumeroTelephone(professeur.getNumeroTelephone());
 		professeurEntity.setListeEleves(professeur.getListeEleves());
 		professeurEntity.setListeMatieres(professeur.getListeMatieres());
-		
 
 		ProfesseurDAO professeurDAO = new ProfesseurDAO();
 		professeurDAO.create(professeurEntity);
@@ -57,12 +56,6 @@ public class ProfesseurManager {
 		 
 		ProfesseurDAO professeurDAO = new ProfesseurDAO();
     	return (professeurDAO.readById(identifiant));
-	}
-	
-	public Professeur readByNomPrenom(String nom, String prenom) {
-		 
-		ProfesseurDAO professeurDAO = new ProfesseurDAO();
-    	return (professeurDAO.readByNomPrenom(nom, prenom));
 	}
 	
 	public void delete(Professeur professeur){
@@ -92,7 +85,6 @@ public class ProfesseurManager {
 	}
 	
 	public  void  update(Professeur professeur) {
-		//
 		ProfesseurEntity professeurEntity = EntityFactory.getProfesseurEntity();
 		professeurEntity.setIdentifiant(professeur.getIdentifiant());
 		professeurEntity.setMotDePasse(professeur.getMotDePasse());

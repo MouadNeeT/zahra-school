@@ -1,11 +1,5 @@
-/**
- * author GAUTIER Stéphanie
- */
-
 package entity;
 
-
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,7 +7,10 @@ import java.util.List;
 import domaine.Eleve;
 import domaine.Matiere;
 
-
+/*
+ *
+ * @author GAUTIER Stephanie
+ */
 public class ProfesseurEntity {
 	private String identifiant;
 	private String motDePasse;
@@ -202,7 +199,7 @@ public class ProfesseurEntity {
 	}
 	
 	/**
-	 * méthode qui ajoute un élève à la liste d'élève du professeur
+	 * mï¿½thode qui ajoute un ï¿½lï¿½ve ï¿½ la liste d'ï¿½lï¿½ve du professeur
 	 * @param eleve
 	 */
 	public void addEleve(Eleve eleve){
@@ -210,7 +207,7 @@ public class ProfesseurEntity {
 	}
 	
 	/**
-	 * méthode qui ajoute une matière à la liste des matières du professeur
+	 * mï¿½thode qui ajoute une matiï¿½re ï¿½ la liste des matiï¿½res du professeur
 	 * @param matiere
 	 */
 	public void addMatiere(Matiere matiere){

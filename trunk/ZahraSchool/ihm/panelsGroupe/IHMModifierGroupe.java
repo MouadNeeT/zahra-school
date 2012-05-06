@@ -18,7 +18,7 @@ import panelsProfesseur.IHMBarreVisionPresentation;
 
 /**
  *
- * @author alexandre
+ * @author Marwan
  */
 public class IHMModifierGroupe extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
