@@ -240,15 +240,12 @@ public class IHMMenuPrincipalAdministrateur extends JPanel{
         }// </editor-fold>
 
         private void boutonFicheProfesseurActionPerformed(java.awt.event.ActionEvent evt) {
-            // TODO add your handling code here:
-        	//f = new FFondFenetreAdministrateur();
         	JPanel panel = new JPanel(new BorderLayout());
         	JPanel visualiserETVision = new JPanel(new BorderLayout());
         	IHMMenuGaucheAdministrateur menuAdminGauche = new IHMMenuGaucheAdministrateur(f);
-        	IHMDateEmbaucheAdministrateur dateEmbauche = new IHMDateEmbaucheAdministrateur();
     		IHMVisualiserProfesseur visualiser = new IHMVisualiserProfesseur(f);
     		visualiserETVision.add(visualiser, BorderLayout.NORTH);
-    		visualiserETVision.add(dateEmbauche, BorderLayout.WEST);
+    		
     		visualiserETVision.add(visualiser, BorderLayout.CENTER);
     		visualiserETVision.add(new IHMBarreVisionVisualiserProfesseur(f), BorderLayout.NORTH);
         	panel.add(menuAdminGauche, BorderLayout.WEST);

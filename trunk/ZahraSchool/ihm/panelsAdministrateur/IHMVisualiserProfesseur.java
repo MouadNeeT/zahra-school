@@ -3,6 +3,8 @@ package panelsAdministrateur;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
+import manager.ProfesseurManager;
+
 import database.SpringJDBC;
 import domaine.Professeur;
 import frames.FFondFenetreAdministrateur;
@@ -286,10 +288,10 @@ public class IHMVisualiserProfesseur extends javax.swing.JPanel {
 
         jList1.setModel(new javax.swing.AbstractListModel() {
         	
-        	 SpringJDBC springJdbc = new SpringJDBC();
-                ArrayList<Professeur> listeProfesseurs = springJdbc.getAllProfesseurs();
+ 
+                ArrayList<Professeur> listeProfesseurs = ProfesseurManager.getInstance().getAllProfesseurs();
                 public int getSize() { return listeProfesseurs.size(); }
-                public Object getElementAt(int i) { return (listeProfesseurs.get(i).getNom() + " " + listeProfesseurs.get(i).getPrenom()); }
+                public Object getElementAt(int i) { return (listeProfesseurs.get(i).getNom() + "  " + listeProfesseurs.get(i).getPrenom()); }
             });
         	
         jList1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -343,8 +345,7 @@ public class IHMVisualiserProfesseur extends javax.swing.JPanel {
     	if (!jList1.isSelectionEmpty()){
 
             jList1.setModel(new javax.swing.AbstractListModel() {
-            	SpringJDBC springJdbc = new SpringJDBC();
-                ArrayList<Professeur> listeProfesseurs = springJdbc.getAllProfesseurs();
+                ArrayList<Professeur> listeProfesseurs = ProfesseurManager.getInstance().getAllProfesseurs();
                 public int getSize() { return listeProfesseurs.size(); }
                 public Object getElementAt(int i) {
                 	jLabelNom.setText(listeProfesseurs.get(i).getNom());
@@ -356,7 +357,7 @@ public class IHMVisualiserProfesseur extends javax.swing.JPanel {
                 	jLabelTelephone.setText("" + listeProfesseurs.get(i).getNumeroTelephone());
 
                                      
-                    return (listeProfesseurs.get(i).getNom() + listeProfesseurs.get(i).getPrenom());
+                    return (listeProfesseurs.get(i).getNom() + " " + listeProfesseurs.get(i).getPrenom());
                 }
             });
         } else System.out.println("aucun élément sélectioné");
