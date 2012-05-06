@@ -1,40 +1,141 @@
+/**
+ * author GAUTIER Stéphanie
+ */
+
 package entity;
 
-import domaine.*;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author alexandre
- */
-public class EleveEntity {
+import domaine.EmploiDuTemps;
+import domaine.Groupe;
+import domaine.Paiement;
+import domaine.Professeur;
+
+
+
+public class EleveEntity extends Entity{
+	/**
+	 * Certains élèves peuvent avoir des noms, prénoms identiques :
+	 * l'identifiant les diférenciera.
+	 * 
+	 * @see Eleve#getIdentifiant()
+	 * @see Eleve#setIdentifiant(int)
+	 */
 	private int identifiant;
+	/**
+	 * le nom de l'élève.
+	 * 
+	 * @see Eleve#setNom(String)
+	 * @see Eleve#getNom()
+	 */
 	private String nom;
+	/**
+	 * le prénom de l'élève.
+	 * 
+	 * @see Eleve#setPrenom(String)
+	 * @see Eleve#getPrenom()
+	 */
 	private String prenom;
+	/**
+	 * l'âge de l'élève.
+	 * 
+	 * @see Eleve#setAge(int)
+	 *  @see Eleve#getAge()
+	 */
 	private int age;
+	/**
+	 * la date de naissance de l'élève
+	 * 
+	 *  @see Eleve#setDateDeNaissance(Date)
+	 *   @see Eleve#getDateDeNaissance()
+	 */
 	private Date dateDeNaissance;
+	/**
+	 * la photo de l'élève. Il s'agit de l'url de la photo.
+	 * 
+	 *  @see Eleve#setPhoto(String)
+	 *   @see Eleve#getPhoto()
+	 */
 	private String photo; 
+	/**
+	 * le numéro de téléphone de l'élève.
+	 * 
+	 *  @see Eleve#setNumeroTelephoneEleve(int)
+	 *   @see Eleve#getNumeroTelephoneEleve()
+	 */
 	private int numeroTelephoneEleve;
+	/**
+	 * le numéro de téléphone des parents.
+	 * 
+	 *  @see Eleve#setNumeroTelephoneParent(int)
+	 *   @see Eleve#getNumeroTelephoneParent()
+	 */
 	private int numeroTelephoneParent;
+	/**
+	 * la date d'inscription de l'élève.
+	 * 
+	 *  @see Eleve#setDateInscription(Date)
+	 *   @see Eleve#getDateInscription()
+	 */
 	private Date dateInscription;
+	/**
+	 * le niveau d'études de l'élève : (ex : collège, lycée, ...) 
+	 * 
+	 *  @see Eleve#setNiveauEtudes(String)
+	 *   @see Eleve#getNiveauEtudes()
+	 */
 	private String niveauEtudes;
+	/**
+	 * le nom du père de l'élève.
+	 *  @see Eleve#setNomPere(String)
+	 *   @see Eleve#getNomPere()
+	 */
 	private String nomPere;
+	/**
+	 * le prénom du père de l'élève.
+	 * 
+	 *  @see Eleve#setPrenomPere(String)
+	 *   @see Eleve#getPrenomPere()
+	 */
 	private String prenomPere;
+	/**
+	 * le nom de la mère de l'élève
+	 * @see Eleve#setNomMere(String)
+	 *   @see Eleve#getNomMere()
+	 */
 	private String nomMere;
+	/**
+	 * le prenom de la mère de l'élève.
+	 * @see Eleve#setPrenomMere(String)
+	 *   @see Eleve#getPrenomMere()
+	 */
 	private String prenomMere;
+	/**
+	 * le statut de l'élève 
+	 * (ex : il se peut qu'un élève ne puisse pas payer le mois)
+	 * @see Eleve#setStatus(String)
+	 *   @see Eleve#getStatus()
+	 */
 	private String status;
+	/**
+	 * le niveau de test de l'élève.
+	 * @see Eleve#setNiveauEtudes(String)
+	 * @see Eleve#getNiveauEtudes()
+	 */
 	private String niveauTest;
-        
+	private String adresse;
+	
 	private ArrayList<Professeur> listeProfesseurs; 
 	private ArrayList<Groupe> listeGroupes; 
 	private ArrayList<Paiement> listePaiements; 
 	private EmploiDuTemps emploiDuTemps; 
 	
-	public EleveEntity() {}
+	public EleveEntity(){
+	}
 	
 	public EleveEntity(int identifiant, String nom, String prenom, 
-			     int age, Date dateDeNaissance, String photo, 
+			     int age, Date dateDeNaissance, String adresse, String photo, 
 			     int numeroTelephoneEleve, int numeroTelephoneParent, 
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
@@ -45,6 +146,7 @@ public class EleveEntity {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.dateDeNaissance = dateDeNaissance;
+		this.adresse = adresse;
 		this.photo = photo;
 		this.numeroTelephoneEleve = numeroTelephoneEleve;
 		this.numeroTelephoneParent = numeroTelephoneParent;
@@ -60,6 +162,7 @@ public class EleveEntity {
 		this.listeGroupes = listeGroupes;
 		this.listePaiements = listePaiements;
 		this.emploiDuTemps = emploiDuTemps;
+		
 	}
 	
 	/**
@@ -335,6 +438,14 @@ public class EleveEntity {
 	
 	public void removePaiement(Paiement paiement){
         this.listePaiements.remove(paiement);
+	}
+	
+	public String getAdresse(){
+		return adresse;
+	}
+	
+	public void setAdresse(String adresse){
+		this.adresse = adresse;
 	}
 	
 }
