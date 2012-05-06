@@ -7,7 +7,7 @@ import java.util.Date;
  * Dans cette classe :
  * add et remove en plus pour les listes
  * 
- * @author GAUTIER Stephanie
+ * @author GAUTIER St�phanie
  *
  */
 
@@ -28,7 +28,7 @@ public class Eleve {
 	private String prenomMere;
 	private String status;
 	private String niveauTest;
-        
+	private String adresse;
 	private ArrayList<Professeur> listeProfesseurs; 
 	private ArrayList<Groupe> listeGroupes; 
 	private ArrayList<Paiement> listePaiements; 
@@ -37,7 +37,7 @@ public class Eleve {
 	public Eleve() {}
 	
 	public Eleve(int identifiant, String nom, String prenom, 
-			     int age, Date dateDeNaissance, String photo, 
+			     int age, Date dateDeNaissance, String adresse, String photo, 
 			     int numeroTelephoneEleve, int numeroTelephoneParent, 
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
@@ -47,7 +47,9 @@ public class Eleve {
 		this.identifiant = identifiant;
 		this.nom = nom;
 		this.prenom = prenom;
+		this.age = age;
 		this.dateDeNaissance = dateDeNaissance;
+		this.adresse = adresse;
 		this.photo = photo;
 		this.numeroTelephoneEleve = numeroTelephoneEleve;
 		this.numeroTelephoneParent = numeroTelephoneParent;
@@ -316,6 +318,13 @@ public class Eleve {
 		this.niveauTest = niveauTest;
 	}
 	
+	public String getAdresse(){
+		return adresse;
+	}
+	
+	public void setAdresse(String adresse){
+		this.adresse = adresse;
+	}
 	public void addProfesseur(Professeur professeur){
 		this.listeProfesseurs.add(professeur);
 	}
@@ -339,5 +348,7 @@ public class Eleve {
 	public void removePaiement(Paiement paiement){
         this.listePaiements.remove(paiement);
 	}
+
+	
 	
 }
