@@ -49,6 +49,8 @@ public class GroupeManager {
 	
 	public void delete(Groupe groupe){
 		GroupeEntity groupeEntity = EntityFactory.getGroupeEntity();
+
+                groupeEntity.setNom(groupe.getNom());
 		
 		GroupeDAO groupeDAO = new GroupeDAO();
 		groupeDAO.delete(groupeEntity);
