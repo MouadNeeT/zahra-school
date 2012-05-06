@@ -55,7 +55,7 @@ public class EleveManager {
 		eleveDAO.create(EleveEntity);
 	}
 	
-	public Eleve readById(String id) {
+	public Eleve readById(int id) {
 		EleveDAO eleveDAO = new EleveDAO();
                 return (eleveDAO.readById(id));
 	}
