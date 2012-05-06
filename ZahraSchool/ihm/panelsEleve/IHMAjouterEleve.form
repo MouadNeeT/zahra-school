@@ -67,7 +67,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <EmptySpace pref="34" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -76,10 +76,10 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane2" pref="169" max="32767" attributes="0"/>
-                          <Component id="jTextField6" pref="169" max="32767" attributes="1"/>
-                          <Component id="jTextField5" pref="169" max="32767" attributes="1"/>
-                          <Component id="jTextField4" alignment="1" pref="169" max="32767" attributes="1"/>
+                          <Component id="jScrollPane2" pref="156" max="32767" attributes="0"/>
+                          <Component id="jTextField6" pref="156" max="32767" attributes="1"/>
+                          <Component id="jTextField5" pref="156" max="32767" attributes="1"/>
+                          <Component id="jTextField4" alignment="1" pref="156" max="32767" attributes="1"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -164,12 +164,12 @@
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextField9" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="23" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

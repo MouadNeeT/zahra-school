@@ -7,7 +7,7 @@ import java.util.Date;
  * Dans cette classe :
  * add et remove en plus pour les listes
  * 
- * @author GAUTIER St�phanie
+ * @author GAUTIER Stephanie
  *
  */
 
