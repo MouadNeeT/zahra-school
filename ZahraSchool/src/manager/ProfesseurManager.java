@@ -57,6 +57,12 @@ public class ProfesseurManager {
 		ProfesseurDAO professeurDAO = new ProfesseurDAO();
     	return (professeurDAO.readById(identifiant));
 	}
+
+        public Professeur readByNomPrenom(String nom, String prenom) {
+
+ 		ProfesseurDAO professeurDAO = new ProfesseurDAO();
+ 	return (professeurDAO.readByNomPrenom(nom, prenom));
+ 	}
 	
 	public void delete(Professeur professeur){
 		
