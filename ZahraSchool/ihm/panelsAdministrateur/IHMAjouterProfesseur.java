@@ -18,6 +18,8 @@ import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import manager.ProfesseurManager;
+
 import database.SpringJDBC;
 import domaine.Professeur;
 
@@ -404,6 +406,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
     private void boutonEnregistrerActionPerformed(java.awt.event.ActionEvent evt) {                                                  
         // TODO add your handling code here:
+    	
     	String nom = textNom.getText();
         String prenom = textPrenom.getText();
         int dateNaissanceJour = Integer.parseInt(textJourNaissance.getText());
@@ -418,22 +421,35 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         String identifiant = textIdentifiant.getText();
         @SuppressWarnings("deprecation")
 		String motDePasse = textMotDePasse.getText();
-        
+    	
         @SuppressWarnings("deprecation")
 		Date dateDeNaissance = new Date(dateNaissanceJour, dateNaissanceMois, dateNaissanceAnnee);
         @SuppressWarnings("deprecation")
 		Date dateEmbauche  = new Date(dateEmbaucheJour,dateEmbaucheMois,dateEmbaucheAnnee);
-        
+    	
+        Professeur professeurBase;
+		professeurBase = ProfesseurManager.getInstance().readById(textIdentifiant.getText());
+		
+		
+		if (professeurBase != null) {
+    		JOptionPane jop1 = new JOptionPane();
+			jop1.showMessageDialog(null, "Cet identifiant est déjà pris", "Erreur", JOptionPane.ERROR_MESSAGE);      	
+			textIdentifiant.setText("");
+			//boutonEnregistrerActionPerformed(evt);
+		}
+		else{
         Professeur professeur = new Professeur(identifiant, motDePasse, nom, prenom,
         									   adresse, telephone, niveauEtudes, 
         									   dateDeNaissance, dateEmbauche, null, null);
         
-        SpringJDBC j= new SpringJDBC(); 
-        j.saveProfesseur(professeur);
+        
+		//Professeur professeur = new Professeur("alexandre.sacareau@gmail.com", "xxxx", "SACAREAU", "Alexandre", "TOULOUSE", 658955488, "BAC + 4", dateNaisssance, dateEmbauche, null, null);
+		ProfesseurManager.getInstance().create(professeur);
+		System.out.println(professeur.getMotDePasse());
         
         JOptionPane jop1 = new JOptionPane();
 		jop1.showMessageDialog(null, "Enregistrement du professeur", "Information", JOptionPane.INFORMATION_MESSAGE);
-
+		}
     }                                                 
 
     private void boutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {                                              
