@@ -258,7 +258,17 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 }//GEN-LAST:event_AjoutGroupeDateJoursActionPerformed
 
     private void AjoutGroupeBoutonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAjouterActionPerformed
-        JOptionPane jp = new JOptionPane();
+        
+    	String nom = AjoutGroupeNomGroupe.getText();
+            int jour = Integer.parseInt(AjoutGroupeDateJours.getSelectedItem().toString());
+            int mois = Integer.parseInt(AjoutGroupeDateMois.getSelectedItem().toString());
+            int annee = Integer.parseInt(AjoutGroupeDateAnnees.getSelectedItem().toString());            
+    	Date dateDeCreation = new Date(jour,mois,annee);    	
+    	float tarif = AjoutGroupeTarifs.getText();
+  //          if (Boxpayepas.isSelected()) {String status = "oui";} else {String status = "oui";}
+  //  	String niveau = AjoutGroupeNiveauGroupe.getText();
+
+    	JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Ajouter le groupe "+AjoutGroupeNomGroupe.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         panelsGroupe.IHMAjouterGroupe p = new  panelsGroupe.IHMAjouterGroupe(f);
         f.setPanel(p);
