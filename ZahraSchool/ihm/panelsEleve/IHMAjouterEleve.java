@@ -416,9 +416,9 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         EleveManager.getInstance().create(eleve);
 
         JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Ajouter l'eleve "+Nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
+        jp.showMessageDialog(null, "Ajouter l'eleve "+nom, "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         JOptionPane jp2 = new JOptionPane();
-	jp2.showMessageDialog(null, "ajout de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
+	jp2.showMessageDialog(null, "Ajout de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
         panelsEleve.IHMAjouterEleve AE = new  panelsEleve.IHMAjouterEleve(f);
         f.setPanel(AE);
     }//GEN-LAST:event_jButton1ActionPerformed
