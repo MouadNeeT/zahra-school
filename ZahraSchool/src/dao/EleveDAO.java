@@ -71,7 +71,7 @@ public class EleveDAO {
             conn = ds.getConnection();
     		stmt = conn.prepareStatement(ELEVE_INSERT);
     	        /*
-    		 * On récupère et on utilisera directement le jdbcTemplate
+    		 * On rï¿½cupï¿½re et on utilisera directement le jdbcTemplate
     		 */
     		
     		stmt.setInt(1, eleve.getIdentifiant());
@@ -81,8 +81,8 @@ public class EleveDAO {
     		stmt.setDate(5, (java.sql.Date) eleve.getDateDeNaissance());
     		stmt.setString(6, eleve.getAdresse());
     		stmt.setString(7, eleve.getPhoto());
-    		stmt.setInt(8, eleve.getNumeroTelephoneEleve());
-    		stmt.setInt(9, eleve.getNumeroTelephoneParent());
+    		stmt.setString(8, eleve.getNumeroTelephoneEleve());
+    		stmt.setString(9, eleve.getNumeroTelephoneParent());
     		stmt.setDate(10, (java.sql.Date) eleve.getDateInscription());
     		stmt.setString(11, eleve.getNiveauEtudes());
     		stmt.setString(12, eleve.getNomPere());
@@ -134,8 +134,8 @@ public class EleveDAO {
     			eleve.setDateDeNaissance(rs.getDate("dateDeNaissance"));
     			eleve.setAdresse(rs.getString("adresse"));
     			eleve.setPhoto(rs.getString("photo"));
-    			eleve.setNumeroTelephoneEleve(rs.getInt("numeroTelephoneEleve"));
-    			eleve.setNumeroTelephoneParent(rs.getInt("numeroTelephoneParent"));
+    			eleve.setNumeroTelephoneEleve(rs.getString("numeroTelephoneEleve"));
+    			eleve.setNumeroTelephoneParent(rs.getString("numeroTelephoneParent"));
     			eleve.setDateInscription(rs.getDate("dateInscription"));
     			eleve.setNiveauEtudes(rs.getString("niveauEtudes"));
     			eleve.setNomPere(rs.getString("nomPere"));

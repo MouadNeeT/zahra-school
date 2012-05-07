@@ -1,5 +1,5 @@
 /**
- * author GAUTIER Stéphanie
+ * author GAUTIER Stï¿½phanie
  */
 
 package entity;
@@ -16,110 +16,110 @@ import domaine.Professeur;
 
 public class EleveEntity extends Entity{
 	/**
-	 * Certains élèves peuvent avoir des noms, prénoms identiques :
-	 * l'identifiant les diférenciera.
+	 * Certains ï¿½lï¿½ves peuvent avoir des noms, prï¿½noms identiques :
+	 * l'identifiant les difï¿½renciera.
 	 * 
 	 * @see Eleve#getIdentifiant()
 	 * @see Eleve#setIdentifiant(int)
 	 */
 	private int identifiant;
 	/**
-	 * le nom de l'élève.
+	 * le nom de l'ï¿½lï¿½ve.
 	 * 
 	 * @see Eleve#setNom(String)
 	 * @see Eleve#getNom()
 	 */
 	private String nom;
 	/**
-	 * le prénom de l'élève.
+	 * le prï¿½nom de l'ï¿½lï¿½ve.
 	 * 
 	 * @see Eleve#setPrenom(String)
 	 * @see Eleve#getPrenom()
 	 */
 	private String prenom;
 	/**
-	 * l'âge de l'élève.
+	 * l'ï¿½ge de l'ï¿½lï¿½ve.
 	 * 
 	 * @see Eleve#setAge(int)
 	 *  @see Eleve#getAge()
 	 */
 	private int age;
 	/**
-	 * la date de naissance de l'élève
+	 * la date de naissance de l'ï¿½lï¿½ve
 	 * 
 	 *  @see Eleve#setDateDeNaissance(Date)
 	 *   @see Eleve#getDateDeNaissance()
 	 */
 	private Date dateDeNaissance;
 	/**
-	 * la photo de l'élève. Il s'agit de l'url de la photo.
+	 * la photo de l'ï¿½lï¿½ve. Il s'agit de l'url de la photo.
 	 * 
 	 *  @see Eleve#setPhoto(String)
 	 *   @see Eleve#getPhoto()
 	 */
 	private String photo; 
 	/**
-	 * le numéro de téléphone de l'élève.
+	 * le numï¿½ro de tï¿½lï¿½phone de l'ï¿½lï¿½ve.
 	 * 
 	 *  @see Eleve#setNumeroTelephoneEleve(int)
 	 *   @see Eleve#getNumeroTelephoneEleve()
 	 */
-	private int numeroTelephoneEleve;
+	private String numeroTelephoneEleve;
 	/**
-	 * le numéro de téléphone des parents.
+	 * le numï¿½ro de tï¿½lï¿½phone des parents.
 	 * 
 	 *  @see Eleve#setNumeroTelephoneParent(int)
 	 *   @see Eleve#getNumeroTelephoneParent()
 	 */
-	private int numeroTelephoneParent;
+	private String numeroTelephoneParent;
 	/**
-	 * la date d'inscription de l'élève.
+	 * la date d'inscription de l'ï¿½lï¿½ve.
 	 * 
 	 *  @see Eleve#setDateInscription(Date)
 	 *   @see Eleve#getDateInscription()
 	 */
 	private Date dateInscription;
 	/**
-	 * le niveau d'études de l'élève : (ex : collège, lycée, ...) 
+	 * le niveau d'ï¿½tudes de l'ï¿½lï¿½ve : (ex : collï¿½ge, lycï¿½e, ...) 
 	 * 
 	 *  @see Eleve#setNiveauEtudes(String)
 	 *   @see Eleve#getNiveauEtudes()
 	 */
 	private String niveauEtudes;
 	/**
-	 * le nom du père de l'élève.
+	 * le nom du pï¿½re de l'ï¿½lï¿½ve.
 	 *  @see Eleve#setNomPere(String)
 	 *   @see Eleve#getNomPere()
 	 */
 	private String nomPere;
 	/**
-	 * le prénom du père de l'élève.
+	 * le prï¿½nom du pï¿½re de l'ï¿½lï¿½ve.
 	 * 
 	 *  @see Eleve#setPrenomPere(String)
 	 *   @see Eleve#getPrenomPere()
 	 */
 	private String prenomPere;
 	/**
-	 * le nom de la mère de l'élève
+	 * le nom de la mï¿½re de l'ï¿½lï¿½ve
 	 * @see Eleve#setNomMere(String)
 	 *   @see Eleve#getNomMere()
 	 */
 	private String nomMere;
 	/**
-	 * le prenom de la mère de l'élève.
+	 * le prenom de la mï¿½re de l'ï¿½lï¿½ve.
 	 * @see Eleve#setPrenomMere(String)
 	 *   @see Eleve#getPrenomMere()
 	 */
 	private String prenomMere;
 	/**
-	 * le statut de l'élève 
-	 * (ex : il se peut qu'un élève ne puisse pas payer le mois)
+	 * le statut de l'ï¿½lï¿½ve 
+	 * (ex : il se peut qu'un ï¿½lï¿½ve ne puisse pas payer le mois)
 	 * @see Eleve#setStatus(String)
 	 *   @see Eleve#getStatus()
 	 */
 	private String status;
 	/**
-	 * le niveau de test de l'élève.
+	 * le niveau de test de l'ï¿½lï¿½ve.
 	 * @see Eleve#setNiveauEtudes(String)
 	 * @see Eleve#getNiveauEtudes()
 	 */
@@ -136,7 +136,7 @@ public class EleveEntity extends Entity{
 	
 	public EleveEntity(int identifiant, String nom, String prenom, 
 			     int age, Date dateDeNaissance, String adresse, String photo, 
-			     int numeroTelephoneEleve, int numeroTelephoneParent, 
+			     String numeroTelephoneEleve, String numeroTelephoneParent,
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
 			     String status, String niveauTest,
@@ -298,25 +298,25 @@ public class EleveEntity extends Entity{
 	/**
 	 * @return the numeroTelephoneEleve
 	 */
-	public int getNumeroTelephoneEleve() {
+	public String getNumeroTelephoneEleve() {
 		return numeroTelephoneEleve;
 	}
 	/**
 	 * @param numeroTelephoneEleve the numeroTelephoneEleve to set
 	 */
-	public void setNumeroTelephoneEleve(int numeroTelephoneEleve) {
+	public void setNumeroTelephoneEleve(String numeroTelephoneEleve) {
 		this.numeroTelephoneEleve = numeroTelephoneEleve;
 	}
 	/**
 	 * @return the numeroTelephoneParent
 	 */
-	public int getNumeroTelephoneParent() {
+	public String getNumeroTelephoneParent() {
 		return numeroTelephoneParent;
 	}
 	/**
 	 * @param numeroTelephoneParent the numeroTelephoneParent to set
 	 */
-	public void setNumeroTelephoneParent(int numeroTelephoneParent) {
+	public void setNumeroTelephoneParent(String numeroTelephoneParent) {
 		this.numeroTelephoneParent = numeroTelephoneParent;
 	}
 	/**
