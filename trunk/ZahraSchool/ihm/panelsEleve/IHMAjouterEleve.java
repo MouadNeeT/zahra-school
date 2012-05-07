@@ -209,7 +209,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
             }
         });
 
-        jLabel13.setText("Niveau de l'eleve :");
+        jLabel13.setText("Niveau d'etudes :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -255,14 +255,12 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(47, 47, 47)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addGap(28, 28, 28))
+                                    .addComponent(jLabel10)
                                     .addComponent(jLabel11)
                                     .addComponent(jLabel12)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel13))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
                                     .addComponent(telparent, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
@@ -390,7 +388,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
         int mois = Integer.parseInt(jComboBox2.getSelectedItem().toString());
         int annee = Integer.parseInt(jComboBox3.getSelectedItem().toString());
-	Date dateDeNaissance = new Date(jour,mois,annee);
+	Date dateDeNaissance = new Date(annee,mois,jour);
 	String photo = "";
 	String numeroTelephoneEleve = teleleve.getText();
 	String numeroTelephoneParent = telparent.getText();

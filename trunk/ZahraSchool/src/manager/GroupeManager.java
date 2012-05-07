@@ -38,13 +38,12 @@ public class GroupeManager {
 		groupeEntity.setListeEleves(groupe.getListeEleves());
 
 		GroupeDAO groupeDAO = new GroupeDAO();
-		GroupeDAO.create(groupeEntity);
-			
+		GroupeDAO.create(groupeEntity);	
 	}
 	
 	public Groupe readById(String nom) {
 		GroupeDAO groupeDAO = new GroupeDAO();
-                return (groupeDAO.readById(nom));
+                return (groupeDAO.readByName(nom));
 	}
 	
 	public void delete(Groupe groupe){

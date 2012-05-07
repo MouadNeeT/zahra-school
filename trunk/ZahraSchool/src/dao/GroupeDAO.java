@@ -35,7 +35,7 @@ public class GroupeDAO {
 	
 	
 	public void create(GroupeEntity groupe) {
-    	Connection conn = null;
+                Connection conn = null;
 		PreparedStatement stmt = null;		
 		try {
 		final String GROUPE_INSERT = "insert into groupe (nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps) "
@@ -49,7 +49,7 @@ public class GroupeDAO {
         conn = ds.getConnection();
 		stmt = conn.prepareStatement(GROUPE_INSERT);
 	        /*
-		 * On récupère et on utilisera directement le jdbcTemplate
+		 * On rï¿½cupï¿½re et on utilisera directement le jdbcTemplate
 		 */
 		
 		stmt.setString(1, groupe.getNom());
@@ -71,7 +71,7 @@ public class GroupeDAO {
 		}
     }
 	
-	public Eleve readByName(String nom){
+	public Groupe readByName(String nom){
     	Connection conn = null;
 		PreparedStatement stmt = null; 
 		ResultSet rs = null;
@@ -94,7 +94,7 @@ public class GroupeDAO {
 			groupe.setNiveau(rs.getString("niveau"));
 			groupe.setDateDeCreation(rs.getDate("dateDeCreation"));
 			groupe.setTarif(rs.getFloat("tarif"));
-			groupe.setListeEleves((ArrayList<Eleve> rs.getObject("listeEleves"));
+			groupe.setListeEleves((ArrayList<Eleve> rs.getObject("listeEleves")));
 			groupe.setEmploiDuTemps((EmploiDuTemps) rs.getObject("emploiDuTemps"));
 			
 		}
