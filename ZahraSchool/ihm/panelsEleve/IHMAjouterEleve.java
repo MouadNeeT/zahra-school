@@ -374,10 +374,10 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 	String nom = Nom.getText();
 	String prenom = Prenom.getText();
 	int age = 0;
-	Date dateDeNaissance = 
-	String photo; 
-	int numeroTelephoneEleve;
-	int numeroTelephoneParent;
+	Date dateDeNaissance = new Date();
+	String photo = "";
+	String numeroTelephoneEleve = teleleve.getText();
+	String numeroTelephoneParent = telparent.getText();
 	Date dateInscription;
 	String niveauEtudes;
 	String nomPere;
