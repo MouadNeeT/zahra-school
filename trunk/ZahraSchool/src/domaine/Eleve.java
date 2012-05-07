@@ -18,8 +18,8 @@ public class Eleve {
 	private int age;
 	private Date dateDeNaissance;
 	private String photo; 
-	private int numeroTelephoneEleve;
-	private int numeroTelephoneParent;
+	private String numeroTelephoneEleve;
+	private String numeroTelephoneParent;
 	private Date dateInscription;
 	private String niveauEtudes;
 	private String nomPere;
@@ -38,7 +38,7 @@ public class Eleve {
 	
 	public Eleve(int identifiant, String nom, String prenom, 
 			     int age, Date dateDeNaissance, String adresse, String photo, 
-			     int numeroTelephoneEleve, int numeroTelephoneParent, 
+			     String numeroTelephoneEleve, String numeroTelephoneParent,
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
 			     String status, String niveauTest,
@@ -200,25 +200,25 @@ public class Eleve {
 	/**
 	 * @return the numeroTelephoneEleve
 	 */
-	public int getNumeroTelephoneEleve() {
+	public String getNumeroTelephoneEleve() {
 		return numeroTelephoneEleve;
 	}
 	/**
 	 * @param numeroTelephoneEleve the numeroTelephoneEleve to set
 	 */
-	public void setNumeroTelephoneEleve(int numeroTelephoneEleve) {
+	public void setNumeroTelephoneEleve(String numeroTelephoneEleve) {
 		this.numeroTelephoneEleve = numeroTelephoneEleve;
 	}
 	/**
 	 * @return the numeroTelephoneParent
 	 */
-	public int getNumeroTelephoneParent() {
+	public String getNumeroTelephoneParent() {
 		return numeroTelephoneParent;
 	}
 	/**
 	 * @param numeroTelephoneParent the numeroTelephoneParent to set
 	 */
-	public void setNumeroTelephoneParent(int numeroTelephoneParent) {
+	public void setNumeroTelephoneParent(String numeroTelephoneParent) {
 		this.numeroTelephoneParent = numeroTelephoneParent;
 	}
 	/**
