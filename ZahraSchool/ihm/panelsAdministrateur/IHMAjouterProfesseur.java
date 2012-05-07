@@ -455,7 +455,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
     private void boutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {                                              
     	IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
 		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f);
-		JPanel panel = new JPanel(new BorderLayout());    		
+		JPanel panel = new JPanel(new BorderLayout());		
 		panel.add(new Horloge(), BorderLayout.WEST);
 		panel.add(menuPrincipal, BorderLayout.EAST);
 		panel.add(visionMenu, BorderLayout.NORTH);
