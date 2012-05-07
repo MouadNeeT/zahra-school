@@ -262,6 +262,8 @@ frames.FFondFenetreProfesseur f;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+
         IHMRechercherEleve IH = new IHMRechercherEleve(f,1);
         f.setPanel(IH);
 }//GEN-LAST:event_jButton2ActionPerformed
