@@ -53,7 +53,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         jComboBox2 = new javax.swing.JComboBox();
         jComboBox3 = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
-        adresse = new javax.swing.JTextArea();
+        Adresse = new javax.swing.JTextArea();
         telparent = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -68,6 +68,8 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         Boxpayepas = new javax.swing.JCheckBox();
         Nom = new javax.swing.JTextField();
         teleleve = new javax.swing.JTextField();
+        niveauetudes = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -134,9 +136,9 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
             }
         });
 
-        adresse.setColumns(20);
-        adresse.setRows(5);
-        jScrollPane1.setViewportView(adresse);
+        Adresse.setColumns(20);
+        Adresse.setRows(5);
+        jScrollPane1.setViewportView(Adresse);
 
         telparent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +201,14 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
             }
         });
 
+        niveauetudes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                niveauetudesActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("Niveau de l'eleve :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,46 +230,46 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(prenommere, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                                    .addComponent(nommere, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                                    .addComponent(prenompere, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                                    .addComponent(nompere, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                                    .addComponent(prenommere, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                                    .addComponent(nommere, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                                    .addComponent(prenompere, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                                    .addComponent(nompere, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(2, 2, 2)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Prenom, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                                            .addComponent(Prenom, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(Nom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)))))
+                                            .addComponent(Nom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane1, 0, 0, Short.MAX_VALUE)))
-                        .addGap(23, 23, 23)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel10)
-                                        .addComponent(jLabel11))
-                                    .addGap(16, 16, 16))
-                                .addComponent(jLabel9)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
+                                .addGap(47, 47, 47)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(teleleve, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                                    .addComponent(telparent, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addGap(28, 28, 28))
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel13))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                                    .addComponent(niveaueleve, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                                    .addComponent(Boxpayepas)))))
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                    .addComponent(telparent, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                    .addComponent(niveauetudes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                    .addComponent(niveaueleve, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                    .addComponent(teleleve, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Boxpayepas)
+                                .addGap(9, 9, 9))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -271,22 +281,26 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(teleleve, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(Prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telparent, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(teleleve, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(Prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(telparent, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(niveauetudes, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -310,21 +324,18 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                                     .addComponent(jLabel8)
                                     .addComponent(prenommere, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel12)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Boxpayepas))))))
+                                .addComponent(niveaueleve, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(Boxpayepas))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9)
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(niveaueleve, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel11)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel12)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -374,30 +385,28 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 	String nom = Nom.getText();
 	String prenom = Prenom.getText();
 	int age = 0;
-	Date dateDeNaissance = new Date();
+        int jour = jComboBox1.getSelectedItem().toString();
+        int mois=1;
+        int annee=1;
+	Date dateDeNaissance = new Date(jour,mois,annee);
 	String photo = "";
 	String numeroTelephoneEleve = teleleve.getText();
 	String numeroTelephoneParent = telparent.getText();
-	Date dateInscription;
-	String niveauEtudes;
-	String nomPere;
-	String prenomPere;
-	String nomMere;
-	String prenomMere;
-	String status;
-	String niveauTest;
-	String adresse;
-	ArrayList<Professeur> listeProfesseurs; 
-	ArrayList<Groupe> listeGroupes; 
-	ArrayList<Paiement> listePaiements; 
-	EmploiDuTemps emploiDuTemps;
+	Date dateInscription = new Date(); // Date courante
+	String niveauEtudes = niveauetudes.getText();
+	String nomPere = nompere.getText();
+	String prenomPere = prenompere.getText();
+	String nomMere = nommere.getText();
+	String prenomMere = prenommere.getText();
+        if (Boxpayepas.isSelected()) {String status = "oui";} else {String status = "oui";}
+	String niveauTest = niveaueleve.getText();
+	String adresse = Adresse.getText();
 
 
         JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Ajouter l'eleve "+Nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         panelsEleve.IHMAjouterEleve AE = new  panelsEleve.IHMAjouterEleve(f);
         f.setPanel(AE);
-        //createBean(AE,1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -417,12 +426,16 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_teleleveActionPerformed
 
+    private void niveauetudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_niveauetudesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_niveauetudesActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea Adresse;
     private javax.swing.JCheckBox Boxpayepas;
     private javax.swing.JTextField Nom;
     private javax.swing.JTextField Prenom;
-    private javax.swing.JTextArea adresse;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox jComboBox1;
@@ -432,6 +445,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -445,6 +459,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField niveaueleve;
+    private javax.swing.JTextField niveauetudes;
     private javax.swing.JTextField nommere;
     private javax.swing.JTextField nompere;
     private javax.swing.JTextField prenommere;
