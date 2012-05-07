@@ -11,8 +11,10 @@
 
 package panelsEleve;
 
+import domaine.Eleve;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import manager.EleveManager;
 
 /**
  *
@@ -398,15 +400,25 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 	String prenomPere = prenompere.getText();
 	String nomMere = nommere.getText();
 	String prenomMere = prenommere.getText();
-        if (Boxpayepas.isSelected()) {String status = "oui";} else {String status = "oui";}
+        String status;
+        if (Boxpayepas.isSelected()) {status = "oui";} else {status = "oui";}
 	String niveauTest = niveaueleve.getText();
 	String adresse = Adresse.getText();
+        //a faire pr groupe
         
-        Eleve eleve = new Professeur(identifiant, motDePasse, nom, prenom,adresse, telephone, niveauEtudes,
-        									   dateDeNaissance, dateEmbauche, null, null);
+        Eleve eleve = new Eleve(identifiant, nom, prenom,
+			     age, dateDeNaissance, adresse, photo,
+			     numeroTelephoneEleve, numeroTelephoneParent,
+			     dateInscription, niveauEtudes, nomPere,
+			     prenomPere, nomMere, prenomMere,
+			     status, niveauTest, null, null, null, null);
+
+        EleveManager.getInstance().create(eleve);
 
         JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Ajouter l'eleve "+Nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
+        JOptionPane jp2 = new JOptionPane();
+	jp2.showMessageDialog(null, "ajout de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
         panelsEleve.IHMAjouterEleve AE = new  panelsEleve.IHMAjouterEleve(f);
         f.setPanel(AE);
     }//GEN-LAST:event_jButton1ActionPerformed
