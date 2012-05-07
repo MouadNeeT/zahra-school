@@ -11,6 +11,7 @@
 
 package panelsEleve;
 
+import domaine.Eleve;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,7 +22,7 @@ import javax.swing.JOptionPane;
 public class IHMModifierEleve extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
     /** Creates new form IHMAjouterEleve */
-    public IHMModifierEleve( frames.FFondFenetreProfesseur f) {
+    public IHMModifierEleve( frames.FFondFenetreProfesseur f, Eleve eleveAmodifier) {
         this.f=f;
         initComponents();
         // ajout images boutons

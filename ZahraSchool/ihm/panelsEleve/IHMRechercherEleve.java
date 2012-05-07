@@ -11,7 +11,11 @@
 
 package panelsEleve;
 
+import domaine.Eleve;
+import domaine.Groupe;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import manager.GroupeManager;
 
 /**
  *
@@ -29,6 +33,12 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
         jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonVoir.png"));
         jButton3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png"));
         jButton4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonSupprimer.png"));
+        // SetModel
+        jList1.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
+                public int getSize() { return listeGroupes.size(); }
+                public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
+        });
     }
 
     /** This method is called from within the constructor to
@@ -73,19 +83,19 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
             }
         });
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "GROUPE 1", "GROUPE 2", "GROUPE 3" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jList1MousePressed(evt);
+            }
         });
         jScrollPane1.setViewportView(jList1);
 
         jLabel3.setText("Groupe :");
 
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "ELEVE 1", "ELEVE 2" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+        jList2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jList2MousePressed(evt);
+            }
         });
         jScrollPane2.setViewportView(jList2);
 
@@ -197,7 +207,7 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        IHMAfficheFicheEleve AE = new IHMAfficheFicheEleve(f);
+        IHMAfficheFicheEleve AE = new IHMAfficheFicheEleve(f,eleve);
         f.setPanel(AE);
 }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -207,7 +217,7 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        IHMModifierEleve AE = new IHMModifierEleve(f);
+        IHMModifierEleve AE = new IHMModifierEleve(f,eleve);
         f.setPanel(AE);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -218,7 +228,40 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
         f.setPanel(p);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
+        if (!jList1.isSelectionEmpty()){
+            jList1.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
+                public int getSize() { return listeGroupes.size(); }
+                public Object getElementAt(int i) {
+                    listeEleves = listeGroupes.get(i).getListeEleves();
+                    jList1.setModel(new javax.swing.AbstractListModel() {
+                        public int getSize() { return listeEleves.size(); }
+                        public Object getElementAt(int i) {
+                            return (listeEleves.get(i).getNom());
+                        }
+                    });
+                    return (listeGroupes.get(i).getNom());
+                }
+            });
+        } else System.out.println("aucun element selectione");
+    }//GEN-LAST:event_jList1MousePressed
 
+    private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
+        if (!jList2.isSelectionEmpty()){
+            jList2.setModel(new javax.swing.AbstractListModel() {
+                public int getSize() { return listeEleves.size(); }
+                public Object getElementAt(int i) {
+                    eleve = listeEleves.get(i);
+                    return (listeEleves.get(i).getNom() + " " + listeEleves.get(i).getPrenom());
+                }
+            });
+        } else System.out.println("aucun element selectione");
+    }//GEN-LAST:event_jList2MousePressed
+
+    // liste d'eleves
+    private ArrayList<Eleve> listeEleves=null;
+    private Eleve eleve ;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

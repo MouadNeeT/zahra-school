@@ -5,7 +5,8 @@ import entity.EleveEntity;
 import java.util.ArrayList;
 
 import entity.EntityFactory;
-import pattern.dao.EleveDAO;
+import dao.EleveDAO;
+
 
 /**
  *
@@ -52,18 +53,13 @@ public class EleveManager {
                 eleveEntity.setNiveauEtudes(eleve.getNiveauEtudes());
 
 		EleveDAO eleveDAO = new EleveDAO();
-		eleveDAO.create(EleveEntity);
+		eleveDAO.create(eleveEntity);
 	}
 	
 	public Eleve readById(int id) {
 		EleveDAO eleveDAO = new EleveDAO();
                 return (eleveDAO.readById(id));
 	}
-
-        public Eleve readByNomPrenom(String nom, String prenom) {
- 		EleveDAO eleveDAO = new EleveDAO();
-                return (eleveDAO.readByNomPrenom(nom, prenom));
- 	}
 	
 	public void delete(Eleve eleve){
 		EleveEntity eleveEntity = EntityFactory.getEleveEntity();
@@ -71,7 +67,7 @@ public class EleveManager {
                 eleveEntity.setListeProfesseurs(eleve.getListeProfesseurs());
 		
 		EleveDAO eleveDAO = new EleveDAO();
-		eleveDAO.delete(EleveEntity);
+		eleveDAO.delete(eleveEntity);
 	}
 	
 	public ArrayList<Eleve> getAllEleves() {
@@ -105,7 +101,7 @@ public class EleveManager {
                 eleveEntity.setNiveauEtudes(eleve.getNiveauEtudes());
 		
 		EleveDAO eleveDAO = new EleveDAO();
-		eleveDAO.update(EleveEntity);
+		eleveDAO.update(eleveEntity);
 	}
 }
 
