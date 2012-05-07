@@ -122,7 +122,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -385,9 +385,9 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 	String nom = Nom.getText();
 	String prenom = Prenom.getText();
 	int age = 0;
-        int jour = jComboBox1.getSelectedItem().toString();
-        int mois=1;
-        int annee=1;
+        int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
+        int mois = Integer.parseInt(jComboBox2.getSelectedItem().toString());
+        int annee = Integer.parseInt(jComboBox3.getSelectedItem().toString());
 	Date dateDeNaissance = new Date(jour,mois,annee);
 	String photo = "";
 	String numeroTelephoneEleve = teleleve.getText();
@@ -401,7 +401,9 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         if (Boxpayepas.isSelected()) {String status = "oui";} else {String status = "oui";}
 	String niveauTest = niveaueleve.getText();
 	String adresse = Adresse.getText();
-
+        
+        Eleve eleve = new Professeur(identifiant, motDePasse, nom, prenom,adresse, telephone, niveauEtudes,
+        									   dateDeNaissance, dateEmbauche, null, null);
 
         JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Ajouter l'eleve "+Nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
