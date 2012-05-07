@@ -430,9 +430,8 @@ frames.FFondFenetreProfesseur f;
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
-        panelsEleve.IHMAfficheFicheEleve a = new panelsEleve.IHMAfficheFicheEleve(f);
-        f.setPanel(a);
+        //panelsEleve.IHMAfficheFicheEleve a = new panelsEleve.IHMAfficheFicheEleve(f, );
+        //f.setPanel(a);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
