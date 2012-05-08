@@ -13,8 +13,10 @@ package panelsGroupe;
 
 import domaine.Groupe;
 import java.awt.BorderLayout;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import manager.GroupeManager;
 import panelsProfesseur.IHMBarreVisionPresentation;
 
 /**
@@ -22,13 +24,21 @@ import panelsProfesseur.IHMBarreVisionPresentation;
  * @author Marwan
  */
 public class IHMModifierGroupe extends javax.swing.JPanel {
- frames.FFondFenetreProfesseur f;
+    frames.FFondFenetreProfesseur f;
+    Groupe g;
+
     /** Creates new form IHMAjouterEleve */
     public IHMModifierGroupe( frames.FFondFenetreProfesseur f, Groupe g) {
         this.f=f;
+        this.g=g;
         initComponents();
         // ajout d'un image dans le bouton modifier
         ModifierGroupeBoutonModifier.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png"));
+        // affiche infos dans les champs
+        Nom.setText(g.getNom());
+        Niveau.setText(g.getNiveau());
+        Tarif.setText(""+g.getTarif());
+        date.setText(g.getDateDeCreation().getDate()+"/"+g.getDateDeCreation().getMonth()+"/"+g.getDateDeCreation().getYear());
     }
 
     /** This method is called from within the constructor to
@@ -46,13 +56,11 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         Niveau = new javax.swing.JTextField();
         Tarif = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
-        jComboBox1 = new javax.swing.JComboBox();
         jLabel11 = new javax.swing.JLabel();
         Nom = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        date = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -75,27 +83,6 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 
         jLabel7.setText("Tarif :");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
-            }
-        });
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
         jLabel11.setText("Niveau du groupe :");
 
         Nom.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +94,8 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         jLabel1.setText("Nom :");
 
         jLabel3.setText("Date de creation :");
+
+        date.setText("date");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -121,20 +110,14 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                         .addComponent(ModifierGroupeBoutonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(108, 108, 108)
-                                .addComponent(Nom))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(32, 32, 32)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Nom)
+                            .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE))
+                        .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(jLabel7))
@@ -158,13 +141,11 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3))
+                        .addComponent(jLabel3)
+                        .addComponent(date))
                     .addComponent(jLabel7)
                     .addComponent(Tarif, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ModifierGroupeBoutonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ModifierGroupeBoutonModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -173,33 +154,31 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ModifierGroupeBoutonModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierGroupeBoutonModifierActionPerformed
+        String nom = Nom.getText();
+        String niveau = Niveau.getText();
+        // On ne peut pas modifier la date de creation
+        /*int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
+        int mois = Integer.parseInt(jComboBox2.getSelectedItem().toString());
+        int annee = Integer.parseInt(jComboBox3.getSelectedItem().toString());
+	Date dateDeCreation = new Date(annee,mois,jour);*/
+        float tarif = Float.parseFloat(Tarif.getText());
+
+        Groupe groupe = new Groupe(nom, niveau ,g.getDateDeCreation(), tarif, null, null);
+
+        GroupeManager.getInstance().create(groupe);
+
         JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Modifier le groupe "+Nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
-        IHMRechercherGroupe p = new IHMRechercherGroupe(f,2);
-        f.setPanel(p);
+        JOptionPane jp2 = new JOptionPane();
+	jp2.showMessageDialog(null, "Modification du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
+        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,2);
+        f.setPanel(RG);
 }//GEN-LAST:event_ModifierGroupeBoutonModifierActionPerformed
 
     private void ModifierGroupeBoutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierGroupeBoutonAnnulerActionPerformed
         panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
-        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,"   Gestion des groupes","");
-        JPanel panel = new JPanel(new BorderLayout());
-        panel.add(CG, BorderLayout.CENTER);
-        panel.add(barreVision, BorderLayout.NORTH);
-        f.setPanel(panel);
-        f.setMenuGauche(true);
+        f.setPanel(CG);
     }//GEN-LAST:event_ModifierGroupeBoutonAnnulerActionPerformed
-
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jComboBox3ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void NomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomActionPerformed
         // TODO add your handling code here:
@@ -212,9 +191,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
     private javax.swing.JTextField Niveau;
     private javax.swing.JTextField Nom;
     private javax.swing.JTextField Tarif;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
+    private javax.swing.JLabel date;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel3;
