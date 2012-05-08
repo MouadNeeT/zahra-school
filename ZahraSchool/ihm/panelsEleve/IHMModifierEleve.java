@@ -341,9 +341,6 @@ public class IHMModifierEleve extends javax.swing.JPanel {
         jp.showMessageDialog(null, "Modifier l'eleve "+Nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         IHMRechercherEleve p = new IHMRechercherEleve(f,2);
         f.setPanel(p);
-        /*panels.IHMJDialogConfirmation d1 = new panels.IHMJDialogConfirmation(f,true,"L'eleve "+jTextField2.getText()+" a bien été modifié",p);
-        d1.setLocation(300,200);
-        d1.setVisible(true);*/
 }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

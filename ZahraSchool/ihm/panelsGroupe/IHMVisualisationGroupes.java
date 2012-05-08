@@ -1,5 +1,7 @@
 package panelsGroupe;
 
+import domaine.Groupe;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -14,7 +16,7 @@ frames.FFondFenetreProfesseur f;
     /**
      * Creates new form VisualisationGroupes
      */
-    public IHMVisualisationGroupes(frames.FFondFenetreProfesseur f) {
+    public IHMVisualisationGroupes(frames.FFondFenetreProfesseur f, Groupe groupe) {
         this.f=f;
         initComponents();
     }

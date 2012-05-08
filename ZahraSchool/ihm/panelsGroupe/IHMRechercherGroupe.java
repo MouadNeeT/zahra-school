@@ -11,9 +11,12 @@
 
 package panelsGroupe;
 
+import domaine.Groupe;
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import manager.GroupeManager;
 import panelsProfesseur.IHMBarreVisionPresentation;
 
 /**
@@ -28,6 +31,11 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
         this.f=f;
         c=i;
         initComponents();
+        jList1.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
+                public int getSize() { return listeGroupes.size(); }
+                public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
+        });
     }
 
     /** This method is called from within the constructor to
@@ -59,10 +67,10 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
             }
         });
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "GROUPE 1", "GROUPE 2", "GROUPE 3" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jList1MousePressed(evt);
+            }
         });
         jScrollPane1.setViewportView(jList1);
 
@@ -150,7 +158,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        IHMModifierGroupe MG = new IHMModifierGroupe(f);
+        IHMModifierGroupe MG = new IHMModifierGroupe(f,groupe);
         f.setPanel(MG);
 }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -162,7 +170,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
 }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        IHMVisualisationGroupes VG = new IHMVisualisationGroupes(f);
+        IHMVisualisationGroupes VG = new IHMVisualisationGroupes(f,groupe);
         f.setPanel(VG);
 }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -176,7 +184,19 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
         f.setMenuGauche(true);
 }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
+        jList1.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
+                public int getSize() { return listeGroupes.size(); }
+                public Object getElementAt(int i) {
+                    groupe = listeGroupes.get(i);
+                    return (listeGroupes.get(i).getNom());
+                }
+        });
+    }//GEN-LAST:event_jList1MousePressed
 
+
+    private Groupe groupe;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
