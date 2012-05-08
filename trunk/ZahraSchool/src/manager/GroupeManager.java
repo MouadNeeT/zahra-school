@@ -38,7 +38,7 @@ public class GroupeManager {
 		groupeEntity.setListeEleves(groupe.getListeEleves());
 
 		GroupeDAO groupeDAO = new GroupeDAO();
-		GroupeDAO.create(groupeEntity);	
+		groupeDAO.create(groupeEntity);	
 	}
 	
 	public Groupe readById(String nom) {
