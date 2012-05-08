@@ -57,64 +57,42 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="AjoutGroupeNomProfesseur" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="AjoutGroupeNomGroupe" alignment="0" max="32767" attributes="1"/>
-                                  <Group type="102" alignment="0" attributes="1">
-                                      <Component id="AjoutGroupeDateJours" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="AjoutGroupeDateMois" min="-2" pref="79" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="AjoutGroupeDateAnnees" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="AjoutGroupeTarifs" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
-                                  <Component id="AjoutGroupePrenomProfesseur" alignment="0" pref="213" max="32767" attributes="1"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="AjoutGroupeAvertissement2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="AjoutGroupeNiveauGroupe" min="-2" pref="168" max="-2" attributes="0"/>
-                                  <Component id="AjoutGroupeBoutonRadIndividuel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="AjoutGroupeBoutonRadCollectif" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="AjoutGroupeAvertissement1" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="AjoutGroupeBoutonAjouter" min="-2" pref="108" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="AjoutGroupeBoutonAnnule" min="-2" pref="107" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" attributes="1">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="Nom" max="32767" attributes="1"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Tarif" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="Niveau" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -123,55 +101,27 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeNomGroupe" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeDateJours" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeDateMois" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeDateAnnees" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeNomProfesseur" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupePrenomProfesseur" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeTarifs" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Nom" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeNiveauGroupe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="27" pref="27" max="27" attributes="0"/>
-                              <Component id="AjoutGroupeBoutonRadIndividuel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="AjoutGroupeBoutonRadCollectif" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="AjoutGroupeAvertissement1" min="-2" pref="23" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AjoutGroupeAvertissement2" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="Niveau" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Tarif" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="48" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="AjoutGroupeBoutonAnnule" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="AjoutGroupeBoutonAjouter" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
@@ -182,27 +132,55 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Niveau du groupe :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="AjoutGroupeBoutonAjouter">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.ImageIcon(&quot;../ZahraSchool/images/imageBoutonAjouter.png&quot;)" type="code"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" Ajouter"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeBoutonAjouterActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="AjoutGroupeBoutonAnnule">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Annuler"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeBoutonAnnuleActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="Niveau">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tarif :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="Tarif">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Date de creation :"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nom :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Date de la cr&#xe9;ation :"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="Nom">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NomActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nom du professeur :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Prenom du professeur :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="AjoutGroupeDateJours">
+    <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="31">
@@ -241,147 +219,58 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeDateJoursActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="AjoutGroupeDateMois">
+    <Component class="javax.swing.JComboBox" name="jComboBox2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="12">
-            <StringItem index="0" value="Janvier"/>
-            <StringItem index="1" value="Fevrier"/>
-            <StringItem index="2" value="Mars"/>
-            <StringItem index="3" value="Avril"/>
-            <StringItem index="4" value="Mai"/>
-            <StringItem index="5" value="Juin"/>
-            <StringItem index="6" value="Juillet"/>
-            <StringItem index="7" value="Aout"/>
-            <StringItem index="8" value="Septembre"/>
-            <StringItem index="9" value="Octobre"/>
-            <StringItem index="10" value="Novembre"/>
-            <StringItem index="11" value="Decembre"/>
+            <StringItem index="0" value="01"/>
+            <StringItem index="1" value="02"/>
+            <StringItem index="2" value="03"/>
+            <StringItem index="3" value="04"/>
+            <StringItem index="4" value="05"/>
+            <StringItem index="5" value="06"/>
+            <StringItem index="6" value="07"/>
+            <StringItem index="7" value="08"/>
+            <StringItem index="8" value="09"/>
+            <StringItem index="9" value="10"/>
+            <StringItem index="10" value="11"/>
+            <StringItem index="11" value="12"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeDateMoisActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="AjoutGroupeDateAnnees">
+    <Component class="javax.swing.JComboBox" name="jComboBox3">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="29">
-            <StringItem index="0" value="2012"/>
-            <StringItem index="1" value="2013"/>
-            <StringItem index="2" value="2014"/>
-            <StringItem index="3" value="2015"/>
-            <StringItem index="4" value="2016"/>
-            <StringItem index="5" value="2017"/>
-            <StringItem index="6" value="2018"/>
-            <StringItem index="7" value="2019"/>
-            <StringItem index="8" value="2020"/>
-            <StringItem index="9" value="2021"/>
-            <StringItem index="10" value="2022"/>
-            <StringItem index="11" value="2023"/>
-            <StringItem index="12" value="2024"/>
-            <StringItem index="13" value="2025"/>
-            <StringItem index="14" value="2026"/>
-            <StringItem index="15" value="2027"/>
-            <StringItem index="16" value="2028"/>
-            <StringItem index="17" value="2029"/>
-            <StringItem index="18" value="2030"/>
-            <StringItem index="19" value="2031"/>
-            <StringItem index="20" value="2032"/>
-            <StringItem index="21" value="2033"/>
-            <StringItem index="22" value="2034"/>
-            <StringItem index="23" value="2035"/>
-            <StringItem index="24" value="2036"/>
-            <StringItem index="25" value="2037"/>
-            <StringItem index="26" value="2038"/>
-            <StringItem index="27" value="2039"/>
-            <StringItem index="28" value="2040"/>
+          <StringArray count="16">
+            <StringItem index="0" value="1990"/>
+            <StringItem index="1" value="1991"/>
+            <StringItem index="2" value="1992"/>
+            <StringItem index="3" value="1993"/>
+            <StringItem index="4" value="1994"/>
+            <StringItem index="5" value="1995"/>
+            <StringItem index="6" value="1996"/>
+            <StringItem index="7" value="1997"/>
+            <StringItem index="8" value="1998"/>
+            <StringItem index="9" value="1999"/>
+            <StringItem index="10" value="2000"/>
+            <StringItem index="11" value="2001"/>
+            <StringItem index="12" value="2002"/>
+            <StringItem index="13" value="2003"/>
+            <StringItem index="14" value="2004"/>
+            <StringItem index="15" value="2005"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeDateAnneesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox3ActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Niveau du groupe :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="AjoutGroupeBoutonAjouter">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="new javax.swing.ImageIcon(&quot;../ZahraSchool/images/imageBoutonAjouter.png&quot;)" type="code"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value=" Ajouter"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeBoutonAjouterActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="AjoutGroupeBoutonAnnule">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Annuler"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeBoutonAnnuleActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="AjoutGroupeBoutonRadCollectif">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Collectif"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeBoutonRadCollectifActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="AjoutGroupeBoutonRadIndividuel">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Individuel"/>
-        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Pointeur par d&#xe9;faut"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Type de groupe:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="AjoutGroupeAvertissement1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Attention le nombre d&apos;&#xe9;l&#xe8;ves dans les groupes individuels "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="AjoutGroupeAvertissement2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="est au maximum de 5."/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="AjoutGroupeNomGroupe">
-    </Component>
-    <Component class="javax.swing.JTextField" name="AjoutGroupeNomProfesseur">
-    </Component>
-    <Component class="javax.swing.JTextField" name="AjoutGroupePrenomProfesseur">
-    </Component>
-    <Component class="javax.swing.JTextField" name="AjoutGroupeNiveauGroupe">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Tarifs :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="AjoutGroupeTarifs">
     </Component>
   </SubComponents>
 </Form>

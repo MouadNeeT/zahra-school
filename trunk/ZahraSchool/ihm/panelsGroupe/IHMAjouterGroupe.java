@@ -11,17 +11,11 @@
 
 package panelsGroupe;
 
+import domaine.Groupe;
 import java.awt.BorderLayout;
-import java.util.ArrayList;
-import java.sql.Date;
-
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
-import domaine.Eleve;
-import domaine.EmploiDuTemps;
-import domaine.Groupe;
-
 import manager.GroupeManager;
 import panelsProfesseur.IHMBarreVisionPresentation;
 
@@ -49,27 +43,18 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        AjoutGroupeDateJours = new javax.swing.JComboBox();
-        AjoutGroupeDateMois = new javax.swing.JComboBox();
-        AjoutGroupeDateAnnees = new javax.swing.JComboBox();
         jLabel11 = new javax.swing.JLabel();
         AjoutGroupeBoutonAjouter = new javax.swing.JButton();
         AjoutGroupeBoutonAnnule = new javax.swing.JButton();
-        AjoutGroupeBoutonRadCollectif = new javax.swing.JRadioButton();
-        AjoutGroupeBoutonRadIndividuel = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
-        AjoutGroupeAvertissement1 = new javax.swing.JLabel();
-        AjoutGroupeAvertissement2 = new javax.swing.JLabel();
-        AjoutGroupeNomGroupe = new javax.swing.JTextField();
-        AjoutGroupeNomProfesseur = new javax.swing.JTextField();
-        AjoutGroupePrenomProfesseur = new javax.swing.JTextField();
-        AjoutGroupeNiveauGroupe = new javax.swing.JTextField();
+        Niveau = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        AjoutGroupeTarifs = new javax.swing.JTextField();
+        Tarif = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        Nom = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox();
+        jComboBox2 = new javax.swing.JComboBox();
+        jComboBox3 = new javax.swing.JComboBox();
 
         jTextField1.setText("jTextField1");
 
@@ -81,35 +66,6 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jList1);
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Ajout d'un groupe"));
-
-        jLabel1.setText("Nom :");
-
-        jLabel3.setText("Date de la création :");
-
-        jLabel5.setText("Nom du professeur :");
-
-        jLabel6.setText("Prenom du professeur :");
-
-        AjoutGroupeDateJours.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        AjoutGroupeDateJours.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjoutGroupeDateJoursActionPerformed(evt);
-            }
-        });
-
-        AjoutGroupeDateMois.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" }));
-        AjoutGroupeDateMois.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjoutGroupeDateMoisActionPerformed(evt);
-            }
-        });
-
-        AjoutGroupeDateAnnees.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040" }));
-        AjoutGroupeDateAnnees.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjoutGroupeDateAnneesActionPerformed(evt);
-            }
-        });
 
         jLabel11.setText("Niveau du groupe :");
 
@@ -128,25 +84,38 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
             }
         });
 
-        buttonGroup1.add(AjoutGroupeBoutonRadCollectif);
-        AjoutGroupeBoutonRadCollectif.setText("Collectif");
-        AjoutGroupeBoutonRadCollectif.addActionListener(new java.awt.event.ActionListener() {
+        jLabel7.setText("Tarif :");
+
+        jLabel3.setText("Date de creation :");
+
+        jLabel1.setText("Nom :");
+
+        Nom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjoutGroupeBoutonRadCollectifActionPerformed(evt);
+                NomActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(AjoutGroupeBoutonRadIndividuel);
-        AjoutGroupeBoutonRadIndividuel.setText("Individuel");
-        AjoutGroupeBoutonRadIndividuel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("Type de groupe:");
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
-        AjoutGroupeAvertissement1.setText("Attention le nombre d'élèves dans les groupes individuels ");
-
-        AjoutGroupeAvertissement2.setText("est au maximum de 5.");
-
-        jLabel7.setText("Tarifs :");
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -155,98 +124,56 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel5))
-                                .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(AjoutGroupeNomProfesseur)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(AjoutGroupeNomGroupe)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(AjoutGroupeDateJours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(AjoutGroupeDateMois, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(AjoutGroupeDateAnnees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7))
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(AjoutGroupeTarifs, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AjoutGroupePrenomProfesseur, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGap(46, 46, 46)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(AjoutGroupeAvertissement2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel2))
-                                .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(AjoutGroupeNiveauGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AjoutGroupeBoutonRadIndividuel)
-                                    .addComponent(AjoutGroupeBoutonRadCollectif)))
-                            .addComponent(AjoutGroupeAvertissement1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(108, 108, 108)
+                                .addComponent(Nom))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(32, 32, 32)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel7))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Tarif, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Niveau, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(AjoutGroupeNomGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(AjoutGroupeDateJours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AjoutGroupeDateMois, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AjoutGroupeDateAnnees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(AjoutGroupeNomProfesseur, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(AjoutGroupePrenomProfesseur, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(AjoutGroupeTarifs, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(AjoutGroupeNiveauGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(7, 7, 7)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(AjoutGroupeBoutonRadIndividuel))
-                            .addComponent(AjoutGroupeBoutonRadCollectif))
-                        .addGap(12, 12, 12)
-                        .addComponent(AjoutGroupeAvertissement1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AjoutGroupeAvertissement2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Niveau, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel11)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3))
+                    .addComponent(jLabel7)
+                    .addComponent(Tarif, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -254,62 +181,23 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AjoutGroupeDateAnneesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeDateAnneesActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_AjoutGroupeDateAnneesActionPerformed
-
-    private void AjoutGroupeDateMoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeDateMoisActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_AjoutGroupeDateMoisActionPerformed
-
-    private void AjoutGroupeDateJoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeDateJoursActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_AjoutGroupeDateJoursActionPerformed
-
     private void AjoutGroupeBoutonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAjouterActionPerformed
-        
-    	String nom = AjoutGroupeNomGroupe.getText();
-            int jour = Integer.parseInt(AjoutGroupeDateJours.getSelectedItem().toString());
-            String mois = AjoutGroupeDateMois.getSelectedItem().toString();
-            int moisEntier = 0;
-            switch (mois) {
-            	case "Janvier" : moisEntier = 1;
-            	                 break;
-            	case "Fevrier" : moisEntier = 2;
-            					 break;
-            	case "Mars" : moisEntier = 3;
-            				  break;
-            	case "Avril" : moisEntier = 4;
-            				   break;
-            	case "Mai" : moisEntier = 5;
-            	             break;
-            	case "Juin" : moisEntier = 6;
-            	              break;
-            	case "Juillet" : moisEntier = 7;
-            	                 break;
-            	case "Aout" : moisEntier = 8;
-            	              break;
-            	case "Septembre" : moisEntier = 9;
-            	                   break;
-            	case "Octobre" : moisEntier = 10;
-            	                 break;
-            	case "Novembre" : moisEntier = 11;
-            	                  break;
-            	case "Decembre" : moisEntier = 12;
-            	                  break;
-            	default : break;
-            }
-            int annee = Integer.parseInt(AjoutGroupeDateAnnees.getSelectedItem().toString());            
-    	@SuppressWarnings("deprecation")
-		Date dateDeCreation = new Date(jour,moisEntier,annee);    	
-    	float tarif = Integer.parseInt(AjoutGroupeTarifs.getText());
-  //          if (Boxpayepas.isSelected()) {String status = "oui";} else {String status = "oui";}
-    	String niveau = AjoutGroupeNiveauGroupe.getText();
+        String nom = Nom.getText();
+        String niveau = Niveau.getText();
+        int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
+        int mois = Integer.parseInt(jComboBox2.getSelectedItem().toString());
+        int annee = Integer.parseInt(jComboBox3.getSelectedItem().toString());
+	Date dateDeCreation = new Date(annee,mois,jour);
+        float tarif = Float.parseFloat(Tarif.getText());
+
         Groupe groupe = new Groupe(nom, niveau ,dateDeCreation, tarif, null, null);
 
-    	GroupeManager.getInstance().create(groupe);
-    	JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Ajouter le groupe "+AjoutGroupeNomGroupe.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
+        GroupeManager.getInstance().create(groupe);
+
+        JOptionPane jp = new JOptionPane();
+        jp.showMessageDialog(null, "Ajouter le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
+        JOptionPane jp2 = new JOptionPane();
+	jp2.showMessageDialog(null, "Ajout du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
         panelsGroupe.IHMAjouterGroupe p = new  panelsGroupe.IHMAjouterGroupe(f);
         f.setPanel(p);
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
@@ -324,33 +212,36 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         f.setMenuGauche(true);
     }//GEN-LAST:event_AjoutGroupeBoutonAnnuleActionPerformed
 
-    private void AjoutGroupeBoutonRadCollectifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonRadCollectifActionPerformed
+    private void NomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_NomActionPerformed
 
-    }//GEN-LAST:event_AjoutGroupeBoutonRadCollectifActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jComboBox3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AjoutGroupeAvertissement1;
-    private javax.swing.JLabel AjoutGroupeAvertissement2;
     private javax.swing.JButton AjoutGroupeBoutonAjouter;
     private javax.swing.JButton AjoutGroupeBoutonAnnule;
-    private javax.swing.JRadioButton AjoutGroupeBoutonRadCollectif;
-    private javax.swing.JRadioButton AjoutGroupeBoutonRadIndividuel;
-    private javax.swing.JComboBox AjoutGroupeDateAnnees;
-    private javax.swing.JComboBox AjoutGroupeDateJours;
-    private javax.swing.JComboBox AjoutGroupeDateMois;
-    private javax.swing.JTextField AjoutGroupeNiveauGroupe;
-    private javax.swing.JTextField AjoutGroupeNomGroupe;
-    private javax.swing.JTextField AjoutGroupeNomProfesseur;
-    private javax.swing.JTextField AjoutGroupePrenomProfesseur;
-    private javax.swing.JTextField AjoutGroupeTarifs;
+    private javax.swing.JTextField Niveau;
+    private javax.swing.JTextField Nom;
+    private javax.swing.JTextField Tarif;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
