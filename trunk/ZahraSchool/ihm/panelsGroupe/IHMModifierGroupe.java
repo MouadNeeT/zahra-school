@@ -174,7 +174,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 
     private void ModifierGroupeBoutonModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierGroupeBoutonModifierActionPerformed
         JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Modifier le groupe "+ModifierGroupeNom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
+        jp.showMessageDialog(null, "Modifier le groupe "+Nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         IHMRechercherGroupe p = new IHMRechercherGroupe(f,2);
         f.setPanel(p);
 }//GEN-LAST:event_ModifierGroupeBoutonModifierActionPerformed
