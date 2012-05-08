@@ -29,9 +29,10 @@ Eleve eleve;
         initComponents();
         // ajout images boutons
         jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imprimer.png"));
+        // Affiche infos
         nom.setText(eleve.getNom());
         prenom.setText(eleve.getPrenom());
-        date.setText(eleve.getDateDeNaissance().getDay()+"/"+eleve.getDateDeNaissance().getMonth()+"/"+eleve.getDateDeNaissance().getYear());
+        date.setText(eleve.getDateDeNaissance().getDate()+"/"+eleve.getDateDeNaissance().getMonth()+"/"+eleve.getDateDeNaissance().getYear());
         adresse.setText(eleve.getAdresse());
         nomere.setText(eleve.getNomMere());
         nompere.setText(eleve.getNomPere());
