@@ -12,8 +12,17 @@
 package panelsGroupe;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
+import java.sql.Date;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import domaine.Eleve;
+import domaine.EmploiDuTemps;
+import domaine.Groupe;
+
+import manager.GroupeManager;
 import panelsProfesseur.IHMBarreVisionPresentation;
 
 /**
@@ -261,13 +270,44 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         
     	String nom = AjoutGroupeNomGroupe.getText();
             int jour = Integer.parseInt(AjoutGroupeDateJours.getSelectedItem().toString());
-            int mois = Integer.parseInt(AjoutGroupeDateMois.getSelectedItem().toString());
+            String mois = AjoutGroupeDateMois.getSelectedItem().toString();
+            int moisEntier = 0;
+            switch (mois) {
+            	case "Janvier" : moisEntier = 1;
+            	                 break;
+            	case "Fevrier" : moisEntier = 2;
+            					 break;
+            	case "Mars" : moisEntier = 3;
+            				  break;
+            	case "Avril" : moisEntier = 4;
+            				   break;
+            	case "Mai" : moisEntier = 5;
+            	             break;
+            	case "Juin" : moisEntier = 6;
+            	              break;
+            	case "Juillet" : moisEntier = 7;
+            	                 break;
+            	case "Aout" : moisEntier = 8;
+            	              break;
+            	case "Septembre" : moisEntier = 9;
+            	                   break;
+            	case "Octobre" : moisEntier = 10;
+            	                 break;
+            	case "Novembre" : moisEntier = 11;
+            	                  break;
+            	case "Decembre" : moisEntier = 12;
+            	                  break;
+            	default : break;
+            }
             int annee = Integer.parseInt(AjoutGroupeDateAnnees.getSelectedItem().toString());            
-    	Date dateDeCreation = new Date(jour,mois,annee);    	
-    	float tarif = AjoutGroupeTarifs.getText();
+    	@SuppressWarnings("deprecation")
+		Date dateDeCreation = new Date(jour,moisEntier,annee);    	
+    	float tarif = Integer.parseInt(AjoutGroupeTarifs.getText());
   //          if (Boxpayepas.isSelected()) {String status = "oui";} else {String status = "oui";}
-  //  	String niveau = AjoutGroupeNiveauGroupe.getText();
+    	String niveau = AjoutGroupeNiveauGroupe.getText();
+        Groupe groupe = new Groupe(nom, niveau ,dateDeCreation, tarif, null, null);
 
+    	GroupeManager.getInstance().create(groupe);
     	JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Ajouter le groupe "+AjoutGroupeNomGroupe.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
         panelsGroupe.IHMAjouterGroupe p = new  panelsGroupe.IHMAjouterGroupe(f);
