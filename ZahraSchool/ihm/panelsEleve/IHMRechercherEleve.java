@@ -229,7 +229,7 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
-        if (!jList1.isSelectionEmpty()){
+        if (!jList1.isSelectionEmpty()) {
             jList1.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }

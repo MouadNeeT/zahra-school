@@ -403,7 +403,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 	String nomMere = nommere.getText();
 	String prenomMere = prenommere.getText();
         String status;
-        if (Boxpayepas.isSelected()) {status = "oui";} else {status = "oui";}
+        if (Boxpayepas.isSelected()) {status = "oui";} else {status = "non";}
 	String niveauTest = niveaueleve.getText();
 	String adresse = Adresse.getText();
         //a faire pr groupe
