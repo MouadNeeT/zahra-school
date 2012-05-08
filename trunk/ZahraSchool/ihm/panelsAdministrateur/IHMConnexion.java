@@ -16,9 +16,11 @@ import frames.FFondFenetreProfesseur;
 import javax.swing.JLabel;
 
 import manager.AdministrateurManager;
+import manager.ProfesseurManager;
 
 import database.SpringJDBC;
 import domaine.Administrateur;
+import domaine.Professeur;
 
 /*
  * To change this template, choose Tools | Templates
@@ -246,11 +248,14 @@ public class IHMConnexion extends javax.swing.JPanel {
         // TODO add your handling code here:
         System.out.println(typePersonne);
         
+        
+        
         //administrateur
     	if (typePersonne == "Administrateur") {
-    		Administrateur administrateur;// = AdministrateurManager.getInstance().readById("stephanie.gautier1@gmail.com");
-    		
-
+    		/**
+    		 * Connexion avec la base de donnee
+    		 */
+    		Administrateur administrateur;
     		administrateur = AdministrateurManager.getInstance().readById(jTextFieldIdentifiant.getText());
         	
         	if (administrateur == null) {
@@ -282,20 +287,36 @@ public class IHMConnexion extends javax.swing.JPanel {
     	//professeur
     	else
         {
-    		f2 = new FFondFenetreProfesseur();   		
-    		JPanel panel = new JPanel(new BorderLayout());
-    		IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
-    		IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
-    		panel.add(menuPrincipal2, BorderLayout.CENTER);
-    		panel.add(visionMenu, BorderLayout.NORTH);
-    		//panel.add(new Horloge(), BorderLayout.WEST);
+    		Professeur professeur;
+    		professeur = ProfesseurManager.getInstance().readById(jTextFieldIdentifiant.getText());
+    		
+    		if (professeur == null) {
+        		System.out.println("pa ni ayen");
+        		professeur = null;
+        		JOptionPane jop1 = new JOptionPane();
+    			jop1.showMessageDialog(null, "Identifiant incorrect", "Erreur", JOptionPane.ERROR_MESSAGE);      	
+        	}
+    		else if (professeur.getMotDePasse().equals(jPasswordFieldMotDePasse.getText())){
+    			f2 = new FFondFenetreProfesseur();   		
+    			JPanel panel = new JPanel(new BorderLayout());
+    			IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
+    			IHMMenuProfesseurPrincipal menuPrincipal2 = new IHMMenuProfesseurPrincipal(f2);
+    			panel.add(menuPrincipal2, BorderLayout.CENTER);
+    			panel.add(visionMenu, BorderLayout.NORTH);
+    			//panel.add(new Horloge(), BorderLayout.WEST);
                 JLabel label = new JLabel();
                 label.setText("                                                            ");
                 panel.add(label, BorderLayout.WEST);
-    		f2.setPanel(panel);
-    		f2.setLocationRelativeTo(null);
-    		f2.setVisible(true);
+                f2.setPanel(panel);
+                f2.setLocationRelativeTo(null);
+                f2.setVisible(true);
                 f2.setMenuGauche(false);
+    		}
+    		else {
+    			professeur = null;
+        		JOptionPane jop1 = new JOptionPane();
+    			jop1.showMessageDialog(null, "Mot de passe incorrect", "Erreur", JOptionPane.ERROR_MESSAGE);
+        	}
     	}
     }
                 /*JLabel label = new JLabel();

@@ -158,14 +158,14 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
         naissance.setText("Date de naissance :");
 
         telephone.setFont(new java.awt.Font("Tahoma", 1, 12));
-        telephone.setText("Numï¿½ro de tï¿½lï¿½phone :");
+        telephone.setText("Numéro de téléphone :");
         telephone.setToolTipText("");
 
         dateEmbauche.setFont(new java.awt.Font("Tahoma", 1, 12));
         dateEmbauche.setText("Date d'embauche :");
 
         niveauEtudes.setFont(new java.awt.Font("Tahoma", 1, 12));
-        niveauEtudes.setText("Niveau d'ï¿½tudes :");
+        niveauEtudes.setText("Niveau d'études :");
 
         adresse.setFont(new java.awt.Font("Tahoma", 1, 12));
         adresse.setText("Adresse :");
@@ -239,7 +239,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel7.setForeground(new java.awt.Color(51, 0, 153));
-        jLabel7.setText("Fiche dï¿½taillï¿½e");
+        jLabel7.setText("Fiche détaillée");
 
         motDePasse1.setFont(new java.awt.Font("Tahoma", 1, 12));
         motDePasse1.setText("Identifiant :");
@@ -433,7 +433,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 		
 		if (professeurBase != null) {
     		JOptionPane jop1 = new JOptionPane();
-			jop1.showMessageDialog(null, "Cet identifiant est deja pris", "Erreur", JOptionPane.ERROR_MESSAGE);
+			jop1.showMessageDialog(null, "Cet identifiant est déjà pris", "Erreur", JOptionPane.ERROR_MESSAGE);      	
 			textIdentifiant.setText("");
 			//boutonEnregistrerActionPerformed(evt);
 		}
@@ -455,7 +455,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
     private void boutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {                                              
     	IHMBarreVisionMenuPrincipal visionMenu = new IHMBarreVisionMenuPrincipal();
 		IHMMenuPrincipalAdministrateur menuPrincipal = new IHMMenuPrincipalAdministrateur(f);
-		JPanel panel = new JPanel(new BorderLayout());		
+		JPanel panel = new JPanel(new BorderLayout());    		
 		panel.add(new Horloge(), BorderLayout.WEST);
 		panel.add(menuPrincipal, BorderLayout.EAST);
 		panel.add(visionMenu, BorderLayout.NORTH);
