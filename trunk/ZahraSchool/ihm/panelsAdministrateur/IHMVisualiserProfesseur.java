@@ -360,7 +360,7 @@ public class IHMVisualiserProfesseur extends javax.swing.JPanel {
                     return (listeProfesseurs.get(i).getNom() + " " + listeProfesseurs.get(i).getPrenom());
                 }
             });
-        } else System.out.println("aucun élément sélectioné");
+        } else System.out.println("aucun element selectione");
 	}
 
 	private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {                                               
