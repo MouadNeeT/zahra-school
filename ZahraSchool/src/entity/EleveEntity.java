@@ -64,14 +64,14 @@ public class EleveEntity extends Entity{
 	 *  @see Eleve#setNumeroTelephoneEleve(int)
 	 *   @see Eleve#getNumeroTelephoneEleve()
 	 */
-	private String numeroTelephoneEleve;
+	private int numeroTelephoneEleve;
 	/**
 	 * le num�ro de t�l�phone des parents.
 	 * 
 	 *  @see Eleve#setNumeroTelephoneParent(int)
 	 *   @see Eleve#getNumeroTelephoneParent()
 	 */
-	private String numeroTelephoneParent;
+	private int numeroTelephoneParent;
 	/**
 	 * la date d'inscription de l'�l�ve.
 	 * 
@@ -136,7 +136,7 @@ public class EleveEntity extends Entity{
 	
 	public EleveEntity(int identifiant, String nom, String prenom, 
 			     int age, Date dateDeNaissance, String adresse, String photo, 
-			     String numeroTelephoneEleve, String numeroTelephoneParent,
+			     int numeroTelephoneEleve, int numeroTelephoneParent,
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
 			     String status, String niveauTest,
@@ -298,25 +298,25 @@ public class EleveEntity extends Entity{
 	/**
 	 * @return the numeroTelephoneEleve
 	 */
-	public String getNumeroTelephoneEleve() {
+	public int getNumeroTelephoneEleve() {
 		return numeroTelephoneEleve;
 	}
 	/**
 	 * @param numeroTelephoneEleve the numeroTelephoneEleve to set
 	 */
-	public void setNumeroTelephoneEleve(String numeroTelephoneEleve) {
+	public void setNumeroTelephoneEleve(int numeroTelephoneEleve) {
 		this.numeroTelephoneEleve = numeroTelephoneEleve;
 	}
 	/**
 	 * @return the numeroTelephoneParent
 	 */
-	public String getNumeroTelephoneParent() {
+	public int getNumeroTelephoneParent() {
 		return numeroTelephoneParent;
 	}
 	/**
 	 * @param numeroTelephoneParent the numeroTelephoneParent to set
 	 */
-	public void setNumeroTelephoneParent(String numeroTelephoneParent) {
+	public void setNumeroTelephoneParent(int numeroTelephoneParent) {
 		this.numeroTelephoneParent = numeroTelephoneParent;
 	}
 	/**
