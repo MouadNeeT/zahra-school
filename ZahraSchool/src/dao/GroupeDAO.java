@@ -28,9 +28,7 @@ public class GroupeDAO {
 	public GroupeDAO(){}
 	
 	public void setDataSource(DataSource dataSource) {
-		this.jdbcTemplat
-		
-		e = new JdbcTemplate(dataSource);
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
 	
@@ -54,7 +52,7 @@ public class GroupeDAO {
 		
 		stmt.setString(1, groupe.getNom());
 		stmt.setString(2, groupe.getNiveau());
-		stmt.setDate(3, (java.sql.Date) groupe.getDateDeCreation());
+		stmt.setDate(3, (Date) groupe.getDateDeCreation());
 		stmt.setFloat(4, groupe.getTarif());
 		stmt.setObject(5, groupe.getListeEleves());
 		stmt.setObject(6, groupe.getEmploiDuTemps());
@@ -77,7 +75,7 @@ public class GroupeDAO {
 		ResultSet rs = null;
 
 		try {
-		String sql = "select nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps from eleve where nom = ?";
+		String sql = "select nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps from groupe where nom = ?";
 
 		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
         DataSource dataSource = (DataSource) appContext.getBean("datasource2");
@@ -94,7 +92,7 @@ public class GroupeDAO {
 			groupe.setNiveau(rs.getString("niveau"));
 			groupe.setDateDeCreation(rs.getDate("dateDeCreation"));
 			groupe.setTarif(rs.getFloat("tarif"));
-			groupe.setListeEleves((ArrayList<Eleve> rs.getObject("listeEleves")));
+			groupe.setListeEleves((ArrayList<Eleve>) rs.getObject("listeEleves"));
 			groupe.setEmploiDuTemps((EmploiDuTemps) rs.getObject("emploiDuTemps"));
 			
 		}
@@ -176,5 +174,45 @@ public class GroupeDAO {
   			} catch (SQLException e) {}
   		}
       }
+
+	public ArrayList<Groupe> getAllGroupes() {
+		Connection conn = null;
+		@SuppressWarnings("unused")
+		PreparedStatement stmt = null;	
+		ResultSet resultats = null;
+		
+	    @SuppressWarnings("unused")
+		final String requete = "";
+	    ArrayList<Groupe> listeGroupes = new ArrayList<Groupe>();
+		
+	    try {
+	    	//JdbcTemplate jdbcTemplate = new JdbcTemplate();
+			//Professeur professeur = SpringJDBC.getProfesseurByName(nom, prenom);
+			/* Chargement conteneur Spring et récupération bean SataSource	*/
+			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
+			//<---------------- ne pas oublier de changer
+	        DataSource ds = (DataSource) appContext.getBean("datasource2");
+	        conn = ds.getConnection();
+			PreparedStatement ALL = conn.prepareStatement("select nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps from groupe");
+			resultats = ALL.executeQuery();
+			
+			boolean encore = resultats.next();
+
+		      while (encore) {
+		        //System.out.print(resultats.getString(1) + resultats.getString(2) + resultats.getString(3) + resultats.getString(4) + resultats.getString(5) + resultats.getInt(6) + resultats.getString(7) + resultats.getDate(8) + resultats.getDate(9) + resultats.getObject(10) +resultats.getObject(11));
+		        
+		        //(nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps)
+		        Groupe g = new Groupe(resultats.getString(1), resultats.getString(2), resultats.getDate(3), resultats.getFloat(4), (ArrayList<Eleve>) resultats.getObject(5), (EmploiDuTemps) resultats.getObject(6));
+		        listeGroupes.add(g);
+		        encore = resultats.next();
+		      }
+
+		      resultats.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return listeGroupes;
+	}
 
 }

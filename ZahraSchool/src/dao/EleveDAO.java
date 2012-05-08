@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.sql.DataSource;
 
@@ -22,6 +22,7 @@ import domaine.Paiement;
 import domaine.Professeur;
 
 import entity.EleveEntity;
+import entity.ProfesseurEntity;
 
 
 
@@ -61,7 +62,7 @@ public class EleveDAO {
     		PreparedStatement stmt = null;		
     		try {
     		final String ELEVE_INSERT = "insert into eleve (identifiant, nom, prenom, age, dateDeNaissance, adresse, photo, numeroTelephoneEleve, numeroTelephoneParent, dateInscription, niveauEtudes, nomPere, prenomPere, nomMere, prenomMere, status, niveauTest, listeProfesseurs, listeGroupes, listePaiements, emploiDuTemps) "
-    				+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, ?)"; 
+    				+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; 
 
 
     		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
@@ -81,8 +82,8 @@ public class EleveDAO {
     		stmt.setDate(5, (java.sql.Date) eleve.getDateDeNaissance());
     		stmt.setString(6, eleve.getAdresse());
     		stmt.setString(7, eleve.getPhoto());
-    		stmt.setString(8, eleve.getNumeroTelephoneEleve());
-    		stmt.setString(9, eleve.getNumeroTelephoneParent());
+    		stmt.setInt(8, eleve.getNumeroTelephoneEleve());
+    		stmt.setInt(9, eleve.getNumeroTelephoneParent());
     		stmt.setDate(10, (java.sql.Date) eleve.getDateInscription());
     		stmt.setString(11, eleve.getNiveauEtudes());
     		stmt.setString(12, eleve.getNomPere());
@@ -134,8 +135,8 @@ public class EleveDAO {
     			eleve.setDateDeNaissance(rs.getDate("dateDeNaissance"));
     			eleve.setAdresse(rs.getString("adresse"));
     			eleve.setPhoto(rs.getString("photo"));
-    			eleve.setNumeroTelephoneEleve(rs.getString("numeroTelephoneEleve"));
-    			eleve.setNumeroTelephoneParent(rs.getString("numeroTelephoneParent"));
+    			eleve.setNumeroTelephoneEleve(rs.getInt("numeroTelephoneEleve"));
+    			eleve.setNumeroTelephoneParent(rs.getInt("numeroTelephoneParent"));
     			eleve.setDateInscription(rs.getDate("dateInscription"));
     			eleve.setNiveauEtudes(rs.getString("niveauEtudes"));
     			eleve.setNomPere(rs.getString("nomPere"));
@@ -239,5 +240,86 @@ public class EleveDAO {
     			} catch (SQLException e) {}
     		}
         }
+
+		public Eleve readByNomPrenom(String nom, String prenom) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		public ArrayList<Eleve> getAllEleves() {
+			int nombreEleves = 0;
+			Connection conn = null;
+			@SuppressWarnings("unused")
+			PreparedStatement stmt = null;	
+			ResultSet resultats = null;
+			
+		    @SuppressWarnings("unused")
+			final String requete = "";
+		    ArrayList<Eleve> listeEleves = new ArrayList<Eleve>();
+			
+		    try {
+		    	//JdbcTemplate jdbcTemplate = new JdbcTemplate();
+				//Professeur professeur = SpringJDBC.getProfesseurByName(nom, prenom);
+				/* Chargement conteneur Spring et récupération bean SataSource	*/
+				ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
+				//<---------------- ne pas oublier de changer
+		        DataSource ds = (DataSource) appContext.getBean("datasource2");
+		        conn = ds.getConnection();
+				PreparedStatement ALL = conn.prepareStatement("select identifiant, nom, prenom, age, dateDeNaissance, adresse, photo, numeroTelephoneEleve, numeroTelephoneParent, dateInscription, niveauEtudes, nomPere, prenomPere, nomMere, prenomMere, status, niveauTest, listeProfesseurs, listeGroupes, listePaiements, emploiDuTemps from eleve");
+				resultats = ALL.executeQuery();
+				
+				boolean encore = resultats.next();
+
+			      while (encore) {
+			       
+			        Eleve e = new Eleve(resultats.getInt(1), resultats.getString(2), resultats.getString(3), resultats.getInt(4), resultats.getDate(5), resultats.getString(6), 
+			        		resultats.getString(7), resultats.getInt(8), resultats.getInt(9), resultats.getDate(10), resultats.getString(11),
+			        		resultats.getString(12), resultats.getString(13), resultats.getString(14), resultats.getString(15), 
+			        		resultats.getString(16), resultats.getString(17), 
+			        		(ArrayList<Professeur>) resultats.getObject(18), (ArrayList<Groupe>)resultats.getObject(19), 
+			        		(ArrayList<Paiement>) resultats.getObject(20), (EmploiDuTemps) resultats.getObject(21));
+			        listeEleves.add(e);
+			        encore = resultats.next();
+			        nombreEleves = nombreEleves + 1;
+			      }
+
+			      resultats.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return listeEleves;
+		
+		}
+		
+		public void delete(ProfesseurEntity professeur) {
+			Connection conn = null;
+			PreparedStatement stmt = null;		
+			try {
+				String nom = professeur.getNom();
+				String prenom = professeur.getPrenom();
+				String mdp = professeur.getMotDePasse();
+			String sql = "DELETE FROM professeur where nom = '" + nom + "' and prenom = '" + prenom + "' and motDePasse = '" +  professeur.getMotDePasse() + "'";
+			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
+			//<---------------- ne pas oublier de changer
+	        DataSource ds = (DataSource) appContext.getBean("datasource2");
+	        
+	        conn = ds.getConnection();
+			stmt = conn.prepareStatement(sql);
+			
+			
+			
+			stmt.execute(sql);
+			} catch (SQLException e) {
+					e.printStackTrace();
+			} finally {
+				try {
+					if(stmt != null) { stmt.close(); }
+					if(conn != null) { conn.close(); }
+				} catch (SQLException e) {}
+			}
+		}
+		
+		
         
 }
