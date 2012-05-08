@@ -12,7 +12,9 @@
 package panelsEleve;
 
 import domaine.Eleve;
-import java.util.Date;
+import java.sql.Date;
+import java.util.GregorianCalendar;
+
 import javax.swing.JOptionPane;
 import manager.EleveManager;
 
@@ -22,6 +24,7 @@ import manager.EleveManager;
  */
 public class IHMAjouterEleve extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
+ GregorianCalendar calendar = new GregorianCalendar();
     public IHMAjouterEleve( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
@@ -37,7 +40,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+    	
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -390,9 +393,10 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         int annee = Integer.parseInt(jComboBox3.getSelectedItem().toString());
 	Date dateDeNaissance = new Date(annee,mois,jour);
 	String photo = "";
-	String numeroTelephoneEleve = teleleve.getText();
-	String numeroTelephoneParent = telparent.getText();
-	Date dateInscription = new Date(); // Date courante
+	int numeroTelephoneEleve = Integer.parseInt(teleleve.getText());
+	int numeroTelephoneParent = Integer.parseInt(telparent.getText());
+
+	Date dateInscription = new Date((calendar.get(GregorianCalendar.DAY_OF_MONTH)), (calendar.get(GregorianCalendar.MONTH) + 1), (calendar.get(GregorianCalendar.YEAR))); // Date courante
 	String niveauEtudes = niveauetudes.getText();
 	String nomPere = nompere.getText();
 	String prenomPere = prenompere.getText();
