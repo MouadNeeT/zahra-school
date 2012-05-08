@@ -6,7 +6,6 @@ import java.util.Date;
 public class Groupe {
     private EmploiDuTemps emploiDuTemps;
     private ArrayList<Eleve> listeEleves;
-    private Groupe groupe;
     private String nom;
     private String niveau;
     private Date dateDeCreation;
@@ -86,19 +85,6 @@ public class Groupe {
 		this.listeEleves = listeEleves;
 	}
 
-	/**
-	 * @return the groupe
-	 */
-	public Groupe getGroupe() {
-		return groupe;
-	}
-
-	/**
-	 * @param groupe the groupe to set
-	 */
-	public void setGroupe(Groupe groupe) {
-		this.groupe = groupe;
-	}
 
 	/**
 	 * @return the tarif
