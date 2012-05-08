@@ -67,7 +67,15 @@
 		<property name="dataSource" ref="datasource2" />
 	</bean>
 	
+	<bean id="EleveDAO"
+		class="dao.ProfesseurDAO">
+		<property name="dataSource" ref="datasource2" />
+	</bean>
 	
+	<bean id="GroupeDAO"
+		class="dao.ProfesseurDAO">
+		<property name="dataSource" ref="datasource2" />
+	</bean>
 	
 	<!--  Déclaration Session Factory -->
 
