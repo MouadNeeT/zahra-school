@@ -16,9 +16,6 @@ import org.springframework.jdbc.core.RowMapper;
 import domaine.Eleve;
 import domaine.EmploiDuTemps;
 import domaine.Groupe;
-import domaine.Matiere;
-import domaine.Paiement;
-import domaine.Professeur;
 
 import entity.GroupeEntity;
 
@@ -47,7 +44,7 @@ public class GroupeDAO {
         conn = ds.getConnection();
 		stmt = conn.prepareStatement(GROUPE_INSERT);
 	        /*
-		 * On rï¿½cupï¿½re et on utilisera directement le jdbcTemplate
+		 * On recupere et on utilisera directement le jdbcTemplate
 		 */
 		
 		stmt.setString(1, groupe.getNom());
@@ -188,7 +185,7 @@ public class GroupeDAO {
 	    try {
 	    	//JdbcTemplate jdbcTemplate = new JdbcTemplate();
 			//Professeur professeur = SpringJDBC.getProfesseurByName(nom, prenom);
-			/* Chargement conteneur Spring et récupération bean SataSource	*/
+			/* Chargement conteneur Spring et rï¿½cupï¿½ration bean SataSource	*/
 			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
 			//<---------------- ne pas oublier de changer
 	        DataSource ds = (DataSource) appContext.getBean("datasource2");
