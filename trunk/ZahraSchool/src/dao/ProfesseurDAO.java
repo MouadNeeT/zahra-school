@@ -117,11 +117,11 @@ public class ProfesseurDAO {
 			}
 
 		};
-		// Retourne l'objet Employe associé à l'Id
+		// Retourne l'objet Employe associe a l'Id
 		// Notez 1) le casting explicite Employe,
 		// 2) que l'enveloppe de l'argument 'id' dans un tableau d'objet,
 		// 3) le boxing de 'id' comme un type reference Long
-		// Ces étapes ne sont pas necessaire en utilisant (java 5)
+		// Ces etapes ne sont pas necessaire en utilisant (java 5)
 		// SimpleJdbcTemplate
 		return (Professeur) jdbcTemplate.queryForObject(sql, new Object[] { 
 				String.valueOf(nom), String.valueOf(prenom) }, mapper);
@@ -143,7 +143,7 @@ public class ProfesseurDAO {
         conn = ds.getConnection();
 		stmt = conn.prepareStatement(PROFESSEUR_INSERT);
 	        /*
-		 * On récupère et on utilisera directement le jdbcTemplate
+		 * On recupere et on utilisera directement le jdbcTemplate
 		 */
 		
 		stmt.setString(1, professeur.getIdentifiant());
@@ -176,7 +176,7 @@ public class ProfesseurDAO {
 		final String PROFESSEUR_COUNT = "select count(*) from professeur";
 
 		/*
-		 * On récupère et on utilisera directement le jdbcTemplate
+		 * On recupere et on utilisera directement le jdbcTemplate
 		 */
 			
 		 int nbLignes = jdbcTemplate.queryForInt(PROFESSEUR_COUNT);
@@ -199,7 +199,7 @@ public class ProfesseurDAO {
 	    try {
 	    	//JdbcTemplate jdbcTemplate = new JdbcTemplate();
 			//Professeur professeur = SpringJDBC.getProfesseurByName(nom, prenom);
-			/* Chargement conteneur Spring et récupération bean SataSource	*/
+			/* Chargement conteneur Spring et recuperation bean SataSource	*/
 			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
 			//<---------------- ne pas oublier de changer
 	        DataSource ds = (DataSource) appContext.getBean("datasource2");
@@ -330,7 +330,7 @@ public class ProfesseurDAO {
         conn = ds.getConnection();
 		stmt = conn.prepareStatement(PROFESSEUR_INSERT);
 	        /*
-		 * On récupère et on utilisera directement le jdbcTemplate
+		 * On recupere et on utilisera directement le jdbcTemplate
 		 */
 		
 		
