@@ -29,7 +29,7 @@ public class SpringJDBC {
 				"insert into administrateur (identifiant,motDePasse) " +
 				"values (?,?)";
 			
-			/* Chargement conteneur Spring et récupération bean SataSource	*/
+			/* Chargement conteneur Spring et recuperation bean SataSource	*/
 			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
 			//<---------------- ne pas oublier de changer
 	        DataSource ds = (DataSource) appContext.getBean("datasource2");
@@ -51,7 +51,7 @@ public class SpringJDBC {
 		}
 		}
 	/**
-	 * Récupération Employe avec à partir de son id
+	 * Recuperation Employe avec a partir de son id
 	 */
 	public Administrateur getAdministrateurbyId(String identifiant) {
 		Connection conn = null;
@@ -105,7 +105,7 @@ public class SpringJDBC {
 				"insert into professeur (identifiant,motDePasse, nom, prenom, adresse, numeroTelephone, niveauEtudes, dateDeNaissance, dateEmbauche, listeEleves, listeMatieres) " +
 				"values (?,?,?,?,?,?,?,?,?,?,?)";
 			
-			/* Chargement conteneur Spring et récupération bean SataSource	*/
+			/* Chargement conteneur Spring et recuperation bean SataSource	*/
 			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
 			//<---------------- ne pas oublier de changer
 	        DataSource ds = (DataSource) appContext.getBean("datasource2");
@@ -144,7 +144,7 @@ public class SpringJDBC {
 		try {
 			JdbcTemplate jdbcTemplate = new JdbcTemplate();
 			//Professeur professeur = SpringJDBC.getProfesseurByName(nom, prenom);
-			/* Chargement conteneur Spring et récupération bean SataSource	*/
+			/* Chargement conteneur Spring et recuperation bean SataSource	*/
 			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
 			//<---------------- ne pas oublier de changer
 	        DataSource ds = (DataSource) appContext.getBean("datasource2");
@@ -184,7 +184,7 @@ public class SpringJDBC {
 	    try {
 	    	//JdbcTemplate jdbcTemplate = new JdbcTemplate();
 			//Professeur professeur = SpringJDBC.getProfesseurByName(nom, prenom);
-			/* Chargement conteneur Spring et récupération bean SataSource	*/
+			/* Chargement conteneur Spring et recuperation bean SataSource	*/
 			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
 			//<---------------- ne pas oublier de changer
 	        DataSource ds = (DataSource) appContext.getBean("datasource2");
