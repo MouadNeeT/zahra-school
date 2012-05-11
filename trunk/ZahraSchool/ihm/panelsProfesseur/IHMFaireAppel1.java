@@ -15,11 +15,11 @@ import java.awt.Container;
  *
  * @author wael
  */
-public class IHMFaireLapelle1 extends javax.swing.JPanel {
+public class IHMFaireAppel1 extends javax.swing.JPanel {
 
    frames.FFondFenetreProfesseur f;
     int Apelle = 3;
-    public IHMFaireLapelle1(frames.FFondFenetreProfesseur f) {
+    public IHMFaireAppel1(frames.FFondFenetreProfesseur f) {
    /*  setLayout(new BorderLayout());
        panelsAdministrateur.IHMBarreVision bv = new  panelsAdministrateur.IHMBarreVision();
        bv.setVisible(true);
@@ -69,7 +69,7 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Type d'appel", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLabel2.setText("Choisisser le type d'appel :");
-        jLabel2.setBounds(20, 60, 190, 17);
+        jLabel2.setBounds(20, 60, 190, -1);
         jLayeredPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLabel2.getAccessibleContext().setAccessibleName("text1");
 
@@ -91,18 +91,18 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jRadioButton2.setBounds(210, 80, 330, 22);
+        jRadioButton2.setBounds(210, 80, 330, -1);
         jLayeredPane1.add(jRadioButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jRadioButton2.getAccessibleContext().setAccessibleName("Plan");
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Choisissez le groupe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
 
         jLayeredPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Recherche rapide ?", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(0, 0, 51))); // NOI18N
-        jLayeredPane4.setBounds(0, -10, 0, 0);
+        jLayeredPane4.setBounds(0, -10, -1, -1);
         jLayeredPane3.add(jLayeredPane4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel3.setText("Rentrez le nom du groupe:");
-        jLabel3.setBounds(10, 40, 170, 17);
+        jLabel3.setBounds(10, 40, 170, -1);
         jLayeredPane3.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTextField2.setText("jTextField2");
@@ -111,7 +111,7 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jTextField2.setBounds(170, 40, 110, 27);
+        jTextField2.setBounds(170, 40, 110, -1);
         jLayeredPane3.add(jTextField2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane3.setBounds(20, 40, 300, 120);
@@ -167,7 +167,7 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
                     .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -177,11 +177,11 @@ public class IHMFaireLapelle1 extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (Apelle==2){
-        IHMFaireLapelle2 f2 = new IHMFaireLapelle2(f);
+        IHMFaireAppel2 f2 = new IHMFaireAppel2(f);
         f2.setVisible(true);
         f.setPanel(f2);}
         else if(Apelle==1){
-        IHMFaireLapelle3 f3 = new IHMFaireLapelle3(f);
+        IHMFaireAppel3 f3 = new IHMFaireAppel3(f);
         f3.setVisible(true);
         f.setPanel(f3);
         }

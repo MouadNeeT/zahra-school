@@ -9,13 +9,13 @@ package panelsProfesseur;
  *
  * @author wael
  */
-public class IHMFaireLapelle2 extends javax.swing.JPanel {
+public class IHMFaireAppel2 extends javax.swing.JPanel {
 frames.FFondFenetreProfesseur f;
        boolean Absent;
     /**
      * Creates new form IHMFaireLapelle2
      */
-    public IHMFaireLapelle2(frames.FFondFenetreProfesseur f) {
+    public IHMFaireAppel2(frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
     }
@@ -240,13 +240,12 @@ frames.FFondFenetreProfesseur f;
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jLabel20)
-                        .addContainerGap(386, Short.MAX_VALUE))
+                        .addComponent(jLabel20))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel21)
                         .addGap(16, 16, 16)
-                        .addComponent(jLabel25)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(jLabel25)))
+                .addContainerGap(378, Short.MAX_VALUE))
         );
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/left.jpg"))); // NOI18N
@@ -278,7 +277,7 @@ frames.FFondFenetreProfesseur f;
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel16.setText("Nom Prenom");
-        jLabel16.setBounds(20, 10, 94, 26);
+        jLabel16.setBounds(20, 10, 120, 26);
         jLayeredPane2.add(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButton3.setText("Absent");
@@ -401,7 +400,7 @@ frames.FFondFenetreProfesseur f;
                                         .addGap(59, 59, 59)))))
                         .addGap(47, 47, 47)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 175, Short.MAX_VALUE)))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

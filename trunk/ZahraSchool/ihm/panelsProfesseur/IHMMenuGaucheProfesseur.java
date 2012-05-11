@@ -619,7 +619,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      * Faire l'appel
      */
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {
-        panelsProfesseur.IHMFaireLapelle1 FA = new panelsProfesseur.IHMFaireLapelle1(f);
+        panelsProfesseur.IHMFaireAppel1 FA = new panelsProfesseur.IHMFaireAppel1(f);
         AfficheBarreVision(FA,"   faire l'appel","../ZahraSchool/images/appel.png");
     }                                         
 
