@@ -86,27 +86,15 @@
                               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="AjoutGroupeTarifs" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
-                                  <Component id="AjoutGroupePrenomProfesseur" alignment="0" pref="213" max="32767" attributes="1"/>
+                                  <Component id="AjoutGroupePrenomProfesseur" alignment="0" pref="219" max="32767" attributes="1"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="AjoutGroupeAvertissement2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="AjoutGroupeNiveauGroupe" min="-2" pref="168" max="-2" attributes="0"/>
-                                  <Component id="AjoutGroupeBoutonRadIndividuel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="AjoutGroupeBoutonRadCollectif" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="AjoutGroupeAvertissement1" alignment="0" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="AjoutGroupeNiveauGroupe" min="-2" pref="168" max="-2" attributes="0"/>
+                      <EmptySpace pref="46" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="AjoutGroupeBoutonAjouter" min="-2" pref="108" max="-2" attributes="0"/>
@@ -151,24 +139,9 @@
                           <Component id="AjoutGroupeTarifs" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AjoutGroupeNiveauGroupe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="27" pref="27" max="27" attributes="0"/>
-                              <Component id="AjoutGroupeBoutonRadIndividuel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="AjoutGroupeBoutonRadCollectif" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="AjoutGroupeAvertissement1" min="-2" pref="23" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AjoutGroupeAvertissement2" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AjoutGroupeNiveauGroupe" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="37" max="32767" attributes="0"/>
@@ -330,43 +303,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeBoutonAnnuleActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="AjoutGroupeBoutonRadCollectif">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Collectif"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AjoutGroupeBoutonRadCollectifActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="AjoutGroupeBoutonRadIndividuel">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Individuel"/>
-        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Pointeur par d&#xe9;faut"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Type de groupe:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="AjoutGroupeAvertissement1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Attention le nombre d&apos;&#xe9;l&#xe8;ves dans les groupes individuels "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="AjoutGroupeAvertissement2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="est au maximum de 5."/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="AjoutGroupeNomGroupe">
     </Component>

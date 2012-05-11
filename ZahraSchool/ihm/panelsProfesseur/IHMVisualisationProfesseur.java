@@ -1,7 +1,14 @@
 package panelsProfesseur;
 
+import panelsAdministrateur.*;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
+import manager.ProfesseurManager;
+
+import database.SpringJDBC;
+import domaine.Professeur;
 import frames.FFondFenetreAdministrateur;
-import frames.FFondFenetreProfesseur;
 
 /*
  * To change this template, choose Tools | Templates
@@ -18,15 +25,14 @@ import frames.FFondFenetreProfesseur;
 
 /**
  *
- * @author Alexandre
+ * @author Evi and Max
  */
 public class IHMVisualisationProfesseur extends javax.swing.JPanel {
-	FFondFenetreProfesseur f;
+    frames.FFondFenetreProfesseur f;
     /** Creates new form IHMVisualiserFicheProfesseur */
-    public IHMVisualisationProfesseur(FFondFenetreProfesseur f) {
+    public IHMVisualisationProfesseur(frames.FFondFenetreProfesseur f) {
     	this.f = f;
         initComponents();
-        boutonModifier.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imprimer.png"));
     }
 
     /** This method is called from within the constructor to
@@ -72,14 +78,14 @@ public class IHMVisualisationProfesseur extends javax.swing.JPanel {
         jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
 
-        boutonModifier.setText("Imprimer la fiche");
+        boutonModifier.setText("Modifier");
         boutonModifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonModifierActionPerformed(evt);
             }
         });
 
-        boutonSupprimer.setText("Annuler");
+        boutonSupprimer.setText("Supprimer");
         boutonSupprimer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boutonSupprimerActionPerformed(evt);
@@ -282,10 +288,19 @@ public class IHMVisualisationProfesseur extends javax.swing.JPanel {
         );
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+        	
+ 
+                ArrayList<Professeur> listeProfesseurs = ProfesseurManager.getInstance().getAllProfesseurs();
+                public int getSize() { return listeProfesseurs.size(); }
+                public Object getElementAt(int i) { return (listeProfesseurs.get(i).getNom() + "  " + listeProfesseurs.get(i).getPrenom()); }
+            });
+        	
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jList1MousePressed(evt);
+            }
         });
+        
         jScrollPane3.setViewportView(jList1);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -326,13 +341,35 @@ public class IHMVisualisationProfesseur extends javax.swing.JPanel {
         );
     }// </editor-fold>
 
-    private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {                                               
-        
+    @SuppressWarnings("unchecked")
+	protected void jList1MousePressed(MouseEvent evt) {
+    	if (!jList1.isSelectionEmpty()){
+
+            jList1.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Professeur> listeProfesseurs = ProfesseurManager.getInstance().getAllProfesseurs();
+                public int getSize() { return listeProfesseurs.size(); }
+                public Object getElementAt(int i) {
+                	jLabelNom.setText(listeProfesseurs.get(i).getNom());
+                	jLabelPrenom.setText(listeProfesseurs.get(i).getPrenom());
+                	jLabelDateEmbauche.setText(""+listeProfesseurs.get(i).getDateEmbauche());
+                	jLabelDateNaissance.setText(""+listeProfesseurs.get(i).getDateDeNaissance());                  
+                	textAdresse.setText(listeProfesseurs.get(i).getAdresse());
+                	textNiveauEtudes.setText(listeProfesseurs.get(i).getNiveauEtudes());
+                	jLabelTelephone.setText("" + listeProfesseurs.get(i).getNumeroTelephone());
+
+                                     
+                    return (listeProfesseurs.get(i).getNom() + " " + listeProfesseurs.get(i).getPrenom());
+                }
+            });
+        } else System.out.println("aucun element selectione");
+	}
+
+	private void boutonModifierActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        // TODO add your handling code here:
     }                                              
 
     private void boutonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {                                                
-        IHMChoixProfesseur CP = new IHMChoixProfesseur(f);
-        f.setPanel(CP);
+        // TODO add your handling code here:
     }                                               
 
 

@@ -23,11 +23,11 @@ import panelsProfesseur.IHMBarreVisionPresentation;
  *
  * @author alexandre
  */
-public class IHMRechercherGroupe extends javax.swing.JPanel {
+public class aIHMRechercherGroupeAncien extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
  int c;
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMRechercherGroupe( frames.FFondFenetreProfesseur f,int i) {
+    public aIHMRechercherGroupeAncien( frames.FFondFenetreProfesseur f,int i) {
         this.f=f;
         c=i;
         initComponents();
@@ -47,8 +47,6 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
         jLabel3 = new javax.swing.JLabel();
@@ -58,14 +56,6 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Recherche d'un Groupe"));
-
-        jLabel1.setText("Rentrer le nom du groupe :");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
 
         jList1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -116,11 +106,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addContainerGap(590, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(226, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,11 +124,7 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,24 +135,20 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        IHMModifierGroupe MG = new IHMModifierGroupe(f,groupe);
+        aIHMModifierGroupeAncien MG = new aIHMModifierGroupeAncien(f,groupe);
         f.setPanel(MG);
 }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Supprimer le groupe "+jTextField1.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
-        IHMRechercherGroupe p = new IHMRechercherGroupe(f,3);
+        jp.showMessageDialog(null, "Supprimer le groupe ", "Confirmation", JOptionPane.OK_CANCEL_OPTION);
+        aIHMRechercherGroupeAncien p = new aIHMRechercherGroupeAncien(f,3);
         f.setPanel(p);
 }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        IHMVisualisationGroupes VG = new IHMVisualisationGroupes(f,groupe);
+        aIHMVisualisationGroupesAncien VG = new aIHMVisualisationGroupesAncien(f,groupe);
         f.setPanel(VG);
 }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -202,11 +180,9 @@ public class IHMRechercherGroupe extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
 }

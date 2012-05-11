@@ -20,9 +20,9 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
         this.f=f;
         initComponents();
         // Ajout d'images dans les boutons
-        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/ajouterGroupe.png"));
+        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/ajouterGroupe.png"));
         jLabel4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/supprimerGroupe.png"));
-        jLabel6.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/editerGroupe.png"));
+        jLabel7.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/editerGroupe.png"));
         jLabel5.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/voirGroupe.png"));
     }
 
@@ -40,10 +40,10 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
         BoutonSupprimerGroupe = new javax.swing.JToggleButton();
         jPanel17 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        BoutonAjouterGroupe = new javax.swing.JToggleButton();
-        jPanel16 = new javax.swing.JPanel();
         BoutonModifierGroupe = new javax.swing.JToggleButton();
+        jPanel16 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        BoutonAjouterGroupe = new javax.swing.JToggleButton();
         jPanel15 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         BoutonVisualisationGroupe = new javax.swing.JToggleButton();
@@ -95,47 +95,6 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
         jPanel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel17.setPreferredSize(new java.awt.Dimension(206, 93));
 
-        BoutonAjouterGroupe.setBackground(new java.awt.Color(255, 255, 255));
-        BoutonAjouterGroupe.setFont(new java.awt.Font("Tahoma", 1, 12));
-        BoutonAjouterGroupe.setForeground(new java.awt.Color(0, 0, 204));
-        BoutonAjouterGroupe.setText("Ajouter un groupe");
-        BoutonAjouterGroupe.setToolTipText("Pour ajouter un groupe, cliquez ici.");
-        BoutonAjouterGroupe.setBorder(null);
-        BoutonAjouterGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        BoutonAjouterGroupe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BoutonAjouterGroupeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(BoutonAjouterGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addComponent(BoutonAjouterGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel16.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel16.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jPanel16.setPreferredSize(new java.awt.Dimension(206, 93));
-
         BoutonModifierGroupe.setBackground(new java.awt.Color(255, 255, 255));
         BoutonModifierGroupe.setFont(new java.awt.Font("Tahoma", 1, 12));
         BoutonModifierGroupe.setForeground(new java.awt.Color(0, 0, 204));
@@ -149,6 +108,48 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
             }
         });
 
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(BoutonModifierGroupe, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(BoutonModifierGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel16.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel16.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel16.setPreferredSize(new java.awt.Dimension(206, 93));
+
+        BoutonAjouterGroupe.setBackground(new java.awt.Color(255, 255, 255));
+        BoutonAjouterGroupe.setFont(new java.awt.Font("Tahoma", 1, 12));
+        BoutonAjouterGroupe.setForeground(new java.awt.Color(0, 0, 204));
+        BoutonAjouterGroupe.setText("Ajouter un groupe");
+        BoutonAjouterGroupe.setToolTipText("Pour ajouter un groupe, cliquez ici.");
+        BoutonAjouterGroupe.setBorder(null);
+        BoutonAjouterGroupe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BoutonAjouterGroupe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BoutonAjouterGroupeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -156,8 +157,8 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BoutonModifierGroupe, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(BoutonAjouterGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
@@ -168,8 +169,8 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(BoutonModifierGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(34, 34, 34)
+                        .addComponent(BoutonAjouterGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -246,23 +247,23 @@ public class IHMChoixGroupe extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BoutonSupprimerGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonSupprimerGroupeActionPerformed
-        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,3);
-        f.setPanel(RG);
+        IHMSupprimerGroupe SG = new IHMSupprimerGroupe(f);
+        f.AfficheBarreVision(SG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");;
     }//GEN-LAST:event_BoutonSupprimerGroupeActionPerformed
 
     private void BoutonAjouterGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonAjouterGroupeActionPerformed
         IHMAjouterGroupe AG = new IHMAjouterGroupe(f);
-        f.setPanel(AG);
+        f.AfficheBarreVision(AG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }//GEN-LAST:event_BoutonAjouterGroupeActionPerformed
 
     private void BoutonModifierGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonModifierGroupeActionPerformed
-        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,2);
-        f.setPanel(RG);
+        IHMModifierGroupe MG = new IHMModifierGroupe(f);
+        f.AfficheBarreVision(MG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }//GEN-LAST:event_BoutonModifierGroupeActionPerformed
 
     private void BoutonVisualisationGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonVisualisationGroupeActionPerformed
-        IHMRechercherGroupe RG = new IHMRechercherGroupe(f,1);
-        f.setPanel(RG);
+        IHMAfficherGroupe VG = new IHMAfficherGroupe(f);
+        f.AfficheBarreVision(VG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }//GEN-LAST:event_BoutonVisualisationGroupeActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

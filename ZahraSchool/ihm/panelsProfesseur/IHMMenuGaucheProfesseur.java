@@ -384,7 +384,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton13.setBackground(new java.awt.Color(102, 153, 255));
         jButton13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton13.setForeground(new java.awt.Color(255, 255, 255));
-        jButton13.setText("Gestion des emplois du temps");
+        jButton13.setText("Voir les statistiques");
         jButton13.setBorder(null);
         jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -565,24 +565,24 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      * Visualiser la fiche d'un groupe
      */
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,1);
-        AfficheBarreVision(RG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
+        panelsGroupe.IHMAfficherGroupe VG = new panelsGroupe.IHMAfficherGroupe(f);
+        AfficheBarreVision(VG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                        
 
     /**
      * Modifier un groupe
      */
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,2);
-        AfficheBarreVision(RG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
+        panelsGroupe.IHMModifierGroupe MG = new panelsGroupe.IHMModifierGroupe(f);
+        AfficheBarreVision(MG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                        
 
     /**
      * Supprimer un groupe
      */
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        panelsGroupe.IHMRechercherGroupe RG = new panelsGroupe.IHMRechercherGroupe(f,3);
-        AfficheBarreVision(RG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
+        panelsGroupe.IHMSupprimerGroupe SG = new panelsGroupe.IHMSupprimerGroupe(f);
+        AfficheBarreVision(SG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }                                         
 
     /**
@@ -602,7 +602,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
     }                                         
 
     /**
-     * Gestion des emplois du temps
+     * Gestion des statistiques
      */
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         

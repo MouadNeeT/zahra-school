@@ -11,12 +11,12 @@ import domaine.Groupe;
  *
  * @author Marwan
  */
-public class IHMVisualisationGroupes extends javax.swing.JPanel {
+public class aIHMVisualisationGroupesAncien extends javax.swing.JPanel {
 frames.FFondFenetreProfesseur f;
     /**
      * Creates new form VisualisationGroupes
      */
-    public IHMVisualisationGroupes(frames.FFondFenetreProfesseur f, Groupe groupe) {
+    public aIHMVisualisationGroupesAncien(frames.FFondFenetreProfesseur f, Groupe groupe) {
         this.f=f;
         initComponents();
     }
@@ -93,7 +93,7 @@ frames.FFondFenetreProfesseur f;
                         .addGap(132, 132, 132))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(153, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,7 +177,7 @@ frames.FFondFenetreProfesseur f;
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 6, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
