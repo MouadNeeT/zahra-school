@@ -9,11 +9,11 @@ package panelsProfesseur;
  *
  * @author wael
  */
-public class IHMFaireLapelle3 extends javax.swing.JPanel {
+public class IHMFaireAppel3 extends javax.swing.JPanel {
 
     frames.FFondFenetreProfesseur f;
     
-    public IHMFaireLapelle3(frames.FFondFenetreProfesseur f) {
+    public IHMFaireAppel3(frames.FFondFenetreProfesseur f) {
         this.f = f;
         initComponents();
     }
@@ -126,7 +126,7 @@ public class IHMFaireLapelle3 extends javax.swing.JPanel {
                         .addGap(123, 123, 123)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(158, 158, 158)
                         .addComponent(jLabel2))
