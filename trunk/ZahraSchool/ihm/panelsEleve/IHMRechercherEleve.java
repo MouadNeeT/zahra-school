@@ -237,8 +237,8 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
                     listeEleves = listeGroupes.get(i).getListeEleves();
                     jList1.setModel(new javax.swing.AbstractListModel() {
                         public int getSize() { return listeEleves.size(); }
-                        public Object getElementAt(int i) {
-                            return (listeEleves.get(i).getNom());
+                        public Object getElementAt(int j) {
+                            return (listeEleves.get(j).getNom());
                         }
                     });
                     return (listeGroupes.get(i).getNom());

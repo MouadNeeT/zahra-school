@@ -4,8 +4,6 @@
  */
 package panelsGroupe;
 
-import panelsGroupe.*;
-
 /**
  *
  * @author wael
