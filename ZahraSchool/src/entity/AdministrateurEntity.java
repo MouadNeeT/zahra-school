@@ -6,15 +6,15 @@ import java.util.Date;
 /**
  * <b>Administrateur est un entity</b>
  * <p>
- * un administrateur est caractérisé par les informations suivantes :
+ * un administrateur est caracterise par les informations suivantes :
  * <ul>
  * <li>L'identifiant de l'administrateur.</li>
  * <li>Le mot de passe de l'administrateur.</li>
  * <li>le nom de l'administrateur.</li>
  * <li>le prenom de l'administrateur.</li>
  * <li>l'adresse de l'administrateur</li>
- * <li>le numéro de téléphone de l'administrateur.</li>
- * <li>le niveau d'études de l'administrateur.</li>
+ * <li>le numero de telephone de l'administrateur.</li>
+ * <li>le niveau d'etudes de l'administrateur.</li>
  * <li>la date de naissance de l'administrateur.</li>
  * <li>la date d'embauche de l'administrateur</li>
  * </ul>
@@ -22,7 +22,7 @@ import java.util.Date;
  * 
  * @see Administrateur
  * 
- * @author GAUTIER Stéphanie
+ * @author GAUTIER Stephanie
  * @version 1.0
  */
 
@@ -37,7 +37,7 @@ public class AdministrateurEntity extends Entity {
 	private String identifiant;
 	/**
 	 * Le mot de passe de l'administrateur.
-	 * En général le mot de passe ser celui de la boite mail
+	 * En general le mot de passe ser celui de la boite mail
 	 * @see Administrateur#setMotDePasse(String)
 	 * @see Administrateur#getMotDePasse()
 	 */

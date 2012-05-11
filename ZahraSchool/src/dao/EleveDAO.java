@@ -260,7 +260,7 @@ public class EleveDAO {
 		    try {
 		    	//JdbcTemplate jdbcTemplate = new JdbcTemplate();
 				//Professeur professeur = SpringJDBC.getProfesseurByName(nom, prenom);
-				/* Chargement conteneur Spring et récupération bean SataSource	*/
+				/* Chargement conteneur Spring et recuperation bean SataSource	*/
 				ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
 				//<---------------- ne pas oublier de changer
 		        DataSource ds = (DataSource) appContext.getBean("datasource2");

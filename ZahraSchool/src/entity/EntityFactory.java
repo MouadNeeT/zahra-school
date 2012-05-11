@@ -1,5 +1,5 @@
 /**
- * author GAUTIER Stéphanie
+ * author GAUTIER Stephanie
  */
 
 package entity;
