@@ -50,6 +50,11 @@ public class GroupeManager {
 		GroupeEntity groupeEntity = EntityFactory.getGroupeEntity();
 
                 groupeEntity.setNom(groupe.getNom());
+		groupeEntity.setNiveau(groupe.getNiveau());
+		groupeEntity.setDate(groupe.getDateDeCreation());
+		groupeEntity.setTarif(groupe.getTarif());
+		groupeEntity.setEmploiDuTemps(groupe.getEmploiDuTemps());
+		groupeEntity.setListeEleves(groupe.getListeEleves());
 		
 		GroupeDAO groupeDAO = new GroupeDAO();
 		groupeDAO.delete(groupeEntity);

@@ -2,12 +2,15 @@ package frames;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import panelsProfesseur.IHMBarreBas;
 import panelsProfesseur.IHMBarreHautProfesseur;
+import panelsProfesseur.IHMBarreVisionPresentation;
 import panelsProfesseur.IHMMenuGaucheProfesseur;
 
 public class FFondFenetreProfesseur extends JFrame {
@@ -49,12 +52,37 @@ public class FFondFenetreProfesseur extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
         }
-        
+
         public void setMenuGauche(Boolean F)
         {
             if(F)
             menuGauche.setVisible(true);
             else
             menuGauche.setVisible(false);
+        }
+
+        public void AfficheBarreVision(JPanel panelMilieu, String titre, String image)
+        {
+        JPanel panel = new JPanel(new BorderLayout());
+        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(this,titre,image);
+        panel.add(barreVision, BorderLayout.NORTH);
+
+        JPanel panel1 = new JPanel();
+        BoxLayout vertical = new BoxLayout(panel1, BoxLayout.Y_AXIS);
+        panel1.setLayout(vertical);
+        panel1.add(Box.createGlue());
+        panel1.add(panelMilieu);
+        panel1.add(Box.createGlue());
+
+        JPanel panel2 = new JPanel();
+        BoxLayout horizontal = new BoxLayout(panel2, BoxLayout.X_AXIS);
+        panel2.setLayout(horizontal);
+        panel2.add(Box.createGlue());
+        panel2.add(panel1);
+        panel2.add(Box.createGlue());
+
+        panel.add(panel2, BorderLayout.CENTER);
+        setPanel(panel);
+        setMenuGauche(true);
         }
 }

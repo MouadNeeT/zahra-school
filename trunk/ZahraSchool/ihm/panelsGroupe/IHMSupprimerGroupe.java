@@ -24,11 +24,11 @@ import panelsProfesseur.IHMBarreVisionPresentation;
  *
  * @author alexandre
  */
-public class IHMModifierGroupe extends javax.swing.JPanel {
-    frames.FFondFenetreProfesseur f;
-
+public class IHMSupprimerGroupe extends javax.swing.JPanel {
+ frames.FFondFenetreProfesseur f;
+ 
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMModifierGroupe(frames.FFondFenetreProfesseur f) {
+    public IHMSupprimerGroupe( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
         // affiche la liste des groupes
@@ -50,19 +50,19 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
-        jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        Niveau = new javax.swing.JTextField();
-        Tarif = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        Nom = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
+        Nom = new javax.swing.JLabel();
+        Niveau = new javax.swing.JLabel();
+        Tarif = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder("Modifier un groupe"));
+        setBorder(javax.swing.BorderFactory.createTitledBorder("Supprimer un groupe"));
 
         jList1.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des groupes :"));
         jList1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -71,14 +71,6 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(jList1);
-
-        jButton3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png"));
-        jButton3.setText(" Modifier");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jButton2.setText("Annuler");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -93,17 +85,17 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 
         jLabel11.setText("Niveau du groupe :");
 
-        Nom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NomActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Nom du groupe :");
+        jLabel1.setText("Nom du groupe:");
 
         jLabel4.setText("Date de creation :");
 
-        date.setText("JJ/MM/AAAA");
+        date.setText(" ");
+
+        Nom.setText(" ");
+
+        Niveau.setText(" ");
+
+        Tarif.setText(" ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -115,18 +107,23 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel7))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Tarif, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Niveau, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Niveau, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Tarif, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(8, 8, 8))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,35 +133,43 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Nom))
                         .addGap(19, 19, 19)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(date)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Niveau, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
+                            .addComponent(jLabel11)
+                            .addComponent(Niveau))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(Tarif, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                            .addComponent(Tarif))))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
+
+        jButton4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonSupprimer.png"));
+        jButton4.setText("Supprimer");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(40, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(649, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(644, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -176,39 +181,16 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(67, 67, 67)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String nom = Nom.getText();
-        String niveau = Niveau.getText();
-        // On ne peut pas modifier la date de creation
-        /*int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
-        int mois = Integer.parseInt(jComboBox2.getSelectedItem().toString());
-        int annee = Integer.parseInt(jComboBox3.getSelectedItem().toString());
-	Date dateDeCreation = new Date(annee,mois,jour);*/
-        float tarif = Float.parseFloat(Tarif.getText());
-
-        Groupe groupe = new Groupe(nom, niveau ,dateC, tarif, null, null);
-
-        // update
-        GroupeManager.getInstance().update(groupe);
-
-        JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Modifier le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
-        JOptionPane jp2 = new JOptionPane();
-	jp2.showMessageDialog(null, "Modification du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
-        IHMModifierGroupe MG = new IHMModifierGroupe(f);
-        f.AfficheBarreVision(MG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
-}//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
@@ -220,8 +202,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) {
-                    // sauvegarde la date pour la repasser ds la modification du groupe (on ne la modifie pas)
-                    dateC = listeGroupes.get(i).getDateDeCreation();
+                    groupeAsupprimer = listeGroupes.get(i);
                     // affiche infos dans les champs
                     Nom.setText(listeGroupes.get(i).getNom());
                     Niveau.setText(listeGroupes.get(i).getNiveau());
@@ -232,19 +213,26 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         });
     }//GEN-LAST:event_jList1MousePressed
 
-    private void NomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_NomActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // delete
+        GroupeManager.getInstance().delete(groupeAsupprimer);
 
+        JOptionPane jp = new JOptionPane();
+        jp.showMessageDialog(null, "Supprimer le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
+        JOptionPane jp2 = new JOptionPane();
+	jp2.showMessageDialog(null, "Suppression du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
+        IHMSupprimerGroupe SG = new IHMSupprimerGroupe(f);
+        f.AfficheBarreVision(SG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
+}//GEN-LAST:event_jButton4ActionPerformed
 
-    private Date dateC;
+    private Groupe groupeAsupprimer;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Niveau;
-    private javax.swing.JTextField Nom;
-    private javax.swing.JTextField Tarif;
+    private javax.swing.JLabel Niveau;
+    private javax.swing.JLabel Nom;
+    private javax.swing.JLabel Tarif;
     private javax.swing.JLabel date;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel4;

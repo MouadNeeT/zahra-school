@@ -24,7 +24,8 @@ import panelsProfesseur.IHMBarreVisionPresentation;
  * @author alexandre
  */
 public class IHMAjouterGroupe extends javax.swing.JPanel {
- frames.FFondFenetreProfesseur f;
+    frames.FFondFenetreProfesseur f;
+ 
     public IHMAjouterGroupe( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
@@ -88,7 +89,7 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 
         jLabel3.setText("Date de creation :");
 
-        jLabel1.setText("Nom :");
+        jLabel1.setText("Nom du groupe :");
 
         Nom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,19 +131,18 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
                         .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1))
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(108, 108, 108)
-                                .addComponent(Nom))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(32, 32, 32)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Nom, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
@@ -155,8 +155,8 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
@@ -173,7 +173,7 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
                         .addComponent(jLabel3))
                     .addComponent(jLabel7)
                     .addComponent(Tarif, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AjoutGroupeBoutonAnnule, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AjoutGroupeBoutonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -192,24 +192,20 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 
         Groupe groupe = new Groupe(nom, niveau ,dateDeCreation, tarif, null, null);
 
+        // create
         GroupeManager.getInstance().create(groupe);
 
         JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Ajouter le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Ajout du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
-        panelsGroupe.IHMAjouterGroupe p = new  panelsGroupe.IHMAjouterGroupe(f);
-        f.setPanel(p);
+        panelsGroupe.IHMAjouterGroupe AG = new  panelsGroupe.IHMAjouterGroupe(f);
+        f.AfficheBarreVision(AG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
 
     private void AjoutGroupeBoutonAnnuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAnnuleActionPerformed
         panelsGroupe.IHMChoixGroupe CG = new  panelsGroupe.IHMChoixGroupe(f);
-        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f,"   Gestion des groupes","");
-        JPanel panel = new JPanel(new BorderLayout());
-        panel.add(CG, BorderLayout.CENTER);
-        panel.add(barreVision, BorderLayout.NORTH);
-        f.setPanel(panel);
-        f.setMenuGauche(true);
+        f.AfficheBarreVision(CG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }//GEN-LAST:event_AjoutGroupeBoutonAnnuleActionPerformed
 
     private void NomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomActionPerformed
