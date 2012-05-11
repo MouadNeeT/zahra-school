@@ -105,7 +105,7 @@ public class AdministrateurDAO{
 		final String ADMINISTRATEUR_COUNT = "select count(*) from administrateur";
 
 		/*
-		 * On récupère et on utilisera directement le jdbcTemplate
+		 * On recupere et on utilisera directement le jdbcTemplate
 		 */
 			
 		 int nbLignes = jdbcTemplate.queryForInt(ADMINISTRATEUR_COUNT);
