@@ -21,11 +21,11 @@ import manager.GroupeManager;
  *
  * @author alexandre
  */
-public class IHMRechercherEleve extends javax.swing.JPanel {
+public class aIHMRechercherEleveAncien extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
  int c;
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMRechercherEleve( frames.FFondFenetreProfesseur f,int i) {
+    public aIHMRechercherEleveAncien( frames.FFondFenetreProfesseur f,int i) {
         this.f=f;
         c=i;
         initComponents();
@@ -207,7 +207,7 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        IHMAfficheFicheEleve AE = new IHMAfficheFicheEleve(f,eleve);
+        IHMAfficherEleve2 AE = new IHMAfficherEleve2(f,eleve);
         f.setPanel(AE);
 }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -217,14 +217,14 @@ public class IHMRechercherEleve extends javax.swing.JPanel {
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        IHMModifierEleve AE = new IHMModifierEleve(f,eleve);
+        aIHMModifierEleveAncien AE = new aIHMModifierEleveAncien(f,eleve);
         f.setPanel(AE);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Supprimer l'eleve "+jTextField1.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
-        IHMRechercherEleve p = new IHMRechercherEleve(f,3);
+        aIHMRechercherEleveAncien p = new aIHMRechercherEleveAncien(f,3);
         f.setPanel(p);
     }//GEN-LAST:event_jButton4ActionPerformed
 

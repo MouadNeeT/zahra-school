@@ -1,5 +1,5 @@
 /**
- * author GAUTIER St�phanie
+ * author GAUTIER Stephanie
  */
 
 package entity;
@@ -16,43 +16,43 @@ import domaine.Professeur;
 
 public class EleveEntity extends Entity{
 	/**
-	 * Certains �l�ves peuvent avoir des noms, pr�noms identiques :
-	 * l'identifiant les dif�renciera.
+	 * Certains eleves peuvent avoir des noms, prenoms identiques :
+	 * l'identifiant les diferenciera.
 	 * 
 	 * @see Eleve#getIdentifiant()
 	 * @see Eleve#setIdentifiant(int)
 	 */
 	private int identifiant;
 	/**
-	 * le nom de l'�l�ve.
+	 * le nom de l'eleve.
 	 * 
 	 * @see Eleve#setNom(String)
 	 * @see Eleve#getNom()
 	 */
 	private String nom;
 	/**
-	 * le pr�nom de l'�l�ve.
+	 * le prenom de l'eleve.
 	 * 
 	 * @see Eleve#setPrenom(String)
 	 * @see Eleve#getPrenom()
 	 */
 	private String prenom;
 	/**
-	 * l'�ge de l'�l�ve.
+	 * l'age de l'eleve.
 	 * 
 	 * @see Eleve#setAge(int)
 	 *  @see Eleve#getAge()
 	 */
 	private int age;
 	/**
-	 * la date de naissance de l'�l�ve
+	 * la date de naissance de l'eleve
 	 * 
 	 *  @see Eleve#setDateDeNaissance(Date)
 	 *   @see Eleve#getDateDeNaissance()
 	 */
 	private Date dateDeNaissance;
 	/**
-	 * la photo de l'�l�ve. Il s'agit de l'url de la photo.
+	 * la photo de l'eleve. Il s'agit de l'url de la photo.
 	 * 
 	 *  @see Eleve#setPhoto(String)
 	 *   @see Eleve#getPhoto()

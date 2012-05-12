@@ -517,7 +517,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      * Visualiser la fiche d'un eleve
      */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,1);
+        panelsEleve.aIHMRechercherEleveAncien RE = new panelsEleve.aIHMRechercherEleveAncien(f,1);
         AfficheBarreVision(RE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
@@ -533,7 +533,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      * Modifier la fiche d'un élève
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,2);
+        panelsEleve.aIHMRechercherEleveAncien RE = new panelsEleve.aIHMRechercherEleveAncien(f,2);
         AfficheBarreVision(RE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
@@ -541,7 +541,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      * Supprimer un eleve
      */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        panelsEleve.IHMRechercherEleve RE = new panelsEleve.IHMRechercherEleve(f,3);
+        panelsEleve.aIHMRechercherEleveAncien RE = new panelsEleve.aIHMRechercherEleveAncien(f,3);
         AfficheBarreVision(RE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }                                        
 
