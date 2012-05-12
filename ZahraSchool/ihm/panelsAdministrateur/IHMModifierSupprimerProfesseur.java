@@ -418,7 +418,7 @@ public class IHMModifierSupprimerProfesseur extends javax.swing.JPanel {
                     return (listeProfesseurs.get(i).getNom() + listeProfesseurs.get(i).getPrenom());
                 }
             });
-        } else System.out.println("aucun élément sélectioné");
+        } else System.out.println("aucun element selectione");
 		
 	}
 
@@ -458,7 +458,7 @@ public class IHMModifierSupprimerProfesseur extends javax.swing.JPanel {
 	    
 	    
 	    JOptionPane jop1 = new JOptionPane();
-		jop1.showMessageDialog(null, "Professeur modifié", "Information", JOptionPane.INFORMATION_MESSAGE);
+		jop1.showMessageDialog(null, "Professeur modifie", "Information", JOptionPane.INFORMATION_MESSAGE);
 		
 	    
 	    //ProfesseurManager.getInstance().update(jList1.getSelectedValue());

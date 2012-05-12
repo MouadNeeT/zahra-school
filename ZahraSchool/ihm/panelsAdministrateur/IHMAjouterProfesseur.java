@@ -433,7 +433,7 @@ public class IHMAjouterProfesseur extends javax.swing.JPanel {
 		
 		if (professeurBase != null) {
     		JOptionPane jop1 = new JOptionPane();
-			jop1.showMessageDialog(null, "Cet identifiant est d�j� pris", "Erreur", JOptionPane.ERROR_MESSAGE);      	
+			jop1.showMessageDialog(null, "Cet identifiant est deja pris", "Erreur", JOptionPane.ERROR_MESSAGE);
 			textIdentifiant.setText("");
 			//boutonEnregistrerActionPerformed(evt);
 		}

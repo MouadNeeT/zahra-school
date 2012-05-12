@@ -182,6 +182,11 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AjoutGroupeBoutonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAjouterActionPerformed
+        JOptionPane jp = new JOptionPane();
+        int reponse = jp.showConfirmDialog(null, "Ajouter le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+
+        if (reponse == JOptionPane.YES_OPTION)
+        {
         String nom = Nom.getText();
         String niveau = Niveau.getText();
         int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
@@ -195,12 +200,11 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
         // create
         GroupeManager.getInstance().create(groupe);
 
-        JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Ajouter le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Ajout du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
         panelsGroupe.IHMAjouterGroupe AG = new  panelsGroupe.IHMAjouterGroupe(f);
         f.AfficheBarreVision(AG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
+        }
     }//GEN-LAST:event_AjoutGroupeBoutonAjouterActionPerformed
 
     private void AjoutGroupeBoutonAnnuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjoutGroupeBoutonAnnuleActionPerformed
