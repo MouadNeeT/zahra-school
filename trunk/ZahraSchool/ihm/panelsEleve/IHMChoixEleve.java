@@ -248,8 +248,8 @@ public class IHMChoixEleve extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-        aIHMRechercherEleveAncien RE = new aIHMRechercherEleveAncien(f,3);
-        f.setPanel(RE);
+        IHMSupprimerEleve SE = new IHMSupprimerEleve(f);
+        f.setPanel(SE);
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
@@ -258,13 +258,13 @@ public class IHMChoixEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        aIHMRechercherEleveAncien RE = new aIHMRechercherEleveAncien(f,2);
-        f.setPanel(RE);
+        IHMModifierEleve ME = new IHMModifierEleve(f);
+        f.setPanel(ME);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        aIHMRechercherEleveAncien RE = new aIHMRechercherEleveAncien(f,1);
-        f.setPanel(RE);
+        IHMAfficherEleve VE = new IHMAfficherEleve(f);
+        f.setPanel(VE);
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
