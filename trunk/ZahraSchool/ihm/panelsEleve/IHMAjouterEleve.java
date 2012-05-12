@@ -443,10 +443,8 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         int mois = Integer.parseInt(jComboBox2.getSelectedItem().toString());
         int annee = Integer.parseInt(jComboBox3.getSelectedItem().toString());
 	Date dateDeNaissance = new Date(annee,mois,jour);
-	String photo = "";
 	int numeroTelephoneEleve = Integer.parseInt(teleleve.getText());
 	int numeroTelephoneParent = Integer.parseInt(telparent.getText());
-
 	Date dateInscription = new Date((calendar.get(GregorianCalendar.DAY_OF_MONTH)), (calendar.get(GregorianCalendar.MONTH) + 1), (calendar.get(GregorianCalendar.YEAR))); // Date courante
 	String niveauEtudes = niveauetudes.getText();
 	String nomPere = nompere.getText();
@@ -457,7 +455,8 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         if (Boxpayepas.isSelected()) {status = "non";} else {status = "oui";}
 	String niveauTest = niveaueleve.getText();
 	String adresse = Adresse.getText();
-        //a faire pr groupe
+        //a faire pr groupe et photo
+        String photo = "";
         
         Eleve eleve = new Eleve(identifiant, nom, prenom,
 			     age, dateDeNaissance, adresse, photo,

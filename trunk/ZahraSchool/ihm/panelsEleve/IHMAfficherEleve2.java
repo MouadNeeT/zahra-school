@@ -19,11 +19,11 @@ import java.util.ArrayList;
  *
  * @author alexandre
  */
-public class IHMAfficheFicheEleve extends javax.swing.JPanel {
+public class IHMAfficherEleve2 extends javax.swing.JPanel {
 frames.FFondFenetreProfesseur f;
 Eleve eleve;
 
-    public IHMAfficheFicheEleve(frames.FFondFenetreProfesseur f, Eleve e) {
+    public IHMAfficherEleve2(frames.FFondFenetreProfesseur f, Eleve e) {
         this.f=f;
         this.eleve=e;
         initComponents();
@@ -49,6 +49,8 @@ Eleve eleve;
             public int getSize() { return listeGroupes.size(); }
             public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
         });
+        // Sa photo
+        Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
     }
 
     /** This method is called from within the constructor to
@@ -92,6 +94,7 @@ Eleve eleve;
         jLabel14 = new javax.swing.JLabel();
         status = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        Photo = new javax.swing.JLabel();
 
         setBorder(null);
         setLayout(new java.awt.BorderLayout());
@@ -169,15 +172,22 @@ Eleve eleve;
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Photo"));
 
+        Photo.setText("          ");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 125, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Photo, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 110, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(Photo, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -238,10 +248,10 @@ Eleve eleve;
                             .addComponent(jLabel14))
                         .addGap(34, 34, 34)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(niveleve, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                            .addComponent(status, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                            .addComponent(niveleve, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                            .addComponent(status, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(nivetu, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                .addComponent(nivetu, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
                                 .addGap(11, 11, 11))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
@@ -277,7 +287,7 @@ Eleve eleve;
                                 .addComponent(teleleve)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(telpa)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,7 +320,7 @@ Eleve eleve;
                                         .addComponent(date)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(adresse)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -329,12 +339,13 @@ Eleve eleve;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        IHMRechercherEleve IH = new IHMRechercherEleve(f,1);
+        aIHMRechercherEleveAncien IH = new aIHMRechercherEleveAncien(f,1);
         f.setPanel(IH);
 }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Photo;
     private javax.swing.JLabel adresse;
     private javax.swing.JLabel date;
     private javax.swing.JButton jButton1;

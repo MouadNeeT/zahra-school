@@ -68,7 +68,7 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Voir la fiche d'un groupe"));
 
-        jList1.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des groupes :"));
+        jList1.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des groupes"));
         jList1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jList1MousePressed(evt);
@@ -76,7 +76,7 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jButton2.setText("Annuler");
+        jButton2.setText("Retour");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
