@@ -197,10 +197,12 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 	Date dateDeCreation = new Date(annee,mois,jour);*/
         float tarif = Float.parseFloat(Tarif.getText());
 
-        Groupe groupe = new Groupe(nom, niveau ,dateC, tarif, null, null);
+        groupeAmodifier.setNom(nom);
+        groupeAmodifier.setNiveau(niveau);
+        groupeAmodifier.setTarif(tarif);
 
         // update
-        GroupeManager.getInstance().update(groupe);
+        GroupeManager.getInstance().update(groupeAmodifier);
 
         JOptionPane jp = new JOptionPane();
         jp.showMessageDialog(null, "Modifier le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -220,8 +222,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) {
-                    // sauvegarde la date pour la repasser ds la modification du groupe (on ne la modifie pas)
-                    dateC = listeGroupes.get(i).getDateDeCreation();
+                    groupeAmodifier = listeGroupes.get(i);
                     // affiche infos dans les champs
                     Nom.setText(listeGroupes.get(i).getNom());
                     Niveau.setText(listeGroupes.get(i).getNiveau());
@@ -236,8 +237,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         // TODO add your handling code here:
 }//GEN-LAST:event_NomActionPerformed
 
-
-    private Date dateC;
+    private Groupe groupeAmodifier;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Niveau;
     private javax.swing.JTextField Nom;

@@ -13,7 +13,7 @@ package panelsGroupe;
 
 import domaine.Groupe;
 import java.awt.BorderLayout;
-import java.util.Date;
+import java.sql.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import manager.GroupeManager;
