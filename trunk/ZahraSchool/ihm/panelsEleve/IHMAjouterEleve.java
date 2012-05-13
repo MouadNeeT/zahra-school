@@ -93,7 +93,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 
         jLabel1.setText("Nom :");
 
-        jLabel2.setText("Prénom :");
+        jLabel2.setText("Prenom :");
 
         jLabel3.setText("Date de naissance :");
 
@@ -162,7 +162,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
             }
         });
 
-        jLabel9.setText("Telephone des Parents :");
+        jLabel9.setText("Telephone des Parents:");
 
         jLabel10.setText("Telephone de l'eleve :");
 
@@ -285,7 +285,9 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addGap(1, 1, 1)
-                                        .addComponent(teleleve, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(telparent, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                                            .addComponent(teleleve, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE))))
                                 .addGap(34, 34, 34)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -310,14 +312,8 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                                 .addGap(17, 17, 17)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(155, 155, 155)
-                                .addComponent(telparent, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(221, 221, 221)))
-                        .addGap(427, 427, 427))))
+                        .addComponent(jLabel9)
+                        .addGap(648, 648, 648))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

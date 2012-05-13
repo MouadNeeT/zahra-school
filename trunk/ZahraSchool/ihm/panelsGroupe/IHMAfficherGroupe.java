@@ -215,7 +215,7 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
                     Nb.setText(""+listeGroupes.get(i).getListeEleves().size());
                     // affiche la liste d'eleves du groupe
                     final ArrayList<Eleve> listeEleves = listeGroupes.get(i).getListeEleves();
-                    jList1.setModel(new javax.swing.AbstractListModel() {
+                    jList2.setModel(new javax.swing.AbstractListModel() {
                         public int getSize() { return listeEleves.size(); }
                         public Object getElementAt(int j) {
                             return (listeEleves.get(j).getNom()+" "+listeEleves.get(j).getPrenom());
