@@ -13,13 +13,11 @@ package panelsGroupe;
 
 import domaine.Eleve;
 import domaine.Groupe;
-import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import manager.GroupeManager;
-import panelsProfesseur.IHMBarreVisionPresentation;
+import panelsEleve.MPanelPrinter;
 
 /**
  *
@@ -65,6 +63,7 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
         jList2 = new javax.swing.JList();
         jLabel8 = new javax.swing.JLabel();
         Nb = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Voir la fiche d'un groupe"));
 
@@ -102,6 +101,11 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
         Tarif.setText(" ");
 
         jList2.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des eleves"));
+        jList2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jList2MousePressed(evt);
+            }
+        });
         jScrollPane2.setViewportView(jList2);
 
         jLabel8.setText("Nombre d'eleves :");
@@ -169,6 +173,13 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jButton1.setText("Imprimer la fiche du groupe");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -180,7 +191,9 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(41, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(716, Short.MAX_VALUE)
+                .addContainerGap(510, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -192,7 +205,9 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -227,6 +242,22 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
         });
     }//GEN-LAST:event_jList1MousePressed
 
+    private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jList2MousePressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JOptionPane jp = new JOptionPane();
+        int reponse = jp.showConfirmDialog(null, "Imprimer la fiche du groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+        if (reponse == JOptionPane.YES_OPTION) {
+            // Impression
+            MPanelPrinter printP = new MPanelPrinter(jPanel1);
+            printP.print();
+            //JOptionPane jp2 = new JOptionPane();
+            //jp2.showMessageDialog(null, "Pas encore disponible !", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+}//GEN-LAST:event_jButton1ActionPerformed
+
 
     private Date dateC;
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -235,6 +266,7 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
     private javax.swing.JLabel Nom;
     private javax.swing.JLabel Tarif;
     private javax.swing.JLabel date;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;

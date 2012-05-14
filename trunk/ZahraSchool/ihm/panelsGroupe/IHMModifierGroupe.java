@@ -188,6 +188,11 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        JOptionPane jp = new JOptionPane();
+        int reponse = jp.showConfirmDialog(null, "Modifier le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+
+        if (reponse == JOptionPane.YES_OPTION)
+        {
         String nom = Nom.getText();
         String niveau = Niveau.getText();
         // On ne peut pas modifier la date de creation
@@ -204,12 +209,11 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         // update
         GroupeManager.getInstance().update(groupeAmodifier);
 
-        JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Modifier le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Modification du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
         IHMModifierGroupe MG = new IHMModifierGroupe(f);
         f.AfficheBarreVision(MG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
+        }
 }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -13,11 +13,12 @@ package panelsEleve;
 
 import domaine.Eleve;
 import domaine.Groupe;
+import java.io.File;
 import java.util.ArrayList;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import manager.EleveManager;
 import manager.GroupeManager;
-import panelsProfesseur.IHMJDialogChoixPhoto;
 
 /**
  *
@@ -32,11 +33,17 @@ public class IHMModifierEleve extends javax.swing.JPanel {
         initComponents();
         // ajout images boutons
         jButton3.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonEditCrayon.png"));
-        // SetModel
+        // Affichage de la liste des groupes
         jList1.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
+        });
+        // Affichage de la liste de tous les eleves
+        jList2.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Eleve> listeEleves = EleveManager.getInstance().getAllEleves();
+                public int getSize() { return listeEleves.size(); }
+                public Object getElementAt(int i) { return (listeEleves.get(i).getNom())+" "+(listeEleves.get(i).getPrenom()); }
         });
     }
 
@@ -458,7 +465,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         IHMChoixEleve CE = new IHMChoixEleve(f);
-        f.setPanel(CE);
+        f.AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
@@ -578,11 +585,22 @@ public class IHMModifierEleve extends javax.swing.JPanel {
 }//GEN-LAST:event_niveauetudesActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        IHMJDialogChoixPhoto CP = new IHMJDialogChoixPhoto(f,this);
-        CP.setVisible(true);
+        JFileChooser fc = new JFileChooser();
+        int retour = fc.showOpenDialog(this);
+        if (retour == JFileChooser.APPROVE_OPTION) {
+               file = fc.getSelectedFile();
+               //System.out.println(file.getAbsolutePath());
+               Photo.setIcon(f.imageLivre(file));
+               photo = file.getAbsolutePath();
+        }
 }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    JOptionPane jp = new JOptionPane();
+    int reponse = jp.showConfirmDialog(null, "Modifier l'eleve "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+    
+    if (reponse == JOptionPane.YES_OPTION)
+    {
         String nom = Nom.getText();
 	String prenom = Prenom.getText();
         /*int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
@@ -602,7 +620,6 @@ public class IHMModifierEleve extends javax.swing.JPanel {
 	String niveauTest = niveaueleve.getText();
 	String adresse = Adresse.getText();
         //a faire pr groupe et photo
-        String photo = "";
 
         Eleve eleveAmodifier = new Eleve(eleve.getIdentifiant(), nom, prenom,
 			     eleve.getAge(), eleve.getDateDeNaissance(), adresse, photo,
@@ -613,13 +630,11 @@ public class IHMModifierEleve extends javax.swing.JPanel {
 
         EleveManager.getInstance().update(eleveAmodifier);
 
-        JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Modifier l'eleve "+nom, "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
-
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Modification de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
         IHMModifierEleve ME = new IHMModifierEleve(f);
-        f.setPanel(ME);
+        f.AfficheBarreVision(ME,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
+    }
 }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jList4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList4MousePressed
@@ -629,6 +644,8 @@ public class IHMModifierEleve extends javax.swing.JPanel {
     // liste d'eleves
     private ArrayList<Eleve> listeEleves=null;
     private Eleve eleve;
+    String photo = "";
+    private File file;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea Adresse;
     private javax.swing.JCheckBox Boxpayepas;

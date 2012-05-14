@@ -24,7 +24,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jScrollPane1" min="0" pref="0" max="32767" attributes="1"/>
                   <Component id="jScrollPane2" alignment="0" min="-2" pref="186" max="-2" attributes="1"/>
@@ -34,7 +34,9 @@
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="788" max="32767" attributes="0"/>
+              <EmptySpace pref="587" max="32767" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton2" min="-2" pref="134" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -46,11 +48,14 @@
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="29" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="16" max="32767" attributes="0"/>
+              <EmptySpace pref="27" max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="153" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" pref="186" max="-2" attributes="0"/>
@@ -95,7 +100,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Eleves du groupe"/>
+                <TitledBorder title="Liste de tous les eleves"/>
               </Border>
             </Property>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
@@ -131,29 +136,28 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="prenom" alignment="1" max="32767" attributes="1"/>
                                       <Component id="nom" alignment="1" min="-2" pref="166" max="-2" attributes="1"/>
+                                      <Component id="date" alignment="0" max="32767" attributes="1"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="1">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="adresse" alignment="0" pref="170" max="32767" attributes="1"/>
-                                      <Component id="date" alignment="0" pref="170" max="32767" attributes="1"/>
-                                  </Group>
+                                  <Component id="adresse" max="32767" attributes="1"/>
                               </Group>
                           </Group>
+                          <EmptySpace pref="6" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -164,10 +168,10 @@
                           </Group>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomere" alignment="0" pref="166" max="32767" attributes="0"/>
-                              <Component id="nompere" alignment="0" pref="166" max="32767" attributes="0"/>
-                              <Component id="prenompere" alignment="0" pref="166" max="32767" attributes="0"/>
-                              <Component id="prenommere" alignment="0" pref="166" max="32767" attributes="0"/>
+                              <Component id="nomere" alignment="0" pref="172" max="32767" attributes="0"/>
+                              <Component id="nompere" alignment="0" pref="172" max="32767" attributes="0"/>
+                              <Component id="prenompere" alignment="0" pref="172" max="32767" attributes="0"/>
+                              <Component id="prenommere" alignment="0" pref="172" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -177,8 +181,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="telpa" alignment="0" pref="165" max="32767" attributes="0"/>
-                              <Component id="teleleve" alignment="0" pref="165" max="32767" attributes="0"/>
+                              <Component id="telpa" alignment="0" pref="171" max="32767" attributes="0"/>
+                              <Component id="teleleve" alignment="0" pref="171" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -192,20 +196,17 @@
                           </Group>
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="niveleve" alignment="1" pref="134" max="32767" attributes="0"/>
-                              <Component id="status" alignment="0" pref="134" max="32767" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="nivetu" pref="123" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="niveleve" alignment="1" pref="137" max="32767" attributes="0"/>
+                              <Component id="status" alignment="0" pref="137" max="32767" attributes="0"/>
+                              <Component id="nivetu" alignment="0" pref="137" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           <Component id="jPanel2" min="-2" max="-2" attributes="1"/>
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="jScrollPane3" min="-2" pref="134" max="-2" attributes="1"/>
                       </Group>
-                      <Component id="jButton1" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -213,38 +214,6 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nompere" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="prenompere" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nomere" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="prenommere" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="teleleve" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="telpa" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -259,17 +228,11 @@
                               <Component id="prenom" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="date" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="adresse" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="adresse" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -283,18 +246,56 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="status" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="date" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel2" alignment="0" min="-2" max="-2" attributes="1"/>
-                      <Component id="jScrollPane3" alignment="0" min="-2" pref="146" max="-2" attributes="1"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" min="-2" pref="185" max="-2" attributes="1"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jPanel2" alignment="1" min="-2" max="-2" attributes="1"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nompere" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="prenompere" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nomere" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="prenommere" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="teleleve" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="telpa" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -302,32 +303,32 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="prenompere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="prenompere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nompere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nompere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="adresse">
           <Properties>
-            <Property name="text" type="java.lang.String" value="adresse"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="date">
           <Properties>
-            <Property name="text" type="java.lang.String" value="date"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="prenom">
           <Properties>
-            <Property name="text" type="java.lang.String" value="prenom"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nom">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nom"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
@@ -406,37 +407,29 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Imprimer la fiche de l&apos;eleve"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="prenommere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="prenommere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="teleleve">
           <Properties>
-            <Property name="text" type="java.lang.String" value="teleleve"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="telpa">
           <Properties>
-            <Property name="text" type="java.lang.String" value="telpa"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nivetu">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nivetu"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nomere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nommere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel24">
@@ -446,7 +439,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="niveleve">
           <Properties>
-            <Property name="text" type="java.lang.String" value="niveleve"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
@@ -456,7 +449,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="status">
           <Properties>
-            <Property name="text" type="java.lang.String" value="status"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel2">
@@ -471,7 +464,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Photo" pref="101" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -481,7 +474,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="Photo" pref="98" max="32767" attributes="0"/>
+                      <Component id="Photo" pref="103" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -494,5 +487,13 @@
         </Container>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Imprimer la fiche de l&apos;eleve"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

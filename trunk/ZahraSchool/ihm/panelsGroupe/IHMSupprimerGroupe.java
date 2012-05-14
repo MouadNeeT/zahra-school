@@ -214,15 +214,19 @@ public class IHMSupprimerGroupe extends javax.swing.JPanel {
     }//GEN-LAST:event_jList1MousePressed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        JOptionPane jp = new JOptionPane();
+        int reponse = jp.showConfirmDialog(null, "Supprimer le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+
+        if (reponse == JOptionPane.YES_OPTION)
+        {
         // delete
         GroupeManager.getInstance().delete(groupeAsupprimer);
 
-        JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Supprimer le groupe "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Suppression du groupe", "Information", JOptionPane.INFORMATION_MESSAGE);
         IHMSupprimerGroupe SG = new IHMSupprimerGroupe(f);
         f.AfficheBarreVision(SG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
+        }
 }//GEN-LAST:event_jButton4ActionPerformed
 
     private Groupe groupeAsupprimer;
