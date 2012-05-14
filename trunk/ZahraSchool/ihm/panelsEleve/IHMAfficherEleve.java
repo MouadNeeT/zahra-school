@@ -139,7 +139,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
 
         jLabel9.setText("Telephone des Parents :");
 
-        jLabel2.setText("Prénom :");
+        jLabel2.setText("Prenom :");
 
         jLabel1.setText("Nom :");
 
