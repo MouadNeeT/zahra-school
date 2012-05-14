@@ -144,7 +144,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton4.setBackground(new java.awt.Color(102, 153, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Modifier la fiche d'un élève");
+        jButton4.setText("Modifier la fiche d'un eleve");
         jButton4.setBorder(null);
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {

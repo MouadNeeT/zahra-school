@@ -353,7 +353,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pr&#xe9;nom :"/>
+            <Property name="text" type="java.lang.String" value="Prenom :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
