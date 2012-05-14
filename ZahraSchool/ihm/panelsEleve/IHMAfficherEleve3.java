@@ -22,16 +22,21 @@ import manager.GroupeManager;
  *
  * @author alexandre
  */
-public class IHMAfficherEleve extends javax.swing.JPanel {
+public class IHMAfficherEleve3 extends javax.swing.JPanel {
     frames.FFondFenetreProfesseur f;
     
     /** Creates new form IHMAfficheFicheEleve */
-    public IHMAfficherEleve( frames.FFondFenetreProfesseur f) {
+    public IHMAfficherEleve3( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
         // ajout images boutons
         jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imprimer.png"));
-
+        // Affichage de la liste des groupes
+        jList1.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
+                public int getSize() { return listeGroupes.size(); }
+                public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
+        });
         // Affichage de la liste de tous les eleves
         jList2.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Eleve> listeEleves = EleveManager.getInstance().getAllEleves();
@@ -49,6 +54,8 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList();
         jButton2 = new javax.swing.JButton();
@@ -86,6 +93,14 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Voir la fiche d'un eleve"));
+
+        jList1.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des groupes"));
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jList1MousePressed(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jList1);
 
         jList2.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste de tous les eleves"));
         jList2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -318,10 +333,12 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, 0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -334,18 +351,19 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -353,6 +371,27 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         IHMChoixEleve CE = new IHMChoixEleve(f);
         f.AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
 }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
+        if (!jList1.isSelectionEmpty()) {
+            jList1.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
+                public int getSize() { return listeGroupes.size(); }
+                public Object getElementAt(int i) {
+                    listeEleves = listeGroupes.get(i).getListeEleves();
+                    // On renomme le titre de la liste des eleves
+                    jList2.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des eleves de "+listeGroupes.get(i).getNom()));
+                    jList2.setModel(new javax.swing.AbstractListModel() {
+                        public int getSize() { return listeEleves.size(); }
+                        public Object getElementAt(int j) {
+                            return (listeEleves.get(j).getNom()+" "+listeEleves.get(j).getPrenom());
+                        }
+                    });
+                    return (listeGroupes.get(i).getNom());
+                }
+            });
+        } else System.out.println("aucun element selectione");
+    }//GEN-LAST:event_jList1MousePressed
 
     private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
         if (!jList2.isSelectionEmpty()){
@@ -426,10 +465,12 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList jList1;
     private javax.swing.JList jList2;
     private javax.swing.JList jList3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel niveleve;
