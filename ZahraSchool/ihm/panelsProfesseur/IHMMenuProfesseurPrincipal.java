@@ -356,34 +356,22 @@ public class IHMMenuProfesseurPrincipal extends javax.swing.JPanel {
 
     private void boutonGestionEleveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionEleveActionPerformed
     	panelsEleve.IHMChoixEleve CE = new panelsEleve.IHMChoixEleve(f2);
-        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f2,"   Gestion des eleves","");
-        JPanel panel = new JPanel(new BorderLayout());
-        panel.add(CE, BorderLayout.CENTER);
-        panel.add(barreVision, BorderLayout.NORTH);
-        f2.setPanel(panel);
-        f2.setMenuGauche(true);
+        f2.AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }
 
     private void boutonGestionGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionGroupeActionPerformed
         panelsGroupe.IHMChoixGroupe CG = new panelsGroupe.IHMChoixGroupe(f2);
-        IHMBarreVisionPresentation barreVision = new IHMBarreVisionPresentation(f2,"   Gestion des groupes","");
-        JPanel panel = new JPanel(new BorderLayout());
-        panel.add(CG, BorderLayout.CENTER);
-        panel.add(barreVision, BorderLayout.NORTH);
-        f2.setPanel(panel);
-        f2.setMenuGauche(true);
+        f2.AfficheBarreVision(CG,"   Gestion des Groupes","../ZahraSchool/images/groupe.png");
     }
 
     private void boutonGestionProfesseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonGestionProfesseurActionPerformed
         panelsProfesseur.IHMChoixProfesseur CP = new panelsProfesseur.IHMChoixProfesseur(f2);
-        f2.setPanel(CP);
-        f2.setMenuGauche(true);
+        f2.AfficheBarreVision(CP,"   Espace Professeur","../ZahraSchool/images/prof.png");
     }
 
     private void boutonAppelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAppelActionPerformed
-        panelsProfesseur.IHMFaireAppel1 FA = new panelsProfesseur.IHMFaireAppel1(f2);
-        f2.setPanel(FA);
-        f2.setMenuGauche(true);
+        panelsAppel.IHMAppel1 FA = new panelsAppel.IHMAppel1(f2);
+        f2.AfficheBarreVision(FA,"   faire l'appel","../ZahraSchool/images/appel.png");
     }
 
 

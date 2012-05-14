@@ -31,11 +31,17 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
         initComponents();
         // ajout images boutons
         jButton4.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imageBoutonSupprimer.png"));
-        // SetModel
+        // Affichage de la liste des groupes
         jList1.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
+        });
+        // Affichage de la liste de tous les eleves
+        jList2.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Eleve> listeEleves = EleveManager.getInstance().getAllEleves();
+                public int getSize() { return listeEleves.size(); }
+                public Object getElementAt(int i) { return (listeEleves.get(i).getNom())+" "+(listeEleves.get(i).getPrenom()); }
         });
     }
 
@@ -363,7 +369,7 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         IHMChoixEleve CE = new IHMChoixEleve(f);
-        f.setPanel(CE);
+        f.AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
@@ -423,16 +429,19 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jList2MousePressed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    JOptionPane jp = new JOptionPane();
+    int reponse = jp.showConfirmDialog(null, "Supprimer l'eleve "+nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+    
+    if (reponse == JOptionPane.YES_OPTION)
+    {
         // delete
         EleveManager.getInstance().delete(eleve);
-
-        JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Supprimer l'eleve "+nom.getText(), "Confirmation", JOptionPane.OK_CANCEL_OPTION);
 
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Suppression de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
         IHMSupprimerEleve SE = new IHMSupprimerEleve(f);
-        f.setPanel(SE);
+        f.AfficheBarreVision(SE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
+    }
 }//GEN-LAST:event_jButton4ActionPerformed
 
     // liste d'eleves

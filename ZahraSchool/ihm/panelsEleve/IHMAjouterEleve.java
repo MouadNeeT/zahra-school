@@ -13,14 +13,15 @@ package panelsEleve;
 
 import domaine.Eleve;
 import domaine.Groupe;
+import java.io.File;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import javax.swing.JFileChooser;
 
 import javax.swing.JOptionPane;
 import manager.EleveManager;
 import manager.GroupeManager;
-import panelsProfesseur.IHMJDialogChoixPhoto;
 
 /**
  *
@@ -86,6 +87,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        Photo = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -238,11 +240,16 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 138, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Photo, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 105, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(Photo, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -295,7 +302,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
+                                .addGap(19, 19, 19)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11)
                                     .addComponent(jLabel12)
@@ -305,10 +312,9 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jScrollPane2, 0, 0, Short.MAX_VALUE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(niveaueleve)
-                                        .addComponent(niveauetudes)
-                                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(niveaueleve, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                                    .addComponent(niveauetudes, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))
                                 .addGap(17, 17, 17)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -356,8 +362,11 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel5)
@@ -377,16 +386,13 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel10)
-                                    .addComponent(teleleve, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(telparent, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(teleleve, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(8, 8, 8)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(telparent, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -431,6 +437,11 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_niveaueleveActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    JOptionPane jp = new JOptionPane();
+    int reponse = jp.showConfirmDialog(null, "Ajouter l'eleve "+Nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+    
+    if (reponse == JOptionPane.YES_OPTION)
+    {
         int identifiant = 0;
 	String nom = Nom.getText();
 	String prenom = Prenom.getText();
@@ -451,8 +462,8 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         if (Boxpayepas.isSelected()) {status = "non";} else {status = "oui";}
 	String niveauTest = niveaueleve.getText();
 	String adresse = Adresse.getText();
-        //a faire pr groupe et photo
-        String photo = "";
+        //photo = file.getAbsolutePath(); fais dans le actionevent de "ajouterimage"
+        //a faire pr groupe
         
         Eleve eleve = new Eleve(identifiant, nom, prenom,
 			     age, dateDeNaissance, adresse, photo,
@@ -463,17 +474,16 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 
         EleveManager.getInstance().create(eleve);
 
-        JOptionPane jp = new JOptionPane();
-        jp.showMessageDialog(null, "Ajouter l'eleve "+nom, "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Ajout de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
         panelsEleve.IHMAjouterEleve AE = new  panelsEleve.IHMAjouterEleve(f);
-        f.setPanel(AE);
+        f.AfficheBarreVision(AE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
       panelsEleve.IHMChoixEleve CE = new panelsEleve.IHMChoixEleve(f);
-      f.setPanel(CE);
+      f.AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void nompereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nompereActionPerformed
@@ -497,15 +507,23 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     }//GEN-LAST:event_jList1MousePressed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        IHMJDialogChoixPhoto CP = new IHMJDialogChoixPhoto(f,this);
-        CP.setVisible(true);
+        JFileChooser fc = new JFileChooser();
+        int retour = fc.showOpenDialog(this);
+        if (retour == JFileChooser.APPROVE_OPTION) {
+               file = fc.getSelectedFile();
+               //System.out.println(file.getAbsolutePath());
+               Photo.setIcon(f.imageLivre(file));
+               photo = file.getAbsolutePath();
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-
+    String photo = "";
+    private File file;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea Adresse;
     private javax.swing.JCheckBox Boxpayepas;
     private javax.swing.JTextField Nom;
+    private javax.swing.JLabel Photo;
     private javax.swing.JTextField Prenom;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

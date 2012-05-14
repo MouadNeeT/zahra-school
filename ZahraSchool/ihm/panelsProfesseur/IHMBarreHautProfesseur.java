@@ -70,7 +70,7 @@ public class IHMBarreHautProfesseur extends JPanel{
         jLabel3.setBackground(new java.awt.Color(0, 0, 153));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Professeur");
+        jLabel3.setText("  Professeur");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -92,7 +92,7 @@ public class IHMBarreHautProfesseur extends JPanel{
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setForeground(new java.awt.Color(0, 0, 153));
         jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/cadenas1.png")); // NOI18N
-        jButton1.setText("Deconnexion");
+        jButton1.setText(" Deconnexion  ");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

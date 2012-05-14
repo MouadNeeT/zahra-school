@@ -605,21 +605,23 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
      * Gestion des statistiques
      */
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        
+        panelsProfesseur.IHMStat S = new panelsProfesseur.IHMStat(f);
+        f.AfficheBarreVision(S,"   Espace Professeur","../ZahraSchool/images/prof.png");
     }                                         
 
     /**
      * Gerer les revenus
      */
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        
+        panelsProfesseur.IHMPaiement VP = new panelsProfesseur.IHMPaiement(f);
+        f.AfficheBarreVision(VP,"   Espace Professeur","../ZahraSchool/images/prof.png");
     }                                         
 
     /**
      * Faire l'appel
      */
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {
-        panelsProfesseur.IHMFaireAppel1 FA = new panelsProfesseur.IHMFaireAppel1(f);
+        panelsAppel.IHMAppel1 FA = new panelsAppel.IHMAppel1(f);
         AfficheBarreVision(FA,"   faire l'appel","../ZahraSchool/images/appel.png");
     }                                         
 

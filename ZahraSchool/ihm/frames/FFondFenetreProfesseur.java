@@ -2,8 +2,11 @@ package frames;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Image;
+import java.io.File;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -39,7 +42,8 @@ public class FFondFenetreProfesseur extends JFrame {
         public JPanel getPanel(){
             return t;
         }
-        
+
+        // Insere le panel avec le menu et barre de presentation
         public void setPanel(JPanel j) {
                 panel1.removeAll();
                 panel1.add(menuGauche, BorderLayout.WEST);
@@ -53,6 +57,7 @@ public class FFondFenetreProfesseur extends JFrame {
 		setVisible(true);
         }
 
+        // Afiche ou masque le menu gauche
         public void setMenuGauche(Boolean F)
         {
             if(F)
@@ -61,6 +66,7 @@ public class FFondFenetreProfesseur extends JFrame {
             menuGauche.setVisible(false);
         }
 
+        // Affiche et ordonne le panel avec la barre de presentation
         public void AfficheBarreVision(JPanel panelMilieu, String titre, String image)
         {
         JPanel panel = new JPanel(new BorderLayout());
@@ -84,5 +90,16 @@ public class FFondFenetreProfesseur extends JFrame {
         panel.add(panel2, BorderLayout.CENTER);
         setPanel(panel);
         setMenuGauche(true);
+        }
+
+        // Redimension de l'image (utilise pour l'affichage de la photo de l'eleve)
+        public ImageIcon imageLivre(File f){
+            ImageIcon image = new ImageIcon(f.getAbsolutePath());
+            Image im = image.getImage();
+            float coef = (float) (((float)(im.getWidth(this)))/95.0);
+            int	hauteur	= Math.round(im.getHeight(this)/coef);
+            im	= im.getScaledInstance(95,hauteur,Image.SCALE_DEFAULT);
+            image.setImage(im);
+            return image;
         }
 }
