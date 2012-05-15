@@ -355,7 +355,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
-        if (!jList2.isSelectionEmpty()){
+        if (!jList2.isSelectionEmpty()) {
             jList2.setModel(new javax.swing.AbstractListModel() {
                 public int getSize() { return listeEleves.size(); }
                 public Object getElementAt(int i) {
