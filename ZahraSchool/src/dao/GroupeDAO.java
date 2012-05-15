@@ -16,6 +16,8 @@ import org.springframework.jdbc.core.RowMapper;
 import domaine.Eleve;
 import domaine.EmploiDuTemps;
 import domaine.Groupe;
+import domaine.Paiement;
+import domaine.Professeur;
 
 import entity.GroupeEntity;
 
@@ -28,13 +30,48 @@ public class GroupeDAO {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
+	public ArrayList<Integer> recupererElevesFromGroupe(String identifiantGroupe){
+		
+		Connection conn = null;
+		@SuppressWarnings("unused")
+		PreparedStatement stmt = null;	
+		ResultSet resultats = null;
+		
+	    ArrayList<Integer> listeIdEleves = new ArrayList<Integer>();
+	    try {
+			String sql = "select identifiantEleve from contient where identifiantGroupe = ?";
+
+			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
+	        DataSource dataSource = (DataSource) appContext.getBean("datasource2");
+	        
+	        conn = dataSource.getConnection();
+			stmt = conn.prepareStatement(sql);
+		
+			stmt.setString(1, identifiantGroupe);
+			resultats = stmt.executeQuery();
+			ArrayList<Integer> list = null;
+			//boolean encore = resultats.next();
+			while (resultats.next()) {
+				int id = resultats.getInt("identifiantEleve");
+				listeIdEleves.add(id);   
+			}
+			
+			resultats.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+			return listeIdEleves;
+	    }
+	
 	
 	public void create(GroupeEntity groupe) {
                 Connection conn = null;
 		PreparedStatement stmt = null;		
 		try {
-		final String GROUPE_INSERT = "insert into groupe (nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps) "
-				+ " values (?,?,?,?,?,?)"; 
+		final String GROUPE_INSERT = "insert into groupe (nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps) ";
+				
 
 
 		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
@@ -72,7 +109,7 @@ public class GroupeDAO {
 		ResultSet rs = null;
 
 		try {
-		String sql = "select nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps from groupe where nom = ?";
+		String sql = "select nom,  niveau , dateDeCreation,  tarif, emploiDuTemps from groupe where nom = ?";
 
 		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
         DataSource dataSource = (DataSource) appContext.getBean("datasource2");
@@ -89,7 +126,7 @@ public class GroupeDAO {
 			groupe.setNiveau(rs.getString("niveau"));
 			groupe.setDateDeCreation(rs.getDate("dateDeCreation"));
 			groupe.setTarif(rs.getFloat("tarif"));
-			groupe.setListeEleves((ArrayList<Eleve>) rs.getObject("listeEleves"));
+			//groupe.setListeEleves((ArrayList<Eleve>) rs.getObject("listeEleves"));
 			groupe.setEmploiDuTemps((EmploiDuTemps) rs.getObject("emploiDuTemps"));
 			
 		}
@@ -150,10 +187,9 @@ public class GroupeDAO {
   		try {
   		final String sql = 
   				 
-  				"UPDATE eleve set nom = '" + groupe.getNom() + "', niveau = '" + groupe.getNiveau() + "'," +
-  						 					 "dateDeCreation = '" + groupe.getDateDeCreation() + "'," + "tarif = '" + groupe.getTarif() + "',"+
-  						                     "listeEleves = '" + groupe.getListeEleves() + "'," + "emploiDuTemps = '" + groupe.getEmploiDuTemps() + "'";
-
+  				"UPDATE groupe set nom = '" + groupe.getNom() + "', niveau = '" + groupe.getNiveau() + "'," +
+  						 					 "dateDeCreation = '" + groupe.getDateDeCreation() + "'," + "tarif = '" + groupe.getTarif() + "'";
+  						                     
   		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
   		//<---------------- ne pas oublier de changer
           DataSource ds = (DataSource) appContext.getBean("datasource2");
@@ -190,7 +226,7 @@ public class GroupeDAO {
 			//<---------------- ne pas oublier de changer
 	        DataSource ds = (DataSource) appContext.getBean("datasource2");
 	        conn = ds.getConnection();
-			PreparedStatement ALL = conn.prepareStatement("select nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps from groupe");
+			PreparedStatement ALL = conn.prepareStatement("select nom,  niveau , dateDeCreation,  tarif, emploiDuTemps from groupe");
 			resultats = ALL.executeQuery();
 			
 			boolean encore = resultats.next();
@@ -199,7 +235,7 @@ public class GroupeDAO {
 		        //System.out.print(resultats.getString(1) + resultats.getString(2) + resultats.getString(3) + resultats.getString(4) + resultats.getString(5) + resultats.getInt(6) + resultats.getString(7) + resultats.getDate(8) + resultats.getDate(9) + resultats.getObject(10) +resultats.getObject(11));
 		        
 		        //(nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps)
-		        Groupe g = new Groupe(resultats.getString(1), resultats.getString(2), resultats.getDate(3), resultats.getFloat(4), (ArrayList<Eleve>) resultats.getObject(5), (EmploiDuTemps) resultats.getObject(6));
+		        Groupe g = new Groupe(resultats.getString(1), resultats.getString(2), resultats.getDate(3), resultats.getFloat(4), (EmploiDuTemps) resultats.getObject(5));
 		        listeGroupes.add(g);
 		        encore = resultats.next();
 		      }
