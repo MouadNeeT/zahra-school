@@ -1,5 +1,5 @@
 /**
- * author GAUTIER Stephanie
+ * author GAUTIER St�phanie
  */
 
 package entity;
@@ -16,43 +16,43 @@ import domaine.Professeur;
 
 public class EleveEntity extends Entity{
 	/**
-	 * Certains eleves peuvent avoir des noms, prenoms identiques :
-	 * l'identifiant les diferenciera.
+	 * Certains �l�ves peuvent avoir des noms, pr�noms identiques :
+	 * l'identifiant les dif�renciera.
 	 * 
 	 * @see Eleve#getIdentifiant()
 	 * @see Eleve#setIdentifiant(int)
 	 */
 	private int identifiant;
 	/**
-	 * le nom de l'eleve.
+	 * le nom de l'�l�ve.
 	 * 
 	 * @see Eleve#setNom(String)
 	 * @see Eleve#getNom()
 	 */
 	private String nom;
 	/**
-	 * le prenom de l'eleve.
+	 * le pr�nom de l'�l�ve.
 	 * 
 	 * @see Eleve#setPrenom(String)
 	 * @see Eleve#getPrenom()
 	 */
 	private String prenom;
 	/**
-	 * l'age de l'eleve.
+	 * l'�ge de l'�l�ve.
 	 * 
 	 * @see Eleve#setAge(int)
 	 *  @see Eleve#getAge()
 	 */
 	private int age;
 	/**
-	 * la date de naissance de l'eleve
+	 * la date de naissance de l'�l�ve
 	 * 
 	 *  @see Eleve#setDateDeNaissance(Date)
 	 *   @see Eleve#getDateDeNaissance()
 	 */
 	private Date dateDeNaissance;
 	/**
-	 * la photo de l'eleve. Il s'agit de l'url de la photo.
+	 * la photo de l'�l�ve. Il s'agit de l'url de la photo.
 	 * 
 	 *  @see Eleve#setPhoto(String)
 	 *   @see Eleve#getPhoto()
@@ -127,7 +127,7 @@ public class EleveEntity extends Entity{
 	private String adresse;
 	
 	private ArrayList<Professeur> listeProfesseurs; 
-	private ArrayList<Groupe> listeGroupes; 
+	//private ArrayList<Groupe> listeGroupes; 
 	private ArrayList<Paiement> listePaiements; 
 	private EmploiDuTemps emploiDuTemps; 
 	
@@ -140,7 +140,7 @@ public class EleveEntity extends Entity{
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
 			     String status, String niveauTest,
-			     ArrayList<Professeur> listeProfesseurs, ArrayList<Groupe> listeGroupes,
+			     ArrayList<Professeur> listeProfesseurs, /*ArrayList<Groupe> listeGroupes,*/
 			     ArrayList<Paiement> listePaiements, EmploiDuTemps emploiDuTemps){
 		this.identifiant = identifiant;
 		this.nom = nom;
@@ -159,7 +159,7 @@ public class EleveEntity extends Entity{
 		this.status = status;
 		this.niveauTest = niveauTest;
 		this.listeProfesseurs = listeProfesseurs;
-		this.listeGroupes = listeGroupes;
+		//this.listeGroupes = listeGroupes;
 		this.listePaiements = listePaiements;
 		this.emploiDuTemps = emploiDuTemps;
 		
@@ -182,16 +182,16 @@ public class EleveEntity extends Entity{
 	/**
 	 * @return the listeGroupes
 	 */
-	public ArrayList<Groupe> getListeGroupes() {
+	/*public ArrayList<Groupe> getListeGroupes() {
 		return listeGroupes;
-	}
+	}*/
 
 	/**
 	 * @param listeGroupes the listeGroupes to set
 	 */
-	public void setListeGroupes(ArrayList<Groupe> listeGroupes) {
+	/*public void setListeGroupes(ArrayList<Groupe> listeGroupes) {
 		this.listeGroupes = listeGroupes;
-	}
+	}*/
 
 	/**
 	 * @return the listePaiements
@@ -420,9 +420,9 @@ public class EleveEntity extends Entity{
 		this.listeProfesseurs.add(professeur);
 	}
 	
-	public void addGroupe(Groupe groupe){
+	/*public void addGroupe(Groupe groupe){
 		this.listeGroupes.add(groupe);
-	}
+	}*/
 		
 	public void addPaiement (Paiement paiement){
 		this.listePaiements.add(paiement);
@@ -432,9 +432,9 @@ public class EleveEntity extends Entity{
         this.listeProfesseurs.remove(professeur);
 	}
 	
-	public void removeGroupe(Groupe groupe){
+	/*public void removeGroupe(Groupe groupe){
         this.listeGroupes.remove(groupe);
-	}
+	}*/
 	
 	public void removePaiement(Paiement paiement){
         this.listePaiements.remove(paiement);
