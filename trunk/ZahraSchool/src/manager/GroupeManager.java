@@ -3,6 +3,7 @@ package manager;
 import java.util.ArrayList;
 
 import dao.GroupeDAO;
+import domaine.Eleve;
 import domaine.Groupe;
 import entity.EntityFactory;
 import entity.GroupeEntity;
@@ -35,7 +36,7 @@ public class GroupeManager {
 		groupeEntity.setDate(groupe.getDateDeCreation());
 		groupeEntity.setTarif(groupe.getTarif());
 		groupeEntity.setEmploiDuTemps(groupe.getEmploiDuTemps());
-		groupeEntity.setListeEleves(groupe.getListeEleves());
+		//groupeEntity.setListeEleves(groupe.getListeEleves());
 
 		GroupeDAO groupeDAO = new GroupeDAO();
 		groupeDAO.create(groupeEntity);	
@@ -50,11 +51,6 @@ public class GroupeManager {
 		GroupeEntity groupeEntity = EntityFactory.getGroupeEntity();
 
                 groupeEntity.setNom(groupe.getNom());
-		groupeEntity.setNiveau(groupe.getNiveau());
-		groupeEntity.setDate(groupe.getDateDeCreation());
-		groupeEntity.setTarif(groupe.getTarif());
-		groupeEntity.setEmploiDuTemps(groupe.getEmploiDuTemps());
-		groupeEntity.setListeEleves(groupe.getListeEleves());
 		
 		GroupeDAO groupeDAO = new GroupeDAO();
 		groupeDAO.delete(groupeEntity);
@@ -73,10 +69,18 @@ public class GroupeManager {
 		groupeEntity.setDate(groupe.getDateDeCreation());
 		groupeEntity.setTarif(groupe.getTarif());
 		groupeEntity.setEmploiDuTemps(groupe.getEmploiDuTemps());
-		groupeEntity.setListeEleves(groupe.getListeEleves());
+		//groupeEntity.setListeEleves(groupe.getListeEleves());
 		
 		GroupeDAO groupeDAO = new GroupeDAO();
 		groupeDAO.update(groupeEntity);
+	}
+	
+	public ArrayList<Integer> recupererElevesFromGroupe(String identifiantGroupe){
+		
+		GroupeEntity groupeEntity = EntityFactory.getGroupeEntity();
+		GroupeDAO groupeDAO = new GroupeDAO();
+		return groupeDAO.recupererElevesFromGroupe(identifiantGroupe);
+		
 	}
 }
 
