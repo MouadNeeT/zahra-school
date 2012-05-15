@@ -30,7 +30,7 @@ public class Eleve {
 	private String niveauTest;
 	private String adresse;
 	private ArrayList<Professeur> listeProfesseurs; 
-	private ArrayList<Groupe> listeGroupes; 
+	//private ArrayList<Groupe> listeGroupes; 
 	private ArrayList<Paiement> listePaiements; 
 	private EmploiDuTemps emploiDuTemps; 
 	
@@ -42,7 +42,7 @@ public class Eleve {
 			     Date dateInscription, String niveauEtudes, String nomPere,
 			     String prenomPere, String nomMere, String prenomMere,
 			     String status, String niveauTest,
-			     ArrayList<Professeur> listeProfesseurs, ArrayList<Groupe> listeGroupes,
+			     ArrayList<Professeur> listeProfesseurs, /*ArrayList<Groupe> listeGroupes,*/
 			     ArrayList<Paiement> listePaiements, EmploiDuTemps emploiDuTemps){
 		this.identifiant = identifiant;
 		this.nom = nom;
@@ -62,7 +62,7 @@ public class Eleve {
 		this.status = status;
 		this.niveauTest = niveauTest;
 		this.listeProfesseurs = listeProfesseurs;
-		this.listeGroupes = listeGroupes;
+		//this.listeGroupes = listeGroupes;
 		this.listePaiements = listePaiements;
 		this.emploiDuTemps = emploiDuTemps;
 	}
@@ -84,16 +84,16 @@ public class Eleve {
 	/**
 	 * @return the listeGroupes
 	 */
-	public ArrayList<Groupe> getListeGroupes() {
+	/*public ArrayList<Groupe> getListeGroupes() {
 		return listeGroupes;
 	}
 
 	/**
 	 * @param listeGroupes the listeGroupes to set
 	 */
-	public void setListeGroupes(ArrayList<Groupe> listeGroupes) {
+	/*public void setListeGroupes(ArrayList<Groupe> listeGroupes) {
 		this.listeGroupes = listeGroupes;
-	}
+	}*/
 
 	/**
 	 * @return the listePaiements
@@ -328,10 +328,9 @@ public class Eleve {
 	public void addProfesseur(Professeur professeur){
 		this.listeProfesseurs.add(professeur);
 	}
-	
-	public void addGroupe(Groupe groupe){
+	/*public void addGroupe(Groupe groupe){
 		this.listeGroupes.add(groupe);
-	}
+	}*/
 		
 	public void addPaiement (Paiement paiement){
 		this.listePaiements.add(paiement);
@@ -340,10 +339,10 @@ public class Eleve {
 	public void removeProfesseur(Professeur professeur){
         this.listeProfesseurs.remove(professeur);
 	}
-	
+	/*
 	public void removeGroupe(Groupe groupe){
         this.listeGroupes.remove(groupe);
-	}
+	}*/
 	
 	public void removePaiement(Paiement paiement){
         this.listePaiements.remove(paiement);

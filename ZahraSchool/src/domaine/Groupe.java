@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Groupe {
     private EmploiDuTemps emploiDuTemps;
-    private ArrayList<Eleve> listeEleves;
+    //private ArrayList<Eleve> listeEleves;
     private String nom;
     private String niveau;
     private Date dateDeCreation;
@@ -13,13 +13,13 @@ public class Groupe {
 
     public Groupe() {}
     
-    public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif,ArrayList<Eleve> listeEleves,EmploiDuTemps emploiDuTemps )
+    public Groupe(String nom, String niveau ,Date dateDeCreation, float tarif,/*ArrayList<Eleve> listeEleves,*/EmploiDuTemps emploiDuTemps )
     {
         this.nom=nom;
         this.niveau=niveau;
         this.dateDeCreation=dateDeCreation;
         this.tarif=tarif;
-        this.listeEleves=listeEleves;
+        //this.listeEleves=listeEleves;
         this.emploiDuTemps= emploiDuTemps;
     }
     
@@ -71,44 +71,13 @@ public class Groupe {
 		this.emploiDuTemps = emploiDuTemps;
 	}
 
-	/**
-	 * @return the listeEleves
-	 */
-	public ArrayList<Eleve> getListeEleves() {
-		return listeEleves;
-	}
-
-	/**
-	 * @param listeEleves the listeEleves to set
-	 */
-	public void setListeEleves(ArrayList<Eleve> listeEleves) {
-		this.listeEleves = listeEleves;
-	}
-
+	
 
 	/**
 	 * @return the tarif
 	 */
 	public float getTarif() {
 		return tarif;
-	}
-
-	/**
-	 * @param e
-	 * @return
-	 * @see java.util.ArrayList#add(java.lang.Object)
-	 */
-	public boolean add(Eleve e) {
-		return listeEleves.add(e);
-	}
-
-	/**
-	 * @param o
-	 * @return
-	 * @see java.util.ArrayList#remove(java.lang.Object)
-	 */
-	public boolean remove(Object o) {
-		return listeEleves.remove(o);
 	}
 
 	/**
