@@ -474,7 +474,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) {
-                    listeEleves = listeGroupes.get(i).getListeEleves();
+                    //listeEleves = listeGroupes.get(i).getListeEleves();
                     jList2.setModel(new javax.swing.AbstractListModel() {
                         public int getSize() { return listeEleves.size(); }
                         public Object getElementAt(int j) {
@@ -514,11 +514,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
                         Boxpayepas.setSelected(true);
                     }
                     // Sa liste de groupe
-                    jList1.setModel(new javax.swing.AbstractListModel() {
-                        ArrayList<Groupe> listeGroupes = eleve.getListeGroupes();
-                        public int getSize() { return listeGroupes.size(); }
-                        public Object getElementAt(int j) { return (listeGroupes.get(j).getNom()); }
-                    });
+
                     // Sa photo
                     Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
                     
@@ -626,7 +622,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
 			     numeroTelephoneEleve, numeroTelephoneParent,
 			     eleve.getDateInscription(), niveauEtudes, nomPere,
 			     prenomPere, nomMere, prenomMere,
-			     status, niveauTest, null, null, null, null);
+			     status, niveauTest, null, null, null);
 
         EleveManager.getInstance().update(eleveAmodifier);
 

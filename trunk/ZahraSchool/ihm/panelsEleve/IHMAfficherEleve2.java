@@ -44,11 +44,7 @@ Eleve eleve;
         nivetu.setText(eleve.getNiveauEtudes());
         status.setText(eleve.getStatus());
         // Sa liste de groupe
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            ArrayList<Groupe> listeGroupes = eleve.getListeGroupes();
-            public int getSize() { return listeGroupes.size(); }
-            public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
-        });
+
         // Sa photo
         Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
     }

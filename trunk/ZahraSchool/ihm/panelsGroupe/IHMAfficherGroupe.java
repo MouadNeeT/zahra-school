@@ -227,15 +227,15 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
                     Niveau.setText(listeGroupes.get(i).getNiveau());
                     Tarif.setText(""+listeGroupes.get(i).getTarif());
                     date.setText(listeGroupes.get(i).getDateDeCreation().getDate()+"/"+listeGroupes.get(i).getDateDeCreation().getMonth()+"/"+listeGroupes.get(i).getDateDeCreation().getYear());
-                    Nb.setText(""+listeGroupes.get(i).getListeEleves().size());
+                    //Nb.setText(""+listeGroupes.get(i).getListeEleves().size());
                     // affiche la liste d'eleves du groupe
-                    final ArrayList<Eleve> listeEleves = listeGroupes.get(i).getListeEleves();
+                    /*final ArrayList<Eleve> listeEleves = listeGroupes.get(i).getListeEleves();
                     jList2.setModel(new javax.swing.AbstractListModel() {
                         public int getSize() { return listeEleves.size(); }
                         public Object getElementAt(int j) {
                             return (listeEleves.get(j).getNom()+" "+listeEleves.get(j).getPrenom());
                         }
-                    });
+                    });*/
                     
                     return (listeGroupes.get(i).getNom());
                 }

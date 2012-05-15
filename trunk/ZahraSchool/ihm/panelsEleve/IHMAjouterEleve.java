@@ -482,6 +482,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 
         EleveManager.getInstance().insertEleveGroupe(identifiant,leGroupe.getNom());
         EleveManager.getInstance().create(eleve);
+        
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Ajout de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
         panelsEleve.IHMAjouterEleve AE = new  panelsEleve.IHMAjouterEleve(f);

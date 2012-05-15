@@ -195,7 +195,7 @@ public class IHMAjouterGroupe extends javax.swing.JPanel {
 	Date dateDeCreation = new Date(annee,mois,jour);
         float tarif = Float.parseFloat(Tarif.getText());
 
-        Groupe groupe = new Groupe(nom, niveau ,dateDeCreation, tarif, null, null);
+        Groupe groupe = new Groupe(nom, niveau ,dateDeCreation, tarif, null);
 
         // create
         GroupeManager.getInstance().create(groupe);
