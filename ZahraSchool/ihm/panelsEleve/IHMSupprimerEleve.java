@@ -378,7 +378,7 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) {
-                    listeEleves = listeGroupes.get(i).getListeEleves();
+                    //listeEleves = listeGroupes.get(i).getListeEleves();
                     jList2.setModel(new javax.swing.AbstractListModel() {
                         public int getSize() { return listeEleves.size(); }
                         public Object getElementAt(int j) {
@@ -414,11 +414,7 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
                     nivetu.setText(eleve.getNiveauEtudes());
                     status.setText(eleve.getStatus());
                     // Sa liste de groupe
-                    jList1.setModel(new javax.swing.AbstractListModel() {
-                        ArrayList<Groupe> listeGroupes = eleve.getListeGroupes();
-                        public int getSize() { return listeGroupes.size(); }
-                        public Object getElementAt(int j) { return (listeGroupes.get(j).getNom()); }
-                    });
+
                     // Sa photo
                     Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
                     

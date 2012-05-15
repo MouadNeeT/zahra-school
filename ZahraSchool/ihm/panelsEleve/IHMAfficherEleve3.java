@@ -378,7 +378,7 @@ public class IHMAfficherEleve3 extends javax.swing.JPanel {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) {
-                    listeEleves = listeGroupes.get(i).getListeEleves();
+                    //listeEleves = listeGroupes.get(i).getListeEleves();
                     // On renomme le titre de la liste des eleves
                     jList2.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des eleves de "+listeGroupes.get(i).getNom()));
                     jList2.setModel(new javax.swing.AbstractListModel() {
@@ -416,11 +416,7 @@ public class IHMAfficherEleve3 extends javax.swing.JPanel {
                     nivetu.setText(eleve.getNiveauEtudes());
                     status.setText(eleve.getStatus());
                     // Sa liste de groupe
-                    jList3.setModel(new javax.swing.AbstractListModel() {
-                        ArrayList<Groupe> listeGroupes = eleve.getListeGroupes();
-                        public int getSize() { return listeGroupes.size(); }
-                        public Object getElementAt(int j) { return (listeGroupes.get(j).getNom()); }
-                    });
+
                     // Sa photo
                     Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
                     

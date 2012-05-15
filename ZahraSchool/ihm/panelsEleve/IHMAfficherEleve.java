@@ -377,11 +377,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
                     nivetu.setText(eleve.getNiveauEtudes());
                     status.setText(eleve.getStatus());
                     // Sa liste de groupe
-                    jList3.setModel(new javax.swing.AbstractListModel() {
-                        ArrayList<Groupe> listeGroupes = eleve.getListeGroupes();
-                        public int getSize() { return listeGroupes.size(); }
-                        public Object getElementAt(int j) { return (listeGroupes.get(j).getNom()); }
-                    });
+
                     // Sa photo
                     Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
                     
