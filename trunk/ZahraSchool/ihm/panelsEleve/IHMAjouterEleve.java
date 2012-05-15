@@ -29,8 +29,12 @@ import manager.GroupeManager;
  */
 public class IHMAjouterEleve extends javax.swing.JPanel {
  frames.FFondFenetreProfesseur f;
+ ArrayList<Groupe> liste = GroupeManager.getInstance().getAllGroupes();
+ Groupe leGroupe = liste.get(0);
+ 
  GregorianCalendar calendar = new GregorianCalendar();
-    public IHMAjouterEleve( frames.FFondFenetreProfesseur f) {
+    @SuppressWarnings({ "unchecked", "serial", "rawtypes" })
+	public IHMAjouterEleve( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
         // ajout images boutons
@@ -38,7 +42,9 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         jList1.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
-                public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
+                public Object getElementAt(int i) { 
+                	leGroupe = listeGroupes.get(i);
+                	return (listeGroupes.get(i).getNom()); }
         });
     }
 
@@ -179,8 +185,10 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         jLabel12.setText("Ajouter groupe(s) :");
 
         jList1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jList1MousePressed(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+            	///////////////////////////////////////////////////////////
+            	
+                jList1mouseClicked(evt);
             }
         });
         jScrollPane2.setViewportView(jList1);
@@ -442,7 +450,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     
     if (reponse == JOptionPane.YES_OPTION)
     {
-        int identifiant = 0;
+        int identifiant = 20;
 	String nom = Nom.getText();
 	String prenom = Prenom.getText();
 	int age = 0; // Pas utilisé
@@ -470,14 +478,15 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
 			     numeroTelephoneEleve, numeroTelephoneParent,
 			     dateInscription, niveauEtudes, nomPere,
 			     prenomPere, nomMere, prenomMere,
-			     status, niveauTest, null, null, null, null);
+			     status, niveauTest, null, null, null);
 
+        EleveManager.getInstance().insertEleveGroupe(identifiant,leGroupe.getNom());
         EleveManager.getInstance().create(eleve);
-
         JOptionPane jp2 = new JOptionPane();
 	jp2.showMessageDialog(null, "Ajout de l'eleve", "Information", JOptionPane.INFORMATION_MESSAGE);
         panelsEleve.IHMAjouterEleve AE = new  panelsEleve.IHMAjouterEleve(f);
         f.AfficheBarreVision(AE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
+        System.out.println(leGroupe.getNom());
     }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -502,8 +511,18 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_niveauetudesActionPerformed
 
-    private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
+    private void jList1mouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
         // TODO add your handling code here:
+    	jList1.setModel(new javax.swing.AbstractListModel() {
+            ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
+            public int getSize() { return listeGroupes.size(); }
+            public Object getElementAt(int i) { 
+            	GroupeManager.getInstance().readById(listeGroupes.get(i).getNom());
+            	System.out.println(leGroupe.getNom());
+            	return (listeGroupes.get(i).getNom()); }
+    });
+    	
+    	
     }//GEN-LAST:event_jList1MousePressed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
