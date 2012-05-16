@@ -129,11 +129,7 @@ public class EleveDAO {
     	   
     		stmt.setString(1, identifiantGroupe);
     		stmt.setInt(2, identifiantEleve);
-    		
-    		
-    		
-    		
-    		stmt.execute();
+     		stmt.execute();
     		} catch (SQLException e) {
     				e.printStackTrace();
     		} finally {
@@ -215,7 +211,6 @@ public class EleveDAO {
     			int identifiant= eleve.getIdentifiant();
     		String sql = "DELETE FROM eleve where nom = '" + nom + "' and prenom = '" + prenom + "' and identifiant = '" +  identifiant + "'";
     		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
-    		//<---------------- ne pas oublier de changer
             DataSource ds = (DataSource) appContext.getBean("datasource2");
             
             conn = ds.getConnection();
@@ -301,7 +296,7 @@ public class EleveDAO {
 				//<---------------- ne pas oublier de changer
 		        DataSource ds = (DataSource) appContext.getBean("datasource2");
 		        conn = ds.getConnection();
-				PreparedStatement ALL = conn.prepareStatement("select identifiant, nom, prenom, age, dateDeNaissance, adresse, photo, numeroTelephoneEleve, numeroTelephoneParent, dateInscription, niveauEtudes, nomPere, prenomPere, nomMere, prenomMere, status, niveauTest, listeProfesseurs, listeGroupes, listePaiements, emploiDuTemps from eleve");
+				PreparedStatement ALL = conn.prepareStatement("select identifiant, nom, prenom, age, dateDeNaissance, adresse, photo, numeroTelephoneEleve, numeroTelephoneParent, dateInscription, niveauEtudes, nomPere, prenomPere, nomMere, prenomMere, status, niveauTest, listeProfesseurs, listePaiements, emploiDuTemps from eleve");
 				resultats = ALL.executeQuery();
 				
 				boolean encore = resultats.next();
