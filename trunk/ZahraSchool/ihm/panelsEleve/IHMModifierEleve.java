@@ -586,7 +586,7 @@ public class IHMModifierEleve extends javax.swing.JPanel {
         if (retour == JFileChooser.APPROVE_OPTION) {
                file = fc.getSelectedFile();
                //System.out.println(file.getAbsolutePath());
-               Photo.setIcon(f.imageLivre(file));
+               Photo.setIcon(f.image(file));
                photo = file.getAbsolutePath();
         }
 }//GEN-LAST:event_jButton4ActionPerformed

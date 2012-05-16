@@ -93,7 +93,7 @@ public class FFondFenetreProfesseur extends JFrame {
         }
 
         // Redimension de l'image (utilise pour l'affichage de la photo de l'eleve)
-        public ImageIcon imageLivre(File f){
+        public ImageIcon image(File f){
             ImageIcon image = new ImageIcon(f.getAbsolutePath());
             Image im = image.getImage();
             float coef = (float) (((float)(im.getWidth(this)))/110.0);
@@ -103,7 +103,7 @@ public class FFondFenetreProfesseur extends JFrame {
             return image;
         }
 
-        public ImageIcon imageLivre2(String adressePath){
+        public ImageIcon image2(String adressePath){
             ImageIcon image = new ImageIcon(adressePath);
             Image im = image.getImage();
             float coef = (float) (((float)(im.getWidth(this)))/110.0);
