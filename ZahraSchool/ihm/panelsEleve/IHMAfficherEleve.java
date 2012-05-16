@@ -31,7 +31,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imprimer.png"));
 
         // Affichage de la liste de tous les eleves
-        jList2.setModel(new javax.swing.AbstractListModel() {
+        jList1.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Eleve> listeEleves = EleveManager.getInstance().getAllEleves();
                 public int getSize() { return listeEleves.size(); }
                 public Object getElementAt(int i) { return (listeEleves.get(i).getNom())+" "+(listeEleves.get(i).getPrenom()); }
@@ -48,7 +48,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
+        jList1 = new javax.swing.JList();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         prenompere = new javax.swing.JLabel();
@@ -85,13 +85,13 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Voir la fiche d'un eleve"));
 
-        jList2.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste de tous les eleves"));
-        jList2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jList1.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste de tous les eleves"));
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jList2MousePressed(evt);
+                jList1MousePressed(evt);
             }
         });
-        jScrollPane2.setViewportView(jList2);
+        jScrollPane2.setViewportView(jList1);
 
         jButton2.setText("Retour");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -365,9 +365,9 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         }
 }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
-        if (!jList2.isSelectionEmpty()) {
-            jList2.setModel(new javax.swing.AbstractListModel() {
+    private void jList1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MousePressed
+        if (!jList1.isSelectionEmpty()) {
+            jList1.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Eleve> listeEleves = EleveManager.getInstance().getAllEleves();
                 public int getSize() { return listeEleves.size(); }
                 public Object getElementAt(int i) {
@@ -397,7 +397,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
                 }
             });
         } else System.out.println("aucun element selectione");
-    }//GEN-LAST:event_jList2MousePressed
+    }//GEN-LAST:event_jList1MousePressed
 
     // liste d'eleves
     //private Eleve eleve ;
@@ -420,7 +420,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList jList2;
+    private javax.swing.JList jList1;
     private javax.swing.JList jList3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
