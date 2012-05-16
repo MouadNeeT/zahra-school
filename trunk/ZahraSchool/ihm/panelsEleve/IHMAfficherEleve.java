@@ -12,11 +12,9 @@
 package panelsEleve;
 
 import domaine.Eleve;
-import domaine.Groupe;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import manager.EleveManager;
-import manager.GroupeManager;
 
 /**
  *
@@ -91,6 +89,9 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         jList2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jList2MousePressed(evt);
+            }
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jList2MouseClicked(evt);
             }
         });
         jScrollPane2.setViewportView(jList2);
@@ -399,6 +400,40 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
             //jp2.showMessageDialog(null, "Pas encore disponible !", "Information", JOptionPane.INFORMATION_MESSAGE);
         }
 }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jList2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MouseClicked
+        if (!jList2.isSelectionEmpty()) {
+            jList2.setModel(new javax.swing.AbstractListModel() {
+                public int getSize() { return listeEleves.size(); }
+                public Object getElementAt(int i) {
+                    // Eleve selectionné
+                    eleve = listeEleves.get(i);
+
+                    // Affiche infos
+                    nom.setText(eleve.getNom());
+                    prenom.setText(eleve.getPrenom());
+                    date.setText(eleve.getDateDeNaissance().getDate()+"/"+eleve.getDateDeNaissance().getMonth()+"/"+eleve.getDateDeNaissance().getYear());
+                    adresse.setText(eleve.getAdresse());
+                    nomere.setText(eleve.getNomMere());
+                    nompere.setText(eleve.getNomPere());
+                    prenommere.setText(eleve.getPrenomMere());
+                    prenompere.setText(eleve.getPrenomPere());
+                    teleleve.setText("" + eleve.getNumeroTelephoneEleve());
+                    telpa.setText("" +eleve.getNumeroTelephoneParent());
+                    niveleve.setText(eleve.getNiveauTest());
+                    nivetu.setText(eleve.getNiveauEtudes());
+                    status.setText(eleve.getStatus());
+                    // Sa liste de groupe
+
+
+                    // Sa photo
+                    Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
+
+                    return (listeEleves.get(i).getNom() + " " + listeEleves.get(i).getPrenom());
+                }
+            });
+        } else System.out.println("aucun element selectione");
+    }//GEN-LAST:event_jList2MouseClicked
 
     // liste d'eleves
     private ArrayList<Eleve> listeEleves=null;
