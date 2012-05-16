@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Absence {
     /**
-     * le motif de l'absence de l'élève.
+     * le motif de l'absence de l'eleve.
      * @see Absence#setMotif(String)
      * @see Absence#getMotif()
      */
