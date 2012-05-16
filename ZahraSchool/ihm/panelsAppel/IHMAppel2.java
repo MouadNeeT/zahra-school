@@ -11,16 +11,26 @@
 
 package panelsAppel;
 
+import java.util.ArrayList;
+
+import manager.EleveManager;
+import manager.GroupeManager;
+import domaine.Eleve;
+import domaine.Groupe;
+
 /**
  *
  * @author Evi and Max
  */
 public class IHMAppel2 extends javax.swing.JPanel {
-
+	int nombreFoisAppuiRight;
 	frames.FFondFenetreProfesseur f;
+	Groupe groupe;
     /** Creates new form IHMAppel */
-    public IHMAppel2(frames.FFondFenetreProfesseur f) {
+    public IHMAppel2(frames.FFondFenetreProfesseur f, Groupe groupe) {
     	this.f = f;
+    	this.groupe = groupe;
+    	nombreFoisAppuiRight=0;
         initComponents();
     }
 
@@ -202,9 +212,9 @@ public class IHMAppel2 extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Prénom :");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("");
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 51, 204));
@@ -336,12 +346,74 @@ public class IHMAppel2 extends javax.swing.JPanel {
     }// </editor-fold>
 
     private void boutonLeftActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+		ArrayList<Integer> listElevesFromGroupe = GroupeManager.getInstance().recupererElevesFromGroupe(groupe.getNom());
+		
+		System.out.println(""+ nombreFoisAppuiRight);
+		if (nombreFoisAppuiRight == listElevesFromGroupe.size() ) {
+			nombreFoisAppuiRight -= 1;
+			boutonRight.setEnabled(true);
+    		boutonLeft.setEnabled(true);
+    		String nom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getNom();
+    		String prenom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getPrenom();
+    		
+    		System.out.println("------------------->" + nom);
+    		System.out.println("------------------->" + nombreFoisAppuiRight);
+			jLabel3.setText("" + nom);
+			jLabel4.setText("" + prenom);		
+    	}
+		else {
+			if (nombreFoisAppuiRight < listElevesFromGroupe.size() && nombreFoisAppuiRight -1>=0){
+				nombreFoisAppuiRight = nombreFoisAppuiRight -1;
+				boutonRight.setEnabled(true);
+	    		boutonLeft.setEnabled(true);
+	    		String nom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getNom();
+	    		String prenom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getPrenom();
+	    		
+	    		System.out.println("------------------->" + nom);
+	    		System.out.println("------------------->" + nombreFoisAppuiRight);
+				jLabel3.setText("" + nom);
+				jLabel4.setText("" + prenom);	
+			}
+			else {
+				nombreFoisAppuiRight = 0;
+				boutonRight.setEnabled(true);
+	    		boutonLeft.setEnabled(false);
+			}
+		}
     }
 
     private void boutonRightActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    	
+    	ArrayList<Integer> listElevesFromGroupe = GroupeManager.getInstance().recupererElevesFromGroupe(groupe.getNom());
+
+    	if (nombreFoisAppuiRight +1< listElevesFromGroupe.size()){
+    		boutonRight.setEnabled(true);
+			boutonLeft.setEnabled(true);
+        	if (listElevesFromGroupe.size() != 0) {
+        		String nom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getNom();
+        		String prenom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getPrenom();
+        		nombreFoisAppuiRight += 1;
+        		System.out.println("------------------->" + nom);
+        		System.out.println("------------------->" + nombreFoisAppuiRight);
+    			jLabel3.setText("" + nom);
+    			jLabel4.setText("" + prenom);
+    			
+        	}
+        	else {
+        		nombreFoisAppuiRight = 0;
+        		boutonRight.setEnabled(false);
+        		boutonLeft.setEnabled(false);   			
+        	}
+    	}
+    	else {
+    		//nombreFoisAppuiRight = + 1;
+    		boutonRight.setEnabled(false);
+    		boutonLeft.setEnabled(true);
+    	}
     }
+ 
+    
 
     private void radioBoutonPresentActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
