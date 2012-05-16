@@ -68,12 +68,17 @@
 	</bean>
 	
 	<bean id="EleveDAO"
-		class="dao.ProfesseurDAO">
+		class="dao.EleveDAO">
 		<property name="dataSource" ref="datasource2" />
 	</bean>
 	
 	<bean id="GroupeDAO"
-		class="dao.ProfesseurDAO">
+		class="dao.GroupeDAO">
+		<property name="dataSource" ref="datasource2" />
+	</bean>
+	
+	<bean id="AbsenceDAO"
+		class="dao.AbsenceDAO">
 		<property name="dataSource" ref="datasource2" />
 	</bean>
 	
