@@ -14,6 +14,7 @@ package panelsGroupe;
 import domaine.Groupe;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import manager.EleveManager;
 import manager.GroupeManager;
 import panelsEleve.MPanelPrinter;
 
@@ -99,11 +100,6 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
         Tarif.setText(" ");
 
         jList2.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des eleves"));
-        jList2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jList2MousePressed(evt);
-            }
-        });
         jScrollPane2.setViewportView(jList2);
 
         jLabel8.setText("Nombre d'eleves :");
@@ -189,7 +185,7 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(41, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(510, Short.MAX_VALUE)
+                .addContainerGap(530, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -225,24 +221,23 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
                     Niveau.setText(listeGroupes.get(i).getNiveau());
                     Tarif.setText(""+listeGroupes.get(i).getTarif());
                     date.setText(listeGroupes.get(i).getDateDeCreation().getDate()+"/"+listeGroupes.get(i).getDateDeCreation().getMonth()+"/"+listeGroupes.get(i).getDateDeCreation().getYear());
-                    //Nb.setText(""+listeGroupes.get(i).getListeEleves().size());
+
+                    // Affiche le nombre d'eleves dans un groupe
+                    listeID = GroupeManager.getInstance().recupererElevesFromGroupe(listeGroupes.get(i).getNom());
+                    Nb.setText(""+listeID.size());
+                    
                     // affiche la liste d'eleves du groupe
-                    /*final ArrayList<Eleve> listeEleves = listeGroupes.get(i).getListeEleves();
                     jList2.setModel(new javax.swing.AbstractListModel() {
-                        public int getSize() { return listeEleves.size(); }
+                        public int getSize() { return listeID.size(); }
                         public Object getElementAt(int j) {
-                            return (listeEleves.get(j).getNom()+" "+listeEleves.get(j).getPrenom());
+                            return (EleveManager.getInstance().readById(listeID.get(j)).getNom()+" "+EleveManager.getInstance().readById(listeID.get(j)).getPrenom());
                         }
-                    });*/
+                    });
                     
                     return (listeGroupes.get(i).getNom());
                 }
         });
     }//GEN-LAST:event_jList1MousePressed
-
-    private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jList2MousePressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane jp = new JOptionPane();
@@ -256,6 +251,7 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
         }
 }//GEN-LAST:event_jButton1ActionPerformed
 
+    ArrayList<Integer> listeID;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Nb;
     private javax.swing.JLabel Niveau;

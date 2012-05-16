@@ -31,7 +31,7 @@
               <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="510" max="32767" attributes="0"/>
+              <EmptySpace pref="530" max="32767" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton2" min="-2" pref="125" max="-2" attributes="0"/>
@@ -237,9 +237,6 @@
                   <StringArray count="0"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jList2MousePressed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
