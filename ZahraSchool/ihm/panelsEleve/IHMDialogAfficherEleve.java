@@ -4,26 +4,29 @@
  */
 
 /*
- * IHMAfficheFicheEleve.java
+ * NewJDialog.java
  *
- * Created on 27 mars 2012, 00:08:19
+ * Created on 16 mai 2012, 19:57:42
  */
 
 package panelsEleve;
 
 import domaine.Eleve;
+import frames.FFondFenetreProfesseur;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author alexandre
  */
-public class IHMAfficherEleve2 extends javax.swing.JPanel {
+public class IHMDialogAfficherEleve extends javax.swing.JDialog {
 frames.FFondFenetreProfesseur f;
 Eleve eleve;
 
-    public IHMAfficherEleve2(frames.FFondFenetreProfesseur f, Eleve e) {
-        this.f=f;
+    /** Creates new form NewJDialog */
+    public IHMDialogAfficherEleve(java.awt.Frame parent, boolean modal, Eleve e) {
+        super(parent, modal);
+        this.f=(FFondFenetreProfesseur) parent;
         this.eleve=e;
         initComponents();
         // ajout images boutons
@@ -90,8 +93,7 @@ Eleve eleve;
         jPanel2 = new javax.swing.JPanel();
         Photo = new javax.swing.JLabel();
 
-        setBorder(null);
-        setLayout(new java.awt.BorderLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Voir la fiche d'un eleve"));
 
@@ -270,8 +272,7 @@ Eleve eleve;
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(teleleve)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(telpa)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(telpa))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,7 +315,28 @@ Eleve eleve;
                 .addContainerGap())
         );
 
-        add(jPanel1, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 678, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 404, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -328,7 +350,7 @@ Eleve eleve;
             //JOptionPane jp2 = new JOptionPane();
             //jp2.showMessageDialog(null, "Pas encore disponible !", "Information", JOptionPane.INFORMATION_MESSAGE);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+}//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
