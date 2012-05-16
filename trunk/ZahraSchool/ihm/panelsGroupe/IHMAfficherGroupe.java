@@ -258,8 +258,6 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
         }
 }//GEN-LAST:event_jButton1ActionPerformed
 
-
-    private Date dateC;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Nb;
     private javax.swing.JLabel Niveau;
