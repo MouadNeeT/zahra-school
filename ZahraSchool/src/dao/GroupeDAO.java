@@ -70,26 +70,21 @@ public class GroupeDAO {
                 Connection conn = null;
 		PreparedStatement stmt = null;		
 		try {
-		final String GROUPE_INSERT = "insert into groupe (nom,  niveau , dateDeCreation,  tarif, listeEleves, emploiDuTemps) ";
-				
-
+		final String GROUPE_INSERT = "insert into groupe (nom,  niveau , dateDeCreation,  tarif, emploiDuTemps) "
+		+ " values (?,?,?,?,?)";
 
 		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
-		//<---------------- ne pas oublier de changer
         DataSource ds = (DataSource) appContext.getBean("datasource2");
         
         conn = ds.getConnection();
 		stmt = conn.prepareStatement(GROUPE_INSERT);
-	        /*
-		 * On recupere et on utilisera directement le jdbcTemplate
-		 */
-		
+	  
 		stmt.setString(1, groupe.getNom());
 		stmt.setString(2, groupe.getNiveau());
 		stmt.setDate(3, (Date) groupe.getDateDeCreation());
 		stmt.setFloat(4, groupe.getTarif());
-		stmt.setObject(5, groupe.getListeEleves());
-		stmt.setObject(6, groupe.getEmploiDuTemps());
+		//stmt.setObject(5, groupe.getListeEleves());
+		stmt.setObject(5, groupe.getEmploiDuTemps());
 		
 		
 		stmt.execute();
