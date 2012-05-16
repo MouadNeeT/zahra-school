@@ -112,8 +112,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="date" pref="182" max="32767" attributes="1"/>
-                              <Component id="Nom" alignment="0" pref="182" max="32767" attributes="1"/>
+                              <Component id="Nom" pref="182" max="32767" attributes="1"/>
+                              <Component id="date" alignment="0" pref="182" max="32767" attributes="1"/>
                           </Group>
                       </Group>
                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -135,7 +135,7 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" pref="176" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="196" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
