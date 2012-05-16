@@ -90,9 +90,6 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jList2MousePressed(evt);
             }
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jList2MouseClicked(evt);
-            }
         });
         jScrollPane2.setViewportView(jList2);
 
@@ -355,39 +352,6 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         f.AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
 }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
-        if (!jList2.isSelectionEmpty()) {
-            jList2.setModel(new javax.swing.AbstractListModel() {
-                public int getSize() { return listeEleves.size(); }
-                public Object getElementAt(int i) {
-                    // Eleve selectionné
-                    eleve = listeEleves.get(i);
-
-                    // Affiche infos
-                    nom.setText(eleve.getNom());
-                    prenom.setText(eleve.getPrenom());
-                    date.setText(eleve.getDateDeNaissance().getDate()+"/"+eleve.getDateDeNaissance().getMonth()+"/"+eleve.getDateDeNaissance().getYear());
-                    adresse.setText(eleve.getAdresse());
-                    nomere.setText(eleve.getNomMere());
-                    nompere.setText(eleve.getNomPere());
-                    prenommere.setText(eleve.getPrenomMere());
-                    prenompere.setText(eleve.getPrenomPere());
-                    teleleve.setText("" + eleve.getNumeroTelephoneEleve());
-                    telpa.setText("" +eleve.getNumeroTelephoneParent());
-                    niveleve.setText(eleve.getNiveauTest());
-                    nivetu.setText(eleve.getNiveauEtudes());
-                    status.setText(eleve.getStatus());
-                    // Sa liste de groupe
-
-                    // Sa photo
-                    Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
-                    
-                    return (listeEleves.get(i).getNom() + " " + listeEleves.get(i).getPrenom());
-                }
-            });
-        } else System.out.println("aucun element selectione");
-    }//GEN-LAST:event_jList2MousePressed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane jp = new JOptionPane();
         int reponse = jp.showConfirmDialog(null, "Imprimer la fiche de l'eleve "+nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
@@ -401,43 +365,42 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
         }
 }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jList2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MouseClicked
+    private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
         if (!jList2.isSelectionEmpty()) {
             jList2.setModel(new javax.swing.AbstractListModel() {
+                ArrayList<Eleve> listeEleves = EleveManager.getInstance().getAllEleves();
                 public int getSize() { return listeEleves.size(); }
                 public Object getElementAt(int i) {
                     // Eleve selectionné
-                    eleve = listeEleves.get(i);
+                    //eleve = listeEleves.get(i);
 
                     // Affiche infos
-                    nom.setText(eleve.getNom());
-                    prenom.setText(eleve.getPrenom());
-                    date.setText(eleve.getDateDeNaissance().getDate()+"/"+eleve.getDateDeNaissance().getMonth()+"/"+eleve.getDateDeNaissance().getYear());
-                    adresse.setText(eleve.getAdresse());
-                    nomere.setText(eleve.getNomMere());
-                    nompere.setText(eleve.getNomPere());
-                    prenommere.setText(eleve.getPrenomMere());
-                    prenompere.setText(eleve.getPrenomPere());
-                    teleleve.setText("" + eleve.getNumeroTelephoneEleve());
-                    telpa.setText("" +eleve.getNumeroTelephoneParent());
-                    niveleve.setText(eleve.getNiveauTest());
-                    nivetu.setText(eleve.getNiveauEtudes());
-                    status.setText(eleve.getStatus());
+                    nom.setText(listeEleves.get(i).getNom());
+                    prenom.setText(listeEleves.get(i).getPrenom());
+                    date.setText(listeEleves.get(i).getDateDeNaissance().getDate()+"/"+listeEleves.get(i).getDateDeNaissance().getMonth()+"/"+listeEleves.get(i).getDateDeNaissance().getYear());
+                    adresse.setText(listeEleves.get(i).getAdresse());
+                    nomere.setText(listeEleves.get(i).getNomMere());
+                    nompere.setText(listeEleves.get(i).getNomPere());
+                    prenommere.setText(listeEleves.get(i).getPrenomMere());
+                    prenompere.setText(listeEleves.get(i).getPrenomPere());
+                    teleleve.setText("" + listeEleves.get(i).getNumeroTelephoneEleve());
+                    telpa.setText("" +listeEleves.get(i).getNumeroTelephoneParent());
+                    niveleve.setText(listeEleves.get(i).getNiveauTest());
+                    nivetu.setText(listeEleves.get(i).getNiveauEtudes());
+                    status.setText(listeEleves.get(i).getStatus());
                     // Sa liste de groupe
 
-
                     // Sa photo
-                    Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
+                    Photo.setIcon(new javax.swing.ImageIcon(listeEleves.get(i).getPhoto()));
 
                     return (listeEleves.get(i).getNom() + " " + listeEleves.get(i).getPrenom());
                 }
             });
         } else System.out.println("aucun element selectione");
-    }//GEN-LAST:event_jList2MouseClicked
+    }//GEN-LAST:event_jList2MousePressed
 
     // liste d'eleves
-    private ArrayList<Eleve> listeEleves=null;
-    private Eleve eleve ;
+    //private Eleve eleve ;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Photo;
     private javax.swing.JLabel adresse;
