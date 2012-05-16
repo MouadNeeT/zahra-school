@@ -57,10 +57,10 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         Tarif = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        Nom = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
+        Nom = new javax.swing.JLabel();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Modifier un groupe"));
 
@@ -93,17 +93,13 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 
         jLabel11.setText("Niveau du groupe :");
 
-        Nom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NomActionPerformed(evt);
-            }
-        });
-
         jLabel1.setText("Nom du groupe :");
 
         jLabel4.setText("Date de creation :");
 
         date.setText("JJ/MM/AAAA");
+
+        Nom.setText(" ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,10 +110,10 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
@@ -136,7 +132,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Nom))
                         .addGap(19, 19, 19)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
@@ -193,7 +189,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 
         if (reponse == JOptionPane.YES_OPTION)
         {
-        String nom = Nom.getText();
+        //String nom = Nom.getText();
         String niveau = Niveau.getText();
         // On ne peut pas modifier la date de creation
         /*int jour = Integer.parseInt(jComboBox1.getSelectedItem().toString());
@@ -202,7 +198,7 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
 	Date dateDeCreation = new Date(annee,mois,jour);*/
         float tarif = Float.parseFloat(Tarif.getText());
 
-        groupeAmodifier.setNom(nom);
+        //groupeAmodifier.setNom(nom);
         groupeAmodifier.setNiveau(niveau);
         groupeAmodifier.setTarif(tarif);
 
@@ -237,14 +233,10 @@ public class IHMModifierGroupe extends javax.swing.JPanel {
         });
     }//GEN-LAST:event_jList1MousePressed
 
-    private void NomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_NomActionPerformed
-
     private Groupe groupeAmodifier;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Niveau;
-    private javax.swing.JTextField Nom;
+    private javax.swing.JLabel Nom;
     private javax.swing.JTextField Tarif;
     private javax.swing.JLabel date;
     private javax.swing.JButton jButton2;

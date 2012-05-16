@@ -124,10 +124,10 @@
                       <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="date" min="-2" pref="181" max="-2" attributes="1"/>
-                      <Component id="Nom" min="-2" pref="165" max="-2" attributes="1"/>
+                      <Component id="Nom" min="-2" pref="181" max="-2" attributes="1"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -151,7 +151,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Nom" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="Nom" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -191,11 +191,6 @@
             <Property name="text" type="java.lang.String" value="Niveau du groupe :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="Nom">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NomActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nom du groupe :"/>
@@ -209,6 +204,11 @@
         <Component class="javax.swing.JLabel" name="date">
           <Properties>
             <Property name="text" type="java.lang.String" value="JJ/MM/AAAA"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Nom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
       </SubComponents>
