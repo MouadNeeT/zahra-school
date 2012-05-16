@@ -102,4 +102,15 @@ public class FFondFenetreProfesseur extends JFrame {
             image.setImage(im);
             return image;
         }
+
+        public ImageIcon imageLivre2(String adressePath){
+            ImageIcon image = new ImageIcon(adressePath);
+            Image im = image.getImage();
+            float coef = (float) (((float)(im.getWidth(this)))/110.0);
+            int	hauteur	= Math.round(im.getHeight(this)/coef);
+            im	= im.getScaledInstance(110,hauteur,Image.SCALE_DEFAULT);
+            image.setImage(im);
+            return image;
+        }
+
 }
