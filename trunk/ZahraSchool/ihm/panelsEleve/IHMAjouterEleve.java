@@ -450,15 +450,14 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
     
     if (reponse == JOptionPane.YES_OPTION)
     {
-        int identifiant = 0;
+        int identifiant = 0;    //temporaire pour l'ID
         ArrayList<Eleve> list = EleveManager.getInstance().getAllEleves();
-		for (int i=0;i<list.size();i++){
-			if (i == (list.size()-1)) {
-				System.out.println("" + list.get(i).getIdentifiant());
-				identifiant = list.get(i).getIdentifiant() + 1;
-			}
-		}
-        
+        for (int i=0;i<list.size();i++){
+            if (i == (list.size()-1)) {
+			System.out.println("" + list.get(i).getIdentifiant());
+			identifiant = list.get(i).getIdentifiant() + 1;
+            }
+        }
 	String nom = Nom.getText();
 	String prenom = Prenom.getText();
 	int age = 0; // Pas utilisé
@@ -540,7 +539,7 @@ public class IHMAjouterEleve extends javax.swing.JPanel {
         if (retour == JFileChooser.APPROVE_OPTION) {
                file = fc.getSelectedFile();
                //System.out.println(file.getAbsolutePath());
-               Photo.setIcon(f.imageLivre(file));
+               Photo.setIcon(f.image(file));
                photo = file.getAbsolutePath();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
