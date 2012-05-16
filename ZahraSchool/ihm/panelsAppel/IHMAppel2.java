@@ -11,10 +11,19 @@
 
 package panelsAppel;
 
+import java.awt.Image;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
+import manager.AbsenceManager;
 import manager.EleveManager;
 import manager.GroupeManager;
+import domaine.Absence;
 import domaine.Eleve;
 import domaine.Groupe;
 
@@ -26,6 +35,7 @@ public class IHMAppel2 extends javax.swing.JPanel {
 	int nombreFoisAppuiRight;
 	frames.FFondFenetreProfesseur f;
 	Groupe groupe;
+	String motifAbsence = "";
     /** Creates new form IHMAppel */
     public IHMAppel2(frames.FFondFenetreProfesseur f, Groupe groupe) {
     	this.f = f;
@@ -346,10 +356,12 @@ public class IHMAppel2 extends javax.swing.JPanel {
     }// </editor-fold>
 
     private void boutonLeftActionPerformed(java.awt.event.ActionEvent evt) {
+    	radioBoutonPresent.setSelected(true);
+		radioBoutonAbsent.setSelected(false);
 		ArrayList<Integer> listElevesFromGroupe = GroupeManager.getInstance().recupererElevesFromGroupe(groupe.getNom());
-		
+		if (listElevesFromGroupe.size() != 0) {
 		System.out.println(""+ nombreFoisAppuiRight);
-		if (nombreFoisAppuiRight == listElevesFromGroupe.size() ) {
+		if (nombreFoisAppuiRight == listElevesFromGroupe.size() && listElevesFromGroupe.size() != 0) {
 			nombreFoisAppuiRight -= 1;
 			boutonRight.setEnabled(true);
     		boutonLeft.setEnabled(true);
@@ -380,24 +392,43 @@ public class IHMAppel2 extends javax.swing.JPanel {
 	    		boutonLeft.setEnabled(false);
 			}
 		}
+		}
+		else {
+			boutonRight.setEnabled(false);
+    		boutonLeft.setEnabled(false);
+		}
     }
 
-    private void boutonRightActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    	
+    private ImageIcon redimensionnerImage(String adressePath, float i){
+        ImageIcon image = new ImageIcon(adressePath);
+        Image im = image.getImage();
+        float coef = (float) (((float)(im.getWidth(this)))/i);
+        int	hauteur	= Math.round(im.getHeight(this)/coef);
+        im	= im.getScaledInstance((int) i,hauteur,Image.SCALE_DEFAULT);
+        image.setImage(im);
+        return image;
+    }
+    
+    private void boutonRightActionPerformed(java.awt.event.ActionEvent evt) {  	
+    	radioBoutonPresent.setSelected(true);
+		radioBoutonAbsent.setSelected(false);
     	ArrayList<Integer> listElevesFromGroupe = GroupeManager.getInstance().recupererElevesFromGroupe(groupe.getNom());
-
-    	if (nombreFoisAppuiRight +1< listElevesFromGroupe.size()){
+    	if (listElevesFromGroupe.size() != 0) {
+    	if (nombreFoisAppuiRight < listElevesFromGroupe.size()){
     		boutonRight.setEnabled(true);
 			boutonLeft.setEnabled(true);
         	if (listElevesFromGroupe.size() != 0) {
         		String nom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getNom();
         		String prenom = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getPrenom();
+        		//String photo = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getPhoto();
+        		ImageIcon photo = redimensionnerImage(EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight)).getPhoto(), 125);
         		nombreFoisAppuiRight += 1;
         		System.out.println("------------------->" + nom);
         		System.out.println("------------------->" + nombreFoisAppuiRight);
     			jLabel3.setText("" + nom);
     			jLabel4.setText("" + prenom);
+    			
+    			labelPhoto.setIcon(photo);
     			
         	}
         	else {
@@ -411,16 +442,44 @@ public class IHMAppel2 extends javax.swing.JPanel {
     		boutonRight.setEnabled(false);
     		boutonLeft.setEnabled(true);
     	}
+    	}
+    	else {
+    		boutonRight.setEnabled(false);
+    		boutonLeft.setEnabled(false);
+    	}
     }
  
     
 
     private void radioBoutonPresentActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    		radioBoutonPresent.setSelected(true);
+    		radioBoutonAbsent.setSelected(false);
     }
 
     private void radioBoutonAbsentActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    	GregorianCalendar calendar = new GregorianCalendar();
+    	ArrayList<Integer> listElevesFromGroupe = GroupeManager.getInstance().recupererElevesFromGroupe(groupe.getNom());
+    	Eleve eleve = EleveManager.getInstance().readById(listElevesFromGroupe.get(nombreFoisAppuiRight-1));
+    	SimpleDateFormat formatter = new SimpleDateFormat ("yyyy/MM/dd");
+    	Date currentTime_1 = new Date((calendar.get(GregorianCalendar.YEAR)), (calendar.get(GregorianCalendar.MONTH) + 1), (calendar.get(GregorianCalendar.DAY_OF_MONTH)));
+    	radioBoutonPresent.setSelected(false);
+		radioBoutonAbsent.setSelected(true);
+    	JOptionPane jop = new JOptionPane();
+		motifAbsence = jop.showInputDialog(null, "Motif de l'absence", "Absence", JOptionPane.QUESTION_MESSAGE);
+		
+		int identifiant = 0;
+        ArrayList<Absence> list = AbsenceManager.getInstance().getAllAbsences();
+		for (int i=0;i<list.size();i++){
+			if (i == (list.size()-1)) {
+				System.out.println("" + list.get(i).getIdentifiant());
+				identifiant = list.get(i).getIdentifiant() + 1;
+			}
+		}
+    	ArrayList<Integer> listElevesFromGroupe2 = GroupeManager.getInstance().recupererElevesFromGroupe(groupe.getNom());
+    	System.out.println("identifiant de la personne malade"+ (EleveManager.getInstance().readById(listElevesFromGroupe2.get(nombreFoisAppuiRight-1)).getIdentifiant()));
+		Absence absence = new Absence(identifiant, motifAbsence, currentTime_1, EleveManager.getInstance().readById(listElevesFromGroupe2.get(nombreFoisAppuiRight-1)).getIdentifiant()-1);
+		AbsenceManager.getInstance().createAbsenceEleve(absence, eleve);
     }
 
     private void boutonVoirFicheActionPerformed(java.awt.event.ActionEvent evt) {
