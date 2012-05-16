@@ -12,8 +12,7 @@
 package panelsEleve;
 
 import domaine.Eleve;
-import domaine.Groupe;
-import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -46,7 +45,7 @@ Eleve eleve;
         // Sa liste de groupe
 
         // Sa photo
-        Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
+        Photo.setIcon(f.image2(eleve.getPhoto()));
     }
 
     /** This method is called from within the constructor to
@@ -331,12 +330,21 @@ Eleve eleve;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        IHMChoixEleve CE = new IHMChoixEleve(f);
+        f.AfficheBarreVision(CE,"   Gestion des Eleves","../ZahraSchool/images/eleve.png");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        aIHMRechercherEleveAncien IH = new aIHMRechercherEleveAncien(f,1);
-        f.setPanel(IH);
+        JOptionPane jp = new JOptionPane();
+        int reponse = jp.showConfirmDialog(null, "Imprimer la fiche de l'eleve "+nom.getText(), "Confirmation", JOptionPane.YES_NO_OPTION);
+        if (reponse == JOptionPane.YES_OPTION)
+        {
+            // Impression
+            MPanelPrinter printP = new MPanelPrinter(jPanel1);
+            printP.print();
+            //JOptionPane jp2 = new JOptionPane();
+            //jp2.showMessageDialog(null, "Pas encore disponible !", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
 }//GEN-LAST:event_jButton2ActionPerformed
 
 

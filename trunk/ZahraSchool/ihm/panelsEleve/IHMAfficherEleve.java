@@ -391,7 +391,7 @@ public class IHMAfficherEleve extends javax.swing.JPanel {
                     // Sa liste de groupe
 
                     // Sa photo
-                    Photo.setIcon(new javax.swing.ImageIcon(listeEleves.get(i).getPhoto()));
+                    Photo.setIcon(f.image2(listeEleves.get(i).getPhoto()));
 
                     return (listeEleves.get(i).getNom() + " " + listeEleves.get(i).getPrenom());
                 }
