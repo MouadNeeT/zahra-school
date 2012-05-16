@@ -212,13 +212,16 @@ public class IHMAppel1 extends javax.swing.JPanel {
     }
 
     private void boutonSuivantActionPerformed(java.awt.event.ActionEvent evt) {
+    	int i = jList1.getSelectedIndex();
+    	ArrayList<Groupe> list = GroupeManager.getInstance().getAllGroupes();
+    	Groupe groupe = list.get(i);
         if (jRadioButtonAlbum.isSelected()) choixTypeAppel = 1;
         else choixTypeAppel = 2;
         
         JPanel panel = new JPanel(new BorderLayout());    		
 		IHMBarreVisionPresentation visionMenu = new IHMBarreVisionPresentation(f, "Faire l'appel", "");
         switch (choixTypeAppel) {
-        	case 1 : panelsAppel.IHMAppel2 appel2 = new IHMAppel2(f);
+        	case 1 : panelsAppel.IHMAppel2 appel2 = new IHMAppel2(f, groupe);
         	         panel.add(appel2, BorderLayout.WEST);
         	         panel.add(visionMenu, BorderLayout.NORTH);
         	         f.setPanel(panel);
