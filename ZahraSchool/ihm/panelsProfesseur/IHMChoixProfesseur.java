@@ -45,6 +45,7 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
         jPanel16 = new javax.swing.JPanel();
         jToggleButton2 = new javax.swing.JToggleButton();
         jLabel6 = new javax.swing.JLabel();
+        jToggleButton4 = new javax.swing.JToggleButton();
         jPanel15 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jToggleButton3 = new javax.swing.JToggleButton();
@@ -145,7 +146,7 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
         jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12));
         jToggleButton2.setForeground(new java.awt.Color(0, 0, 204));
-        jToggleButton2.setText("Fiches Profeseurs");
+        jToggleButton2.setText("Fiches des profeseurs");
         jToggleButton2.setToolTipText("Pour modifier un élève, cliquez ici.");
         jToggleButton2.setBorder(null);
         jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -157,6 +158,19 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
 
         jLabel6.setText(" ");
 
+        jToggleButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jToggleButton4.setFont(new java.awt.Font("Tahoma", 1, 12));
+        jToggleButton4.setForeground(new java.awt.Color(0, 0, 204));
+        jToggleButton4.setText("Modifier sa fiche");
+        jToggleButton4.setToolTipText("Pour modifier un élève, cliquez ici.");
+        jToggleButton4.setBorder(null);
+        jToggleButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -165,17 +179,26 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
                 .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(17, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                .addContainerGap(61, Short.MAX_VALUE)
+                .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
@@ -255,7 +278,8 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        
+        panelsProfesseur.IHMModificationProfesseur MP = new panelsProfesseur.IHMModificationProfesseur(f);
+        f.AfficheBarreVision(MP,"   Espace Professeur","../ZahraSchool/images/prof.png");
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
@@ -267,6 +291,10 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
         panelsProfesseur.IHMPaiement P = new panelsProfesseur.IHMPaiement(f);
         f.AfficheBarreVision(P,"   Espace Professeur","../ZahraSchool/images/prof.png");
     }//GEN-LAST:event_jToggleButton3ActionPerformed
+
+    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton4ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel4;
@@ -280,6 +308,7 @@ public class IHMChoixProfesseur extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel18;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JToggleButton jToggleButton5;
     private javax.swing.JToggleButton jToggleButton6;
     // End of variables declaration//GEN-END:variables
