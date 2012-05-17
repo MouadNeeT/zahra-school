@@ -6,7 +6,7 @@
 /*
  * IHMStat.java
  *
- * Created on 14 mai 2012, 12:15:47
+ * Created on 13 mai 2012, 12:15:47
  */
 
 package panelsProfesseur;
@@ -41,8 +41,13 @@ public class IHMStat extends javax.swing.JPanel {
         Nb1.setText(""+listeGroupes.size());
         ArrayList<Professeur> listeProfesseurs = ProfesseurManager.getInstance().getAllProfesseurs();
         Nb2.setText(""+listeProfesseurs.size());
-        
+
+        // Date actuelle
         Date Ajourdhui = new Date();
+        Ajourdhui.setMonth(Ajourdhui.getMonth()+1);
+        Ajourdhui.setYear(Ajourdhui.getYear()+1900);
+
+        // Age des eleves
         Date Age = new Date();
         float moy = 0;
         for (int i=0; i<listeEleves.size(); i++)
@@ -53,29 +58,27 @@ public class IHMStat extends javax.swing.JPanel {
         moy = moy/listeEleves.size();
         Nb3.setText(""+moy);
 
+        // Age des professeurs
         Date Age2 = new Date();
         float moy2 = 0;
         for (int i=0; i<listeProfesseurs.size(); i++)
         {
             Age2.setTime(Ajourdhui.getTime()-listeProfesseurs.get(i).getDateDeNaissance().getTime());
-            moy2 += Age.getYear();
+            moy2 += Age2.getYear();
         }
         moy2 = moy2/listeProfesseurs.size();
         Nb4.setText(""+moy2);
 
-                moy = moy/listeEleves.size();
-        Nb3.setText(""+moy);
-
+        // ancienneté des professeurs
         Date Age3 = new Date();
         float moy3 = 0;
         for (int i=0; i<listeProfesseurs.size(); i++)
         {
             Age3.setTime(Ajourdhui.getTime()-listeProfesseurs.get(i).getDateEmbauche().getTime());
-            moy3 += Age.getYear();
+            moy3 += Age3.getYear();
         }
         moy3 = moy3/listeProfesseurs.size();
         Nb5.setText(""+moy3);
-
     }
 
     /** This method is called from within the constructor to
