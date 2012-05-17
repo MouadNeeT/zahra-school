@@ -37,12 +37,12 @@ public class IHMAfficherEleve3 extends javax.swing.JPanel {
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) { return (listeGroupes.get(i).getNom()); }
         });
-        // Affichage de la liste de tous les eleves
+        /* Affichage de la liste de tous les eleves
         jList2.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Eleve> listeEleves = EleveManager.getInstance().getAllEleves();
                 public int getSize() { return listeEleves.size(); }
                 public Object getElementAt(int i) { return (listeEleves.get(i).getNom())+" "+(listeEleves.get(i).getPrenom()); }
-        });
+        });*/
     }
 
     /** This method is called from within the constructor to
@@ -378,15 +378,17 @@ public class IHMAfficherEleve3 extends javax.swing.JPanel {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
                 public int getSize() { return listeGroupes.size(); }
                 public Object getElementAt(int i) {
-                    //listeEleves = listeGroupes.get(i).getListeEleves();
+                    listeID = GroupeManager.getInstance().recupererElevesFromGroupe(listeGroupes.get(i).getNom());
                     // On renomme le titre de la liste des eleves
                     jList2.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des eleves de "+listeGroupes.get(i).getNom()));
+                    // affiche la liste d'eleves du groupe
                     jList2.setModel(new javax.swing.AbstractListModel() {
-                        public int getSize() { return listeEleves.size(); }
+                        public int getSize() { return listeID.size(); }
                         public Object getElementAt(int j) {
-                            return (listeEleves.get(j).getNom()+" "+listeEleves.get(j).getPrenom());
+                            return (EleveManager.getInstance().readById(listeID.get(j)).getNom()+" "+EleveManager.getInstance().readById(listeID.get(j)).getPrenom());
                         }
                     });
+
                     return (listeGroupes.get(i).getNom());
                 }
             });
@@ -396,10 +398,10 @@ public class IHMAfficherEleve3 extends javax.swing.JPanel {
     private void jList2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MousePressed
         if (!jList2.isSelectionEmpty()){
             jList2.setModel(new javax.swing.AbstractListModel() {
-                public int getSize() { return listeEleves.size(); }
+                public int getSize() { return listeID.size(); }
                 public Object getElementAt(int i) {
                     // Eleve selectionné
-                    eleve = listeEleves.get(i);
+                    eleve = EleveManager.getInstance().readById(listeID.get(i));
 
                     // Affiche infos
                     nom.setText(eleve.getNom());
@@ -418,9 +420,9 @@ public class IHMAfficherEleve3 extends javax.swing.JPanel {
                     // Sa liste de groupe
 
                     // Sa photo
-                    Photo.setIcon(new javax.swing.ImageIcon(eleve.getPhoto()));
+                    Photo.setIcon(f.image2(eleve.getPhoto()));
                     
-                    return (listeEleves.get(i).getNom() + " " + listeEleves.get(i).getPrenom());
+                    return (EleveManager.getInstance().readById(listeID.get(i)).getNom()+" "+EleveManager.getInstance().readById(listeID.get(i)).getPrenom());
                 }
             });
         } else System.out.println("aucun element selectione");
@@ -440,7 +442,7 @@ public class IHMAfficherEleve3 extends javax.swing.JPanel {
 }//GEN-LAST:event_jButton1ActionPerformed
 
     // liste d'eleves
-    private ArrayList<Eleve> listeEleves=null;
+    ArrayList<Integer> listeID;
     private Eleve eleve ;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Photo;
