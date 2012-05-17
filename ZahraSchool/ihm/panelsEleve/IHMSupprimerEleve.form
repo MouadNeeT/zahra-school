@@ -304,32 +304,32 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="prenompere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="prenompere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nompere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nompere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="adresse">
           <Properties>
-            <Property name="text" type="java.lang.String" value="adresse"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="date">
           <Properties>
-            <Property name="text" type="java.lang.String" value="date"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="prenom">
           <Properties>
-            <Property name="text" type="java.lang.String" value="prenom"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nom">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nom"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
@@ -410,27 +410,27 @@
         </Container>
         <Component class="javax.swing.JLabel" name="prenommere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="prenommere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="teleleve">
           <Properties>
-            <Property name="text" type="java.lang.String" value="teleleve"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="telpa">
           <Properties>
-            <Property name="text" type="java.lang.String" value="telpa"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nivetu">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nivetu"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nomere">
           <Properties>
-            <Property name="text" type="java.lang.String" value="nommere"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel24">
@@ -440,7 +440,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="niveleve">
           <Properties>
-            <Property name="text" type="java.lang.String" value="niveleve"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
@@ -450,7 +450,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="status">
           <Properties>
-            <Property name="text" type="java.lang.String" value="status"/>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel2">

@@ -29,6 +29,8 @@ public class IHMAfficherGroupe extends javax.swing.JPanel {
     public IHMAfficherGroupe( frames.FFondFenetreProfesseur f) {
         this.f=f;
         initComponents();
+        // ajout images boutons
+        jButton1.setIcon(new javax.swing.ImageIcon("../ZahraSchool/images/imprimer.png"));
         // affiche la liste des groupes
         jList1.setModel(new javax.swing.AbstractListModel() {
                 ArrayList<Groupe> listeGroupes = GroupeManager.getInstance().getAllGroupes();
