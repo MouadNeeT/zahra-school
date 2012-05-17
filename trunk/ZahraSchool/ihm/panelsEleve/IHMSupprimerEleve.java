@@ -119,17 +119,17 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        prenompere.setText("prenompere");
+        prenompere.setText(" ");
 
-        nompere.setText("nompere");
+        nompere.setText(" ");
 
-        adresse.setText("adresse");
+        adresse.setText(" ");
 
-        date.setText("date");
+        date.setText(" ");
 
-        prenom.setText("prenom");
+        prenom.setText(" ");
 
-        nom.setText("nom");
+        nom.setText(" ");
 
         jLabel10.setText("Telephone de l'eleve :");
 
@@ -156,23 +156,23 @@ public class IHMSupprimerEleve extends javax.swing.JPanel {
         jList3.setBorder(javax.swing.BorderFactory.createTitledBorder("Ses groupes"));
         jScrollPane3.setViewportView(jList3);
 
-        prenommere.setText("prenommere");
+        prenommere.setText(" ");
 
-        teleleve.setText("teleleve");
+        teleleve.setText(" ");
 
-        telpa.setText("telpa");
+        telpa.setText(" ");
 
-        nivetu.setText("nivetu");
+        nivetu.setText(" ");
 
-        nomere.setText("nommere");
+        nomere.setText(" ");
 
         jLabel24.setText("Niveau d'etudes:");
 
-        niveleve.setText("niveleve");
+        niveleve.setText(" ");
 
         jLabel14.setText("L'eleve paye :");
 
-        status.setText("status");
+        status.setText(" ");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Photo"));
 
