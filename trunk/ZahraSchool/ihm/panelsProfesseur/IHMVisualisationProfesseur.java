@@ -1,15 +1,11 @@
 package panelsProfesseur;
 
-import panelsAdministrateur.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 import manager.ProfesseurManager;
 
-import database.SpringJDBC;
 import domaine.Professeur;
-import frames.FFondFenetreAdministrateur;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -29,6 +25,7 @@ import frames.FFondFenetreAdministrateur;
  */
 public class IHMVisualisationProfesseur extends javax.swing.JPanel {
     frames.FFondFenetreProfesseur f;
+    
     /** Creates new form IHMVisualiserFicheProfesseur */
     public IHMVisualisationProfesseur(frames.FFondFenetreProfesseur f) {
     	this.f = f;

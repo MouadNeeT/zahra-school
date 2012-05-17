@@ -372,7 +372,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton12.setBackground(new java.awt.Color(102, 153, 255));
         jButton12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton12.setForeground(new java.awt.Color(255, 255, 255));
-        jButton12.setText("Visualiser la fiche d'un professeur");
+        jButton12.setText("Visualiser/Modifier la fiche d'un professeur");
         jButton12.setBorder(null);
         jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -396,7 +396,7 @@ public class IHMMenuGaucheProfesseur extends javax.swing.JPanel {
         jButton14.setBackground(new java.awt.Color(102, 153, 255));
         jButton14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton14.setForeground(new java.awt.Color(255, 255, 255));
-        jButton14.setText("Gerer les revenus");
+        jButton14.setText("Gerer les paiements");
         jButton14.setBorder(null);
         jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
