@@ -12,7 +12,7 @@
 package panelsAppel;
 
 import java.awt.Image;
-import java.sql.Date;
+import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -113,7 +113,7 @@ public class IHMAppel2 extends javax.swing.JPanel {
             }
         });
 
-        panelAbsences.setBackground(new java.awt.Color(255, 0, 51));
+        panelAbsences.setBackground(new java.awt.Color(0, 255, 0));
 
         javax.swing.GroupLayout panelAbsencesLayout = new javax.swing.GroupLayout(panelAbsences);
         panelAbsences.setLayout(panelAbsencesLayout);
@@ -429,6 +429,22 @@ public class IHMAppel2 extends javax.swing.JPanel {
     			jLabel4.setText("" + prenom);
     			
     			labelPhoto.setIcon(photo);
+    			ArrayList<Absence> listeAbsenceEleve = AbsenceManager.getInstance().getAllAbsencesFromIdEleve(nombreFoisAppuiRight-1);
+    	    	int nbAbsenceDuMois = 0;
+    			for (int i = 0; i<listeAbsenceEleve.size();i++){
+    	    		Absence absence = listeAbsenceEleve.get(i);
+    	    		Date date = (Date) absence.getDate();
+    	    		System.out.println("mois de l'élève " + date.getMonth());
+    	    		System.out.println("année de l'élève " + date.getYear());
+    	    		System.out.println("année courante " + (new Date()).getYear());
+    	    		System.out.println("mois courant " + (new Date()).getMonth());
+    	    		if (date.getMonth() == (new Date()).getMonth() +1){
+    	    			nbAbsenceDuMois = nbAbsenceDuMois + 1;
+    	    			System.out.println("nombre d'absences dans le mois : " + nbAbsenceDuMois);
+    	    		}
+    	    	}
+    			if (nbAbsenceDuMois >= 3) panelAbsences.setBackground(new java.awt.Color(255, 0, 51));
+    			else panelAbsences.setBackground(new java.awt.Color(0, 255, 0));
     			
         	}
         	else {
@@ -483,8 +499,26 @@ public class IHMAppel2 extends javax.swing.JPanel {
     }
 
     private void boutonVoirFicheActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
+        
+    	ArrayList<Integer> listElevesFromGroupe = GroupeManager.getInstance().recupererElevesFromGroupe(groupe.getNom());
+    	if (listElevesFromGroupe.size() != 0){
+    	String informations = "";
+    	ArrayList<Absence> listeAbsence = AbsenceManager.getInstance().getAllAbsencesFromIdEleve(nombreFoisAppuiRight+1);
+    	for (int i = 0; i<listeAbsence.size();i++){
+    		Absence absence = listeAbsence.get(i);
+    		String motif = absence.getMotif();
+    		Date date = (Date) absence.getDate();
+    		System.out.println(""+date.getDay());
+    		System.out.println(""+date.getMonth());
+    		System.out.println(""+date.getYear());
+    		String laDate =  "" + (date.getDay()+15) + "/" + date.getMonth() + "/" + date.getYear();
+    		informations = informations + laDate + " : " + motif + "\n";
+    	}
+    	JOptionPane jop1 = new JOptionPane();
+    	jop1.showMessageDialog(null, informations, "Information", JOptionPane.INFORMATION_MESSAGE);
+    	}
+    	else boutonVoirFiche.setVisible(false);
+    	}
 
 
     // Variables declaration - do not modify
