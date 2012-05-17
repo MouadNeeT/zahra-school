@@ -77,6 +77,12 @@ public class AbsenceManager {
 		AbsenceDAO absenceDAO = new AbsenceDAO();
 		return absenceDAO.getAllAbsences();
 	}
+	
+public ArrayList<Absence> getAllAbsencesFromIdEleve(int identifiantEleve) {
+	AbsenceDAO absence = new AbsenceDAO();
+	return absence.getAllAbsencesFromIdEleve(identifiantEleve);
+		
+	}
 	}
 
 
