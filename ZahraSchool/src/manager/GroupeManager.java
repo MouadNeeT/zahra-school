@@ -75,12 +75,10 @@ public class GroupeManager {
 		groupeDAO.update(groupeEntity);
 	}
 	
-	public ArrayList<Integer> recupererElevesFromGroupe(String identifiantGroupe){
-		
+	public ArrayList<Integer> recupererElevesFromGroupe(String identifiantGroupe) {
 		GroupeEntity groupeEntity = EntityFactory.getGroupeEntity();
 		GroupeDAO groupeDAO = new GroupeDAO();
 		return groupeDAO.recupererElevesFromGroupe(identifiantGroupe);
-		
 	}
 }
 
