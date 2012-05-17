@@ -98,27 +98,42 @@ private JdbcTemplate jdbcTemplate;
 	
 	}
 
-/*	@Override
-	public boolean delete(AbsenceEntity obj) {
-		// TODO Auto-generated method stub
-		return false;
+	public ArrayList<Absence> getAllAbsencesFromIdEleve(int identifiantEleve) {
+		Connection conn = null;
+		@SuppressWarnings("unused")
+		PreparedStatement stmt = null;	
+		ResultSet resultats = null;
+		
+	    @SuppressWarnings("unused")
+		final String requete = "";
+	    ArrayList<Absence> listeAbsencesEleve = new ArrayList<Absence>();
+		
+	    try {
+			ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("spring-data.xml");
+			//<---------------- ne pas oublier de changer
+	        DataSource ds = (DataSource) appContext.getBean("datasource2");
+	        conn = ds.getConnection();
+			PreparedStatement ALL = conn.prepareStatement("select identifiant, motif, date, identifiantEleve from absence " +
+					                                       "where identifiantEleve = '" + identifiantEleve + "'");
+			resultats = ALL.executeQuery();
+			
+			boolean encore = resultats.next();
+
+		      while (encore) {
+		    	
+		        @SuppressWarnings("unchecked")
+				Absence a = new Absence (resultats.getInt(1), resultats.getString(2), resultats.getDate(3), resultats.getInt(4));
+		        listeAbsencesEleve.add(a);
+		        encore = resultats.next();
+		      }
+
+		      resultats.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return listeAbsencesEleve;
+	
 	}
 
-	@Override
-	public boolean update(AbsenceEntity obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public AbsenceEntity find(String nom, String prenom) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public AbsenceEntity find(AbsenceEntity obj) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
 }
