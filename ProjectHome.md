@@ -1,0 +1,1 @@
+Une application (intranet/internet)avec plusieurs types de terminaux ( Interface web, Swing, Mobile .. ) qui permet la gestion d'une structure de soutien scolaire (Paiement, Pointage, correspondance, administration, cours ... ).
